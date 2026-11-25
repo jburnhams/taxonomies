@@ -1,0 +1,21 @@
+# An Essay towards a Real Character, and a Philosophical Language
+
+- **Source**: John Wilkins, *An Essay towards a Real Character, and a Philosophical Language* (1668); Jorge Luis Borges, "The Analytical Language of John Wilkins" (1942); Michel Foucault, *The Order of Things* (1966), preface; Umberto Eco, *The Search for the Perfect Language* (1995).
+- **Type**: Book + essays
+- **Access**: Wilkins public domain (scans online); others paywalled
+- **URL**: none found
+- **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
+- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `wilkins-1668-real-character-and-borges.pdf`) and note it in this line.
+- **To fetch**: Nothing needed: what the notes rely on was readable online.
+- **Used in**: [`07-limits-and-politics.md`](../../07-limits-and-politics.md), [`eli5.md`](../../eli5.md)
+
+## What is distinctive
+
+The history lesson: the attempt to name everything from one universal classification, and why it fails.
+
+## Notes
+
+- Wilkins built a universal classification of all things (40 genera, then differences and species) and a language whose words spelled out each thing's place in it, so a word would tell you what the thing is.
+- Borges's essay mocks it with a fictional "Chinese encyclopaedia" dividing animals into "those that belong to the Emperor, embalmed ones, ... those drawn with a very fine camel-hair brush, ... others"; his point: "there is no classification of the universe that is not arbitrary and conjectural".
+- Foucault opens *The Order of Things* by laughing at that list. Eco's book is the history of such universal-language projects.
+- For us: do not encode the classification into the names (Wilkins's mistake: change the scheme and every name breaks). Names are labels; the classification lives beside them. Biology's codes reached the same rule.
