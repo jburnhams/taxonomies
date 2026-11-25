@@ -5,7 +5,7 @@
 - **Access**: book paywalled; Reference open (CC BY 4.0)
 - **URL**: https://domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf
 - **Read**: Reference read in part 2026-11-25; book not read this pass.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `evans-2003-domain-driven-design.pdf`) and note it in this line.
+- **Stored here**: `evans-2015-ddd-reference.pdf` (+ `.md`): *Domain-Driven Design Reference* (2015, CC BY 4.0) from domainlanguage.com. The 2003 book is not stored. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: The 2003 book (optional; the Reference covers the patterns).
 - **Used in**: [`06-shared-language-in-software.md`](../../06-shared-language-in-software.md), [`07-limits-and-politics.md`](../../07-limits-and-politics.md)
 

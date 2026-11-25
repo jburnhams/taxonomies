@@ -5,8 +5,8 @@
 - **Access**: open (CC BY-NC-ND 4.0)
 - **URL**: https://arxiv.org/abs/2403.12173v1
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `wan-2024-tnt-llm.pdf`) and note it in this line.
-- **To fetch**: Nothing needed: what the notes rely on was readable online.
+- **Stored here**: `wan-2024-tnt-llm.pdf` (+ `.md`): arXiv 2403.12173v1 (CC BY-NC-ND 4.0). Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the paper is stored here.
 - **Used in**: [`05-building-and-testing.md`](../../05-building-and-testing.md)
 
 ## What is distinctive

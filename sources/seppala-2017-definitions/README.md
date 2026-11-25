@@ -5,8 +5,8 @@
 - **Access**: free to read (journal and PhilArchive)
 - **URL**: https://philarchive.org/archive/SEPGFW
 - **Read**: Read in part 2026-11-25: the first half or so verbatim; the rest only as a summary, so claims from it are marked. Items 9.3 onward from the summary.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `seppala-2017-definitions.pdf`) and note it in this line.
-- **To fetch**: Nothing needed: what the notes rely on was readable online.
+- **Stored here**: `seppala-2017-definitions.pdf` (+ `.md`): the published article from the journal site (revista.ibict.br). Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the article is stored here.
 - **Used in**: [`03-naming.md`](../../03-naming.md), [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md)
 
 ## What is distinctive

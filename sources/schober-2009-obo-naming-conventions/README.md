@@ -5,8 +5,8 @@
 - **Access**: open (CC BY 2.0)
 - **URL**: https://pmc.ncbi.nlm.nih.gov/articles/PMC2684543
 - **Read**: Read 2026-11-25: sections 1-2 of Table 1 verbatim; sections 3-4 only as a summary (marked).
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `schober-2009-obo-naming-conventions.pdf`) and note it in this line.
-- **To fetch**: Nothing needed: what the notes rely on was readable online.
+- **Stored here**: `schober-2009-obo-naming-conventions.html` (+ `.md`): the article from PMC (CC BY 2.0). Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the article is stored here.
 - **Used in**: [`03-naming.md`](../../03-naming.md), [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md)
 
 ## What is distinctive

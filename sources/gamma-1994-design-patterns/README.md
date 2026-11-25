@@ -5,8 +5,8 @@
 - **Access**: book paywalled; Beck and Cunningham's paper free online
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `gamma-1994-design-patterns.pdf`) and note it in this line.
-- **To fetch**: Nothing needed: what the notes rely on was readable online.
+- **Stored here**: `beck-cunningham-1987-oopsla.html` (+ `.md`): Beck and Cunningham's OOPSLA-87 paper from c2.com. The Gamma et al. book is not stored. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: The book (optional; Beck and Cunningham is stored).
 - **Used in**: [`08-pattern-languages.md`](../../08-pattern-languages.md)
 
 ## What is distinctive

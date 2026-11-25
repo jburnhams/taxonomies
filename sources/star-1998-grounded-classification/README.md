@@ -5,8 +5,8 @@
 - **Access**: free (IDEALS)
 - **URL**: https://www.ideals.illinois.edu/items/8174/bitstreams/28019/data.pdf
 - **Read**: Identified 2026-11-25 (opened by mistake for Kwasnik); not read in full.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `star-1998-grounded-classification.pdf`) and note it in this line.
-- **To fetch**: Nothing needed: what the notes rely on was readable online.
+- **Stored here**: `star-1998-grounded-classification.pdf` (+ `.md`): the article from IDEALS. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the article is stored here.
 - **Used in**: [`05-building-and-testing.md`](../../05-building-and-testing.md), [`07-limits-and-politics.md`](../../07-limits-and-politics.md)
 
 ## What is distinctive

@@ -5,7 +5,7 @@
 - **Access**: Wilkins public domain (scans online); others paywalled
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `wilkins-1668-real-character-and-borges.pdf`) and note it in this line.
+- **Stored here**: `wilkins-1668-essay-real-character.pdf` and `.ocr.txt`: the 1668 *Essay* (public domain), Internet Archive scan `AnEssayTowardsARealCharacterAndAPhilosophicalLanguage`, with its OCR text (rough; long s and ligatures garble). Borges, Foucault and Eco are not stored. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it.
 - **To fetch**: Nothing needed: what the notes rely on was readable online.
 - **Used in**: [`07-limits-and-politics.md`](../../07-limits-and-politics.md), [`eli5.md`](../../eli5.md)
 

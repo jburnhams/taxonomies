@@ -5,8 +5,8 @@
 - **Access**: book paywalled; MIT Press may have an open edition (not checked)
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `arp-smith-spear-2015-bfo.pdf`) and note it in this line.
-- **To fetch**: The book.
+- **Stored here**: `smith-2007-obo-foundry.html` (+ `.md`): Smith et al. 2007, "The OBO Foundry", author manuscript from PMC (PMC2814061). The book is not stored. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: The book (the OBO Foundry paper is stored).
 - **Used in**: [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md)
 
 ## What is distinctive

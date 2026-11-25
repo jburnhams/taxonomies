@@ -5,8 +5,8 @@
 - **Access**: open (W3C document licence: copying permitted with notice)
 - **URL**: https://www.w3.org/TR/skos-reference/
 - **Read**: Read 2026-11-25 (online copy, see URL). Later sections partly from a summary.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `skos-2009.pdf`) and note it in this line.
-- **To fetch**: Nothing needed: what the notes rely on was readable online.
+- **Stored here**: `skos-reference-2009.html` (+ `.md`): the W3C Recommendation. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the Recommendation is stored here.
 - **Used in**: [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md)
 
 ## What is distinctive

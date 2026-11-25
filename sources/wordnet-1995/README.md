@@ -5,8 +5,8 @@
 - **Access**: WordNet is free (open licence); article on ACM DL
 - **URL**: https://wordnet.princeton.edu/
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `wordnet-1995.pdf`) and note it in this line.
-- **To fetch**: Nothing needed: what the notes rely on was readable online.
+- **Stored here**: `miller-1995-wordnet.pdf` (+ `.md`): the CACM article, from a University of Pennsylvania course page. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the article is stored here.
 - **Used in**: [`03-naming.md`](../../03-naming.md)
 
 ## What is distinctive

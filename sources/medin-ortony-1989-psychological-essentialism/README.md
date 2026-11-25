@@ -5,8 +5,8 @@
 - **Access**: paywalled
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `medin-ortony-1989-psychological-essentialism.pdf`) and note it in this line.
-- **To fetch**: The chapter.
+- **Stored here**: `medin-ortony-1989-psychological-essentialism.pdf`: the chapter, scanned, from Medin's lab site at Northwestern. It is an image scan with no text layer, so no `.md` was extracted. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it.
+- **To fetch**: Nothing needed: the chapter is stored here.
 - **Used in**: [`02-how-minds-categorise.md`](../../02-how-minds-categorise.md)
 
 ## What is distinctive

@@ -5,8 +5,8 @@
 - **Access**: free copy online (course reading)
 - **URL**: https://www.cns.nyu.edu/~msl/courses/2223/Readings/Rosch-CogPsych1976.pdf
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text. The 1978 chapter summarises it.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `rosch-1976-basic-objects.pdf`) and note it in this line.
-- **To fetch**: Nothing needed: what the notes rely on was readable online.
+- **Stored here**: `rosch-1976-basic-objects.pdf` (+ `.md`): the article, from an NYU course reading list. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the article is stored here.
 - **Used in**: [`02-how-minds-categorise.md`](../../02-how-minds-categorise.md)
 
 ## What is distinctive

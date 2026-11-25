@@ -5,8 +5,8 @@
 - **Access**: free on hillside.net (robots block automated fetching)
 - **URL**: https://hillside.net/index.php/a-pattern-language-for-pattern-writing
 - **Read**: Not read: the site refuses automated fetches. Notes from prior knowledge.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `meszaros-doble-1997-pattern-writing.pdf`) and note it in this line.
-- **To fetch**: A copy of the page or PDF from hillside.net (free; download by hand).
+- **Stored here**: `meszaros-doble-1997-pattern-writing.pdf` (+ `.md`): the full pattern language, from patternwritingpatterns.gerardmeszaros.com (the authors' copy). Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the paper is stored here.
 - **Used in**: [`08-pattern-languages.md`](../../08-pattern-languages.md)
 
 ## What is distinctive

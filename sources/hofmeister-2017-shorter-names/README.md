@@ -5,8 +5,8 @@
 - **Access**: paywalled (author copies may exist)
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `hofmeister-2017-shorter-names.pdf`) and note it in this line.
-- **To fetch**: The paper.
+- **Stored here**: `hofmeister-2017-shorter-names.pdf` (+ `.md`): the SANER 2017 paper, author copy from Saarland University (se.cs.uni-saarland.de). An extended version appeared in *Empirical Software Engineering* 24, 2019 (doi 10.1007/s10664-018-9621-x), not stored. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the paper is stored here.
 - **Used in**: [`06-shared-language-in-software.md`](../../06-shared-language-in-software.md)
 
 ## What is distinctive

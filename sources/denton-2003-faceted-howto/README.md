@@ -5,8 +5,8 @@
 - **Access**: open (footer reportedly CC BY 4.0; not seen verbatim)
 - **URL**: https://miskatonic.org/library/facet-web-howto.html
 - **Read**: Read in part 2026-11-25: the first half or so verbatim; the rest only as a summary, so claims from it are marked.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `denton-2003-faceted-howto.pdf`) and note it in this line.
-- **To fetch**: Nothing needed: what the notes rely on was readable online.
+- **Stored here**: `denton-2003-faceted-howto.html` (+ `.md`): the page from miskatonic.org. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the page is stored here.
 - **Used in**: [`05-building-and-testing.md`](../../05-building-and-testing.md), [`01-structures.md`](../../01-structures.md)
 
 ## What is distinctive

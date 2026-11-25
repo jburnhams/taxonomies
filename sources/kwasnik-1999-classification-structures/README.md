@@ -5,8 +5,8 @@
 - **Access**: free to read in the IDEALS repository (item page found; full text not reached)
 - **URL**: https://www.ideals.illinois.edu/items/8222
 - **Read**: Not read: the item page has no direct PDF link the fetch could follow. Notes from prior knowledge and Denton's summary.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `kwasnik-1999-classification-structures.pdf`) and note it in this line.
-- **To fetch**: The PDF from the IDEALS item page (free; the container's network blocks it).
+- **Stored here**: `kwasnik-1999-classification-structures.pdf` (+ `.md`): the article from IDEALS (item 8222). Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the article is stored here.
 - **Used in**: [`01-structures.md`](../../01-structures.md)
 
 ## What is distinctive

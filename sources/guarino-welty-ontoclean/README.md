@@ -5,7 +5,7 @@
 - **Access**: free author copy
 - **URL**: https://www.loa.istc.cnr.it/wp-content/uploads/2020/03/OverviewOntoClean-compresso.pdf
 - **Read**: Read in part 2026-11-25: the first half or so verbatim; the rest only as a summary, so claims from it are marked.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `guarino-welty-ontoclean.pdf`) and note it in this line.
+- **Stored here**: `guarino-welty-2004-overview-of-ontoclean.pdf` (+ `.md`): the *Handbook on Ontologies* chapter, author copy from ISTC-CNR. The 2002 CACM article is not stored. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: Nothing needed: what the notes rely on was readable online.
 - **Used in**: [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md)
 

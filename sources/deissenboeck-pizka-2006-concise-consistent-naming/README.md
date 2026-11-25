@@ -5,8 +5,8 @@
 - **Access**: paywalled
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `deissenboeck-pizka-2006-concise-consistent-naming.pdf`) and note it in this line.
-- **To fetch**: The article.
+- **Stored here**: `deissenboeck-pizka-2006-sqj.pdf` (+ `.md`): the 2006 *Software Quality Journal* article, publisher layout, from itestra.com; `deissenboeck-pizka-2005-iwpc.pdf` (+ `.md`): the earlier IWPC 2005 conference version, from TU München. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the journal article is stored here.
 - **Used in**: [`03-naming.md`](../../03-naming.md), [`06-shared-language-in-software.md`](../../06-shared-language-in-software.md)
 
 ## What is distinctive

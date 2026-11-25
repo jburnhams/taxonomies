@@ -5,8 +5,8 @@
 - **Access**: free download from NISO
 - **URL**: https://niso.org/publications/ansiniso-z3919-2005-r2010
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text. Free PDF exists; the container's network blocks it.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `niso-z39-19-2005.pdf`) and note it in this line.
-- **To fetch**: The free PDF from NISO (no purchase needed).
+- **Stored here**: `ansi-niso-z39-19-2005-r2010.pdf` (+ `.md`): the full standard, free download from NISO. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the standard is stored here.
 - **Used in**: [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md), [`03-naming.md`](../../03-naming.md)
 
 ## What is distinctive

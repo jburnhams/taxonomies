@@ -5,8 +5,8 @@
 - **Access**: open preprints on arXiv
 - **URL**: https://arxiv.org/abs/2103.07487 ; https://arxiv.org/abs/2402.10022
 - **Read**: Read 2026-11-25 (online copy, see URL). (PDF partly; key figures read verbatim)
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `feitelson-2021-how-developers-choose-names.pdf`) and note it in this line.
-- **To fetch**: Nothing needed: what the notes rely on was readable online.
+- **Stored here**: `feitelson-2021-how-developers-choose-names.pdf` (+ `.md`): arXiv 2103.07487v1; `alpern-2024-reproducing-naming-experiments.pdf` (+ `.md`): arXiv 2402.10022v1. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: both preprints are stored here.
 - **Used in**: [`03-naming.md`](../../03-naming.md), [`06-shared-language-in-software.md`](../../06-shared-language-in-software.md)
 
 ## What is distinctive
