@@ -4,6 +4,13 @@
 [1](../01-structures.md) to [8](../08-pattern-languages.md); each rule names its source.
 Working name: none yet (pick one; see [open questions](#open-questions)).
 
+> **Superseded in detail (2026-11-25)**: the definitive versions are
+> [`spec.md`](./spec.md) (file format, naming and definition rules, governance,
+> validation tests) and [`process.md`](./process.md) (the step-by-step build), each rule
+> and step citing a stored source by path and page. The open questions below and the
+> nine source-check proposals are now in [`decisions.md`](./decisions.md). This page
+> stays as the overview and the reasoning for the overall shape.
+
 ## In one paragraph
 
 For each domain, write down **what the taxonomy is for** and the questions it must
@@ -115,6 +122,9 @@ here under `domains/<name>/`:
 
 ## The procedure
 
+*Superseded by [`process.md`](./process.md), which adds a reuse check, a held-out test
+sample, an early facet test, name tests and adoption, and lowers the kappa target to 0.6.*
+
 **Round 0: frame** (an hour)
 
 1. Write `scope.md`: purpose, readers, 5-15 competency questions, out of scope.
@@ -177,6 +187,8 @@ glossary:
 - A lint step can flag aliases used in place of preferred names in new docs.
 
 ## Open questions
+
+*Now tracked, with the source-check proposals, in [`decisions.md`](./decisions.md).*
 
 These change the goal, so they are Jonathan's to decide:
 
