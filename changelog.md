@@ -13,7 +13,7 @@ access, author or repository copies, course reading lists, public-domain and Dig
 Library of India scans); Internet Archive loans and anonymous uploads of in-copyright
 books were left alone.
 
-- `sources/*/`: 38 files added across 32 folders (PDFs or saved HTML pages, plus OCR text
+- `sources/*/`: 38 files (plus 24 figure images) added across 32 folders (PDFs or saved HTML pages, plus OCR text
   for the Wilkins 1668 and Ranganathan scans). Beside each PDF or page, a `.md` holds its
   extracted text for searching; the original file is the authority. Medin and Ortony 1989
   and Star and Griesemer 1989 are image scans with no text layer, so they have no `.md`.
@@ -25,6 +25,11 @@ books were left alone.
   copy is the SANER 2017 paper (a longer EMSE 2019 version exists); `hjorland-2017-
   classification/`'s URL pointed to the IEKO *knowledge organization* article, and the
   stored copy is the IEKO *classification* article.
+- Review fixes (PR #2, Codex): the *Colon Classification* OCR is the 6th edition (1960,
+  1969 reprint), not 1933 as the Internet Archive catalogues it; renamed to
+  `ranganathan-1960-colon-classification-6th-ed.ocr.txt`. The saved pages for Alexander
+  1965, Noy and McGuinness, and IEKO "Classification" now carry their figures in an
+  `img/` folder beside them, with references rewritten to point there.
 - `sources.md`: new **Stored** column (yes / part / blank).
 - `to-fetch.md`: rewritten. 9 items obtained and removed; 24 remain. Free copies found
   for Nickerson et al. 2013 (Augsburg postprint) and Usman et al. 2017 (ScienceDirect)

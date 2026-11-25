@@ -5,7 +5,7 @@
 - **Access**: free to read on patternlanguage.com (© Christopher Alexander)
 - **URL**: https://www.patternlanguage.com/archive/cityisnotatree.html
 - **Read**: Read 2026-11-25 (online copy, see URL).
-- **Stored here**: `alexander-1965-city-is-not-a-tree.html` (+ `.md`): the essay as published on patternlanguage.com. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **Stored here**: `alexander-1965-city-is-not-a-tree.html` (+ `.md`), with its figures in `img/`: the essay as published on patternlanguage.com. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: Nothing needed: the full essay is stored here.
 - **Used in**: [`08-pattern-languages.md`](../../08-pattern-languages.md), [`01-structures.md`](../../01-structures.md)
 

@@ -5,7 +5,7 @@
 - **Access**: free to read
 - **URL**: https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html
 - **Read**: Read in part 2026-11-25: the first half or so verbatim; the rest only as a summary, so claims from it are marked.
-- **Stored here**: `noy-mcguinness-2001-ontology-101.html` (+ `.md`): the guide from protege.stanford.edu. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **Stored here**: `noy-mcguinness-2001-ontology-101.html` (+ `.md`), with its figures in `img/`: the guide from protege.stanford.edu. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: Nothing needed: the guide is stored here.
 - **Used in**: [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md), [`05-building-and-testing.md`](../../05-building-and-testing.md)
 

@@ -5,7 +5,7 @@
 - **Access**: paywalled / out of print (scans of the 1967 edition circulate; not checked)
 - **URL**: https://isko.org/cyclo/facet_analysis (secondary account used this pass)
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: `ranganathan-1937-prolegomena.pdf` and `ranganathan-1937-prolegomena.ocr.txt`: the **1937 first edition** of *Prolegomena*, Digital Library of India scan via the Internet Archive (`in.gov.ignca.7074`), with its OCR text; `ranganathan-1933-colon-classification.ocr.txt`: OCR text of the 1933 *Colon Classification* (Internet Archive `in.ernet.dli.2015.211185`; PDF not stored, 29 MB). OCR is rough. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it.
+- **Stored here**: `ranganathan-1937-prolegomena.pdf` and `ranganathan-1937-prolegomena.ocr.txt`: the **1937 first edition** of *Prolegomena*, Digital Library of India scan via the Internet Archive (`in.gov.ignca.7074`), with its OCR text; `ranganathan-1960-colon-classification-6th-ed.ocr.txt`: OCR text of *Colon Classification*, **6th edition (1960), 1969 reprint**, not the 1933 first edition (Internet Archive `in.ernet.dli.2015.211185`, catalogued there as 1933; PDF not stored, 29 MB). OCR is rough. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it.
 - **To fetch**: The 3rd edition (1967), which reworks the 1937 text; the 1937 edition is stored.
 - **Used in**: [`01-structures.md`](../../01-structures.md), [`05-building-and-testing.md`](../../05-building-and-testing.md)
 
