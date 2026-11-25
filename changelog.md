@@ -21,6 +21,10 @@ Jonathan's choice (process step 4).
   detection, mode), three other sets, the build-sample classification and the
   bare-facet test with the changes it caused.
 - `domains/ux/changelog.md`: **new**.
+- `domains/ux/glossary.md`: **new**. 41 candidate entries for the general terms and the
+  four modes; facet values wait for the facet choice. Seven label choices are listed at
+  the top for Jonathan's veto, the main one being that `surface` means the tonal layer
+  (as in strata-react's token names) and `screen` the page being built.
 
 **Recorded Jonathan's six "before the first domain" decisions (branch `claude/project-thread-cfqw9w`)**.
 Jonathan asked to be interviewed on the open decisions; he answered one card per
