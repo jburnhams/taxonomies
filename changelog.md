@@ -4,6 +4,24 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-25
 
+**Started the ux-research domain (branch `claude/project-thread-l3cp9e`)**. Jonathan
+asked to start applying the adopted method (v1) to ux-research. Files go in
+`domains/ux/` (J2). The thirteen open decisions follow their recommendations
+(J3, J4, J9-J19), as `design/decisions.md` says; the facets are proposed and wait for
+Jonathan's choice (process step 4).
+
+- `domains/ux/scope.md`: **new**. Purpose, readers, owner, twelve competency questions,
+  out of scope, neighbours, ending conditions (T1-T6, T7 with at most 2 unsorted, T8
+  κ ≥ 0.6 by two model families, T10, T11).
+- `domains/ux/samples.md`: **new**. 48 build items, 10 bare-facet test items, 30 round-1
+  test items, 21 held for round 2, from ux-research at `c742019`.
+- `domains/ux/harvest.md`: **new**. Term counts over the repo's own 28 docs, synonym sets,
+  and seven homonyms (surface, layer, mode, signature, finding, role, source).
+- `domains/ux/facets.md`: **new, proposal**. Recommended set A (aspect, brief override,
+  detection, mode), three other sets, the build-sample classification and the
+  bare-facet test with the changes it caused.
+- `domains/ux/changelog.md`: **new**.
+
 **Recorded Jonathan's six "before the first domain" decisions (branch `claude/project-thread-cfqw9w`)**.
 Jonathan asked to be interviewed on the open decisions; he answered one card per
 decision in the project thread. Three answers differ from the recommendations, so the
