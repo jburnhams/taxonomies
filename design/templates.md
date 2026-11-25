@@ -1,5 +1,9 @@
 # Templates
 
+*Superseded by [`spec.md`](./spec.md) §§2-7 (2026-11-25), which fixes the field names,
+adds `Kind`, `Status` and `Warrant`, and replaces confidence with status. Kept for
+history.*
+
 Plain markdown, so people and agents read them without tools. Field names follow SKOS
 ([`skos-2009`](../sources/skos-2009/)) so a script could convert them to RDF later.
 

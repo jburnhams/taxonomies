@@ -4,6 +4,51 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-25
 
+**Wrote the definitive process and spec (branch `claude/project-thread-cfqw9w`, built on PR #2)**.
+Jonathan asked for a process and spec for the taxonomies to be built in other repos,
+with a citation backing every decision. Every rule and step now cites a stored file in
+`sources/` with a page or section; where the best source is not stored, it says so (⚠).
+The branch starts from PR #2's branch because the citations point at the files PR #2
+stores, so PR #2 should be merged first.
+
+- `design/spec.md`: **new**. File set and field grammar for `taxonomy/` in each domain
+  repo (`scope.md`, `facets.md`, `glossary.md`, `map.md`, `changelog.md`, `patterns/`),
+  mapped to SKOS and to the Z39.19 term record; structure rules S1-S6, naming N1-N8,
+  definitions D1-D5, contexts C1-C3, governance G1-G7, and tests T1-T14 (mechanical,
+  judgement, in use).
+- `design/process.md`: **new**. Steps 0-12, from deciding to start to maintenance, with a
+  light version and a table of what models and people each do.
+- `design/decisions.md`: **new**. Nineteen decisions for Jonathan (six needed before the
+  first domain), with recommendations. It absorbs the five open questions in
+  `design/README.md` and the nine proposals in `design/source-check-2026-11-25.md`.
+- `tools/check_citations.py`: **new**. Checks that every rule and step in the spec and
+  process cites an existing stored file (or carries ⚠), and that all links resolve.
+- `design/README.md`, `design/templates.md`: marked as superseded in detail by the new
+  files; kept for the overview and history.
+- `README.md`: links the new files.
+- `sources/wan-2024-tnt-llm/README.md`: notes on TnT-LLM's agreement results, read for the
+  spec.
+- **Changes to earlier claims and proposals**:
+  - Kappa target lowered from 0.7 to **0.6** (proposed). TnT-LLM's expert annotators
+    reached 0.553 and above 0.6 on its two taxonomies (§5.3.2, Table 2).
+  - The **depth cap** ("at most three levels") is dropped: it rested on Berlin 1992, which
+    is not stored. Noy and McGuinness's sibling and new-level rules (§§4.2, 4.4) replace it.
+  - **Confidence levels** (Alexander's asterisks, not stored) are replaced by a status
+    (`candidate`, `approved`, `deprecated`) from Z39.19 §11.1.6.
+  - TnT-LLM's authors did "a lightweight human calibration" after generation (§5.3); the
+    earlier note said only that the loop has no human in it, which stays true.
+- Review fixes (PR #3, Codex): G5 kept a deprecated term's labels on its record *and*
+  copied them to the replacement, which T2 would reject; now they stay on the deprecated
+  record, which gains a **Replaced by** field. The light version used the whole domain to
+  build and then had nothing fresh to test on, and its 20-item agreement test clashed
+  with T8's 30; it now holds back a third first, and small samples give an indicative
+  kappa only.
+- Read for the first time: Z39.19 §11 (construction, testing, maintenance, management
+  systems, pp. 90-102), which supplies most of the governance and the error checks.
+- Not reachable again: Kundisch et al. 2022 (Augsburg resets the connection, Springer
+  serves a JS page, EconStor a bot check). Nickerson 2013, Cohen 1960, Berlin 1992 and
+  *A Pattern Language* remain unstored, so the points resting on them are marked ⚠.
+
 **Checked the notes and topic docs against the stored sources (branch `claude/project-thread-sn5nqu`, PR #2)**.
 Jonathan asked to use the downloaded sources to inform the research. Each of the 32
 stored sources' notes was checked against its text (two scans read by eye), its

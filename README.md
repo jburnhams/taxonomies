@@ -44,6 +44,13 @@ method, with an optional pattern layer. Templates in
 [`design/first-look.md`](./design/first-look.md); what the stored sources suggest
 changing in [`design/source-check-2026-11-25.md`](./design/source-check-2026-11-25.md).
 
+**The method, in full**: [`design/process.md`](./design/process.md) (step by step) and
+[`design/spec.md`](./design/spec.md) (what the files contain, the rules, governance and
+tests), with every rule citing a stored source by path and page.
+[`design/decisions.md`](./design/decisions.md) lists the choices only Jonathan can make.
+`python3 tools/check_citations.py` checks that each rule and step cites a stored file
+that exists.
+
 ## Sources
 
 - [`sources/`](./sources): one folder per source with citation, access, what was read,
