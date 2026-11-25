@@ -9,9 +9,9 @@ answers. Each item gets one answer per question. With four questions you can fin
 example, "every slop tell in the copy that a linter can catch on Operate screens" without
 a special list for it.
 
-**Status**: proposal, 2026-11-25. Choosing the facets is Jonathan's (process step 4); the
-recommendation below is set A. Values have no glossary entries yet; they are written once
-the set is chosen (step 6).
+**Status**: set A chosen by Jonathan, 2026-11-25 (process step 4). Every value has a
+glossary entry in [`glossary.md`](./glossary.md), status `candidate`. Sets B to D are kept
+below as the record of what was weighed.
 
 ## How these were found
 
@@ -35,7 +35,7 @@ the set is chosen (step 6).
   aspect ("by layer"), detection (src/render/judge) and severity (P0-P2); §4 names the
   slop/quality split as "a different axis"; `SKILL.md` §1 has the modes.
 
-## Set A (recommended): aspect, brief override, detection, mode
+## Set A (chosen): aspect, brief override, detection, mode
 
 ### Aspect (`aspect`)
 

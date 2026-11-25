@@ -5,6 +5,16 @@ named on each line (G1); Jonathan can reverse any of them.
 
 ## 2026-11-25
 
+- **add** set A, chosen by Jonathan: facets `aspect`, `brief-override`, `detection`, `mode`
+  are no longer a proposal (process step 4).
+- **add** 12 candidate terms for the facet values (`colour`, `typography`, `layout`,
+  `component`, `imagery`, `motion`, `copy`, `interaction`, `code`, `render`, `judgement`,
+  `any-mode`), and **Facet** fields on `slop`, `defect`, `persuade` and `operate`.
+  Scope notes and near misses were written from build items only; three draft phrases that
+  echoed round-1 or held items (a staged delay, a modal as the first thought, the Lucide
+  icon names, sound) were reworded before the raters saw the files. Approved by: Claude.
+- **add** `rounds/round-1/`: items, two rater prompts with values shuffled differently,
+  and how to run and score the second rater.
 - **move** sample items `r06`, `r07`, `r09`, `r26` (round-1 test) and `h16` (held) into the
   build sample, and `h01`, `h12`, `h14`, `h15` into the round-1 test: the draft facets and
   glossary had drawn on the first five, so they were no longer fresh (process step 2;

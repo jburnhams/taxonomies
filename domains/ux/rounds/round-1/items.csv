@@ -1,0 +1,31 @@
+id,item,from
+r01,KPI figures at 36–48px bold in the brand colour,"tells.md, Generated dashboards"
+r02,"Gradient area chart, smoothed spline, a dot on every point; a hue per bar","tells.md, Generated dashboards"
+r03,"Zebra table, uppercase tracked headers, checkbox, avatar, chip and kebab on every row","tells.md, Generated dashboards"
+r04,Left-aligned proportional digits,"tells.md, Generated dashboards"
+r05,"The accent on every button, tab and link","tells.md, Generated dashboards"
+r08,Sound with no off switch,"tells.md, Playful slop"
+r10,"Perpetual loops (pulse, float, shimmer, typewriter) on components at rest","tells.md, Playful slop"
+r11,"Pastel blobs, rounded-everything and ""bold colors"" because the brief said ""fun""","tells.md, Playful slop"
+r12,"Streaks, badges and points on a tool nobody asked to gamify","tells.md, Playful slop"
+r13,Fake waiting jokes; a delay staged before a flourish,"tells.md, Playful slop"
+r14,"Actions are `<button>`, navigation is `<a>`/`<Link>`; no click handlers on `div`/`span`. `lint: div-onclick`",audit.md
+r15,Icon-only buttons have an accessible name. `lint: icon-button-label`,audit.md
+r16,Sticky headers and overlays never cover the focused element; dialogs trap and return focus; `overscroll-behavior: contain` in sheets and drawers.,audit.md
+r17,No `transition: all`; animate transform/opacity/colour only. `lint: transition-all`,audit.md
+r18,"Labels on every form control; errors inline, specific, with the fix; first error focused on submit.",audit.md
+r19,Buttons name their action; the same verb carries through the flow.,audit.md
+r20,No console errors; the page renders (an empty `#root` passes every code check and is still a failure).,audit.md
+r21,Loads at the top (`scrollY === 0`); no horizontal overflow at 375px and 1280px (`scrollWidth <= innerWidth`).,audit.md
+r22,"Dark mode designed, not inverted: `color-scheme: dark`, tokens only, no manual `dark:` colour overrides. `lint: dark-override`",audit.md
+r23,"Browser surfaces themed: text selection, caret, scrollbars, underline offset, focus ring colour.",audit.md
+r24,Dark mode nobody asked for; dark ground with muted grey body text,ux-slop-taxonomy.md §3a
+r25,Glass and backdrop blur as decoration,ux-slop-taxonomy.md §3a
+r27,Monotonous spacing; heading closer to the block above than its own content,ux-slop-taxonomy.md §3c
+r28,Fake window chrome (macOS traffic lights) as the hero,ux-slop-taxonomy.md §3d
+r29,Modal as the first thought,ux-slop-taxonomy.md §3d
+r30,"""X theater"" framing",ux-slop-taxonomy.md §3f
+h01,Cyan or neon accents on a dark ground; several neon accents with no dominant one,ux-slop-taxonomy.md §3a
+h12,Every button styled as primary,ux-slop-taxonomy.md §3d
+h14,Emoji as icons or bullets; Unicode glyphs as an icon system,ux-slop-taxonomy.md §3d
+h15,"The worn Lucide set: `Sparkles` for AI, `Zap`, `Rocket`, `Shield`, `ArrowRight`",ux-slop-taxonomy.md §3d

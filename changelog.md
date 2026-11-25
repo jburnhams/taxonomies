@@ -21,6 +21,15 @@ Jonathan's choice (process step 4).
   detection, mode), three other sets, the build-sample classification and the
   bare-facet test with the changes it caused.
 - `domains/ux/changelog.md`: **new**.
+- Jonathan chose facet set A on 2026-11-25; `facets.md` now says so, and `glossary.md`
+  has 12 more candidates for the facet values (53 in all).
+- `domains/ux/rounds/round-1/`: **new**. The 30-item agreement-test kit: `items.csv`, two
+  prompts (`prompt-claude.md`, `prompt-second.md`, values in different orders) and a
+  README on running the second model family, which Jonathan is setting up on omarchy.
+- `tools/rater_kit.py`: **new**. Builds the items file and rater prompts from a domain's
+  samples, facets and glossary.
+- `tools/kappa.py`: **new**. Cohen's kappa per facet between two raters' CSVs, with the list
+  of disagreements.
 - `domains/ux/glossary.md`: **new**. 41 candidate entries for the general terms and the
   four modes; facet values wait for the facet choice. Seven label choices are listed at
   the top for Jonathan's veto, the main one being that `surface` means the tonal layer

@@ -7,9 +7,9 @@ words people use for it, a definition, an example and a near miss.
 If you reach for one of its aliases, it points you here. Every entry is a `candidate`
 until the agreement test passes (spec G3).
 
-**Status**: round 1 draft, 2026-11-25. General terms only; the facet values are added
-once Jonathan has chosen the facets (process step 4). Mode values are here already
-because the modes are domain terms whichever facets are chosen.
+**Status**: round 1 draft, 2026-11-25. General terms, and the values of the four facets
+Jonathan chose on 2026-11-25 (set A in [`facets.md`](./facets.md)). Read and Experience
+are modes but not yet facet values.
 
 Field rules: [`design/spec.md` §4](../../design/spec.md#4-glossarymd). Counts:
 [`harvest.md`](./harvest.md). Examples link to ux-research at commit `c742019`.
@@ -38,8 +38,25 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 7. **Definition form for mass nouns and names.** D1 and T4 expect "A <label> is a ...".
    Mass nouns and mode names cannot take "a", so those entries read "<Label> is a ..."
    ("Slop is a property ...", "Operate is a mode ..."). The T4 check should accept both.
+8. **`component` as an aspect value** keeps the catalogue's word, although strata-react
+   also calls its React parts components. The two senses agree (the aspect is about
+   which parts are used and how they are styled), so no second entry; T9 will show
+   whether readers take it that way.
 
 ## Entries
+
+### any mode (`any-mode`)
+
+- **Definition**: Any mode is a mode scope that covers every mode of screen.
+- **Scope**: The value for items the repo applies everywhere. Excludes items it applies only to Persuade or only to Operate screens.
+- **Aliases**: all modes, every mode
+- **Example**: [audit.md](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/audit.md)
+- **Near miss**: An item the repo relaxes on one mode but still counts there (the eyebrow, one allowed on Operate): still any mode.
+- **Kind**: property
+- **Facet**: `mode`
+- **Status**: candidate
+- **Warrant**: no single word in the repo; the default for rows with no mode named
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
 
 ### brief (`brief`)
 
@@ -64,6 +81,32 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Warrant**: "character" 125, "personality" 17, "playful" 40, "delight" 30
 - **History**: 2026-11-25 added (round 1 harvest)
 
+### code (`code`)
+
+- **Definition**: Code is a detection method that finds an item by reading the source.
+- **Scope**: Includes rules in `slop-lint` and anything a reader of the source could spot without running it. Take it whenever reading the code is enough, even if the brief may still allow the item.
+- **Aliases**: src, lint, source check
+- **Example**: [ux-design/README.md §3](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/README.md#3-what-the-linter-covers)
+- **Near miss**: A contrast check on token pairs done by `palette.mjs`: it reads values, not the page, so it is code; a contrast check on the rendered overrides is render.
+- **Kind**: property
+- **Facet**: `detection`
+- **Status**: candidate
+- **Warrant**: catalogue "src" (and `tells.md` rule ids); "src" was mostly paths, so not counted
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+
+### colour (`colour`)
+
+- **Definition**: Colour is an aspect of an interface that covers the hues, lightness and contrast of its fills, text, borders, shadows and glows.
+- **Scope**: Includes gradients, including gradient text, coloured glows and halos, palette choice, and contrast between text and its surface. Excludes the shape of a shadow or a radius (use `component`).
+- **Aliases**: color, palette, colour and surface
+- **Example**: [ux-slop-taxonomy.md §3a](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3a-colour-and-surface)
+- **Near miss**: Gradient text: it is about colour even though the target is a headline, because removing it means changing the fill, not the type.
+- **Kind**: thing
+- **Facet**: `aspect`
+- **Status**: candidate
+- **Warrant**: catalogue §3a "Colour and surface"; "colour" in the repo's own docs throughout
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+
 ### competitor test (`competitor-test`)
 
 - **Definition**: A competitor test is a check that puts the nearest competitor into a reference sentence to see whether it still works.
@@ -75,6 +118,32 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Status**: candidate
 - **Warrant**: "competitor test" 8
 - **History**: 2026-11-25 added (round 1 harvest)
+
+### component (`component`)
+
+- **Definition**: A component is an aspect of an interface that covers which UI parts are used and how each is shaped and configured.
+- **Scope**: Includes cards, badges, chips, buttons, modals, charts as parts, and their radius, borders and shadows. Excludes the icon or picture inside a part (use `imagery`).
+- **Aliases**: components, chrome, UI part
+- **Example**: [ux-slop-taxonomy.md §3d](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3d-components-and-chrome)
+- **Near miss**: An icon in a tinted square chip: the chip is the tell, so it is component; the choice of which icons to draw is imagery.
+- **Kind**: thing
+- **Facet**: `aspect`
+- **Status**: candidate
+- **Warrant**: catalogue §3d "Components and chrome"; "component(s)" 86
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+
+### copy (`copy`)
+
+- **Definition**: Copy is an aspect of an interface that covers the words and numbers it shows.
+- **Scope**: Includes headlines, labels, button text, error messages, invented proof and number formats.
+- **Aliases**: text, wording, microcopy
+- **Example**: [ux-slop-taxonomy.md §3f](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3f-copy)
+- **Near miss**: A stat strip of round numbers: the numbers are invented copy, though they sit in a layout block.
+- **Kind**: thing
+- **Facet**: `aspect`
+- **Status**: candidate
+- **Warrant**: catalogue §3f "Copy"; "copy" in `tells.md`
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
 
 ### dark mode (`dark-mode`)
 
@@ -96,6 +165,7 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: A font declared but never loaded: listed in the catalogue as a tell, but it is a defect, because no brief asks for a font that does not load.
 - **Kind**: thing
 - **Related**: `quality-floor`
+- **Facet**: `brief-override`
 - **Status**: candidate
 - **Warrant**: "defect(s)" 4; `audit.md`: "These are defects, not taste"; `slop-lint` category `quality`
 - **History**: 2026-11-25 added (round 1 harvest)
@@ -164,6 +234,58 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Warrant**: "ground" 49, "background" 33, "page ground" 6
 - **History**: 2026-11-25 added (round 1 harvest)
 
+### imagery (`imagery`)
+
+- **Definition**: Imagery is an aspect of an interface that covers its icons, illustrations, images, emoji and mascots.
+- **Scope**: Includes icon sets, illustration kits, image alt text and dimensions.
+- **Aliases**: icons, illustration, images
+- **Example**: [tells.md, Playful slop](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md)
+- **Near miss**: A decorative sparkline: a chart drawn as decoration is a `component`, not an image.
+- **Kind**: thing
+- **Facet**: `aspect`
+- **Status**: candidate
+- **Warrant**: no catalogue section; added after the bare-facet test (`t02`)
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+
+### interaction (`interaction`)
+
+- **Definition**: Interaction is an aspect of an interface that covers how it responds to a person's input.
+- **Scope**: Includes keyboard access, focus, hit targets, form behaviour, semantic controls and what happens after an action.
+- **Aliases**: behaviour, input
+- **Example**: [audit.md, Operable](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/audit.md)
+- **Near miss**: A hover lift on every card: it moves, so it is `motion`; it does not change what the input does.
+- **Kind**: thing
+- **Facet**: `aspect`
+- **Status**: candidate
+- **Warrant**: `audit.md` "Operable" section; no catalogue section
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+
+### judgement (`judgement`)
+
+- **Definition**: Judgement is a detection method that needs the brief or the subject to find an item.
+- **Scope**: Includes items that no rule can decide without knowing what the product is or what was asked: a stock section order, a direction borrowed from the category.
+- **Aliases**: judge, judgment
+- **Example**: [tells.md](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md)
+- **Near miss**: A tell the brief may allow: whether the brief allows it is the `brief-override` facet; detection only asks how it is found.
+- **Kind**: property
+- **Facet**: `detection`
+- **Status**: candidate
+- **Warrant**: "judge" 40, "judgement" 5
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+
+### layout (`layout`)
+
+- **Definition**: Layout is an aspect of an interface that covers the arrangement, alignment, spacing and order of its blocks and sections.
+- **Scope**: Includes section order, centring, widths, grids, spacing rhythm, reflow and overflow.
+- **Aliases**: page structure, structure, spacing
+- **Example**: [ux-slop-taxonomy.md §3c](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3c-layout-and-page-structure)
+- **Near miss**: A row of identical cards: layout when the item names the arrangement (three in a row, a stock order), `component` when it names how the card is styled (stripe, shadow, nesting).
+- **Kind**: thing
+- **Facet**: `aspect`
+- **Status**: candidate
+- **Warrant**: catalogue §3c "Layout and page structure"
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+
 ### mode (`mode`)
 
 - **Definition**: A mode is a property of a screen that names what the person on it is there to do.
@@ -213,6 +335,19 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Warrant**: "mood" 38, "vibe" 9
 - **History**: 2026-11-25 added (round 1 harvest)
 
+### motion (`motion`)
+
+- **Definition**: Motion is an aspect of an interface that covers animation, transitions, easing and anything that moves on its own.
+- **Scope**: Includes entrance animations, hover lifts, loops, count-ups, celebrations and reduced-motion handling.
+- **Aliases**: animation
+- **Example**: [ux-slop-taxonomy.md §3e](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3e-motion)
+- **Near miss**: A slow response to a click: the wait is `interaction` (what happens when the person acts), not motion.
+- **Kind**: thing
+- **Facet**: `aspect`
+- **Status**: candidate
+- **Warrant**: catalogue §3e "Motion"
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+
 ### one finding (`one-finding`)
 
 - **Definition**: The one finding is a fact in the current data that most needs the attention of a person on an Operate screen.
@@ -246,6 +381,7 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: A dashboard on a landing page as decoration (a fake dashboard hero): that screen is Persuade.
 - **Kind**: property
 - **Broader**: `mode`
+- **Facet**: `mode`
 - **Status**: candidate
 - **Warrant**: "Operate" 97
 - **History**: 2026-11-25 added (round 1 harvest)
@@ -272,6 +408,7 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: A tool's own settings page, which is Operate even though the product also has Persuade pages.
 - **Kind**: property
 - **Broader**: `mode`
+- **Facet**: `mode`
 - **Status**: candidate
 - **Warrant**: "Persuade" 33
 - **History**: 2026-11-25 added (round 1 harvest)
@@ -314,6 +451,19 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Status**: candidate
 - **Warrant**: "reference sentence(s)" 12
 - **History**: 2026-11-25 added (round 1 harvest)
+
+### render (`render`)
+
+- **Definition**: Render is a detection method that needs the page running to find an item.
+- **Scope**: Includes pixels, computed styles, layout measurements and a keyboard or screen-reader pass.
+- **Aliases**: browser check, running page
+- **Example**: [audit.md, Robust](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/audit.md)
+- **Near miss**: A font declared but never loaded: the declaration is in the code, but whether it loaded needs the render.
+- **Kind**: property
+- **Facet**: `detection`
+- **Status**: candidate
+- **Warrant**: "render" 64
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
 
 ### screen (`screen`)
 
@@ -358,6 +508,7 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Example**: [ux-slop-taxonomy.md opening](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md)
 - **Near miss**: Generic but deliberate design, such as a house style a team chose and wrote down: it is chosen, so it is not slop.
 - **Kind**: property
+- **Facet**: `brief-override`
 - **Status**: candidate
 - **Warrant**: "slop" 194, "AI slop" 8, "generic" 23, "median" 25 (own docs)
 - **History**: 2026-11-25 added (round 1 harvest)
@@ -519,6 +670,19 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Status**: candidate
 - **Warrant**: "treatment" 9 (from Claude `artifact-design`)
 - **History**: 2026-11-25 added (round 1 harvest)
+
+### typography (`typography`)
+
+- **Definition**: Typography is an aspect of an interface that covers its typefaces, sizes, weights, tracking, line length and line height.
+- **Scope**: Includes font choice and loading, the type scale, casing of headings and display headlines.
+- **Aliases**: type, fonts
+- **Example**: [ux-slop-taxonomy.md §3b](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3b-typography)
+- **Near miss**: The words of a headline: what it says is `copy`; how it is set is typography.
+- **Kind**: thing
+- **Facet**: `aspect`
+- **Status**: candidate
+- **Warrant**: catalogue §3b "Typography"; the catalogue writes "type", which N4 bars as a claim word
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
 
 ### utilitarian (`utilitarian`)
 
