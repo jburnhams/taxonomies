@@ -47,7 +47,11 @@ specialists, places get worse.
   removing **misfits**: list the requirements, link the ones that interact, and
   decompose the graph into nearly independent clusters, each solved by a "diagram".
   That is a classification method (clustering requirements), and the diagrams became
-  patterns.
+  patterns. In the 1971 preface (quoted in full in Gabriel's 2023 commentary, stored
+  with it) Alexander disowned the method: the diagrams can be made "piecemeal, one at a
+  time ... out of your experience", readers had "made a cult of following this method",
+  and he rejected "design methods as a subject of study". A caution for our own build
+  method: keep it light and inside real work.
 - "A City is Not a Tree" (1965,
   [`alexander-1965`](./sources/alexander-1965-city-is-not-a-tree/)) argues that real
   structures are **semilattices** (overlapping sets), not trees, and that designers
@@ -69,10 +73,31 @@ vocabulary (Factory, Observer, Adapter). Two things to note:
   [`salingaros-2000`](./sources/salingaros-2000-structure-of-pattern-languages/):
   a set of patterns is a language only if it is connected).
 
-Pattern writing has its own patterns: mandatory elements (name, problem, context,
-forces, solution) and naming advice such as an evocative noun-phrase name
-([`meszaros-doble-1997`](./sources/meszaros-doble-1997-pattern-writing/), not read
-this pass). UI design has pattern languages too
+## Alexander's own verdict: patterns are not enough
+
+Gabriel's essay "The Failure of Pattern Languages" (pp. 57-60, read 2026-11-25) reports,
+through Grabow's 1983 interviews, that Alexander tried the language and judged it had
+failed at its own goal. Buildings designed with it, such as the Modesto Clinic, "basically
+looked like any other buildings of our time", while their designers believed them
+radically different. The books "do quite a good job of identifying the difference but
+actually do not accomplish anything". Alexander turned to the **process** of building
+(money, zoning, construction, who decides): "By controlling the process, you control
+the result". Gabriel draws the software parallel that quality follows the process that
+produces it.
+
+For us this is a warning about the pattern layer and the vocabulary alike: naming the
+target does not hit it. What changes the result is the build-and-review loop that uses
+the names.
+
+Pattern writing has its own patterns
+([`meszaros-doble-1997`](./sources/meszaros-doble-1997-pattern-writing/), read
+2026-11-25): five mandatory elements (name, context, problem, forces, solution), optional
+ones when they help (indications, resulting context, related patterns, examples,
+rationale, aliases), and three naming patterns. **Evocative Pattern Name** says test a
+name by having people who have not read the pattern guess what it is about from the
+name alone; **Noun Phrase Name** says "Name the pattern after the result it creates",
+because problem names are not unique and verb phrases are awkward to say;
+**Meaningful Metaphor Name** uses a familiar metaphor where one fits. UI design has pattern languages too
 ([`tidwell-designing-interfaces`](./sources/tidwell-designing-interfaces/)), which is
 the bridge to the UX research repo.
 
@@ -100,6 +125,7 @@ How they fit together:
    ubiquitous language). The point is shared use, not correctness.
 5. **Confidence marks** (Alexander's asterisks) are worth copying into the vocabulary:
    mark how settled each term is.
+6. **Neither works without a process** that uses it: Alexander's own verdict above.
 
 ## For Jonathan's domains
 

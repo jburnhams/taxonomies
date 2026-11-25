@@ -5,7 +5,7 @@
 - **Access**: open
 - **URL**: https://isko.org/cyclo/facet_analysis (index: https://www.isko.org/cyclo/index.html)
 - **Read**: Read in part 2026-11-25: the first half or so verbatim; the rest only as a summary, so claims from it are marked.
-- **Stored here**: `ieko-facet-analysis.html` (+ `.md`): Hjørland, "Facet analysis"; `ieko-knowledge-organization.html` (+ `.md`): Hjørland, "Knowledge organization". Both as they stood on isko.org on 2026-11-25. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **Stored here**: `ieko-facet-analysis.html` (+ `.md`): Hjørland, "Facet analysis"; `ieko-knowledge-organization.html` (+ `.md`): Hjørland, "Knowledge organization". Both as they stood on isko.org on 2026-11-25. Downloaded 2026-11-25; quoted lines checked against it the same day. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: Nothing needed: the articles used are stored here.
 - **Used in**: [`01-structures.md`](../../01-structures.md), [`07-limits-and-politics.md`](../../07-limits-and-politics.md)
 

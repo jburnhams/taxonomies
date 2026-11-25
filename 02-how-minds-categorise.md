@@ -50,9 +50,14 @@ many directions: it has the most listed attributes per unit of generality, its m
 share motor movements (you sit on any chair the same way) and shapes, it is recognised
 fastest, children learn it first, and adults name pictures with it.
 
-The basic level moves with expertise: the 1976 study found students' basic level for
-trees sat above the folk "generic" (tree, not oak), and experts name at finer levels.
-So the right level depends on **who the names are for**.
+The basic level depends on who is naming. The 1976 study found that for its students the
+basic level for plants and animals sat one level *above* the anthropologists' folk
+"generic" (tree, not oak; Rosch et al. 1976, pp. 392-393). Whether expertise moves it
+*down* the study did not test ("the degree of expertise of subjects did not vary
+systematically"); it offers one former airplane mechanic as an illustration and says
+the effect "requires systematic study" (checked 2026-11-25). Later studies are usually
+cited for it (Tanaka and Taylor 1991; from prior knowledge, not stored). Either way the
+right level depends on **who the names are for**.
 
 **Prototypes** are "the clearest cases of" membership, measured by people's
 goodness-of-example ratings. Rosch warned against over-reading this: the idea "has
@@ -94,6 +99,14 @@ People act as if a category has a hidden essence that makes things what they are
 ([`medin-ortony-1989`](./sources/medin-ortony-1989-psychological-essentialism/)).
 That is why a rename can feel like an attack on what something *is*, and why people
 hunt for the one "true" taxonomy. Naming arguments get hot for this reason.
+
+Medin and Ortony's own wording (checked 2026-11-25) adds two useful points. People need
+not know what the essence is: their concepts hold an "essence placeholder", sometimes
+filled only with the belief "that there are people, experts, who really know what makes
+the thing the thing that it is" (pp. 184-185). And the claim is about belief, not
+metaphysics: cognition is "affected by the fact that people believe in it". So a
+glossary that names an **owner** for each term, someone whose definition settles it,
+gives that deference somewhere to land.
 
 ## What this means for our design
 

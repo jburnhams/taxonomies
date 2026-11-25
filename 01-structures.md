@@ -23,10 +23,10 @@ and Barbara Kwasnik's analysis of what each demands
 | Form | What it is | Demands | Breaks when |
 |---|---|---|---|
 | **List** | flat set of names | agreement on the names | there are too many to scan |
-| **Tree / hierarchy** | each thing in one place; is-a or part-of down the levels | one principle of division at each level, and enough theory to apply it | a thing belongs in two places; the principle changes |
+| **Tree / hierarchy** | each thing in one place; is-a (a hierarchy, with inheritance) or part-of, rank, stage (a tree, without) down the levels | one principle of division at each level, and "relatively complete knowledge of the domain in advance" | a thing belongs in two places; two sets of criteria compete (lions in the wild vs in zoos); a "miscellaneous" box appears |
 | **Polyhierarchy** | a thing can have two parents | rules for when that is allowed | it turns into a tangle |
-| **Paradigm / matrix** | two facets crossed in a grid | two independent dimensions | you need a third; but its **empty cells** point at things not yet named |
-| **Facets** | several independent dimensions, each with its own short list | the facets to be truly independent | facets leak into each other; nobody can see the whole |
+| **Paradigm / matrix** | two facets crossed in a grid | two well-chosen dimensions | you need a third; it shows one lens only; but its **empty cells** ask whether a concept is missing or the axes are wrong |
+| **Facets** | several independent dimensions, each with its own short list | the right facets, chosen knowing the domain and the users | a facet is missing (hard to add once the scheme is in use); facets leak into each other; nobody can see the whole |
 | **Network / system map** | things linked by typed relations | the relation types | it is not a classification any more, just a graph |
 
 Kwasnik's point: each form encodes a different amount of **theory**. A strict
@@ -34,13 +34,24 @@ hierarchy says "we understand this domain well enough to divide it cleanly at ev
 level". Facets say less: "here are some independent questions you can ask of any
 item". When a domain is young (agent design is), facets are the honest choice.
 
+Two details from her text (checked 2026-11-25) sharpen this. Her test for a tree built
+too early: "The sure sign of a 'premature' hierarchical structure is the need for a
+'miscellaneous' or 'other' category" (p. 29), which is a usable check on any taxonomy
+we draft. And facets move the risk rather than remove it: choosing them is hard
+without knowing the domain and its users, and "it is not a simple matter to add
+fundamental facets once the general classification is established" (p. 41). So the
+facet list is the part to test hardest before anything is built on it.
+
 ## Facets in detail
 
 Ranganathan ([`ranganathan-prolegomena`](./sources/ranganathan-prolegomena/)) split a
 subject into independent facets, each with its own list of values (foci), and built
 compound subjects by combining values in a fixed **citation order**. His five
 fundamental categories, **PMEST** (Personality, Matter, Energy, Space, Time), were
-meant to apply to any subject. The British Classification Research Group made it
+meant to apply to any subject. (Checked 2026-11-25: PMEST is rule 05501 of *Colon
+Classification*, 6th ed. 1960, listed "in the increasing sequence of concreteness" from
+Time to Personality; it is not yet in the 1937 *Prolegomena*, which has no "facets"
+either. He admits there is no exact test for recognising Energy.) The British Classification Research Group made it
 practical; Vickery's list of 13 categories (substance, organ, constituent, structure,
 shape, property, object of action, action, operation, process, agent, space, time) is
 a good checklist for finding the facets of a new domain

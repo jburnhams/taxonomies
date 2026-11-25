@@ -5,7 +5,7 @@
 - **Access**: open
 - **URL**: https://martinfowler.com/bliki/TwoHardThings.html
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: `fowler-two-hard-things.html` (+ `.md`): Martin Fowler's bliki entry. Downloaded 2026-11-25; the notes below were written before this copy was stored and have not yet been re-checked against it. `.md` beside a file is its text, extracted for searching.
+- **Stored here**: `fowler-two-hard-things.html` (+ `.md`): Martin Fowler's bliki entry. Downloaded 2026-11-25; quoted lines checked against it the same day. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: Nothing needed: the page is stored here.
 - **Used in**: [`eli5.md`](../../eli5.md)
 

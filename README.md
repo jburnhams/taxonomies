@@ -41,7 +41,8 @@ Each opens with a one-line answer and a plain explanation, then goes deep.
 facets plus a SKOS-style glossary per bounded context, built by an iterative tested
 method, with an optional pattern layer. Templates in
 [`design/templates.md`](./design/templates.md); a first look at the two repos in
-[`design/first-look.md`](./design/first-look.md).
+[`design/first-look.md`](./design/first-look.md); what the stored sources suggest
+changing in [`design/source-check-2026-11-25.md`](./design/source-check-2026-11-25.md).
 
 ## Sources
 

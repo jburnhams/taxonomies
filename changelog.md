@@ -4,6 +4,62 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-25
 
+**Checked the notes and topic docs against the stored sources (branch `claude/project-thread-sn5nqu`, PR #2)**.
+Jonathan asked to use the downloaded sources to inform the research. Each of the 32
+stored sources' notes was checked against its text (two scans read by eye), its
+**Read** line and the `sources.md` Read column updated, and the topic docs corrected or
+extended where the text said more or something different. Design changes are written
+as proposals, not applied.
+
+- `sources/*/README.md` (32 folders): notes rewritten from the text with page or section
+  references; quotes that were from memory are now checked. Corrections to earlier
+  claims:
+  - Rosch et al. 1976 did **not** test expertise ("the degree of expertise of subjects
+    did not vary systematically"). "Experts name at a finer level" was stated as a
+    finding; it is a hypothesis in the paper, with one anecdote.
+  - Kwasnik's paradigm is strictly two dimensions, not "two or three".
+  - Z39.19 allows singular count nouns where a field's usage is singular (§6.5.1.1), so
+    there is no real clash with OBO's singular rule.
+  - Hofmeister et al.: the figure is 19%, and abbreviations were no better than single
+    letters. Lawrie et al. (2007 version) found abbreviations often as good as words and
+    easier to remember; the earlier note gave only half of that.
+  - TnT-LLM has no human review in its loop; the review step is an LLM prompt.
+  - Medin and Ortony: the painted-raccoon example is Keil's, not theirs.
+  - Gruber's design criteria (clarity, coherence, etc.) are from his 1995 paper, not 1993.
+  - PMEST is in *Colon Classification* (6th ed., rule 05501) and absent from the 1937
+    *Prolegomena*; the three planes are in neither stored edition.
+  - Feitelson et al.'s 334 vs 234 subjects: both right (all experiments vs main survey).
+  - Denton's page shows no licence; "reportedly CC BY 4.0" is unconfirmed.
+- New findings worked into the topic docs:
+  - `01-structures.md`: Kwasnik's "premature hierarchy" test (a "miscellaneous" box),
+    and her warning that facets are hard to add later.
+  - `02-how-minds-categorise.md`: the basic-level correction above, and Medin and
+    Ortony's "essence placeholder" that defers to experts.
+  - `03-naming.md`: Z39.19 abbreviation and plural rules, the Hofmeister and Lawrie
+    figures, Meszaros and Doble's guess-the-name test, and Ranganathan's 1937 Canons of
+    Terminology (Currency, Reticence, Enumeration, Context).
+  - `04-vocabularies-and-ontologies.md`: OntoClean's other two pitfalls (constitution
+    and "can be" taken for is-a). Its own worked example treats *Agent* as a role. Also
+    the OBO Foundry's orthogonality and term composition, and the fact that
+    `exactMatch` is transitive.
+  - `05-building-and-testing.md`: what TnT-LLM and Clio actually do, and constant
+    comparison from grounded theory.
+  - `07-limits-and-politics.md`: Star and Griesemer's definition and four types of
+    boundary object, and Hjørland's four approaches.
+  - `08-pattern-languages.md`: Meszaros and Doble's mandatory elements and naming
+    patterns. Alexander's 1971 rejection of his own method. Gabriel's "The Failure of
+    Pattern Languages": Alexander judged the language did not change what got built,
+    and turned to the process.
+- `design/source-check-2026-11-25.md`: **new**. It lists what this pass confirms in the
+  design and nine proposed additions, none adopted. Examples: test the facet list early;
+  a Reticence rule for names; abbreviations as aliases; an owner per glossary; define
+  "agent" first; prefer `closeMatch`; keep the procedure light. It is linked from
+  `design/README.md` and `README.md`.
+- `sources/*/`: the IEKO pages' `.md` text was re-extracted, because the first
+  extraction ran each table-laid page onto a few lines.
+- `sources.md`: the Read column was updated for the 32 checked sources. 28 rows remain
+  "not read", all for sources with no stored copy.
+
 **Downloaded copies of the sources (branch `claude/project-thread-sn5nqu`)**.
 The coordinator asked for full copies of every source from the first pass, now that the
 project has a cloud environment that can reach publisher and preprint hosts; Jonathan had
