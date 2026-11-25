@@ -4,6 +4,24 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-25
 
+**Recorded Jonathan's six "before the first domain" decisions (branch `claude/project-thread-cfqw9w`)**.
+Jonathan asked to be interviewed on the open decisions; he answered one card per
+decision in the project thread. Three answers differ from the recommendations, so the
+spec and process were edited to match.
+
+- `design/decisions.md`: new "Decided 2026-11-25" table replacing "Needed before the
+  first domain". J1 adopt as version 1; J2 files live **centrally** in this repo under
+  `domains/<name>/` (recommended: in each repo); J5 κ ≥ 0.6; J6 raters are **two model
+  families** (recommended: Jonathan plus a model); J7 build 30-60, test 30 fresh; J8
+  **agents approve, Jonathan can veto** (recommended: Jonathan approves everything).
+- `design/spec.md`: status now version 1; §1 paths moved from `taxonomy/` in each repo to
+  `domains/<name>/` here, with the trade-off against Evans's code-base boundary written
+  down; T8 rater rule; G1 and G2 rewritten for agent approval with a veto, noting that
+  this departs from Z39.19 §11.3.1.1; `scope.md` Owner field.
+- `design/process.md`: status; steps 1, 3, 6, 8, 10, 11, 12, the light version and both
+  tables updated for J2, J6 and J8. Step 4 (choosing facets) still names Jonathan, since
+  J8 asked about names and changes, not structure.
+
 **Wrote the definitive process and spec (branch `claude/project-thread-cfqw9w`, built on PR #2)**.
 Jonathan asked for a process and spec for the taxonomies to be built in other repos,
 with a citation backing every decision. Every rule and step now cites a stored file in

@@ -1,11 +1,13 @@
 # Decisions for Jonathan
 
 **In one line**: nineteen choices that the process and spec depend on and that only
-Jonathan can make; six are needed before the first domain is built, the rest can wait.
+Jonathan can make; the six needed before the first domain were decided on 2026-11-25,
+and thirteen can wait.
 
-**Status**: open, 2026-11-25. [`process.md`](./process.md) and [`spec.md`](./spec.md)
-are written as if every recommendation below were accepted, so they read as a whole.
-Rejecting one means editing the rule or step named in its row. These include the five
+**Status**: six decided (J1, J2, J5-J8), thirteen open, 2026-11-25.
+[`process.md`](./process.md) and [`spec.md`](./spec.md) follow the decisions, and follow
+the recommendation for each open row so they read as a whole. Rejecting an open
+recommendation means editing the rule or step named in its row. These include the five
 open questions in [`README.md`](./README.md#open-questions) and the nine proposals in
 [`source-check-2026-11-25.md`](./source-check-2026-11-25.md); this page supersedes both
 lists.
@@ -13,16 +15,16 @@ lists.
 Each row gives the recommendation, the stored source it rests on (paths are in
 [`spec.md`](./spec.md#sources-cited)), and where it lands.
 
-## Needed before the first domain
+## Decided 2026-11-25 (interview in the project thread)
 
-| # | Decision | Recommended | Rests on | Lands in |
+| # | Decision | Jonathan's answer | Was recommended | What changed |
 |---|---|---|---|---|
-| J1 | Adopt this process and spec as the method | Yes, as version 1, to be revised after the first domain | the whole of `spec.md` and `process.md` | everything |
-| J2 | Where a domain's taxonomy files live | In each domain repo, `taxonomy/` (was open question 1) | Evans p. 2: a bounded context's boundary includes "code bases"; agents read files in their own repo | spec §1 |
-| J5 | Agreement target | κ ≥ 0.6 on every facet (was 0.7, open question 3) | Wan et al. §5.3.2 and Table 2: expert annotators reached 0.553 and >0.6; their scale calls >0.6 substantial. ⚠ Cohen 1960 and Landis and Koch not stored | spec T8, process step 8 |
-| J6 | Who the two raters are | Jonathan plus a model, or two different model families; not two sessions of one model | Z39.19 §11.2.2 (several indexers); Wan et al. §5.3.2 (GPT-4 as a reliable single-label rater). Same-model blind spots: reasoning, no stored source | spec T8 |
-| J7 | Sample sizes | Build: 30-60 items or the whole domain; test: at least 30 fresh items per round; light version under ~30 items | Denton §2.3 step 1 gives the principle ("enough to cover all foreseen possibilities"); the numbers have **no stored source** (Tullis and Wood 2004 is in `to-fetch.md`) | process steps 2, 8 |
-| J8 | Owner of each glossary | Jonathan, for every context, until he names someone else (proposal 5) | Z39.19 §11.3 ("identify the individual responsible"); OBO Foundry Table 2 (custodians); Medin and Ortony pp. 184-185 | spec G1 |
+| J1 | Adopt this process and spec as the method | **Adopt as version 1**, revise after the first domain | same | spec and process status now "version 1, adopted" |
+| J2 | Where a domain's taxonomy files live | **Centrally, in this repo**, `domains/<name>/`; each domain repo links to it | in each repo's `taxonomy/` (Evans p. 2) | spec §1 and process step 11. Trade-off recorded in spec §1: the vocabulary sits one link from the work, so T12 (alias drift) is the check that agents use it |
+| J5 | Agreement target | **κ ≥ 0.6 on every facet** | same (Wan et al. §5.3.2, Table 2) | none; already in spec T8 |
+| J6 | Who the two raters are | **Two model families** (for example Claude and another vendor's model) | Jonathan plus a model | spec T8 and process steps 8 and the light version. With no human rater, T9 (fresh reader) and Jonathan's veto are the human checks |
+| J7 | Sample sizes | **Build from 30-60 items, test on 30 fresh items per round**; light version under ~30 items | same; still no stored source (Tullis and Wood 2004 in `to-fetch.md`) | none |
+| J8 | Who has the final say | **Agents approve, Jonathan can veto**: an agent approves changes that pass T1-T6 with a logged reason; Jonathan is the named owner, reviews the changelog, can reverse anything and settles disputes | Jonathan approves every change | spec G1, G2 and the `scope.md` Owner field; process steps 1, 3, 6, 10, 12 and the tables. Departs from Z39.19 §11.3.1.1 (editor reviews each term); the veto and logged reasons keep it checkable |
 
 ## Can wait until it comes up
 
