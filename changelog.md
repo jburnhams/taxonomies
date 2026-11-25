@@ -4,6 +4,37 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-25
 
+**Started the ux-research domain (branch `claude/project-thread-l3cp9e`)**. Jonathan
+asked to start applying the adopted method (v1) to ux-research. Files go in
+`domains/ux/` (J2). The thirteen open decisions follow their recommendations
+(J3, J4, J9-J19), as `design/decisions.md` says; the facets are proposed and wait for
+Jonathan's choice (process step 4).
+
+- `domains/ux/scope.md`: **new**. Purpose, readers, owner, twelve competency questions,
+  out of scope, neighbours, ending conditions (T1-T6, T7 with at most 2 unsorted, T8
+  κ ≥ 0.6 by two model families, T10, T11).
+- `domains/ux/samples.md`: **new**. 53 build items, 10 bare-facet test items, 30 round-1
+  test items, 16 held for round 2, from ux-research at `c742019` (five items moved into the build sample after review, because the draft had drawn on them).
+- `domains/ux/harvest.md`: **new**. Term counts over the repo's own 28 docs, synonym sets,
+  and seven homonyms (surface, layer, mode, signature, finding, role, source).
+- `domains/ux/facets.md`: **new, proposal**. Recommended set A (aspect, brief override,
+  detection, mode), three other sets, the build-sample classification and the
+  bare-facet test with the changes it caused.
+- `domains/ux/changelog.md`: **new**.
+- Jonathan chose facet set A on 2026-11-25; `facets.md` now says so, and `glossary.md`
+  has 12 more candidates for the facet values (53 in all).
+- `domains/ux/rounds/round-1/`: **new**. The 30-item agreement-test kit: `items.csv`, two
+  prompts (`prompt-claude.md`, `prompt-second.md`, values in different orders) and a
+  README on running the second model family, which Jonathan is setting up on omarchy.
+- `tools/rater_kit.py`: **new**. Builds the items file and rater prompts from a domain's
+  samples, facets and glossary.
+- `tools/kappa.py`: **new**. Cohen's kappa per facet between two raters' CSVs, with the list
+  of disagreements.
+- `domains/ux/glossary.md`: **new**. 41 candidate entries for the general terms and the
+  four modes; facet values wait for the facet choice. Seven label choices are listed at
+  the top for Jonathan's veto, the main one being that `surface` means the tonal layer
+  (as in strata-react's token names) and `screen` the page being built.
+
 **Recorded Jonathan's six "before the first domain" decisions (branch `claude/project-thread-cfqw9w`)**.
 Jonathan asked to be interviewed on the open decisions; he answered one card per
 decision in the project thread. Three answers differ from the recommendations, so the
