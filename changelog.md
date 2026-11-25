@@ -13,8 +13,8 @@ Jonathan's choice (process step 4).
 - `domains/ux/scope.md`: **new**. Purpose, readers, owner, twelve competency questions,
   out of scope, neighbours, ending conditions (T1-T6, T7 with at most 2 unsorted, T8
   κ ≥ 0.6 by two model families, T10, T11).
-- `domains/ux/samples.md`: **new**. 48 build items, 10 bare-facet test items, 30 round-1
-  test items, 21 held for round 2, from ux-research at `c742019`.
+- `domains/ux/samples.md`: **new**. 53 build items, 10 bare-facet test items, 30 round-1
+  test items, 16 held for round 2, from ux-research at `c742019` (five items moved into the build sample after review, because the draft had drawn on them).
 - `domains/ux/harvest.md`: **new**. Term counts over the repo's own 28 docs, synonym sets,
   and seven homonyms (surface, layer, mode, signature, finding, role, source).
 - `domains/ux/facets.md`: **new, proposal**. Recommended set A (aspect, brief override,

@@ -112,7 +112,8 @@ Severity and wave stay as fields on the catalogue and registry rows; they are no
 
 ## Step 4: build sample under set A
 
-48 items from [`samples.md`](./samples.md). Counts: aspect colour 10, typography 8,
+The first 48 items of [`samples.md`](./samples.md) (the five moved in later are
+classified in round 1). Counts: aspect colour 10, typography 8,
 component 8, layout 7, copy 7, motion 5, interaction 3, imagery 0; brief override slop 38,
 defect 10; detection code 35, render 9, judgement 4; mode any-mode 33, persuade 14,
 operate 1. 22 of 48 items had a hesitation (noted below), mostly on aspect.
@@ -204,7 +205,8 @@ Changes made because of it (logged in [`changelog.md`](./changelog.md)):
 1. **`render` now means "the running page"**, not "pixels": a keyboard pass (`t04`) needs
    the page running but no screenshot.
 2. **`imagery` kept** as an aspect value: the first image check (`t02`) had nowhere else
-   to go, and round 1 has illustration and mascot items.
+   to go, and the build sample has illustration and mascot items (`r07`, `r09`, moved there
+   from the round-1 test for that reason).
 3. **The "least evidence" rule** for detection, written above, after `t03` and `t05`.
 4. **Bundled items** (`t01`, `t02`, `t03`, and `b47`) hold two or three checks with
    different answers. Items stay as the repo writes them, so raters take the first check

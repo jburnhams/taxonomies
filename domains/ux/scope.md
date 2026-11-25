@@ -82,5 +82,5 @@ Adopt (process step 10) when all of these hold on the same round:
 
 ## Samples
 
-[`samples.md`](./samples.md): build sample (48), bare-facet test (10), round-1 test (30),
-held for round 2 (21). Term harvest: [`harvest.md`](./harvest.md).
+[`samples.md`](./samples.md): build sample (53), bare-facet test (10), round-1 test (30),
+held for round 2 (16). Term harvest: [`harvest.md`](./harvest.md).

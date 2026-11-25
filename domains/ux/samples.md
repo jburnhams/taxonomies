@@ -16,11 +16,11 @@ sample does not use, plus the catalogue rows it left out. An item that bundles s
 checks is kept whole, as written in the repo (see the bare-facet test in
 [`facets.md`](./facets.md) for why that matters).
 
-Sizes follow J7: build 30-60, test 30 fresh per round.
+Sizes follow J7: build 30-60, test 30 fresh per round. IDs never change when an item moves between sets.
 
-## Build sample (48)
+## Build sample (53)
 
-Used in steps 3-4.
+Used in steps 3-4. The last five rows were moved in from the round-1 test and held sets on 2026-11-25, because the first draft of the facets and glossary drew on them (they keep their IDs).
 
 | ID | Item | From |
 |---|---|---|
@@ -72,6 +72,11 @@ Used in steps 3-4.
 | `b46` | Dates and numbers via `Intl.*`; units with non-breaking spaces. | [audit.md](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/audit.md) |
 | `b47` | Long, empty and hostile content handled: `min-w-0` on flex children, `truncate`/`line-clamp`, empty and error states. | [audit.md](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/audit.md) |
 | `b48` | Fonts actually load (check the computed font in the render, not the CSS). | [audit.md](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/audit.md) |
+| `r06` | An illustration and "No data yet" in an empty chart | [tells.md, Generated dashboards](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md) |
+| `r07` | Stock illustration kits: unDraw, Humaaans, Open Peeps, Storyset, Blush, generic Lottie files | [tells.md, Playful slop](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md) |
+| `r09` | A mascot that talks on every screen | [tells.md, Playful slop](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md) |
+| `r26` | Font declared in CSS but never loaded | [ux-slop-taxonomy.md §3b](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
+| `h16` | Content left at `opacity: 0` waiting for an observer that never fires | [ux-slop-taxonomy.md §3e](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 
 ## Bare-facet test (10)
 
@@ -92,7 +97,7 @@ Used once, in step 5, before any glossary entry.
 
 ## Round-1 test (30)
 
-For step 7 and the first agreement test (step 8). Not read while building.
+For step 7 and the first agreement test (step 8). Not read while building. Four rows (`h01`, `h12`, `h14`, `h15`) replace the four moved to the build sample.
 
 | ID | Item | From |
 |---|---|---|
@@ -101,10 +106,7 @@ For step 7 and the first agreement test (step 8). Not read while building.
 | `r03` | Zebra table, uppercase tracked headers, checkbox, avatar, chip and kebab on every row | [tells.md, Generated dashboards](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md) |
 | `r04` | Left-aligned proportional digits | [tells.md, Generated dashboards](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md) |
 | `r05` | The accent on every button, tab and link | [tells.md, Generated dashboards](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md) |
-| `r06` | An illustration and "No data yet" in an empty chart | [tells.md, Generated dashboards](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md) |
-| `r07` | Stock illustration kits: unDraw, Humaaans, Open Peeps, Storyset, Blush, generic Lottie files | [tells.md, Playful slop](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md) |
 | `r08` | Sound with no off switch | [tells.md, Playful slop](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md) |
-| `r09` | A mascot that talks on every screen | [tells.md, Playful slop](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md) |
 | `r10` | Perpetual loops (pulse, float, shimmer, typewriter) on components at rest | [tells.md, Playful slop](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md) |
 | `r11` | Pastel blobs, rounded-everything and "bold colors" because the brief said "fun" | [tells.md, Playful slop](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md) |
 | `r12` | Streaks, badges and points on a tool nobody asked to gamify | [tells.md, Playful slop](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md) |
@@ -121,19 +123,21 @@ For step 7 and the first agreement test (step 8). Not read while building.
 | `r23` | Browser surfaces themed: text selection, caret, scrollbars, underline offset, focus ring colour. | [audit.md](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/audit.md) |
 | `r24` | Dark mode nobody asked for; dark ground with muted grey body text | [ux-slop-taxonomy.md §3a](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 | `r25` | Glass and backdrop blur as decoration | [ux-slop-taxonomy.md §3a](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
-| `r26` | Font declared in CSS but never loaded | [ux-slop-taxonomy.md §3b](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 | `r27` | Monotonous spacing; heading closer to the block above than its own content | [ux-slop-taxonomy.md §3c](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 | `r28` | Fake window chrome (macOS traffic lights) as the hero | [ux-slop-taxonomy.md §3d](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 | `r29` | Modal as the first thought | [ux-slop-taxonomy.md §3d](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 | `r30` | "X theater" framing | [ux-slop-taxonomy.md §3f](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
+| `h01` | Cyan or neon accents on a dark ground; several neon accents with no dominant one | [ux-slop-taxonomy.md §3a](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
+| `h12` | Every button styled as primary | [ux-slop-taxonomy.md §3d](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
+| `h14` | Emoji as icons or bullets; Unicode glyphs as an icon system | [ux-slop-taxonomy.md §3d](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
+| `h15` | The worn Lucide set: `Sparkles` for AI, `Zap`, `Rocket`, `Shield`, `ArrowRight` | [ux-slop-taxonomy.md §3d](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 
-## Held for round 2 (21)
+## Held for round 2 (16)
 
-Catalogue rows not used yet; round 2 adds 9 more from `ux-product-ui.md` and `ux-character.md`.
+Catalogue rows not used yet; round 2 adds 14 more from `ux-product-ui.md` and `ux-character.md`.
 
 | ID | Item | From |
 |---|---|---|
-| `h01` | Cyan or neon accents on a dark ground; several neon accents with no dominant one | [ux-slop-taxonomy.md §3a](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 | `h02` | Timid, evenly distributed palette; primary and accent within 20° of hue | [ux-slop-taxonomy.md §3a](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 | `h03` | Grey text on a coloured surface; muted text below AA | [ux-slop-taxonomy.md §3a](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 | `h04` | Grid-line or stripe backgrounds with no canvas under them | [ux-slop-taxonomy.md §3a](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
@@ -144,11 +148,7 @@ Catalogue rows not used yet; round 2 adds 9 more from `ux-product-ui.md` and `ux
 | `h09` | Bento grid as the default composition | [ux-slop-taxonomy.md §3c](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 | `h10` | FAQ accordion of 3+ generic questions near the bottom, often restating the page | [ux-slop-taxonomy.md §3c](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 | `h11` | Everything visible at once: no progressive disclosure on app screens | [ux-slop-taxonomy.md §3c](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
-| `h12` | Every button styled as primary | [ux-slop-taxonomy.md §3d](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 | `h13` | Stock effect components (Spotlight, Beams, Meteors, Number Ticker, Marquee) | [ux-slop-taxonomy.md §3d](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
-| `h14` | Emoji as icons or bullets; Unicode glyphs as an icon system | [ux-slop-taxonomy.md §3d](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
-| `h15` | The worn Lucide set: `Sparkles` for AI, `Zap`, `Rocket`, `Shield`, `ArrowRight` | [ux-slop-taxonomy.md §3d](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
-| `h16` | Content left at `opacity: 0` waiting for an observer that never fires | [ux-slop-taxonomy.md §3e](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 | `h17` | Motion that ignores `prefers-reduced-motion` | [ux-slop-taxonomy.md §3e](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 | `h18` | Em-dash saturation (8 or more at about 1 per 500 characters) | [ux-slop-taxonomy.md §3f](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
 | `h19` | Performative labels ("Field notes", "Quietly trusted by", "On our desks") | [ux-slop-taxonomy.md §3f](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3-the-catalogue-by-layer) |
