@@ -183,12 +183,15 @@ These change the goal, so they are Jonathan's to decide:
 1. **Where glossaries live**: in each domain repo (closest to use; recommended) or
    centrally here.
 2. **Singular or plural** term names: OBO says singular, Z39.19 says plural for countable
-   things. Recommended: singular, because the names double as identifiers in code and
-   prompts.
+   things but allows singular where the field's usage is singular (§6.5.1.1, checked
+   2026-11-25), so singular breaks neither. Recommended: singular, because the names
+   double as identifiers in code and prompts.
 3. **Kappa target**: 0.7 proposed. Higher is stricter and slower.
 4. **A name for the system itself.**
 5. **Machine-readable copy**: markdown only (recommended for now), or also SKOS/YAML
    generated from it.
 
 Templates: [`templates.md`](./templates.md). What applying it to the two existing repos
-would start from: [`first-look.md`](./first-look.md).
+would start from: [`first-look.md`](./first-look.md). What reading the stored sources
+suggests changing (nine proposals, none adopted):
+[`source-check-2026-11-25.md`](./source-check-2026-11-25.md).

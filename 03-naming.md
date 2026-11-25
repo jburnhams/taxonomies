@@ -69,10 +69,18 @@ standard ([`niso-z39-19`](./sources/niso-z39-19-2005/)), and the identifier stud
 - **One concept, one name; one name, one concept** (within a context).
 - **Nouns or noun phrases** for things; a noun for a process too ("compaction", not
   "compact"). Singular (OBO) for concepts; Z39.19 prefers plurals for countable
-  things in thesauri. We pick one and stick to it.
+  things in thesauri, but allows singular where the field's own usage is singular
+  (§6.5.1.1: body parts in medicine, objects in a museum catalogue). We pick one and
+  stick to it.
 - **Explicit and concise**; no articles.
-- **No abbreviations** unless the short form is the one everyone uses. Full words are
-  read faster and more accurately.
+- **No abbreviations** unless the short form is the one everyone uses (Z39.19 §6.6.3:
+  "so well established that the full form ... is rarely used"; then alias the full
+  form). Evidence, checked 2026-11-25: in Hofmeister et al. 2017, 72 professional
+  developers found semantic defects 19% faster with full words than with letters or
+  abbreviations, and abbreviations were no better than letters; Lawrie et al. found full
+  words best for comprehension but often not significantly better than abbreviations,
+  which were easier to remember. So full words as the preferred label, abbreviations
+  as aliases.
 - **No "and" / "or"** in a name: it is two concepts.
 - **No negations** ("non-interactive agent"): name what it is.
 - **No catch-alls** ("other", "misc", "unknown"): they hide the places the scheme fails.
@@ -105,6 +113,17 @@ prototype that people actually think with. Keep both.
 - **Check ambiguity** against plain English (WordNet,
   [`wordnet-1995`](./sources/wordnet-1995/)): a word with many senses ("agent",
   "model", "context") needs a tight scope note.
-- **Evocative, short, sayable** for pattern names ([8](./08-pattern-languages.md)).
+- **Evocative, short, sayable** for pattern names, named after the result, and tested by
+  asking someone who has not read the definition to guess its meaning from the name
+  ([8](./08-pattern-languages.md)).
+- **Ranganathan's Canons of Terminology** (*Prolegomena*, 1937, pp. 62-72; read
+  2026-11-25 from the stored scan), which anticipate most of the above:
+  **Currency**: use the term current "among those who specialise in" the domain, and
+  have "some arrangement by which the terms can be changed over to current ones";
+  **Reticence**: terms "should not be critical", only "purely descriptive and not
+  opinionative" (no "legacy", "hacky", "minor"); **Enumeration** and **Context**: a
+  term's meaning is fixed by what is listed under it and by where it sits, because
+  "one and the same term denotes several different entities". The last two are why a
+  term entry needs its broader term and its scope note, not just a label.
 
 Next: [4. Vocabularies and ontologies](./04-vocabularies-and-ontologies.md).

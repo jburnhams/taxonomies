@@ -5,8 +5,8 @@
 - **Access**: open
 - **URL**: https://martinfowler.com/bliki/TwoHardThings.html
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `karlton-two-hard-things.pdf`) and note it in this line.
-- **To fetch**: Nothing needed: what the notes rely on was readable online.
+- **Stored here**: `fowler-two-hard-things.html` (+ `.md`): Martin Fowler's bliki entry. Downloaded 2026-11-25; quoted lines checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the page is stored here.
 - **Used in**: [`eli5.md`](../../eli5.md)
 
 ## What is distinctive

@@ -5,8 +5,8 @@
 - **Access**: open
 - **URL**: https://isko.org/cyclo/facet_analysis (index: https://www.isko.org/cyclo/index.html)
 - **Read**: Read in part 2026-11-25: the first half or so verbatim; the rest only as a summary, so claims from it are marked.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `isko-encyclopedia.pdf`) and note it in this line.
-- **To fetch**: Nothing needed: what the notes rely on was readable online.
+- **Stored here**: `ieko-facet-analysis.html` (+ `.md`): Hjørland, "Facet analysis"; `ieko-knowledge-organization.html` (+ `.md`): Hjørland, "Knowledge organization". Both as they stood on isko.org on 2026-11-25. Downloaded 2026-11-25; quoted lines checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the articles used are stored here.
 - **Used in**: [`01-structures.md`](../../01-structures.md), [`07-limits-and-politics.md`](../../07-limits-and-politics.md)
 
 ## What is distinctive

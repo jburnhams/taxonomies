@@ -5,8 +5,8 @@
 - **Access**: open preprints on arXiv
 - **URL**: https://arxiv.org/abs/2103.07487 ; https://arxiv.org/abs/2402.10022
 - **Read**: Read 2026-11-25 (online copy, see URL). (PDF partly; key figures read verbatim)
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `feitelson-2021-how-developers-choose-names.pdf`) and note it in this line.
-- **To fetch**: Nothing needed: what the notes rely on was readable online.
+- **Stored here**: `feitelson-2021-how-developers-choose-names.pdf` (+ `.md`): arXiv 2103.07487v1; `alpern-2024-reproducing-naming-experiments.pdf` (+ `.md`): arXiv 2402.10022v1. Downloaded 2026-11-25; figures checked against both PDFs the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: both preprints are stored here.
 - **Used in**: [`03-naming.md`](../../03-naming.md), [`06-shared-language-in-software.md`](../../06-shared-language-in-software.md)
 
 ## What is distinctive
@@ -19,5 +19,5 @@ Furnas's finding, repeated for code: developers almost never pick the same name,
 - Names chosen by others were generally understood, but this "may hide different assumptions" that lead to bugs.
 - **Three-step model of naming**: (1) choose the concepts to include, (2) choose a word for each concept, (3) build the name from the words. Developers taught the model produced names judged better "by a ratio of two-to-one".
 - The 2024 replication confirms the low agreement and that using the model helps (asking for longer names does not). It classifies name concepts as universal (everyone includes it), alternative, or optional.
-- Unresolved: the paper's abstract says 334 subjects, the body 234 respondents.
+- Subject count, resolved against the stored PDF 2026-11-25: 334 is the total across the paper's sequence of experiments; 234 is the number who answered at least one question in the main naming survey. Both figures are right.
 - For us: agreement on names has to be manufactured, not expected. The three steps are a good template for naming a term: decide the concepts first, then the words.

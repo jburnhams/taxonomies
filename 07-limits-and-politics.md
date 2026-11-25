@@ -38,7 +38,12 @@ quotes from prior knowledge, to check):
 - **Boundary objects** (from Star and Griesemer,
   [`star-griesemer-1989`](./sources/star-griesemer-1989-boundary-objects/)): things
   "plastic enough to adapt to local needs ... yet robust enough to maintain a common
-  identity across sites". A shared vocabulary across projects should be one.
+  identity across sites", "weakly structured in common use" and "strongly structured
+  in individual-site use" (p. 393, checked 2026-11-25). Their four types are
+  repositories, ideal types, coincident boundaries and standardised forms
+  (pp. 410-411). A shared vocabulary across projects should be one: a term shared
+  between repos works like an *ideal type* (vague on purpose), and our term template
+  is a *standardised form*.
 
 ## Pragmatism: judge by purpose
 
@@ -49,6 +54,16 @@ analysis itself as a priori, with a "lack of empirical basis" and a "speculative
 ordering of knowledge". Noy and McGuinness agree from the engineering side: "There is
 no one correct way to model a domain." Hence the first step of our method is writing
 down the purpose.
+
+His "Classification" article (IEKO version, read 2026-11-25) sets out four approaches:
+rationalism (logical division, as in Ranganathan), empiricism (observed similarity),
+historicism (classes that follow development and theory) and his own, pragmatism and
+critical theory. On that view a classification "can never be neutral, but will always
+tend to support certain goals and interests at the expense of other interests", yet it
+is not arbitrary: quoting Nobes and Stadler, "some classifications can be more
+reasonable or more useful than others". So the purpose statement should also say
+**whose** interests the vocabulary serves (here, Jonathan's and the agents' that read
+his repos).
 
 ## Taxonomies harden
 

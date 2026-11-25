@@ -87,11 +87,19 @@ bottom-up and top-down rounds, explicit stopping rules, then test with users.**
   conversations and has a model name the clusters
   ([`tamkin-2024-clio`](./sources/tamkin-2024-clio/)). Good for the
   empirical-to-conceptual round on a pile of files. Clusters show what looks alike, not
-  what the groups mean; the names still go through [3](./03-naming.md).
+  what the groups mean; the names still go through [3](./03-naming.md). Details checked
+  2026-11-25: TnT-LLM's loop is generate, then per batch *evaluate, list issues,
+  modify*, then a final review, all by the model and all carrying a **use-case
+  instruction** (the purpose and the label format), with no person in the loop; Clio
+  extracts "facets" per item, clusters one facet with embeddings and k-means, and
+  recovered known topics with 94% accuracy on synthetic data. Neither shows the
+  categories are the right ones for a purpose, so a person still decides.
 - **Workshops**: EventStorming harvests a domain's words fast and shows where one word
   means two things ([`brandolini-event-storming`](./sources/brandolini-event-storming/)).
 - **Grounded theory**: build categories from cases and keep revising (Star,
-  [`star-1998`](./sources/star-1998-grounded-classification/)).
+  [`star-1998`](./sources/star-1998-grounded-classification/)). Its core move is
+  **constant comparison**: compare unlike cases to find the dimensions they share
+  ("why is a priest like a prostitute?"), which is a concrete way to find facets.
 
 ## Testing agreement
 

@@ -18,7 +18,8 @@ vehicle, so it has wheels").
 NISO Z39.19 ([`niso-z39-19`](./sources/niso-z39-19-2005/)) names four rungs:
 
 1. **List**: agreed terms.
-2. **Synonym ring**: groups of terms treated as the same for search.
+2. **Synonym ring**: groups of terms treated as the same for search (used to expand
+   searches, not to label things: it has no preferred term).
 3. **Taxonomy**: terms in a hierarchy.
 4. **Thesaurus**: terms with three relationships:
    - **Equivalence**: USE / UF ("use for"). The preferred term and its aliases.
@@ -46,7 +47,7 @@ data model. It is the right level of formality for us:
 | `broader` / `narrower` | direct parent / child | **not** transitive; two parents allowed |
 | `related` | associated, not hierarchical | cannot also be an ancestor |
 | `ConceptScheme` | one vocabulary | |
-| `exactMatch`, `closeMatch`, `broadMatch`, `narrowMatch`, `relatedMatch` | links to concepts in **other** schemes | |
+| `exactMatch`, `closeMatch`, `broadMatch`, `narrowMatch`, `relatedMatch` | links to concepts in **other** schemes | `exactMatch` is transitive, so chains of it merge concepts across schemes; prefer `closeMatch` unless interchangeable |
 
 The split between `Concept` and its labels is Ranganathan's idea plane vs verbal plane
 again ([1](./01-structures.md)): the concept has a stable identity, the labels can
@@ -75,11 +76,26 @@ Useful ideas from ontology practice, even without the machinery:
   parent of a rigid one: Student cannot subsume Person. For us: **roles cannot be
   parents of kinds**. "Reviewer" is a role an agent plays; "agent" is a kind. A
   hierarchy that puts "agent" under "reviewer" is wrong.
+
+  The chapter's worked example (read 2026-11-25) adds two more common mistakes:
+  **constitution taken for is-a** (a living being is made of matter, not a kind of
+  matter) and **"can be" taken for "is a"**. Its own example of the second is *Agent*
+  placed above Animal and Social Entity: "The modeler intends to mean, not that all
+  animals are agents, but that animals can be agents." In OntoClean "agent" is a role
+  (anything that acts). Our domain uses "agent" for a kind of program, so the glossary
+  has to say which sense it means, or it will inherit exactly this confusion.
 - **Things vs happenings**: Basic Formal Ontology's top split into *continuants*
   (objects, qualities, roles) and *occurrents* (processes, events)
   ([`arp-smith-spear-2015`](./sources/arp-smith-spear-2015-bfo/)). A quick first check
   on any term: is it a thing, a property, a role, or something that happens? Mixing
-  them in one facet is the most common error.
+  them in one facet is a common error (our judgement, not a measured finding). The OBO
+  Foundry lays out its whole family of ontologies as a grid of continuant/occurrent by
+  scale (Smith et al. 2007, Table 1; read 2026-11-25).
+- **Orthogonality and composition** (OBO Foundry): each ontology has a "clearly bounded"
+  scope and "no term should appear in more than one ontology"; compound terms are
+  composed from terms in several ontologies ("increased concentration" + "blood" +
+  "glucose") rather than listed one by one. That is one home per term, and facets
+  combined at use time.
 - **Definitions in genus-differentia form** and **naming conventions**
   ([3](./03-naming.md)).
 
