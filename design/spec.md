@@ -114,6 +114,7 @@ it names.
 | **Facet** | if a value | `inScheme` | the facet it is a value of |
 | **Matches** | if any | mapping properties | see `map.md` (C3) |
 | **Status** | yes | — | `candidate`, `approved`, or `deprecated` (G3) |
+| **Replaced by** | if deprecated | `changeNote` | the ID(s) that replace a deprecated term (G5) |
 | **Warrant** | yes | — | where the term is used: files, counts, or "Jonathan's words" (N2) |
 | **History** | yes | `historyNote` | dated lines: added, renamed, split, ... with the reason (G4) |
 
@@ -337,10 +338,12 @@ the same **Status** field as terms; Alexander's asterisk ratings are ⚠ not sto
   alias ([Z39.19 §11.4.5][z39]). Split: an overused term is replaced by narrower,
   more specific terms ([Z39.19 §11.3.1.3][z39]). ⚠ The operation set in Kundisch et
   al. 2022 (read online in the first pass) is not stored; check it when fetched.
-- **G5. Deprecate, never delete.** A deprecated term keeps its record, ID and history,
-  says what replaces it, and its labels become hidden labels of the replacement
-  ([Z39.19 §11.3.2.1a, p. 97][z39]). Delete only a term added in error and never used
-  ([same][z39]).
+- **G5. Deprecate, never delete.** A deprecated term keeps its record, ID, labels and
+  history, and its **Replaced by** field names the term(s) to use instead; looking up an
+  old label finds the deprecated record, which points on. The labels stay on the
+  deprecated record only and are not copied to the replacement, so T2 still holds
+  ([Z39.19 §11.3.2.1a, p. 97][z39]: retained, marked, with "a cross-reference to the new
+  term"). Delete only a term added in error and never used ([same][z39]).
 - **G6. A rename is a model change.** Update the glossary, the aliases and every use in
   the repo in the same commit: "a change in the language is a change to the model"
   ([Evans pp. 3-4][ev]).
@@ -368,7 +371,8 @@ cross-reference rules [§11.4.3, pp. 100-101][z39]) plus SKOS's integrity condit
   ([SKOS S46][skos]); aliases and deprecated terms have no relations of their own
   ([Z39.19 §11.4.3][z39], note).
 - **T2. Labels.** No label (preferred, alias or hidden) used twice in the context, after
-  folding case and hyphens ([SKOS S13-S14][skos]; potential duplicates,
+  folding case and hyphens, counting deprecated records too (G5 keeps an old label on
+  its deprecated record only); every deprecated record has a **Replaced by** that exists ([SKOS S13-S14][skos]; potential duplicates,
   [Z39.19 §11.4.6][z39]).
 - **T3. Name form.** Flags N4 and N7 breaches: "and"/"or", "non-"/"not", catch-alls,
   claim words ("type", "class"), plural endings, dates or status words, evaluative words
@@ -410,8 +414,10 @@ cross-reference rules [§11.4.3, pp. 100-101][z39]) plus SKOS's integrity condit
     ([Wan et al. §5.2.2][wan]).
   - At least one rater is Jonathan or a different model family (◆ J6). Two sessions of
     the same model may share blind spots; this is reasoning, not a stored finding.
-  - Sample: at least 30 items per test, with every value used at least once
-    (◆ J7; prior knowledge: kappa on few items has a wide margin of error).
+  - Sample: at least 30 held-out items per test, with every value used at least once
+    (◆ J7; prior knowledge: kappa on few items has a wide margin of error). A small
+    domain without 30 spare items uses the light version's rule ([process.md](./process.md#light-version-small-domains)):
+    all its held-out items, with the result recorded as **indicative**, not passed.
 - **T9. Guess the name.** Show someone who has not seen the glossary a preferred label
   and ask what it means. A wrong guess means the name or the concept needs work
   ([Meszaros and Doble, "Evocative Pattern Name"][md]). Look up candidate labels in

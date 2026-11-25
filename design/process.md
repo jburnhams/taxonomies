@@ -262,9 +262,18 @@ commitment to a common ontology is a guarantee of consistency, but not completen
 
 ## Light version (small domains)
 
-For a domain of under about 30 items (◆ J7): step 0, step 1, steps 2 to 6 in one sitting
-on the whole domain, one round of step 7, step 8 with Jonathan and one model on 20 items,
-then adopt. Alexander's warning applies most here: keep it piecemeal and inside real work
+For a domain of under about 30 items (◆ J7):
+
+1. Steps 0 and 1 as usual.
+2. **Before building, hold back a third of the items** (at least 10; if the domain has
+   fewer than about 15 items, skip the held-out set and the kappa test altogether and
+   rely on T7, T10 and T11). The same reason as step 2: a taxonomy tested on its own
+   build items looks better than it is ([Wan et al. §5.2.2][wan]).
+3. Steps 3 to 6 in one sitting on the remaining items.
+4. One round of step 7 and the agreement test of step 8 on the held-back items, with
+   Jonathan and one model as raters. With fewer than 30 items, kappa is recorded as
+   **indicative**: it guides fixes but is not an ending condition (spec T8).
+5. Adopt when T1 to T7, T10 and T11 pass. Alexander's warning applies most here: keep it piecemeal and inside real work
 ([Gabriel 2023, App. E.2][gab23]).
 
 ## Where models fit

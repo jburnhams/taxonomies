@@ -37,6 +37,12 @@ stores, so PR #2 should be merged first.
     (`candidate`, `approved`, `deprecated`) from Z39.19 §11.1.6.
   - TnT-LLM's authors did "a lightweight human calibration" after generation (§5.3); the
     earlier note said only that the loop has no human in it, which stays true.
+- Review fixes (PR #3, Codex): G5 kept a deprecated term's labels on its record *and*
+  copied them to the replacement, which T2 would reject; now they stay on the deprecated
+  record, which gains a **Replaced by** field. The light version used the whole domain to
+  build and then had nothing fresh to test on, and its 20-item agreement test clashed
+  with T8's 30; it now holds back a third first, and small samples give an indicative
+  kappa only.
 - Read for the first time: Z39.19 §11 (construction, testing, maintenance, management
   systems, pp. 90-102), which supplies most of the governance and the error checks.
 - Not reachable again: Kundisch et al. 2022 (Augsburg resets the connection, Springer
