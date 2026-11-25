@@ -4,7 +4,8 @@
 questions, name and define each concept, then test on fresh items until two raters agree;
 after that, change it only through named, logged operations.
 
-**Status**: proposal, 2026-11-25. Not adopted. Choices marked ◆ are Jonathan's and are
+**Status**: version 1, adopted 2026-11-25 (J1). Decisions J1, J2 and J5-J8 are settled;
+the rest are still recommendations. Choices marked ◆ are Jonathan's and are
 listed in [`decisions.md`](./decisions.md); the steps follow the recommended option. The
 files each step produces are defined in [`spec.md`](./spec.md), and rule IDs (S1, N2,
 T8, ...) refer to it.
@@ -37,11 +38,11 @@ checking.
 | 3 | Harvest the words | term list with counts | model |
 | 4 | Find the facets | draft `facets.md` | model proposes, Jonathan decides |
 | 5 | Test the bare facets | revised `facets.md` | model |
-| 6 | Name and define | `glossary.md` (all `candidate`) | model drafts, Jonathan decides names |
+| 6 | Name and define | `glossary.md` (all `candidate`) | model drafts and approves, Jonathan can veto |
 | 7 | Classify fresh items, fix, repeat | revised files, `changelog.md` | model |
 | 8 | Agreement test | kappa per facet | two independent raters |
 | 9 | Name tests | fixes to labels | a fresh reader, WordNet |
-| 10 | Adopt | terms `approved`, `scope.md` status "in use" | Jonathan |
+| 10 | Adopt | terms `approved`, `scope.md` status "in use" | agent approves, Jonathan can veto |
 | 11 | Put into use | links from CLAUDE.md / AGENTS.md, lint | model |
 | 12 | Maintain | changelog entries, reviews | owner |
 
@@ -79,7 +80,8 @@ recorded ([Z39.19 §11.1.2, p. 91][z39]).
    will always tend to support certain goals and interests at the expense of other
    interests" ([Hjørland §4.2c][hj]). Recommended: Jonathan first, then the agents that
    read the repo.
-3. **Owner** (◆ J8): who approves changes ([spec G1](./spec.md#9-governance-how-a-taxonomy-changes)).
+3. **Owner**: Jonathan, with agents approving changes that pass the checks and Jonathan
+   able to veto (J8; [spec G1](./spec.md#9-governance-how-a-taxonomy-changes)).
 4. **Competency questions**: 5 to 15 questions the finished taxonomy must answer, used as
    the "litmus test" of scope ([Noy and McGuinness, Step 1][noy]). Example for prompts:
    "Which agent designs run without a person in the loop?"
@@ -124,7 +126,8 @@ recorded ([Z39.19 §11.1.2, p. 91][z39]).
   extracts per-item attributes ("facets") and clusters them ([Tamkin et al. §2][tam]).
   Neither has a person deciding in the loop (TnT-LLM adds "a lightweight human
   calibration" afterwards, [§5.3][wan]), but Z39.19 assumes construction "calls for
-  intellectual decisions" ([§11.1.3.4][z39]), so **Jonathan decides** in step 6.
+  intellectual decisions" ([§11.1.3.4][z39]), so a separate approving step follows in
+  step 6: an agent approves under spec G1 and Jonathan can veto (J8).
 - **Group into synonym sets** (several words, one concept) and flag **homonyms** (one
   word, several concepts). Both break naming consistency, and the mix of the two
   "maximizes confusion" ([Deissenboeck and Pizka pp. 267-268][dp]). Expect a lot of
@@ -178,9 +181,9 @@ For each concept, in this order (N3: concepts, then words, then the name,
    facet, warrant, history.
 5. **Mark it `candidate`** until step 10 ([Z39.19 §11.1.6, p. 93][z39]).
 
-A model drafts the entries; Jonathan chooses between candidate labels where warrant does
-not settle it ([Z39.19 §11.1.5, p. 93][z39]: "In problematic cases, expert advice should
-be sought").
+A model drafts the entries. Where warrant does not settle a label, the approving agent
+picks one and logs why, and the choice is listed for Jonathan, who can veto it (J8;
+[Z39.19 §11.1.5, p. 93][z39]: "In problematic cases, expert advice should be sought").
 
 ## Step 7. Classify fresh items, fix, repeat
 
@@ -213,8 +216,8 @@ back to step 7.
 - Target (◆ J5): κ ≥ 0.6 per facet. Expert human annotators in TnT-LLM reached 0.553 to
   above 0.6 ([Wan et al. Table 2][wan]), so the first draft's 0.7 would be strict.
   ⚠ Cohen 1960 and the conventional bands (Landis and Koch 1977) are not stored.
-- Raters (◆ J6): Jonathan and a model, or two different model families; one value per
-  facet; values shuffled for a model rater ([Wan et al. §§5.2.2, 5.3.2][wan]).
+- Raters (J6, decided): models from two different families; one value per facet; values
+  shuffled ([Wan et al. §§5.2.2, 5.3.2][wan]).
 
 ## Step 9. Name tests
 
@@ -227,16 +230,16 @@ back to step 7.
 
 ## Step 10. Adopt
 
-When the ending conditions hold (T7, T8, T10, T11 at their targets, T1 to T6 clean),
-Jonathan approves: terms move from `candidate` to `approved` ([Z39.19 §11.1.6][z39]) and
+When the ending conditions hold (T7, T8, T10, T11 at their targets, T1 to T6 clean), an
+agent approves under spec G1 and tells Jonathan, who can veto (J8): terms move from `candidate` to `approved` ([Z39.19 §11.1.6][z39]) and
 `scope.md` status becomes "in use". The glossary need not be complete to be adopted: "A
 commitment to a common ontology is a guarantee of consistency, but not completeness"
 ([Gruber §2][gru]). New concepts are added later through step 12.
 
 ## Step 11. Put into use
 
-- Link `taxonomy/glossary.md` from the repo's `CLAUDE.md` / `AGENTS.md` so agents load it
-  and use preferred labels.
+- Link `domains/<name>/glossary.md` in this repo from the domain repo's `CLAUDE.md` /
+  `AGENTS.md` (by its GitHub URL) so agents there load it and use preferred labels (J2).
 - Use the language everywhere: "Within a bounded context, use the same language in
   diagrams, writing, and especially speech" ([Evans pp. 3-4][ev]). Rename existing uses
   in the same commit as the decision (G6).
@@ -246,7 +249,7 @@ commitment to a common ontology is a guarantee of consistency, but not completen
 ## Step 12. Maintain
 
 - **Changes** follow [spec §9](./spec.md#9-governance-how-a-taxonomy-changes): anyone
-  proposes a `candidate`, the owner decides, every change is a named operation in
+  proposes a `candidate`, an agent approves it under spec G1 with Jonathan able to veto, every change is a named operation in
   `changelog.md` and the term's history, and nothing is deleted
   ([Z39.19 §§11.3-11.3.2, pp. 96-97][z39]).
 - **Reviews**: when the domain is next worked on, and at least each month it is active
@@ -271,7 +274,7 @@ For a domain of under about 30 items (◆ J7):
    build items looks better than it is ([Wan et al. §5.2.2][wan]).
 3. Steps 3 to 6 in one sitting on the remaining items.
 4. One round of step 7 and the agreement test of step 8 on the held-back items, with
-   Jonathan and one model as raters. With fewer than 30 items, kappa is recorded as
+   two model families as raters (J6). With fewer than 30 items, kappa is recorded as
    **indicative**: it guides fixes but is not an ending condition (spec T8).
 5. Adopt when T1 to T7, T10 and T11 pass. Alexander's warning applies most here: keep it piecemeal and inside real work
 ([Gabriel 2023, App. E.2][gab23]).
@@ -283,11 +286,11 @@ For a domain of under about 30 items (◆ J7):
 | 1 | draft `scope.md` from the repo and Jonathan's notes | set purpose, readers, owner |
 | 3 | extract and count terms, group synonyms ([Z39.19 §11.1.3.4][z39]; [Wan et al. §3][wan]) | check the groups |
 | 4-5 | propose facets by comparison; test-classify | choose facets |
-| 6 | draft entries | choose labels where warrant is split |
-| 7 | classify, log hesitations, propose fixes | approve operations |
-| 8 | be one rater | be the other rater, or pick a second model family |
+| 6 | draft entries; pick labels where warrant is split, with reasons | veto |
+| 7 | classify, log hesitations, make fixes as named operations | veto |
+| 8 | both raters, from two model families (J6) | — |
 | 9 | be the fresh reader | — |
-| 11-12 | use the terms; propose candidates; run checks | approve changes |
+| 11-12 | use the terms; propose and approve candidates; run checks | review the changelog, veto |
 
 ## Sources cited
 

@@ -3,7 +3,8 @@
 **In one line**: what a domain's taxonomy files contain, the rules their names, definitions
 and structure must follow, how they change, and the tests they must pass.
 
-**Status**: proposal, 2026-11-25. Not adopted. Where a choice is Jonathan's, it is marked
+**Status**: version 1, adopted 2026-11-25 (J1). Decisions J1, J2 and J5-J8 are settled;
+the rest are still recommendations. Where a choice is Jonathan's, it is marked
 ◆ and listed in [`decisions.md`](./decisions.md); the text below follows the recommended
 option so the spec reads as a whole. The order of work that produces these files is in
 [`process.md`](./process.md).
@@ -27,19 +28,24 @@ spec says what goes in that notebook, how it is written, and how to check it.
 
 ## 1. Files and where they live
 
-Each domain is one **bounded context** and keeps its files in a `taxonomy/` folder at the
-root of its own repo (◆ J2). A bounded context is the boundary inside which one model,
-and so one meaning per word, applies, and Evans names "code bases" as one such boundary
-([Evans p. 2][ev]; definition [p. vi][ev]).
+Each domain is one **bounded context** and keeps its files centrally, in this repo, in
+`domains/<name>/` (for example `domains/prompts/`, `domains/ux/`), decided by Jonathan
+2026-11-25 (J2). Each domain repo links to its folder from its `CLAUDE.md` / `AGENTS.md`
+so its agents load the glossary (process step 11). A bounded context is the boundary
+inside which one model, and so one meaning per word, applies ([Evans p. 2][ev];
+definition [p. vi][ev]); here that boundary is the domain folder, not the domain's repo.
+Evans names "code bases" as one kind of boundary, so the cost of this choice is that the
+vocabulary sits one link away from the work it governs: the alias-drift check (T12) is
+what shows whether agents in the domain repo actually use it.
 
 | File | Holds | Required |
 |---|---|---|
-| `taxonomy/scope.md` | purpose, readers, owner, competency questions, out of scope, neighbours, ending conditions | yes |
-| `taxonomy/facets.md` | the facets and their values | yes |
-| `taxonomy/glossary.md` | one entry per concept | yes |
-| `taxonomy/map.md` | links to other contexts' terms and the shared kernel | once a second context exists |
-| `taxonomy/changelog.md` | every change as a named operation | yes |
-| `taxonomy/patterns/<id>.md` | one pattern per file (design domains only) | no |
+| `domains/<name>/scope.md` | purpose, readers, owner, competency questions, out of scope, neighbours, ending conditions | yes |
+| `domains/<name>/facets.md` | the facets and their values | yes |
+| `domains/<name>/glossary.md` | one entry per concept | yes |
+| `domains/<name>/map.md` | links to other contexts' terms and the shared kernel | once a second context exists |
+| `domains/<name>/changelog.md` | every change as a named operation | yes |
+| `domains/<name>/patterns/<id>.md` | one pattern per file (design domains only) | no |
 
 The structure and format are fixed here, before any terms are collected, because the
 format decides which relationships get recorded ([Z39.19 §11.1.2, p. 91][z39]).
@@ -68,7 +74,7 @@ names plus "human-readable text" first ([Gruber §1][gru]).
 | **Context** | the repo or area this vocabulary governs, and its short context name | [Evans p. 29][ev]: "Name each bounded context" |
 | **Purpose** | one sentence: what the taxonomy is for, and the one question every facet must help answer | [Denton §1][den]: "The design of the classification must follow its purpose"; [Hjørland §1][hj] |
 | **Readers** | who uses the names, in priority order, and whose needs win when they conflict | [Hjørland §4.2c][hj]: a classification "can never be neutral" |
-| **Owner** | the person who decides disputes and approves changes | [Z39.19 §11.3, p. 96][z39]; [OBO Foundry Table 2][obo] (named custodians) |
+| **Owner** | the person who settles disputes and can veto any change; agents approve changes that pass the checks (G1) | [Z39.19 §11.3, p. 96][z39]; [OBO Foundry Table 2][obo] (named custodians) |
 | **Competency questions** | 5 to 15 questions the taxonomy must let you answer | [Noy and McGuinness, Step 1][noy] |
 | **Out of scope** | what this context does not cover | [OBO Foundry, "A collaborative experiment"][obo] (orthogonality) |
 | **Neighbours** | other contexts it touches, and the map file | [Evans p. 29][ev] |
@@ -316,14 +322,21 @@ the same **Status** field as terms; Alexander's asterisk ratings are ⚠ not sto
 
 ## 9. Governance: how a taxonomy changes
 
-- **G1. Owner.** Each context names one owner in `scope.md`, who approves every change
-  and settles disputes (◆ J8: Jonathan for now). Change records note "the individual
-  responsible" ([Z39.19 §11.3, p. 96][z39]); each OBO Foundry ontology has named
-  custodians ([OBO Foundry Table 2][obo]). People defer to someone who "really knows
-  what makes the thing the thing that it is" ([Medin and Ortony pp. 184-185][mo]), so
-  give that deference a name. (Source-check proposal 5.)
-- **G2. Anyone proposes, the owner decides.** Any person or agent may propose a term or a
-  change, with its reason and evidence. The proposal is recorded as a `candidate`
+- **G1. Agents approve, Jonathan can veto** (J8, decided by Jonathan 2026-11-25). An
+  agent may approve a change, or a term's move from `candidate` to `approved`, when
+  every mechanical test (T1-T6) passes and the change is logged with its reason. The
+  approving agent is named in the changelog line, since change records note "the
+  individual responsible" ([Z39.19 §11.3, p. 96][z39]). **Jonathan** is the named
+  owner in `scope.md`: he reviews the changelog, can reverse any change (logged as its
+  own operation), and settles any dispute an agent cannot settle by warrant. Each OBO
+  Foundry ontology likewise has named custodians ([OBO Foundry Table 2][obo]), and
+  people defer to someone who "really knows what makes the thing the thing that it is"
+  ([Medin and Ortony pp. 184-185][mo]), so that deference still has a name.
+  Approving by agent departs from Z39.19, which assumes an editor or board reviews each
+  term ([§11.3.1.1, p. 96][z39]); the veto and the logged reasons are what keep it
+  checkable.
+- **G2. Anyone proposes; an agent approves under G1.** Any person or agent may propose a
+  term or a change, with its reason and evidence. The proposal is recorded as a `candidate`
   ([Z39.19 §§11.1.6, 11.3.1.1-11.3.1.2, pp. 93-97][z39]). An agent writing docs that
   needs a term not in the glossary adds a candidate entry rather than inventing a word.
 - **G3. Status.** `candidate` (proposed, usable, not yet agreed), `approved`, or
@@ -412,8 +425,11 @@ cross-reference rules [§11.4.3, pp. 100-101][z39]) plus SKOS's integrity condit
     when allowed several labels ([Wan et al. §§5.2.3, 5.3.2][wan]).
   - Shuffle the order of the values for a model rater; LLM raters showed position bias
     ([Wan et al. §5.2.2][wan]).
-  - At least one rater is Jonathan or a different model family (◆ J6). Two sessions of
-    the same model may share blind spots; this is reasoning, not a stored finding.
+  - The two raters are models from **two different families** (for example Claude and
+    another vendor's model), decided by Jonathan 2026-11-25 (J6). Two sessions of one
+    model may share blind spots (reasoning, not a stored finding), and a second family
+    reduces that. With no human rater, T9 (a fresh reader) and Jonathan's veto (G1) are
+    the human checks.
   - Sample: at least 30 held-out items per test, with every value used at least once
     (◆ J7; prior knowledge: kappa on few items has a wide margin of error). A small
     domain without 30 spare items uses the light version's rule ([process.md](./process.md#light-version-small-domains)):
