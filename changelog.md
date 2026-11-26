@@ -4,6 +4,80 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Scored prompts round 2, fixed decider again, drew 80 more items for round 3 (branch `claude/project-thread-oneclm`)**.
+Round 2 passed Fleiss' κ ≥ 0.6 on every facet (0.87, 0.66, 0.72) but the two non-Claude
+raters agreed only 0.54 on decider, so the M4 rule (proposed, J23) fails. The held set
+was used up, so `sample.py` drew 80 more from the same seeded order.
+
+- `domains/prompts/glossary.md`: `second-model`, `person`, `rule` redefined.
+- `domains/prompts/rounds/round-2/results.md`: the reading and the fixes table added.
+- `domains/prompts/samples.md`, `items-all.csv`, `sample.py`: **new** set `g01`-`g80`.
+- `domains/prompts/rounds/round-3/`: **new** kit, 60 items.
+- `domains/prompts/facets.md`, `changelog.md`: agreement and operations.
+
+**Ran prompts round 2 with the same three raters** (kit `6145895`, 56 items). Fleiss' κ:
+area 0.87, decider 0.66, moment 0.72, all passing; openai-gemini: 0.87, 0.54, 0.67, so
+decider still misses for the non-Claude pair.
+
+- `domains/prompts/rounds/round-2/answers/`: **new**. Each rater's CSV and raw reply with
+  run details. `results.md`: **new**, both kappa tables and the disagreement lists.
+
+**Scored prompts round 1, fixed the decider and moment scope notes, built round 2 (branch `claude/project-thread-oneclm`)**.
+The three raters (Claude Opus 5.5, GPT-6.2-Astra via `codex exec`, Gemini 4 Carbon High via
+`agy -p`) were run on omarchy. Area and moment passed; decider missed at Fleiss' κ 0.58.
+
+- `domains/prompts/rounds/round-1/results.md`: written by the run; this commit adds the
+  reading of the numbers (decider's low kappa with 83% unanimity) and the fixes table.
+- `domains/prompts/glossary.md`: `working-model`, `rule`, `second-model`, `setup` redefined.
+- `domains/prompts/facets.md`: agreement recorded per facet; status line.
+- `domains/prompts/rounds/round-2/`: **new**. 56 items, three prompts, README.
+- `domains/prompts/changelog.md`: the operations above.
+
+**Ran prompts round 1 with three raters**. Each rater ran on omarchy from an empty
+directory with only its own prompt (kit `e923f21`); decider misses κ 0.6, so its
+definitions need fixing before round 2.
+
+- `domains/prompts/rounds/round-1/answers/`: **new**. Round 1 answers from three raters
+  (Claude Opus 5.5, GPT-6.2-Astra, Gemini 4 Carbon High), each with its raw reply and run
+  details; `results.md`: **new**, the scores. Fleiss' κ: area 0.93, decider 0.58 (misses
+  0.6), moment 0.72; openai-gemini: 0.92, 0.57, 0.69.
+
+**Started the prompts taxonomy and proposed method v1.1 for large domains (branch `claude/project-thread-oneclm`)**.
+Jonathan asked for a taxonomy for `jburnhams/prompts` ("agents, mcps, llm, harnesses,
+evals, everything really"), to refine the process as it goes, and for better raters
+(OpenAI, and a stronger Gemini than Flash through `agy`). The repo is about 815,000 words
+in 281 files, so the plan changed from one pass to stages: the kernel words and an area
+facet first, then one area at a time.
+
+- `design/method-v1.1.md`: **new**. Seven proposed changes (M1-M7): stages inside one
+  context, a written population and seeded draw, test samples of at least 5 per value,
+  three raters from three families scored with Fleiss' and pairwise kappa, majority
+  labels, rules for raters run through agent CLIs, and items as heading plus text. Not
+  adopted; `process.md` and `spec.md` are unchanged.
+- `design/decisions.md`: J20-J26 for those proposals; J14 ("agent") flagged as needed now.
+- `tools/kappa.py`: takes three or more answer files and prints Fleiss' kappa, Cohen's
+  kappa per pair, and the majority value or SPLIT for each disagreement. Two files work as
+  before (checked on ux round 1: same table). Fleiss checked against the textbook
+  14-rater example (0.210).
+- `domains/prompts/`: **new**. `scope.md`, `harvest.md`, `samples.md`, `sample.py`,
+  `items-all.csv`, `facets.md`, `changelog.md`.
+- `domains/prompts/glossary.md`: **new**. Draft `candidate` entries for set A's 18 values,
+  written before Jonathan's choice so the kit could be built; the decider value `model`
+  became `working-model` so it does not share a label with the area `model`.
+  `tools/check_domain.py domains/prompts`: one heuristic flag (`operations`, a mass noun,
+  kept).
+- `domains/prompts/rounds/round-1/`: **new**. Three-rater kit: `items.csv` (60 items),
+  `prompt-{claude,openai,gemini}.md` with values shuffled per rater, `make_prompts.py`,
+  and a `README.md` for running all three through their CLIs on omarchy (M6).
+- Jonathan decided J14 on 2026-11-26: "agent" is a model configured to act (prompt and tools in a loop); products are harnesses. Moved to the decided table in `design/decisions.md`.
+- Jonathan chose facet set A on 2026-11-26; `facets.md`, the domain changelog and the kit README say so.
+- `domains/prompts/glossary.md`: 36 kernel terms drafted after J14; area values `model` and `tool` relabelled "model access" and "tool use" (IDs kept) so the plain words are kernel terms. T1-T6 clean apart from one heuristic flag.
+- `domains/prompts/samples.md`, `rounds/round-1/`: four round-1 items (`r06`, `r36`, `r48`, `r58`) had been used in the facet comparison or as glossary examples, so they moved to the build sample and four held items (`h01`-`h04`) replaced them; prompts regenerated. Found by the Codex review on PR #9.
+- `.gitignore`: **new**, ignores `__pycache__/` (one `.pyc` was committed by mistake and removed).
+- Looked for and found: `agent-design/keel/taxonomy.md` in prompts is an existing
+  glossary (Keel's own words) and is the seed; *Inside the Scaffold* (stored in
+  prompts' `papers/`) has a three-layer taxonomy not yet read in full for this.
+
 **Fixed the duplicate-ID check in `tools/check_domain.py` (branch `claude/project-thread-l3cp9e`)**.
 A review on PR #7 found that T1's duplicate-ID flag was lost when the second record replaced
 the first, so a glossary with a repeated ID passed. The fix was committed after PR #7 merged.
