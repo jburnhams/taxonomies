@@ -4,6 +4,13 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Fixed the duplicate-ID check in `tools/check_domain.py` (branch `claude/project-thread-l3cp9e`)**.
+A review on PR #7 found that T1's duplicate-ID flag was lost when the second record replaced
+the first, so a glossary with a repeated ID passed. The fix was committed after PR #7 merged.
+
+- `tools/check_domain.py`: the replacing record keeps the duplicate flag; tested by appending
+  a second `brief` entry to the ux glossary (now reports `T1 brief: duplicate id`).
+
 **Fixed what round 1 showed and adopted the ux taxonomy (branch `claude/project-thread-l3cp9e`, built on PR #6)**.
 Round 1 passed κ ≥ 0.6 on every facet. The six disagreements were fixed in scope notes,
 the name test and the remaining checks were run, and the domain was adopted under G1,

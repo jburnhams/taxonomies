@@ -23,9 +23,8 @@ def parse_glossary(text):
     for m in re.finditer(r"^### (.+?) \(`([\w-]+)`\)\n(.*?)(?=^### |\Z)", text, re.M | re.S):
         label, rid, body = m.groups()
         f = dict(re.findall(r"^- \*\*([^*]+)\*\*: (.*)$", body, re.M))
-        if rid in recs:
-            recs[rid]["_dup"] = True
-        recs[rid] = {"label": label, **f}
+        dup = rid in recs
+        recs[rid] = {"label": label, **f, "_dup": dup or recs.get(rid, {}).get("_dup", False)}
     return recs
 
 
