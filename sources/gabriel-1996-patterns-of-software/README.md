@@ -5,7 +5,7 @@
 - **Access**: free PDF from the author's site (dreamsongs.com)
 - **URL**: none found
 - **Read**: Read in part 2026-11-25 from the stored PDF: Habitability and Piecemeal Growth, Pattern Languages and The Failure of Pattern Languages; other essays not read.
-- **Stored here**: [`gabriel-1996-patterns-of-software.pdf`](https://github.com/jburnhams/taxonomies-sources/blob/main/gabriel-1996-patterns-of-software/gabriel-1996-patterns-of-software.pdf) (+ `.md`): the full book, free PDF from dreamsongs.com. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **Stored here**: `gabriel-1996-patterns-of-software.pdf` (+ `.md`): the full book, free PDF from dreamsongs.com. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: Nothing needed: the book is stored here.
 - **Used in**: [`08-pattern-languages.md`](../../08-pattern-languages.md)
 

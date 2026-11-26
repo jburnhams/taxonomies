@@ -5,7 +5,7 @@
 - **Access**: free copy online (course reading)
 - **URL**: https://www.cns.nyu.edu/~msl/courses/2223/Readings/Rosch-CogPsych1976.pdf
 - **Read**: Read 2026-11-25 from the stored PDF: abstract, Part I set-up and Experiment 1 results, and the discussion of expertise; the other experiments skimmed.
-- **Stored here**: [`rosch-1976-basic-objects.pdf`](https://github.com/jburnhams/taxonomies-sources/blob/main/rosch-1976-basic-objects/rosch-1976-basic-objects.pdf) (+ `.md`): the article, from an NYU course reading list. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **Stored here**: `rosch-1976-basic-objects.pdf` (+ `.md`): the article, from an NYU course reading list. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: Nothing needed: the article is stored here.
 - **Used in**: [`02-how-minds-categorise.md`](../../02-how-minds-categorise.md)
 

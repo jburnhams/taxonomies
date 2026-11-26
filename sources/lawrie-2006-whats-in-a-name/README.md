@@ -5,7 +5,7 @@
 - **Access**: paywalled
 - **URL**: none found
 - **Read**: Read 2026-11-25: abstract and results of the stored 2007 journal version (the extended ICPC 2006 study).
-- **Stored here**: [`lawrie-2007-effective-identifier-names.pdf`](https://github.com/jburnhams/taxonomies-sources/blob/main/lawrie-2006-whats-in-a-name/lawrie-2007-effective-identifier-names.pdf) (+ `.md`): "Effective identifier names for comprehension and memory", *Innovations in Systems and Software Engineering* 3, 2007, the extended journal version of the ICPC 2006 paper by the same authors, from a Kent State course page. The ICPC 2006 paper itself is not stored. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **Stored here**: `lawrie-2007-effective-identifier-names.pdf` (+ `.md`): "Effective identifier names for comprehension and memory", *Innovations in Systems and Software Engineering* 3, 2007, the extended journal version of the ICPC 2006 paper by the same authors, from a Kent State course page. The ICPC 2006 paper itself is not stored. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: The ICPC 2006 paper, only if the journal version's figures differ from what the notes cite.
 - **Used in**: [`06-shared-language-in-software.md`](../../06-shared-language-in-software.md)
 

@@ -5,7 +5,7 @@
 - **Access**: free to read (journal and PhilArchive)
 - **URL**: https://philarchive.org/archive/SEPGFW
 - **Read**: Read in part 2026-11-25: the first half or so verbatim; the rest only as a summary, so claims from it are marked. Items 9.3 onward from the summary.
-- **Stored here**: [`seppala-2017-definitions.pdf`](https://github.com/jburnhams/taxonomies-sources/blob/main/seppala-2017-definitions/seppala-2017-definitions.pdf) (+ `.md`): the published article from the journal site (revista.ibict.br). Downloaded 2026-11-25; the parts marked as from a summary were checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **Stored here**: `seppala-2017-definitions.pdf` (+ `.md`): the published article from the journal site (revista.ibict.br). Downloaded 2026-11-25; the parts marked as from a summary were checked against it the same day. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: Nothing needed: the article is stored here.
 - **Used in**: [`03-naming.md`](../../03-naming.md), [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md)
 

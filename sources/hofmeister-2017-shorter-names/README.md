@@ -5,7 +5,7 @@
 - **Access**: paywalled (author copies may exist)
 - **URL**: none found
 - **Read**: Read 2026-11-25 from the stored PDF: abstract, design and results.
-- **Stored here**: [`hofmeister-2017-shorter-names.pdf`](https://github.com/jburnhams/taxonomies-sources/blob/main/hofmeister-2017-shorter-names/hofmeister-2017-shorter-names.pdf) (+ `.md`): the SANER 2017 paper, author copy from Saarland University (se.cs.uni-saarland.de). An extended version appeared in *Empirical Software Engineering* 24, 2019 (doi 10.1007/s10664-018-9621-x), not stored. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **Stored here**: `hofmeister-2017-shorter-names.pdf` (+ `.md`): the SANER 2017 paper, author copy from Saarland University (se.cs.uni-saarland.de). An extended version appeared in *Empirical Software Engineering* 24, 2019 (doi 10.1007/s10664-018-9621-x), not stored. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: Nothing needed: the paper is stored here.
 - **Used in**: [`06-shared-language-in-software.md`](../../06-shared-language-in-software.md)
 
