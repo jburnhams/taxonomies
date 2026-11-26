@@ -2,8 +2,7 @@
 # and publishes it to GitHub Pages. Every push to main rebuilds it, so a new domain, term or
 # round shows up without anyone touching the site. Pull requests build it without publishing.
 # One-time setup: Settings > Pages > Build and deployment > Source: GitHub Actions.
-# Pages on a private repository needs a paid GitHub plan, and the published site is public:
-# see site/README.md for what is and is not published.
+# What is and is not published: site/README.md.
 name: Pages
 
 on:

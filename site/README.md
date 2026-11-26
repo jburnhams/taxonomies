@@ -28,11 +28,9 @@ The domain order is: `taxonomies` (the method's own words) first, then by size.
 
 ## What is published
 
-The site is public even though the repo is private (GitHub Pages has no private sites on
-personal plans). It publishes the docs, domain files and CSVs, and each source's
-`README.md` (citation and notes). It does **not** publish stored source copies (PDFs,
-saved pages, OCR text); their links go to the repo on GitHub, which only people with
-access can open.
+The docs, domain files and CSVs, and each source's `README.md` (citation and notes). Stored
+source copies (PDFs, saved pages, OCR text) are **not** copied into the site; their links
+go to the file in the repository on GitHub.
 
 ## Run it
 

@@ -58,7 +58,7 @@ Each domain's taxonomy lives in `domains/<name>/` (spec §1):
 [`taxonomies`](./domains/taxonomies/scope.md) (the method's own words, draft).
 **[`site/`](./site/README.md)** builds a browsable site from them on every push to `main`:
 an overview, then each domain's facets, terms, items and rounds, down to each rater's
-answers. Published at `https://jburnhams.github.io/taxonomies/` once Pages is enabled.
+answers. Published at <https://jburnhams.github.io/taxonomies/>.
 
 ## Sources
 

@@ -14,7 +14,8 @@ the method's vocabulary, so one was drafted (proposal, not adopted).
   rounds, answer CSVs, changelog) and the docs and sources, recomputes kappa from the
   answers, and writes JSON; a Vite + strata-react app renders overview, domain, facet,
   term, round, item, doc, CSV and source pages. `site/README.md` lists what the generator
-  relies on and what is published (no stored source copies).
+  relies on and what is published (no stored source copies). The repo was made public
+  the same day, which let Actions and Pages run.
 - `.github/workflows/pages.yml`: **new**. Builds on every pull request, deploys on push to
   `main` once Pages is set to GitHub Actions.
 - `domains/taxonomies/`: **new**, `draft`. `scope.md`, `facets.md` (`kind`, `stage`),
