@@ -4,6 +4,13 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Ran prompts stage 2 round 1 (context area) with three raters** (kit `258f560`, 30 items,
+same models as stage 1). On the 27 in-area items: Fleiss' κ operation 0.82, content 0.88,
+reach 0.68; openai-gemini 0.84, 0.82, 0.53 (reach misses).
+
+- `domains/prompts/stage-2/rounds/round-1/answers/`: **new**. Each rater's CSV and raw
+  reply with run details. `results.md`: **new**, the three kappa.py runs.
+
 **Started stage 2 of the prompts taxonomy: the context area (branch `claude/project-thread-oneclm`)**. Jonathan said go on stage 2. I chose the context area over control, because it has the most words in the repo and its own classification to start from (memory levels). This adds the samples, the term harvest, three proposed facet sets for him to choose from, candidate entries for the recommended set, and the round-1 rater kit.
 
 - `domains/prompts/stage-2/`: **new**. `sample2.py`, `samples.md`, `items.csv` (130 items), `harvest.md`, and `rounds/round-1/` (README, items, `make_prompts.py`, three prompts).
