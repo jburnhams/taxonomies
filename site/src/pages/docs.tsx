@@ -2,7 +2,7 @@ import { useParams } from "react-router";
 import { Breadcrumb, DataTable, PageHeader, Status, TextLink } from "strata-react";
 import type { Column } from "strata-react";
 import { useDomain, useIndexData, useLinks, useRaw, githubBlob, type Domain, type SourceEntry } from "../data";
-import { Loaded, Prose } from "../parts";
+import { Loaded, OffSite, Prose } from "../parts";
 
 function crumbsFor(path: string, title: string, domains: { id: string; title: string }[]) {
   const items: { label: string; to?: string }[] = [{ label: "Taxonomies", to: "/" }];
@@ -42,7 +42,7 @@ function Doc({ path, d }: { path: string; d?: Domain }) {
         return (
           <article className="flex flex-col gap-6">
             <Breadcrumb items={crumbsFor(path, title, index.domains)} />
-            <PageHeader title={title} scope={<span><code className="type-caption">{path}</code> · <TextLink href={githubBlob(index, path)}>on GitHub</TextLink></span>} />
+            <PageHeader title={title} scope={<span><code className="type-caption">{path}</code> · <OffSite href={githubBlob(index, path)}>on GitHub</OffSite></span>} />
             <div className="max-w-3xl">
               <Prose md={body} ctx={ctx} />
             </div>
@@ -68,7 +68,7 @@ export function FilePage() {
         return (
           <div className="flex flex-col gap-6">
             <Breadcrumb items={crumbsFor(path, path.split("/").pop() ?? path, index.domains)} />
-            <PageHeader title={path.split("/").pop() ?? path} scope={<span><code className="type-caption">{path}</code> · {rows.length} rows · <TextLink href={githubBlob(index, path)}>on GitHub</TextLink></span>} />
+            <PageHeader title={path.split("/").pop() ?? path} scope={<span><code className="type-caption">{path}</code> · {rows.length} rows · <OffSite href={githubBlob(index, path)}>on GitHub</OffSite></span>} />
             <DataTable caption={path} columns={cols} rows={objs} rowKey={(r) => `row:${r.key}`} sortParam="sort" />
           </div>
         );

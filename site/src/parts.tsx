@@ -93,3 +93,14 @@ export function Facts({ items }: { items: { label: string; value: React.ReactNod
     </dl>
   );
 }
+
+/** A link to another site (the repo on GitHub). Strata's TextLink sends an `href` through the
+ *  router's useHref, which under a hash router turns an absolute URL into a broken route, so
+ *  off-site links are plain anchors styled like it. */
+export function OffSite({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <a href={href} target="_blank" rel="noreferrer" className="text-primary underline underline-offset-2 hover:decoration-2">
+      {children}
+    </a>
+  );
+}

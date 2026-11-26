@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 import { Breadcrumb, CompositionBar, DataTable, EmptyState, PageHeader, Status, TextLink, format } from "strata-react";
 import type { Column } from "strata-react";
 import { useDomain, useIndexData, useLinks, githubBlob, kap, pct, cap, type Domain, type Round, type Term } from "../data";
-import { Facts, KappaWord, Loaded, Prose, Section, StatusWord, TermLink } from "../parts";
+import { Facts, KappaWord, Loaded, OffSite, Prose, Section, StatusWord, TermLink } from "../parts";
 
 function useDomainPage<T>(render: (d: Domain) => React.ReactNode) {
   const { domain = "" } = useParams();
@@ -109,7 +109,7 @@ function RoundShare({ r, fid, d }: { r: Round; fid: string; d: Domain }) {
       }
     >
       <div className="max-w-2xl">
-        <CompositionBar label={`${f.label}, ${r.id}`} parts={parts} formatValue={(n) => format.count(n, "item", "items")} partHeader="Value" valueHeader="Items" />
+        <CompositionBar label={`${f.label}, ${r.id}`} parts={parts} formatValue={(n) => format.count(n, "item", "items")} partHeader="Value" valueHeader="Items" other={parts.length > 5 ? { label: (n) => `${n} other values` } : undefined} />
       </div>
     </Section>
   );
@@ -201,7 +201,7 @@ function TermView({ d, t }: { d: Domain; t: Term }) {
       {placed.length ? <Placed d={d} t={t} /> : facet ? <p className="type-body-sm text-muted-foreground">No rater has put an item under this value yet.</p> : null}
       <p className="type-body-sm text-muted-foreground">
         As written in <TextLink to={`/doc/${d.path}/glossary.md`}>glossary.md</TextLink>
-        {t.section ? `, under “${t.section}”` : ""}. <TextLink href={githubBlob(index, `${d.path}/glossary.md`)}>Source on GitHub</TextLink>
+        {t.section ? `, under “${t.section}”` : ""}. <OffSite href={githubBlob(index, `${d.path}/glossary.md`)}>Source on GitHub</OffSite>
       </p>
     </div>
   );
