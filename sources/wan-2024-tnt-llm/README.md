@@ -5,8 +5,8 @@
 - **Access**: open (CC BY-NC-ND 4.0)
 - **URL**: https://arxiv.org/abs/2403.12173v1
 - **Read**: Read in part 2026-11-25 from the stored PDF: abstract, introduction and the method section; experiments skimmed.
-- **Stored here**: `wan-2024-tnt-llm.pdf` (+ `.md`): arXiv 2403.12173v1 (CC BY-NC-ND 4.0). Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
-- **To fetch**: Nothing needed: the paper is stored here.
+- **Stored** (private, in [`taxonomies-sources/wan-2024-tnt-llm/`](https://github.com/jburnhams/taxonomies-sources/tree/main/wan-2024-tnt-llm)): `wan-2024-tnt-llm.pdf` (+ `.md`): arXiv 2403.12173v1 (CC BY-NC-ND 4.0). Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the paper is stored in `taxonomies-sources`.
 - **Used in**: [`05-building-and-testing.md`](../../05-building-and-testing.md)
 
 ## What is distinctive

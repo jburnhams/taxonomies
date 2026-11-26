@@ -5,7 +5,7 @@
 - **Access**: free copy online (course reading)
 - **URL**: https://wayne2wang.github.io/teaching/2023ActPer/papers/1978roschCategorization.pdf
 - **Read**: Read 2026-11-25 through about p.15 verbatim; the rest only as a summary, not relied on.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `rosch-1978-principles-of-categorization.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `rosch-1978-principles-of-categorization/` (for example `rosch-1978-principles-of-categorization.pdf`) and note it in this line.
 - **To fetch**: Nothing needed: what the notes rely on was readable online.
 - **Used in**: [`02-how-minds-categorise.md`](../../02-how-minds-categorise.md), [`03-naming.md`](../../03-naming.md)
 

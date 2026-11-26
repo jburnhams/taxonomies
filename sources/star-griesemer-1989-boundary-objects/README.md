@@ -5,8 +5,8 @@
 - **Access**: paywalled
 - **URL**: none found
 - **Read**: Read 2026-11-25 from the stored scan: the introduction, definition (pp. 387-393) and the four types (pp. 409-411); the museum history between skimmed.
-- **Stored here**: `star-griesemer-1989-boundary-objects.pdf`: the article as published (SAGE page scans), from a course reading list on dubberly.com. Image scan with no usable text layer, so no `.md`. Downloaded 2026-11-25; notes checked against it the same day.
-- **To fetch**: Nothing needed: the article is stored here.
+- **Stored** (private, in [`taxonomies-sources/star-griesemer-1989-boundary-objects/`](https://github.com/jburnhams/taxonomies-sources/tree/main/star-griesemer-1989-boundary-objects)): `star-griesemer-1989-boundary-objects.pdf`: the article as published (SAGE page scans), from a course reading list on dubberly.com. Image scan with no usable text layer, so no `.md`. Downloaded 2026-11-25; notes checked against it the same day.
+- **To fetch**: Nothing needed: the article is stored in `taxonomies-sources`.
 - **Used in**: [`07-limits-and-politics.md`](../../07-limits-and-politics.md)
 
 ## What is distinctive

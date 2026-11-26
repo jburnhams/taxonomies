@@ -29,8 +29,10 @@ The domain order is: `taxonomies` (the method's own words) first, then by size.
 ## What is published
 
 The docs, domain files and CSVs, and each source's `README.md` (citation and notes). Stored
-source copies (PDFs, saved pages, OCR text) are **not** copied into the site; their links
-go to the file in the repository on GitHub.
+source copies (PDFs, saved pages, OCR text) are not in this repository at all: they live in
+the private [`jburnhams/taxonomies-sources`](https://github.com/jburnhams/taxonomies-sources)
+repo, listed in [`sources/stored-files.txt`](../sources/stored-files.txt), which is where the
+"Stored copy" counts come from. Their links go there and open only for its owner.
 
 ## Run it
 

@@ -4,10 +4,15 @@ Research into classification and naming, and a method for agreeing a taxonomy pe
 domain. Layout and reading order are in [`README.md`](./README.md).
 
 - **Layers**: `sources/<slug>/` (one folder per source: README with citation, type,
-  access, URL, what was read and when, stored files, notes; raw copies stored beside it,
-  which Jonathan has said is fine for this private repo), then topic docs at the root
+  access, URL, what was read and when, stored files, notes), then topic docs at the root
   (`NN-topic.md`, each opening with a one-line answer and a plain explanation), then
   `design/`.
+- **Stored copies never go in this repo**: it is public. PDFs, saved pages and extracted
+  text go in the private [`jburnhams/taxonomies-sources`](https://github.com/jburnhams/taxonomies-sources)
+  repo at `<slug>/<file>` (same folder names), with the path added to
+  `sources/stored-files.txt` here and the README's **Stored** line linking to the folder.
+  Link a stored file as `https://github.com/jburnhams/taxonomies-sources/blob/main/<slug>/<file>`.
+  Notes and short quotes stay here.
 - **Every source** read or cited gets a folder and a row in `sources.md`. Paywalled or
   unreachable ones go in `to-fetch.md`; move them out when read.
 - **Evidence**: say whether a claim was read in the source or comes from prior

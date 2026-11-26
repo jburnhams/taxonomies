@@ -5,8 +5,8 @@
 - **Access**: open (W3C document licence: copying permitted with notice)
 - **URL**: https://www.w3.org/TR/skos-reference/
 - **Read**: Read 2026-11-25 (online copy, see URL). Later sections partly from a summary.
-- **Stored here**: `skos-reference-2009.html` (+ `.md`): the W3C Recommendation. Downloaded 2026-11-25; the later sections were checked against it the same day. `.md` beside a file is its text, extracted for searching.
-- **To fetch**: Nothing needed: the Recommendation is stored here.
+- **Stored** (private, in [`taxonomies-sources/skos-2009/`](https://github.com/jburnhams/taxonomies-sources/tree/main/skos-2009)): `skos-reference-2009.html` (+ `.md`): the W3C Recommendation. Downloaded 2026-11-25; the later sections were checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the Recommendation is stored in `taxonomies-sources`.
 - **Used in**: [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md)
 
 ## What is distinctive

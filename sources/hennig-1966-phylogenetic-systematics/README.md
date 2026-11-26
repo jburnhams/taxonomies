@@ -5,7 +5,7 @@
 - **Access**: paywalled
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `hennig-1966-phylogenetic-systematics.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `hennig-1966-phylogenetic-systematics/` (for example `hennig-1966-phylogenetic-systematics.pdf`) and note it in this line.
 - **To fetch**: Nothing needed: what the notes rely on was readable online.
 - **Used in**: [`01-structures.md`](../../01-structures.md)
 

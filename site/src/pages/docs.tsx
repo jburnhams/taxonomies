@@ -118,7 +118,7 @@ export function SourcesPage() {
       <Breadcrumb items={[{ label: "Taxonomies", to: "/" }, { label: "Sources" }]} />
       <PageHeader title="Sources" scope={`${index.sources.length} sources, one folder each`} />
       <p className="type-body-sm text-muted-foreground max-w-prose">
-        Each source's notes are shown here. Stored copies (PDFs, saved pages) are not copied into this site; their links go to the repository on GitHub. The full list by field, with read status, is{" "}
+        Each source's notes are shown here. Stored copies (PDFs, saved pages) are kept in a separate private repository, so they are not in this site and their links open only for its owner. The full list by field, with read status, is{" "}
         <Prose md="[sources.md](sources.md)" ctx={ctx} inline />.
       </p>
       <DataTable caption="Sources" columns={cols} rows={index.sources} rowKey={(s) => `source:${s.slug}`} sortParam="sort" />

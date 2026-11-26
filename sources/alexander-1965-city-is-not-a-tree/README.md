@@ -5,8 +5,8 @@
 - **Access**: free to read on patternlanguage.com (© Christopher Alexander)
 - **URL**: https://www.patternlanguage.com/archive/cityisnotatree.html
 - **Read**: Read 2026-11-25 (online copy, see URL).
-- **Stored here**: `alexander-1965-city-is-not-a-tree.html` (+ `.md`), with its figures in `img/`: the essay as published on patternlanguage.com. Downloaded 2026-11-25; the quoted lines were checked against it the same day. `.md` beside a file is its text, extracted for searching.
-- **To fetch**: Nothing needed: the full essay is stored here.
+- **Stored** (private, in [`taxonomies-sources/alexander-1965-city-is-not-a-tree/`](https://github.com/jburnhams/taxonomies-sources/tree/main/alexander-1965-city-is-not-a-tree)): `alexander-1965-city-is-not-a-tree.html` (+ `.md`), with its figures in `img/`: the essay as published on patternlanguage.com. Downloaded 2026-11-25; the quoted lines were checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the full essay is stored in `taxonomies-sources`.
 - **Used in**: [`08-pattern-languages.md`](../../08-pattern-languages.md), [`01-structures.md`](../../01-structures.md)
 
 ## What is distinctive

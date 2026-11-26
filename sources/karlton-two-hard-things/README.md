@@ -5,8 +5,8 @@
 - **Access**: open
 - **URL**: https://martinfowler.com/bliki/TwoHardThings.html
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: `fowler-two-hard-things.html` (+ `.md`): Martin Fowler's bliki entry. Downloaded 2026-11-25; quoted lines checked against it the same day. `.md` beside a file is its text, extracted for searching.
-- **To fetch**: Nothing needed: the page is stored here.
+- **Stored** (private, in [`taxonomies-sources/karlton-two-hard-things/`](https://github.com/jburnhams/taxonomies-sources/tree/main/karlton-two-hard-things)): `fowler-two-hard-things.html` (+ `.md`): Martin Fowler's bliki entry. Downloaded 2026-11-25; quoted lines checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the page is stored in `taxonomies-sources`.
 - **Used in**: [`eli5.md`](../../eli5.md)
 
 ## What is distinctive

@@ -5,7 +5,7 @@
 - **Access**: open (CC BY 4.0)
 - **URL**: https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/deliver/index/docId/90911/file/90911.pdf
 - **Read**: Read 2026-11-25 through about p.436 verbatim; appendices not read.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `kundisch-2022-taxonomy-update.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `kundisch-2022-taxonomy-update/` (for example `kundisch-2022-taxonomy-update.pdf`) and note it in this line.
 - **To fetch**: Nothing needed: what the notes rely on was readable online.
 - **Used in**: [`05-building-and-testing.md`](../../05-building-and-testing.md)
 

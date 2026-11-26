@@ -321,4 +321,4 @@ Drawn 2026-11-26 after round 2 used up the held set: `sample.py` continues the s
 | `g66` | The floor: path and kind rules (deterministic, harness) | [agent-design/risk.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/risk.md) |
 | `g67` | Verification authority handed to the user, not the model | [agent-self-verification.md](https://github.com/jburnhams/prompts/blob/a531474/agent-self-verification.md) |
 
-[den]: ../../sources/denton-2003-faceted-howto/denton-2003-faceted-howto.html
+[den]: https://github.com/jburnhams/taxonomies-sources/blob/main/denton-2003-faceted-howto/denton-2003-faceted-howto.html

@@ -5,7 +5,7 @@
 - **Access**: paywalled
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `bowker-star-1999-sorting-things-out.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `bowker-star-1999-sorting-things-out/` (for example `bowker-star-1999-sorting-things-out.pdf`) and note it in this line.
 - **To fetch**: The book (ch. 1 and the conclusion are the essential parts).
 - **Used in**: [`07-limits-and-politics.md`](../../07-limits-and-politics.md), [`01-structures.md`](../../01-structures.md)
 

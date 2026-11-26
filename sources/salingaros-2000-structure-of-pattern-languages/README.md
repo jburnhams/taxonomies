@@ -5,7 +5,7 @@
 - **Access**: paywalled (author copy on his site, not checked)
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `salingaros-2000-structure-of-pattern-languages.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `salingaros-2000-structure-of-pattern-languages/` (for example `salingaros-2000-structure-of-pattern-languages.pdf`) and note it in this line.
 - **To fetch**: The article.
 - **Used in**: [`08-pattern-languages.md`](../../08-pattern-languages.md)
 

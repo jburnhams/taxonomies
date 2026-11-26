@@ -5,7 +5,7 @@
 - **Access**: paywalled (Taylor & Francis; USD 39.95)
 - **URL**: https://link.springer.com/article/10.1057/ejis.2012.26
 - **Read**: Abstract only (paywalled). Method details from Kundisch et al. 2022 (read) and prior knowledge (marked).
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `nickerson-2013-taxonomy-method.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `nickerson-2013-taxonomy-method/` (for example `nickerson-2013-taxonomy-method.pdf`) and note it in this line.
 - **To fetch**: The article (doi 10.1057/ejis.2012.26).
 - **Used in**: [`05-building-and-testing.md`](../../05-building-and-testing.md)
 

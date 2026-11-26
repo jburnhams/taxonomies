@@ -5,8 +5,8 @@
 - **Access**: free on hillside.net (robots block automated fetching)
 - **URL**: https://hillside.net/index.php/a-pattern-language-for-pattern-writing
 - **Read**: Read 2026-11-25 from the stored PDF: the pattern list, Mandatory Elements Present, Optional Elements When Helpful and the naming patterns; other patterns skimmed.
-- **Stored here**: `meszaros-doble-1997-pattern-writing.pdf` (+ `.md`): the full pattern language, from patternwritingpatterns.gerardmeszaros.com (the authors' copy). Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
-- **To fetch**: Nothing needed: the paper is stored here.
+- **Stored** (private, in [`taxonomies-sources/meszaros-doble-1997-pattern-writing/`](https://github.com/jburnhams/taxonomies-sources/tree/main/meszaros-doble-1997-pattern-writing)): `meszaros-doble-1997-pattern-writing.pdf` (+ `.md`): the full pattern language, from patternwritingpatterns.gerardmeszaros.com (the authors' copy). Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the paper is stored in `taxonomies-sources`.
 - **Used in**: [`08-pattern-languages.md`](../../08-pattern-languages.md)
 
 ## What is distinctive
