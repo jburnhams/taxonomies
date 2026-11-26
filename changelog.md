@@ -4,6 +4,14 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Ran taxonomies round 2 and the name test with three raters** (kit `7004a36`, 43 items,
+same models as round 1). Fleiss' κ part 0.94, stage 0.84, check 0.55 (misses);
+openai-gemini 0.97, 0.90, 0.45 (check misses). The name test ran in separate fresh sessions.
+
+- `domains/taxonomies/rounds/round-2/answers/`: **new**. Each rater's CSV and raw reply.
+  `results.md`: **new**, both kappa tables and the disagreement lists.
+- `domains/taxonomies/rounds/round-2/name-test/guesses-{claude,openai,gemini}.md`: **new**.
+
 **Scored taxonomies round 1, fixed `check`, built round 2 and the name test (branch `claude/project-thread-yet87g`, PR #10)**.
 The three raters (Claude Opus 5.5, GPT-6.2-Astra, Gemini 4 Carbon High) passed every facet:
 Fleiss' κ part 1.00, stage 1.00, check 0.78; non-Claude pair 1.00, 1.00, 0.74. Part and
