@@ -4,6 +4,11 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Recorded Jonathan's choice of facets for the taxonomies taxonomy (branch `claude/project-thread-yet87g`)**.
+He chose set A (`part`, `stage`, `check`), and to adopt `check` if the indicative round 3 reaches κ 0.6.
+
+- `domains/taxonomies/facets.md`, `changelog.md`: the choice recorded.
+
 **Taxonomies T10 and T11 review after rounds 1 and 2 (branch `claude/project-thread-yet87g`, PR #10)**.
 Jonathan chose to adopt `check` if round 3 reaches κ 0.6; the review was done meanwhile.
 The changelog lines were left out of the review's own commit (`bb6baaf`) and added here.

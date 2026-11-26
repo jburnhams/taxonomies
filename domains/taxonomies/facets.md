@@ -10,8 +10,8 @@ building, testing or governing? And will a script tell me if I break it, or does
 someone's judgement, or is it Jonathan's call? Each question has a short list of answers,
 and every item gets one answer to each.
 
-**Status**: draft, 2026-11-26. Set A of three put to Jonathan (recommended; his choice
-is open, and he can veto). Bare-tested on 10 items (below); round 1 passed on every facet;
+**Status**: draft, 2026-11-26. Set A chosen by Jonathan (2026-11-26, from three put to
+him). Bare-tested on 10 items (below); round 1 passed on every facet;
 round 2 (fresh items, ids removed) passed `part` and `stage` and failed `check`, which is
 redefined and retested in round 3 (2026-11-26). Every
 value has a `candidate` glossary entry.
@@ -42,7 +42,7 @@ value has a `candidate` glossary entry.
 
 | Set | Facets | Why not chosen (if not) |
 |---|---|---|
-| **A** (recommended) | `part`, `stage`, `check` | |
+| **A** (chosen by Jonathan, 2026-11-26) | `part`, `stage`, `check` | |
 | B | `part`, `stage`, `kind` | `kind` asks what sort of thing a rule is about; most rules are about several, and the field already sorts concepts |
 | C | the draft `kind`, `stage` | two facets (a grid, S2); sorts terms, not rules |
 
@@ -81,7 +81,7 @@ What it changed, before the glossary was written:
 
 No facet was added, dropped or split.
 
-## Proposed: part, stage, check
+## Chosen: part, stage, check
 
 ### Part (`part`)
 
