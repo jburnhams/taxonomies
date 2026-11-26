@@ -48,3 +48,13 @@ named on each line (G1); Jonathan can reverse any of them.
 - **review** T10 (12 of 13 competency questions answered; "artifact" left for stage 2) and
   T11 (no unmarked synonym, no missing facet): `rounds/round-3/review.md`.
 - **add** name-test prompt (T9) for the 54 labels: `rounds/round-3/name-test/prompt.md`.
+- **review** name test (T9): openai 51/54 (94%), gemini 50/54 (93%), both above 80%:
+  `rounds/round-3/name-test/results.md`. Graded by: Claude.
+- **rename** `rule` label "rule" → "fixed logic" (alias "rule"); `model` label "model
+  access" → "model calling" (alias "model access"). Ids kept. Both readers read "rule"
+  as prompt text and "model access" as sign-in only. Approved by: Claude (G1).
+- **redefine** `context-window` as a token limit on one request, reply included (the
+  readers' sense); **add near miss** to `steer` for a person's mid-run message. Approved
+  by: Claude (G1).
+- **adopt** stage 1 (process step 10): every ending condition met on round 3. 50 terms
+  `approved`, 4 `candidate` (the four above). Approved by: Claude under G1; Jonathan can veto.

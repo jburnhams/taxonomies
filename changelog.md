@@ -4,6 +4,17 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Adopted stage 1 of the prompts taxonomy after the name test (branch `claude/project-thread-oneclm`, PR #11)**.
+Both fresh readers passed T9 (openai 94%, gemini 93%), so every stage-1 ending condition
+holds on round 3. The four missed labels were changed and are `candidate` again.
+
+- `domains/prompts/rounds/round-3/name-test/results.md`: **new**. Scores and the four misses.
+- `domains/prompts/glossary.md`: `rule` labelled "fixed logic" and `model` labelled "model
+  calling" (old labels kept as aliases); `context-window` redefined as a token limit;
+  `steer` gains a near miss; statuses set (50 approved, 4 candidate).
+- `domains/prompts/facets.md`, `scope.md`: status `in use`, round-3 agreement figures.
+- `domains/prompts/changelog.md`: the operations above.
+
 **Ran the prompts name test (T9)** with the two non-Claude raters (GPT-6.2-Astra via
 `codex exec`, Gemini 4 Carbon High via `agy -p`), same isolation as the rounds.
 
