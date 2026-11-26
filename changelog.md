@@ -31,6 +31,7 @@ facet first, then one area at a time.
 - `domains/prompts/rounds/round-1/`: **new**. Three-rater kit: `items.csv` (60 items),
   `prompt-{claude,openai,gemini}.md` with values shuffled per rater, `make_prompts.py`,
   and a `README.md` for running all three through their CLIs on omarchy (M6).
+- Jonathan decided J14 on 2026-11-26: "agent" is a model configured to act (prompt and tools in a loop); products are harnesses. Moved to the decided table in `design/decisions.md`.
 - Jonathan chose facet set A on 2026-11-26; `facets.md`, the domain changelog and the kit README say so.
 - `.gitignore`: **new**, ignores `__pycache__/` (one `.pyc` was committed by mistake and removed).
 - Looked for and found: `agent-design/keel/taxonomy.md` in prompts is an existing

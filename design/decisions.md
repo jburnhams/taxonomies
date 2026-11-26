@@ -4,7 +4,7 @@
 Jonathan can make; the six needed before the first domain were decided on 2026-11-25,
 and thirteen can wait.
 
-**Status**: six decided (J1, J2, J5-J8), thirteen open, 2026-11-25; seven more proposed
+**Status**: seven decided (J1, J2, J5-J8 on 2026-11-25, J14 on 2026-11-26), twelve open; seven more proposed
 (J20-J26, method v1.1), 2026-11-26.
 [`process.md`](./process.md) and [`spec.md`](./spec.md) follow the decisions, and follow
 the recommendation for each open row so they read as a whole. Rejecting an open
@@ -16,7 +16,7 @@ lists.
 Each row gives the recommendation, the stored source it rests on (paths are in
 [`spec.md`](./spec.md#sources-cited)), and where it lands.
 
-## Decided 2026-11-25 (interview in the project thread)
+## Decided 2026-11-25 and 2026-11-26 (in the project threads)
 
 | # | Decision | Jonathan's answer | Was recommended | What changed |
 |---|---|---|---|---|
@@ -26,12 +26,13 @@ Each row gives the recommendation, the stored source it rests on (paths are in
 | J6 | Who the two raters are | **Two model families** (for example Claude and another vendor's model) | Jonathan plus a model | spec T8 and process steps 8 and the light version. With no human rater, T9 (fresh reader) and Jonathan's veto are the human checks |
 | J7 | Sample sizes | **Build from 30-60 items, test on 30 fresh items per round**; light version under ~30 items | same; still no stored source (Tullis and Wood 2004 in `to-fetch.md`) | none |
 | J8 | Who has the final say | **Agents approve, Jonathan can veto**: an agent approves changes that pass T1-T6 with a logged reason; Jonathan is the named owner, reviews the changelog, can reverse anything and settles disputes | Jonathan approves every change | spec G1, G2 and the `scope.md` Owner field; process steps 1, 3, 6, 10, 12 and the tables. Departs from Z39.19 §11.3.1.1 (editor reviews each term); the veto and logged reasons keep it checkable |
+| J14 | What "agent" means in the prompts glossary | **A model configured to act** (prompt and tools, in a loop; Keel's sense). Products such as Claude Code and Codex are harnesses; sub-agent and reviewer are roles | same (proposal 6) | `domains/prompts/glossary.md` kernel entries; OntoClean §8.3 |
 
 ## Proposed 2026-11-26 (prompts domain, method v1.1)
 
 Raised while starting the prompts domain. Each is argued in
 [`method-v1.1.md`](./method-v1.1.md); `domains/prompts/` follows the recommendation
-while it is open. J14 (below) is needed now too: stage 1 is the kernel, and "agent" is in it.
+while it is open. J14 was decided the same day (table above).
 
 | # | Decision | Recommended | Rests on | Lands in |
 |---|---|---|---|---|
@@ -54,7 +55,6 @@ while it is open. J14 (below) is needed now too: stage 1 is the kernel, and "age
 | J11 | No evaluative words in names | Adopt as N7 (proposal 3) | Ranganathan 1937 pp. 62-72, Canon of Reticence; Seppälä 9.4 | spec N7, T3 |
 | J12 | Abbreviations | Full form preferred, abbreviation as alias unless the full form is rarely used (proposal 4) | Z39.19 §6.6.3; Schober 3.4; Hofmeister abstract; Lawrie abstract | spec N8 |
 | J13 | Find facets by comparison, and test the bare facet list early | Adopt both as process steps 4 and 5 (proposals 1 and 2) | Star 1998 pp. 218-224; Kwasnik p. 41 | process steps 4, 5 |
-| J14 | What "agent" means in the prompts glossary | Decide first; treat "agent" as a kind (a configured model program) and "sub-agent", "reviewer" as roles (proposal 6) | OntoClean §8.3: *Agent* as a role, and the error of putting it above kinds | process step 1; spec D5 |
 | J15 | Default mapping between contexts | `closeMatch`; `exactMatch` only for real identity (proposal 7) | SKOS §10.4 S45 (`exactMatch` is transitive), §10.1 | spec C3 |
 | J16 | Replace "confidence" with a status | `candidate` / `approved` / `deprecated` | Z39.19 §11.1.6 (candidate terms), §11.3.2.1a (retained terms). Alexander's asterisks are not stored | spec G3 |
 | J17 | Rules whose best source is not stored | Keep them marked ⚠ and in force; check each when the source is fetched (Nickerson 2013, Kundisch 2022, Cohen 1960, Berlin 1992, biology codes, *A Pattern Language*) | `to-fetch.md`; the ⚠ lines in `spec.md` and `process.md` | both |
