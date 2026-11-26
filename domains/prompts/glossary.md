@@ -7,7 +7,7 @@ words people use for it, a definition, an example and a near miss.
 If you reach for one of its aliases, it points you here. Everything here is `candidate`
 until stage 1 passes its rounds (spec G3).
 
-**Status**: draft, 2026-11-26, all `candidate`. 18 values of facet set A (chosen by
+**Status**: stage 1 in use from 2026-11-26, after round 3 and the name test ([`scope.md`](./scope.md)). 50 terms `approved`; 4 `candidate` (`rule`, `model`, `context-window`, `steer`), changed after the name test and waiting for the next round. 18 values of facet set A (chosen by
 Jonathan, [`facets.md`](./facets.md)) and 36 kernel terms drafted after J14 ("agent" is a
 model configured to act). The moment values `turn`, `tool-call` and `ending` are also the
 kernel entries for those concepts. Field rules: [`design/spec.md` §4](../../design/spec.md#4-glossarymd).
@@ -18,12 +18,12 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 1. **`second-model`** for a separate model call that makes the call, rather than "judge",
    "monitor" or "classifier": each of those names one role of it (harvest synonym set 3),
    and the bare test had a title-writing helper model that is none of them (`t12`).
-2. **`rule`** rather than "harness" or "code" for fixed logic, because the harness also
+2. **`rule`**, labelled "fixed logic" since the name test (readers took "rule" for a rules file), rather than "harness" or "code", because the harness also
    runs the model and the other values, and a schema check or a setting applied by code is
    still a rule.
 3. **`verification`** rather than "evaluation" for the checking area, because it covers
    self-verification and code review as well as evals; "eval" is an alias.
-4. **Area labels "model access" and "tool use"** (IDs `model`, `tool` unchanged, as the
+4. **Area labels "model calling" (first "model access", renamed after the name test) and "tool use"** (IDs `model`, `tool` unchanged, as the
    round-1 raters use them): so that the plain words "model" and "tool" can be the
    kernel concepts (`language-model`, `agent-tool`). Area aliases that named kernel
    concepts (eval, memory, MCP, telemetry, harness, handoff) were moved to those entries.
@@ -41,18 +41,18 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 
 ## Area values (`area`)
 
-### model access (`model`)
+### model calling (`model`)
 
-- **Definition**: Model access is an area of an agent system that covers how models are called and chosen.
+- **Definition**: Model calling is an area of an agent system that covers how models are called and chosen.
 - **Scope**: Includes providers and their wire formats (dialects), routing between models, reasoning effort and thinking budgets, prompt caching, and what happens when a model's response is broken. Excludes what the model is told (`context`) and which tools it is offered (`tool`).
-- **Aliases**: LLM access, inference
+- **Aliases**: model access, LLM access, inference
 - **Example**: [agent-prompt-cache-health.md](https://github.com/jburnhams/prompts/blob/a531474/agent-prompt-cache-health.md), what moves a cached prefix.
 - **Near miss**: Deferring tool definitions so the cache survives: the change is to how the request is assembled, so it is `model` when the point is the cache and `tool` when the point is which tools are loaded.
 - **Kind**: thing
 - **Facet**: `area`
 - **Status**: candidate
 - **Warrant**: model 3,759 uses in 210 files; LLM 308 (Jonathan's words: "llm")
-- **History**: 2026-11-26 added.
+- **History**: 2026-11-26 added. 2026-11-26 rename: "model access" → "model calling"; both name-test readers read "access" as keys, billing and quota.
 
 ### tool use (`tool`)
 
@@ -63,7 +63,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: An approval prompt before a shell command: the command is a tool, but asking whether it may run is `control`.
 - **Kind**: thing
 - **Facet**: `area`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "tool surface" 143, tool call 206, MCP server 132 (Jonathan's words: "mcps")
 - **History**: 2026-11-26 added.
 
@@ -76,7 +76,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: A reminder the harness injects when the model loops: it is text in the context, but its job is to redirect, so it is `control`.
 - **Kind**: thing
 - **Facet**: `area`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: compaction 501, memory 1,215, AGENTS.md 425, system prompt 258
 - **History**: 2026-11-26 added.
 
@@ -89,7 +89,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: Routing a sub-agent's approval request to the parent session: the routing is `coordination`, but refusing an answer from the wrong session decides whether, so it is `control`.
 - **Kind**: thing
 - **Facet**: `area`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: approval 759, sandbox 457, policy 614, permission 238
 - **History**: 2026-11-26 added.
 
@@ -102,7 +102,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: A tool that ends a run: choosing which ending applies is `control`; the follow-up run it dispatches is `coordination`.
 - **Kind**: thing
 - **Facet**: `area`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: sub-agent 750 (both spellings), orchestrator 281, pipeline 390, trigger 306
 - **History**: 2026-11-26 added.
 
@@ -115,7 +115,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: A transcript of the run: it is produced, but for operators and analysis, so it is `operations`.
 - **Kind**: thing
 - **Facet**: `area`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: output 967, artifact 573, view 548
 - **History**: 2026-11-26 added.
 
@@ -128,7 +128,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: A blocking monitor that refuses a risky command: it checks an action before it happens, so it is `control`.
 - **Kind**: thing
 - **Facet**: `area`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: reviewer 445, eval 182, benchmark 129, self-verification 137 (Jonathan's words: "evals")
 - **History**: 2026-11-26 added.
 
@@ -141,7 +141,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: A loop detector that stops a run: it reads telemetry, but stopping decides, so it is `control`.
 - **Kind**: thing
 - **Facet**: `area`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: telemetry 158, trace 122, transcript 410
 - **History**: 2026-11-26 added.
 
@@ -156,7 +156,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: Rules written in the prompt as a table that the harness then checks: the check has the final say, so `rule`. A reminder the harness inserts listing lost calls: the harness writes it, but the model decides what to do, so `working-model`.
 - **Kind**: role
 - **Facet**: `decider`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "the agent" 629; "model self-report" in agent-risk-assessment.md
 - **History**: 2026-11-26 added; renamed from the bare-test value "model" so the label differs from the area value. 2026-11-26 redefine: the ignore test added to the scope after round 1 split on instructions the harness does not enforce (`r05`, `r24`, `r34`, `r55`).
 
@@ -169,22 +169,22 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: A sub-agent that does part of the task: it is a separate model call, but it works rather than decides; its work is judged by whoever accepts it.
 - **Kind**: role
 - **Facet**: `decider`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: judge 218, classifier 134, monitor 65, grader 39, verifier 30 (Jonathan's words: "llm judges")
 - **History**: 2026-11-26 added. 2026-11-26 redefine: background curators and provider-side filtering placed after round 1 split on them (`r26`, `r54`). 2026-11-26 redefine: a harness-built prompt does not make the decider `rule`, after round 2's non-Claude pair split on it (`h22`, `h44`, `h57`, `h07`).
 
-### rule (`rule`)
+### fixed logic (`rule`)
 
-- **Definition**: A rule is a decider that is fixed logic applied without a model's judgment.
+- **Definition**: A fixed logic is a decider that applies set rules without a model's judgment.
 - **Scope**: Includes harness code, schema and format checks, caps and budgets, a setting chosen beforehand and applied by code, a model provider's service filtering content, and stores and formats where nothing is chosen at run time. The outcome holds even if the model ignores its instructions. Where a section names several mechanisms with different deciders, classify the first one named (reminders before a trajectory judge: `rule`); where it surveys a spectrum without naming one first, classify the one the section recommends or, failing that, mark `unsure`.
-- **Aliases**: code, deterministic check, static rule
+- **Aliases**: rule, code, deterministic check, static rule
 - **Example**: [agent-self-verification.md](https://github.com/jburnhams/prompts/blob/a531474/agent-self-verification.md), "Deterministic, non-LLM completion gates".
 - **Near miss**: A person choosing a permission mode before the run: the choice is the person's, but at run time the mode is applied by code, so `rule`.
 - **Kind**: role
 - **Facet**: `decider`
 - **Status**: candidate
 - **Warrant**: harness 1,544; "static rules" (agent-permissions-approval.md §2)
-- **History**: 2026-11-26 added. 2026-11-26 redefine: the ignore test and the first-named rule added after round 1 (`r15`, `r34`).
+- **History**: 2026-11-26 added. 2026-11-26 redefine: the ignore test and the first-named rule added after round 1 (`r15`, `r34`). 2026-11-26 rename: "rule" → "fixed logic"; both name-test readers read "rule" as an instruction file (Cursor-style rules). Old label kept as an alias.
 
 ### person (`person`)
 
@@ -195,7 +195,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: "ultrathink" typed by the user: the person decides, though code detects the word.
 - **Kind**: role
 - **Facet**: `decider`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: approval 759; "human in the loop" in agent-design/vision.md
 - **History**: 2026-11-26 added. 2026-11-26 redefine: starting something is not deciding it, after round 2 (`h05`, `h25`).
 
@@ -210,7 +210,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: Loading a deeper context file when the model first reads that folder: it happens mid-run, so `tool-call`.
 - **Kind**: happening
 - **Facet**: `moment`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: Keel taxonomy §8 "Starting work"
 - **History**: 2026-11-26 added. 2026-11-26 redefine: "anything fixed for the whole run" removed after round 1, where one rater put fixed formats and stores at `setup` and the others at the moment of use (`r09`, `r14`, `r22`, `r23`, `r27`, `r46`, `r47`).
 
@@ -223,7 +223,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: A check on each shell command: it acts per action, so `tool-call`.
 - **Kind**: happening
 - **Facet**: `moment`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: turn 887 uses in 143 files
 - **History**: 2026-11-26 added.
 
@@ -236,7 +236,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: A tool the model calls to finish: the call is the moment the run ends, so `ending`.
 - **Kind**: happening
 - **Facet**: `moment`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: tool call 206 uses in 86 files
 - **History**: 2026-11-26 added.
 
@@ -249,7 +249,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: A planned stop because the work is done: `ending`.
 - **Kind**: happening
 - **Facet**: `moment`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: agent-run-recovery.md (whole doc)
 - **History**: 2026-11-26 added.
 
@@ -262,7 +262,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: A review of a merged PR the next day: it is after the run, so `after-run`.
 - **Kind**: happening
 - **Facet**: `moment`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: Keel taxonomy §5 "How a run ends"; handoff 261
 - **History**: 2026-11-26 added.
 
@@ -275,7 +275,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Near miss**: A loop detector inside the run: it reads the same signals, but acts during the run, so `failure`.
 - **Kind**: happening
 - **Facet**: `moment`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: Keel taxonomy §7 "What a run leads to"
 - **History**: 2026-11-26 added.
 
@@ -292,7 +292,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Example**: [agent-design/keel/taxonomy.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/keel/taxonomy.md)
 - **Near miss**: Claude Code: it is a harness that runs agents; calling it "an agent" is the product sense.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: agent 5,598 uses in 227 files; Keel taxonomy §1
 - **History**: 2026-11-26 added; sense decided by Jonathan (J14).
 
@@ -305,7 +305,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: An agent SDK such as Pydantic AI: it supplies the parts a harness is built from but is not itself a running program.
 - **Kind**: thing
 - **Related**: `agent`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: harness 1,544 in 170 files; scaffold 81 (Jonathan's words: "harnesses")
 - **History**: 2026-11-26 added.
 
@@ -318,7 +318,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: The Claude Agent SDK spawns the Claude Code CLI: the SDK is the library, the CLI is the harness.
 - **Kind**: thing
 - **Related**: `harness`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: SDK 452 in 83 files; framework 143
 - **History**: 2026-11-26 added.
 
@@ -331,7 +331,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A model provider: the company or service that serves the model.
 - **Kind**: thing
 - **Related**: `model-provider`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: model 3,759 in 210 files; LLM 308 (Jonathan's words: "llm")
 - **History**: 2026-11-26 added.
 
@@ -344,7 +344,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A model family: Claude or Gemini names models, not the service.
 - **Kind**: thing
 - **Related**: `language-model`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: provider 345; vendor 211
 - **History**: 2026-11-26 added.
 
@@ -357,7 +357,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A session in a chat UI, which may contain many runs.
 - **Kind**: happening
 - **Related**: `session`, `transcript`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: run 3,287 in 219 files; Keel taxonomy §9
 - **History**: 2026-11-26 added.
 
@@ -370,7 +370,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A run: one execution, which a session may contain several of.
 - **Kind**: happening
 - **Related**: `run`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: session 1,019; conversation 440; thread 457
 - **History**: 2026-11-26 added.
 
@@ -383,7 +383,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A trace: spans with timings, not the conversation.
 - **Kind**: thing
 - **Related**: `run`, `trace`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: transcript 410; trajectory 49
 - **History**: 2026-11-26 added.
 
@@ -396,7 +396,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A transcript: what the model saw, not how long each part took.
 - **Kind**: thing
 - **Related**: `transcript`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: trace 122; span 119
 - **History**: 2026-11-26 added.
 
@@ -409,7 +409,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A skill: instructions and files the agent reads, not a callable function (though a skill may bring tools).
 - **Kind**: thing
 - **Related**: `tool-surface`, `tool-result`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: tool call 206; Keel taxonomy §3
 - **History**: 2026-11-26 added.
 
@@ -422,7 +422,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: Keel's tool group: a named, reusable set used to grant tools; a run's tool surface may combine several.
 - **Kind**: thing
 - **Related**: `agent-tool`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "tool surface" 143 in 67 files
 - **History**: 2026-11-26 added.
 
@@ -435,7 +435,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: The tool's side effect (a file written): the result is only what the model is told.
 - **Kind**: thing
 - **Related**: `agent-tool`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: tool result 122 in 58 files
 - **History**: 2026-11-26 added.
 
@@ -448,7 +448,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: An agent SDK's own tool interface: in-process, not a protocol between programs.
 - **Kind**: thing
 - **Related**: `mcp-server`, `mcp-app`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: MCP server 132; mcp-apps/, mcp-events.md (Jonathan's words: "mcps")
 - **History**: 2026-11-26 added.
 
@@ -461,7 +461,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A plugin: a package that may bundle MCP servers with skills and hooks.
 - **Kind**: thing
 - **Related**: `mcp`, `plugin`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: MCP server 132 in 57 files; connector 47
 - **History**: 2026-11-26 added.
 
@@ -474,7 +474,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A Claude Artifact: written by the model, not served by an MCP server.
 - **Kind**: thing
 - **Related**: `mcp`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: mcp-apps/README.md; MCP App 7
 - **History**: 2026-11-26 added.
 
@@ -487,7 +487,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A slash command: run when a person types it, not chosen by the model from a description.
 - **Kind**: thing
 - **Related**: `plugin`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: skill 685 in 115 files
 - **History**: 2026-11-26 added.
 
@@ -500,7 +500,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: An MCP server: one source of tools, which a plugin may contain.
 - **Kind**: thing
 - **Related**: `skill`, `mcp-server`, `hook`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: plugin 169; extension 199
 - **History**: 2026-11-26 added.
 
@@ -513,7 +513,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: Middleware in an SDK: code in the same process, set by the developer rather than the user.
 - **Kind**: thing
 - **Related**: `plugin`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: hook 120 in 44 files
 - **History**: 2026-11-26 added.
 
@@ -527,7 +527,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Kind**: role
 - **Broader**: `agent`
 - **Related**: `orchestrator`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: sub-agent 481, subagent 269
 - **History**: 2026-11-26 added; role, not kind (J14, OntoClean §8.3).
 
@@ -541,7 +541,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Kind**: role
 - **Broader**: `agent`
 - **Related**: `sub-agent`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: orchestrator 281; coordinator 26
 - **History**: 2026-11-26 added.
 
@@ -554,14 +554,14 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A context file: written by a repo's owners and loaded per repo, not part of the harness.
 - **Kind**: thing
 - **Related**: `context-window`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: system prompt 258 in 89 files
 - **History**: 2026-11-26 added.
 
 ### context window (`context-window`)
 
-- **Definition**: A context window is a body of input that a model is given on one request, up to its token limit.
-- **Scope**: Includes the system prompt, tool definitions, conversation, tool results and injected text. Excludes the area value `context`, which is about how it is filled.
+- **Definition**: A context window is a limit on how many tokens a model accepts on one request, its reply included.
+- **Scope**: Includes the limit and what fills it: the system prompt, tool definitions, conversation, tool results and injected text. Excludes the area value `context`, which is about how it is filled.
 - **Aliases**: model context, prompt
 - **Example**: [agent-context-compaction.md](https://github.com/jburnhams/prompts/blob/a531474/agent-context-compaction.md)
 - **Near miss**: Memory: kept across runs and loaded into the context window only when retrieved.
@@ -569,7 +569,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Related**: `system-prompt`, `compaction`
 - **Status**: candidate
 - **Warrant**: context window 69 in 29 files
-- **History**: 2026-11-26 added.
+- **History**: 2026-11-26 added. 2026-11-26 redefine: the limit, not the contents, after both name-test readers gave the established sense (N6).
 
 ### context file (`context-file`)
 
@@ -580,7 +580,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A skill: loaded only when its description matches, not whenever the repo is open.
 - **Kind**: thing
 - **Related**: `system-prompt`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: AGENTS.md 425; CLAUDE.md 102; "context file" 18
 - **History**: 2026-11-26 added; label chosen because the repo has no single word (harvest synonym set 5).
 
@@ -593,7 +593,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: Memory consolidation: between runs, for later runs, not to fit this one.
 - **Kind**: happening
 - **Related**: `context-window`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: compaction 501 in 63 files
 - **History**: 2026-11-26 added.
 
@@ -606,7 +606,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A transcript: a record of one run, which becomes memory only if something extracts from it.
 - **Kind**: thing
 - **Related**: `context-window`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: memory 1,215 in 94 files
 - **History**: 2026-11-26 added.
 
@@ -616,11 +616,11 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Scope**: Includes system reminders, nudges, loop warnings and a trajectory judge's feedback.
 - **Aliases**: nudge, system reminder, reminder, system-reminder
 - **Example**: [agent-run-steering.md](https://github.com/jburnhams/prompts/blob/a531474/agent-run-steering.md)
-- **Near miss**: An approval prompt: asks a person, does not redirect the model.
+- **Near miss**: An approval prompt: asks a person, does not redirect the model. A person's message typed while the agent works (which some harnesses call steering): it is the person's input, `person` deciding, not a steer.
 - **Kind**: thing
 - **Status**: candidate
 - **Warrant**: steer 103; nudge 108; system-reminder 46
-- **History**: 2026-11-26 added.
+- **History**: 2026-11-26 added. 2026-11-26 redefine: near miss added after a name-test reader took steer to be a person's mid-run message.
 
 ### approval (`approval`)
 
@@ -631,7 +631,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A review of finished work: after the fact, `code-review`.
 - **Kind**: happening
 - **Related**: `permission-mode`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: approval 759 in 113 files
 - **History**: 2026-11-26 added.
 
@@ -644,7 +644,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: Plan mode as a way of working: it also restricts tools, but its point is planning first.
 - **Kind**: thing
 - **Related**: `approval`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: approval mode 17; permission mode 11; plan mode 81; auto mode 31
 - **History**: 2026-11-26 added; "mode" alone is a homonym (harvest 2) and gets no entry.
 
@@ -656,7 +656,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Example**: [agent-local-compute.md](https://github.com/jburnhams/prompts/blob/a531474/agent-local-compute.md)
 - **Near miss**: A permission mode: decides what is asked, not what can be reached.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: sandbox 457 in 102 files
 - **History**: 2026-11-26 added.
 
@@ -668,7 +668,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Example**: [agent-permissions-approval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-permissions-approval.md)
 - **Near miss**: A sub-agent's report: returned to its spawner, which carries on.
 - **Kind**: happening
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: handoff 261; hand-off 17
 - **History**: 2026-11-26 added.
 
@@ -681,7 +681,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A hook: runs a command inside a run, does not start one.
 - **Kind**: thing
 - **Related**: `pipeline`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: trigger 306 in 80 files
 - **History**: 2026-11-26 added.
 
@@ -694,7 +694,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: An orchestrator: an agent deciding at run time, not a defined graph.
 - **Kind**: thing
 - **Related**: `trigger`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: pipeline 390; workflow 320
 - **History**: 2026-11-26 added.
 
@@ -707,7 +707,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: Self-verification: the agent checking its own work during a run.
 - **Kind**: thing
 - **Related**: `benchmark`, `self-verification`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: eval 182 in 57 files (Jonathan's words: "evals")
 - **History**: 2026-11-26 added.
 
@@ -720,7 +720,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A project's own eval suite: not published for comparison.
 - **Kind**: thing
 - **Broader**: `eval`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: benchmark 129; SWE-bench 90
 - **History**: 2026-11-26 added.
 
@@ -733,7 +733,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A completion gate run by code: the check is a rule; self-verification is when the agent itself checks.
 - **Kind**: happening
 - **Related**: `eval`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: self-verification 137 in 42 files
 - **History**: 2026-11-26 added.
 
@@ -746,6 +746,6 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: Self-review: the same agent, the same run.
 - **Kind**: happening
 - **Related**: `self-verification`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: reviewer 445; code-review-approaches.md
 - **History**: 2026-11-26 added.

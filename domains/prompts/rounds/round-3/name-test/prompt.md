@@ -1,0 +1,58 @@
+# Name test (T9): labels shown to a fresh reader
+
+The repo is research about how AI agent products and harnesses are built (Claude Code, Codex, Gemini CLI, MCP, agent SDKs), with designs for the owner's own agent platform. Some labels name parts of an agent system, some name who makes a decision, and some name a moment in a run. For each label below, say in one sentence what you think it means in that repo. Do not look anything up and do not read any files. Answer as a markdown list in the same order: `- <label>: <your guess>`.
+
+- after run
+- agent
+- agent SDK
+- approval
+- benchmark
+- code review
+- compaction
+- context
+- context file
+- context window
+- control
+- coordination
+- ending
+- eval
+- failure
+- handoff
+- harness
+- hook
+- MCP
+- MCP App
+- MCP server
+- memory
+- model
+- model access
+- model provider
+- operations
+- orchestrator
+- output
+- permission mode
+- person
+- pipeline
+- plugin
+- rule
+- run
+- sandbox
+- second model
+- self-verification
+- session
+- setup
+- skill
+- steer
+- sub-agent
+- system prompt
+- tool
+- tool call
+- tool result
+- tool surface
+- tool use
+- trace
+- transcript
+- trigger
+- turn
+- verification
+- working model

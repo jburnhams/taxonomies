@@ -4,6 +4,42 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Adopted stage 1 of the prompts taxonomy after the name test (branch `claude/project-thread-oneclm`, PR #11)**.
+Both fresh readers passed T9 (openai 94%, gemini 93%), so every stage-1 ending condition
+holds on round 3. The four missed labels were changed and are `candidate` again.
+
+- `domains/prompts/rounds/round-3/name-test/results.md`: **new**. Scores and the four misses.
+- `domains/prompts/glossary.md`: `rule` labelled "fixed logic" and `model` labelled "model
+  calling" (old labels kept as aliases); `context-window` redefined as a token limit;
+  `steer` gains a near miss; statuses set (50 approved, 4 candidate).
+- `domains/prompts/facets.md`, `scope.md`: status `in use`, round-3 agreement figures.
+- `domains/prompts/changelog.md`: the operations above.
+
+**Ran the prompts name test (T9)** with the two non-Claude raters (GPT-6.2-Astra via
+`codex exec`, Gemini 4 Carbon High via `agy -p`), same isolation as the rounds.
+
+- `domains/prompts/rounds/round-3/name-test/guesses-openai.md`, `guesses-gemini.md`:
+  **new**. Each reply verbatim, with CLI, model and run details at the top.
+
+**Prompts round 3 passes; competency and heuristic review; name-test prompt (branch `claude/project-thread-oneclm`, PR #11)**.
+Round 3 passed J23 on every facet. The remaining ending conditions are T9 (name test,
+waiting on two fresh readers) and adoption.
+
+- `domains/prompts/rounds/round-3/review.md`: **new**. T10 and T11.
+- `domains/prompts/rounds/round-3/name-test/prompt.md`: **new**. 54 labels.
+- `domains/prompts/changelog.md`: the operations above.
+
+**Ran prompts round 3 with the same three raters** (kit `5d0ad9e`, 60 items). Every facet
+passes: Fleiss' κ area 0.80, decider 0.77, moment 0.86; openai-gemini 0.76, 0.76, 0.83.
+
+- `domains/prompts/rounds/round-3/answers/`: **new**. Each rater's CSV and raw reply with
+  run details. `results.md`: **new**, both kappa tables and the disagreement lists.
+
+**Recorded J23 (branch `claude/project-thread-oneclm`)**. Jonathan chose the three-rater pass rule: Fleiss' κ ≥ 0.6 per facet and the non-Claude pair κ ≥ 0.6.
+
+- `design/decisions.md`: J23 moved to the decided table.
+- `design/method-v1.1.md`: M4 marked adopted; the other six stay proposed.
+
 **Scored prompts round 2, fixed decider again, drew 80 more items for round 3 (branch `claude/project-thread-oneclm`)**.
 Round 2 passed Fleiss' κ ≥ 0.6 on every facet (0.87, 0.66, 0.72) but the two non-Claude
 raters agreed only 0.54 on decider, so the M4 rule (proposed, J23) fails. The held set

@@ -11,9 +11,7 @@ Stage 1 only needs facets that work across the whole repo; each area gets its ow
 finer questions in a later stage (proposal M1 in
 [`design/method-v1.1.md`](../../design/method-v1.1.md)).
 
-**Status**: set A chosen by Jonathan, 2026-11-26 (process step 4). Round 2 (2026-11-26):
-every facet passes on Fleiss' κ; `decider` misses only the non-Claude pair rule (0.54);
-fixed again, round 3 next. Set A's values have draft glossary
+**Status**: set A chosen by Jonathan, 2026-11-26 (process step 4). In use from 2026-11-26: round 3 passed J23 on every facet. Set A's values have draft glossary
 entries (`candidate`) so the round-1 kit could be built while Jonathan chooses; they are
 redone if he picks another set.
 
@@ -67,7 +65,7 @@ redone if he picks another set.
 - **Order**: from the model outward: what is called, what it can do, what it knows, what
   it may do, how runs fit together, what comes out, how it is checked, how it is run.
 - **Unsorted**: none yet.
-- **Agreement**: Fleiss' κ = 0.87, non-Claude pair 0.87. Round 2, 2026-11-26, 56 items (round 1: 0.93 / 0.92) ([results](./rounds/round-2/results.md)).
+- **Agreement**: Fleiss' κ = 0.80, non-Claude pair 0.76. Round 3, 2026-11-26, 60 items (round 2: 0.87 / 0.87; round 1: 0.93 / 0.92) ([results](./rounds/round-3/results.md)).
 
 ### Decider (`decider`)
 
@@ -85,7 +83,7 @@ redone if he picks another set.
   - `person`: a human answer at that moment (an approval, a reply, a typed command).
 - **Order**: from least to most outside the run.
 - **Unsorted**: none yet.
-- **Agreement**: Fleiss' κ = 0.66, non-Claude pair **0.54**. Round 2, 2026-11-26, 56 items (round 1: 0.58 / 0.57). Scope notes redefined again; round 3 next.
+- **Agreement**: Fleiss' κ = 0.77, non-Claude pair 0.76. Round 3, 2026-11-26, 60 items (round 2: 0.66 / 0.54; round 1: 0.58 / 0.57).
 
 ### Moment (`moment`)
 
@@ -103,7 +101,7 @@ redone if he picks another set.
   - `after-run`: between or after runs: memory, evals, telemetry analysis, review of a PR.
 - **Order**: the run's own order.
 - **Unsorted**: none yet.
-- **Agreement**: Fleiss' κ = 0.72, non-Claude pair 0.67. Round 2, 2026-11-26, 56 items (round 1: 0.72 / 0.69).
+- **Agreement**: Fleiss' κ = 0.86, non-Claude pair 0.83. Round 3, 2026-11-26, 60 items (round 2: 0.72 / 0.67; round 1: 0.72 / 0.69).
 
 ## Set B: area and decider only
 

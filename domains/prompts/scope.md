@@ -28,7 +28,10 @@ Built with the method in [`design/process.md`](../../design/process.md) (version
   conflict, Jonathan's reading wins.
 - **Owner**: Jonathan. Agents approve changes that pass T1-T6 with a logged reason;
   Jonathan reviews [`changelog.md`](./changelog.md) and can veto (J8, spec G1).
-- **Status**: `draft`, 2026-11-26. Stage 1 (kernel and areas) in progress.
+- **Status**: stage 1 `in use`, 2026-11-26, after round 3 met the ending conditions below
+  ([results](./rounds/round-3/results.md), [review](./rounds/round-3/review.md),
+  [name test](./rounds/round-3/name-test/results.md)). Approved by Claude under G1;
+  Jonathan can veto. Stage 2 not started.
 
 ## Stages (proposal M1)
 
@@ -39,7 +42,7 @@ samples and rounds, inside this one context (one meaning per word across all sta
 
 | Stage | Covers | Facets | Status |
 |---|---|---|---|
-| 1. Kernel | the 30-40 words every area uses (agent, harness, model, run, turn, tool, MCP server, skill, sub-agent, context file, approval, eval, ...) and the split into areas | `area`, `decider`, `moment` (proposed) | samples drawn; facets await Jonathan |
+| 1. Kernel | the 30-40 words every area uses (agent, harness, model, run, turn, tool, MCP server, skill, sub-agent, context file, approval, eval, ...) and the split into areas | `area`, `decider`, `moment` (set A, Jonathan 2026-11-26) | in use 2026-11-26 after three rounds |
 | 2. First area | `context` or `control`, the two areas the repo's `changelog.md` mentions most (context and memory docs 79 times; permission, risk, recovery and steering docs 59; tool docs 45) | that area's own facets, such as channel or risk dimension | not started |
 | 3+. Other areas | one at a time, in the order the repo's work reaches them (J10) | per area | not started |
 

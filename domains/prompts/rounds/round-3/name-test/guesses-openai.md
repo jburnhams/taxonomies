@@ -1,0 +1,63 @@
+# Name test: openai guesses
+
+- **CLI**: codex-cli 0.172.0, `codex exec --skip-git-repo-check --sandbox read-only --ephemeral --ignore-user-config --ignore-rules -m gpt-6.2-astra -c model_reasoning_effort=high -c web_search=disabled --json -o answer -`, prompt on stdin. No tool calls in the event log.
+- **Model**: `gpt-6.2-astra`, reasoning effort high.
+- **Run**: 2026-11-26T07:35:27Z to 2026-11-26T07:36:11Z (UTC). Tokens: 18810 in, 1064 out (0 reasoning).
+- Prompt: the whole of `prompt.md` (commit `a3261b3`), copied alone into a fresh empty temp directory and run from there, as the only input. API keys removed from the environment (billed to the plan).
+
+## Reply (verbatim)
+
+- after run: The period after an agent run ends, when its results can be recorded, reviewed, or passed on.
+- agent: The component that uses a model to choose and carry out steps toward a goal.
+- agent SDK: A library developers use to build agents and embed them in their own applications.
+- approval: A decision to let a particular proposed action go ahead.
+- benchmark: A standardized set of tasks and scoring criteria used to compare models, agents, or harnesses.
+- code review: An examination of a proposed code change to find defects and risks before it is accepted.
+- compaction: The process of condensing earlier messages and tool results so the agent can keep working within its context window.
+- context: The information the model receives when choosing its next response or action.
+- context file: A file the harness reads to give the agent project instructions or background.
+- context window: The maximum number of tokens a model can handle in a single request, including any capacity reserved for its response.
+- control: Who or what has the authority to choose, redirect, or stop the agent’s next action.
+- coordination: How multiple agents or components divide work, share progress, and manage dependencies.
+- ending: The point when the agent or harness decides that the run should stop.
+- eval: A test that checks how well an agent, model, or harness meets a defined criterion.
+- failure: A case where the system cannot complete the task or produces an outcome that misses its requirements.
+- handoff: A transfer of responsibility for a task, along with the context the next person or agent needs to continue.
+- harness: The software around a model that manages the agent loop, supplies context, and executes tool calls.
+- hook: A callback the harness invokes at a defined event, such as just before a tool runs.
+- MCP: The Model Context Protocol gives AI applications a standard way to discover and use tools, resources, and prompts exposed by servers.
+- MCP App: An interactive interface an MCP server supplies for display inside a compatible host.
+- MCP server: A service that exposes tools, resources, or prompts to clients through MCP.
+- memory: Information retained from earlier work that the agent can retrieve and use later.
+- model: The inference engine that takes context as input and generates a response or tool request.
+- model access: How the harness obtains permission and connects to a model to make requests.
+- model provider: The organization or service that makes a model available for inference.
+- operations: The ongoing work of running, monitoring, and maintaining the agent platform.
+- orchestrator: The component that assigns work, sequences steps, and decides what runs next.
+- output: The answer, artifact, or other result the agent produces for the task.
+- permission mode: A preset that determines which actions the agent can take automatically, which need approval, and which are blocked.
+- person: The human participant who gives directions, makes decisions, or judges the result.
+- pipeline: A defined sequence of processing stages through which a task or its artifacts pass.
+- plugin: An installable extension that adds capabilities to the host, such as tools, hooks, or skills.
+- rule: An explicit instruction or constraint that applies when the agent acts.
+- run: One execution of an agent on a task, from invocation until it stops.
+- sandbox: An isolated execution environment that restricts what agent actions can access or change.
+- second model: An additional model consulted during a task, for example to critique the primary model’s work.
+- self-verification: The agent checks its own work against the task requirements before reporting completion.
+- session: A continuing interaction that preserves conversation or work state across turns and potentially across runs.
+- setup: The configuration and preparation needed before the agent can begin working.
+- skill: A reusable package of task-specific instructions, sometimes accompanied by scripts or reference material.
+- steer: To redirect an active agent by giving it new guidance while it works.
+- sub-agent: An agent given a delegated part of a larger task and expected to report its result back.
+- system prompt: The high-priority instructions supplied to the model that define its role and guide its behavior.
+- tool: A callable capability that lets the agent retrieve information or take an action.
+- tool call: A single request to invoke a particular tool with specified arguments.
+- tool result: The data, status, or error returned from a tool call.
+- tool surface: The set of tools visible to the model, including their descriptions and accepted arguments.
+- tool use: The process by which an agent selects a tool, invokes it, and uses the result to continue.
+- trace: A structured record of execution events that helps reconstruct what happened during a run.
+- transcript: The ordered record of messages exchanged in a session, often including tool calls and results.
+- trigger: An event or condition that causes a run or action to start.
+- turn: One cycle from a participant’s message through the agent’s response, potentially including several tool calls.
+- verification: A check that the work meets its requirements, such as running tests or inspecting the resulting artifact.
+- working model: The primary model doing the task and choosing the agent’s next actions.
