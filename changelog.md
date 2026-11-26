@@ -4,6 +4,12 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Ran prompts round 3 with the same three raters** (kit `5d0ad9e`, 60 items). Every facet
+passes: Fleiss' κ area 0.80, decider 0.77, moment 0.86; openai-gemini 0.76, 0.76, 0.83.
+
+- `domains/prompts/rounds/round-3/answers/`: **new**. Each rater's CSV and raw reply with
+  run details. `results.md`: **new**, both kappa tables and the disagreement lists.
+
 **Recorded J23 (branch `claude/project-thread-oneclm`)**. Jonathan chose the three-rater pass rule: Fleiss' κ ≥ 0.6 per facet and the non-Claude pair κ ≥ 0.6.
 
 - `design/decisions.md`: J23 moved to the decided table.
