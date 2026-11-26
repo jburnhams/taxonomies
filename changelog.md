@@ -4,6 +4,29 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Put the taxonomies taxonomy through the full process, to the round-1 kit (branch `claude/project-thread-yet87g`, PR #10)**.
+Jonathan asked to "put the taxonomies taxonomy through full process". The draft sorted the
+method's concepts; the full process needs items to sort, so the items became the method's
+own rules, steps, file fields and decisions, and the facets were rebuilt for them. The
+facet choice is put to Jonathan; work went ahead on the recommended set.
+
+- `domains/taxonomies/scope.md`: rewritten (process step 1): items, purpose, twelve
+  competency questions, ending conditions with three rater families.
+- `domains/taxonomies/sample.py`, `items-all.csv`, `samples.md`: **new** (step 2). 106 items
+  (48 build, 10 bare-facet test, 30 round 1, 18 held), seed 20261126, each kind spread
+  evenly through the sets; steps carry their "Who" from the process's step table.
+- `domains/taxonomies/harvest.md`: **new** (step 3). Counts over `design/` and `domains/ux/`,
+  six synonym sets, nine homonyms (scope, round, kind, context, test, status, domain,
+  review, check).
+- `domains/taxonomies/facets.md`: rewritten (steps 4 and 5). Facets `part`, `stage`, `check`
+  (set A of three); the draft facet `kind` retired. Bare-facet test on ten items, with five
+  rules it produced.
+- `domains/taxonomies/glossary.md`: ten new `candidate` values, stage scope notes
+  rewritten, the four term kinds moved out of the facets, two more label choices. One
+  correction: the alias entry cited N7 where it meant N1.
+- `domains/taxonomies/rounds/round-1/`: **new**. 30 items, `make_prompts.py`, three
+  shuffled prompts, README with the run and scoring steps. Raters not yet run.
+
 **Added the explorer site, generated from the domain files, and drafted the method's own words as a domain (branch `claude/project-thread-yet87g`)**.
 Jonathan asked for a GitHub Pages site with an overview and a way to explore each taxonomy
 down to the raw data behind each term, generated from the structured files, built on

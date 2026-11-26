@@ -7,23 +7,28 @@ words for it, a definition, an example and a near miss.
 heading word of the entry. Everything here is `candidate`: drafted, not yet tested
 (spec G3).
 
-**Status**: draft, 2026-11-26, all `candidate`. 39 concepts of the method and the 8
-values of facets `kind` and `stage` ([`facets.md`](./facets.md)). Field rules:
+**Status**: draft, 2026-11-26, all `candidate`. 39 concepts of the method, the 4 term
+kinds, and the 14 values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)). Field rules:
 [`design/spec.md` §4](../../design/spec.md#4-glossarymd). Warrant counts are whole-word,
 case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/` on
 2026-11-26.
 
 ## Label choices for Jonathan's veto (J8)
 
-1. **`alias`** rather than "alternative label" (SKOS's word): alias has 113 uses, the
+1. **`alias`** rather than "alternative label" (SKOS's word): alias has 115 uses, the
    SKOS word none, and the glossary field is already called Aliases. T3 flags "alias" as
    a possible plural; it is singular.
-2. **`kind`** is a facet here although N4 bars "kind" as a claim word in labels: the
-   facet keeps the spec's field name (S4), and it is not a glossary label.
+2. **`owner-decision`** rather than "Jonathan's decision" (his name has 110 uses): a
+   domain may have another owner (spec §2), and the value must hold for all of them.
 3. **`governing`** for steps 10 to 12, to match framing, building and testing, although
    "governance" (the spec's §9 heading) has more uses; governance is an alias.
 4. **`definition`**, **`scope note`** and **`near miss`** are entries even though they
    are also field names, because the method's rules (D1-D4) are about them.
+5. **`naming`**, **`meaning`** and **`change`** for the parts the spec heads Names,
+   Definitions and Governance: the heading words name the rules, these name the part of a
+   taxonomy the rules govern, and "definitions" reads as the `definition` entry's plural.
+   "names" and "definitions" are aliases; "governance" stays an alias of `governing`
+   only (T2), so `change` has none.
 
 ## Entries
 
@@ -258,7 +263,7 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 ### alias (`alias`)
 
 - **Definition**: An alias is a label that people also use for a term and that points to its preferred label.
-- **Scope**: Listed in the Aliases field; each points to one term only (N7).
+- **Scope**: Listed in the Aliases field; each points to one term only (N1).
 - **Aliases**: alternative label, altLabel
 - **Example**: [spec §4](../../design/spec.md#4-glossarymd)
 - **Near miss**: A hidden label: kept for search, never offered as a word to use.
@@ -513,7 +518,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Warrant**: "pattern" 54 (design/ and domains/ux/, 2026-11-26)
 - **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
 
-## Facet values
+## Term kinds
+
+The values of every entry's Kind field (spec S4). They were the draft facet `kind`.
 
 ### thing (`thing`)
 
@@ -522,10 +529,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Example**: [spec S4](../../design/spec.md#structure)
 - **Near miss**: A role: a part a thing plays for a while (a model is a thing; rater is one of its roles).
 - **Kind**: property
-- **Facet**: `kind`
 - **Status**: candidate
 - **Warrant**: "thing" 95 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 moved (no longer a facet value: facet `kind` retired in step 4; kept as a value of the Kind field)
 
 ### property (`property`)
 
@@ -534,10 +540,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Example**: [spec S4](../../design/spec.md#structure)
 - **Near miss**: A thing: it exists on its own; a property exists only in what has it.
 - **Kind**: property
-- **Facet**: `kind`
 - **Status**: candidate
 - **Warrant**: "property" 50 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 moved (no longer a facet value: facet `kind` retired in step 4; kept as a value of the Kind field)
 
 ### role (`role`)
 
@@ -546,10 +551,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Example**: [spec S4](../../design/spec.md#structure)
 - **Near miss**: A thing: a model stays a model when it stops rating.
 - **Kind**: property
-- **Facet**: `kind`
 - **Status**: candidate
 - **Warrant**: "role" 38 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 moved (no longer a facet value: facet `kind` retired in step 4; kept as a value of the Kind field)
 
 ### happening (`happening`)
 
@@ -558,51 +562,178 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Example**: [spec S4](../../design/spec.md#structure)
 - **Near miss**: A thing that records a happening: the changelog is a thing; the operation it records is a happening.
 - **Kind**: property
-- **Facet**: `kind`
 - **Status**: candidate
 - **Warrant**: "happening" 12 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 moved (no longer a facet value: facet `kind` retired in step 4; kept as a value of the Kind field)
+
+## Facet values
+
+Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
+
+### purpose (`purpose`)
+
+- **Definition**: A purpose is a part of a taxonomy that says what it is for, who reads it, what it must answer and when it is finished.
+- **Scope**: Includes the `scope.md` fields Purpose, Readers, Owner, Competency questions, Out of scope and Ending conditions, process steps 0 and 1, and the competency-question test (T10). Excludes the edges between this context and others (`boundary`).
+- **Example**: [spec §2](../../design/spec.md#2-scopemd)
+- **Near miss**: Out of scope: it marks the edge of the domain's own subject, so `purpose`; a link to a neighbouring context is `boundary`.
+- **Kind**: property
+- **Facet**: `part`
+- **Status**: candidate
+- **Warrant**: "purpose" 25 (design/ and domains/ux/, 2026-11-26)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
+
+### boundary (`boundary`)
+
+- **Definition**: A boundary is a part of a taxonomy that covers how its context meets other contexts.
+- **Scope**: Includes one context per domain, `map.md` and its mappings (closeMatch and the rest), the shared kernel, and the `scope.md` fields Context and Neighbours (spec §8 Contexts, C1-C3, G7). Excludes what the domain itself covers (`purpose`).
+- **Aliases**: contexts
+- **Example**: [spec §8, Contexts](../../design/spec.md#contexts)
+- **Near miss**: A shared kernel change: it needs every owner's agreement, but it is about two contexts meeting, so `boundary`, with check `owner-decision`.
+- **Kind**: property
+- **Facet**: `part`
+- **Status**: candidate
+- **Warrant**: "boundary" 12, "context" 38 (design/ and domains/ux/, 2026-11-26)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
+
+### structure (`structure`)
+
+- **Definition**: A structure is a part of a taxonomy that covers how its terms and facets are arranged.
+- **Scope**: Includes facets and their values, the `facets.md` fields, broader and related links, term kinds, levels, the Unsorted list, the record grammar and integrity (spec §8 Structure, S1-S6, T1, T5-T7). Excludes the words chosen for them (`naming`).
+- **Example**: [spec §8, Structure](../../design/spec.md#structure)
+- **Near miss**: A facet value's label: the value is structure, the word for it is `naming`.
+- **Kind**: property
+- **Facet**: `part`
+- **Status**: candidate
+- **Warrant**: "structure" 22 (design/ and domains/ux/, 2026-11-26)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
+
+### naming (`naming`)
+
+- **Definition**: Naming is a part of a taxonomy that covers the words for its concepts: labels, aliases, hidden labels and identifiers.
+- **Scope**: Includes the rules N1-N8, the label test (T2), name form (T3), the name test (T9), and the harvest and warrant that choose a label (N2). Excludes what the word means (`meaning`).
+- **Aliases**: names
+- **Example**: [spec §8, Names](../../design/spec.md#names)
+- **Near miss**: Warrant: it is counted evidence, but it exists to choose a label, so `naming`, not `evidence`.
+- **Kind**: property
+- **Facet**: `part`
+- **Status**: candidate
+- **Warrant**: "naming" 8, "names" (spec §8 heading) (design/ and domains/ux/, 2026-11-26)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
+
+### meaning (`meaning`)
+
+- **Definition**: Meaning is a part of a taxonomy that covers what each term is: its definition, scope note, example and near miss.
+- **Scope**: Includes the rules D1-D5 and the definition form test (T4). Excludes the term's label (`naming`) and its place among other terms (`structure`).
+- **Aliases**: definitions
+- **Example**: [spec §8, Definitions](../../design/spec.md#definitions)
+- **Near miss**: The Kind field: D5 asks for it, but it places the term among kinds (S4), so `structure`.
+- **Kind**: property
+- **Facet**: `part`
+- **Status**: candidate
+- **Warrant**: "meaning" 10, "definitions" 131 (design/ and domains/ux/, 2026-11-26)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
+
+### evidence (`evidence`)
+
+- **Definition**: Evidence is a part of a taxonomy that covers the items it is tried on and the results of trying it.
+- **Scope**: Includes samples, build and test items, rounds, raters and their answers, kappa and the agreement test (T8), the Agreement field, and sample sizes (J7). Excludes counts of words (`naming`).
+- **Example**: [spec T8](../../design/spec.md#judgement-while-building-and-at-each-review)
+- **Near miss**: A competency question: it is asked of the finished taxonomy, but it states what the taxonomy is for, so `purpose`.
+- **Kind**: property
+- **Facet**: `part`
+- **Status**: candidate
+- **Warrant**: "evidence" 12, "round" 191, "sample" 47 (design/ and domains/ux/, 2026-11-26)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
+
+### change (`change`)
+
+- **Definition**: A change is a part of a taxonomy that covers how it is approved, adopted, used and altered over time.
+- **Scope**: Includes the rules G1-G6, the operations, status, history, the changelog, adoption, veto, reviews, putting a glossary into use, and the in-use tests (T12-T14). Excludes changes to how contexts meet (`boundary`).
+- **Example**: [spec §9](../../design/spec.md#9-governance-how-a-taxonomy-changes)
+- **Near miss**: A rule about when a label should be updated (N6): a change happens, but the rule is about the label, so `naming`.
+- **Kind**: property
+- **Facet**: `part`
+- **Status**: candidate
+- **Warrant**: "change" 41, "governance" 8 (design/ and domains/ux/, 2026-11-26)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
+
+### script (`script`)
+
+- **Definition**: A script is a check in which a program decides from the files whether an item holds.
+- **Scope**: Includes counts, uniqueness, presence of fields, formats and computed figures: the mechanical tests T1-T6, kappa against its target (T8's pass), sample sizes, and the in-use counts (T12, T13). A program must be able to decide pass or fail without anyone reading for sense. Excludes a script that only flags candidates for a person to decide (`judgement`).
+- **Example**: [`tools/check_domain.py`](../../tools/check_domain.py)
+- **Near miss**: N7, no evaluative words: T3 flags words from a short list, but a person decides, so `judgement`.
+- **Kind**: role
+- **Facet**: `check`
+- **Status**: candidate
+- **Warrant**: "script" 6, "mechanical" 5 (design/ and domains/ux/, 2026-11-26)
+- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested)
+
+### judgement (`judgement`)
+
+- **Definition**: A judgement is a check in which a person or a model reads for sense and decides whether an item holds.
+- **Scope**: Includes writing and reviewing definitions, choosing facets and labels, rating items, the name test, the heuristic review and agent approval under G1, where Jonathan can veto but an agent settles it. Excludes a computed pass (`script`) and a call the text reserves for the owner (`owner-decision`).
+- **Example**: [spec §10, Judgement](../../design/spec.md#judgement-while-building-and-at-each-review)
+- **Near miss**: A step "checked by Jonathan": he looks, but the step's work is settled by whoever does it, so `judgement`.
+- **Kind**: role
+- **Facet**: `check`
+- **Status**: candidate
+- **Warrant**: "judgement" 50 (design/ and domains/ux/, 2026-11-26)
+- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested)
+
+### owner decision (`owner-decision`)
+
+- **Definition**: An owner decision is a check in which the item's own text gives the final word to Jonathan or a domain's owner.
+- **Scope**: Includes deciding to start a domain, choosing the facets (process step 4, "Jonathan decides"), a veto, design changes, open questions left for him, and shared-kernel changes needing every owner. A decision record is sorted by what it settles, not by the fact that Jonathan made it. Excludes "can veto" and "checked by Jonathan", where an agent still settles it (`judgement`).
+- **Aliases**: Jonathan's decision
+- **Example**: [spec G1](../../design/spec.md#9-governance-how-a-taxonomy-changes)
+- **Near miss**: G1, agents approve and Jonathan can veto: the veto is his, but what settles a change day to day is an agent's approval, so `judgement`.
+- **Kind**: role
+- **Facet**: `check`
+- **Status**: candidate
+- **Warrant**: "owner" 13, "Jonathan decides" (process step table) (design/ and domains/ux/, 2026-11-26)
+- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested)
 
 ### framing (`framing`)
 
 - **Definition**: Framing is a stage of the method that decides a domain's purpose, readers and ending conditions before any word is collected.
-- **Scope**: Process steps 0 and 1; produces `scope.md`.
+- **Scope**: Process steps 0 and 1; produces `scope.md`. Includes every `scope.md` field and the decisions they settle.
 - **Example**: [process, the steps at a glance](../../design/process.md#the-steps-at-a-glance)
 - **Near miss**: Building: it starts once the frame is written.
 - **Kind**: happening
 - **Facet**: `stage`
 - **Status**: candidate
 - **Warrant**: "framing" 3 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 redefined (scope note: which items take this stage, after the bare-facet test)
 
 ### building (`building`)
 
 - **Definition**: Building is a stage of the method that collects samples and words and drafts the facets and glossary.
-- **Scope**: Process steps 2 to 6.
+- **Scope**: Process steps 2 to 6: samples, harvest, facets, the bare-facet test, names and definitions. Includes the rules applied while drafting (S, N and D rules) and the `facets.md` and `glossary.md` fields, which step 4 or 6 first fills.
 - **Example**: [process, the steps at a glance](../../design/process.md#the-steps-at-a-glance)
 - **Near miss**: Testing: building may read the build sample; testing may not.
 - **Kind**: happening
 - **Facet**: `stage`
 - **Status**: candidate
 - **Warrant**: "building" 10 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 redefined (scope note: which items take this stage, after the bare-facet test)
 
 ### testing (`testing`)
 
 - **Definition**: Testing is a stage of the method that sorts fresh items, scores agreement and tries the names on fresh readers.
-- **Scope**: Process steps 7 to 9, repeated by round.
+- **Scope**: Process steps 7 to 9, repeated by round. Includes every validation test from T1 to T11 (the spec runs the mechanical ones after each round, step 7), the Agreement and Unsorted fields, and rater rules.
 - **Example**: [process, the steps at a glance](../../design/process.md#the-steps-at-a-glance)
-- **Near miss**: Mechanical checks: they run in every stage, on every commit.
+- **Near miss**: A rule a test checks, such as N7 checked by T3: the rule first applies when a label is chosen, so `building`; the test is `testing`.
 - **Kind**: happening
 - **Facet**: `stage`
 - **Status**: candidate
 - **Warrant**: "testing" 1 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 redefined (scope note: which items take this stage, after the bare-facet test)
 
 ### governing (`governing`)
 
 - **Definition**: Governing is a stage of the method that adopts a taxonomy and then changes it only by named operations.
-- **Scope**: Process steps 10 to 12.
+- **Scope**: Process steps 10 to 12: adoption, putting into use, and maintenance. Includes the G rules, reviews, the in-use tests T12 to T14, and `map.md` (written in step 12).
 - **Aliases**: governance, maintenance
 - **Example**: [process, the steps at a glance](../../design/process.md#the-steps-at-a-glance)
 - **Near miss**: Building: a change after adoption is an operation, never a redraft.
@@ -610,4 +741,4 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Facet**: `stage`
 - **Status**: candidate
 - **Warrant**: "governing" 0, "governance" 4, "maintenance" 2 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 redefined (scope note: which items take this stage, after the bare-facet test)
