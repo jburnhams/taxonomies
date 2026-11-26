@@ -158,9 +158,9 @@ What it shows:
 5. **No facet added or dropped**; `second-model` replaces a first draft's `judge`, and
    the decider `model` became `working-model` so it does not share a label with the area.
 
-## Stage 2: context area (proposed)
+## Stage 2: context area
 
-**Status**: proposed 2026-11-26, awaiting Jonathan's choice of set (process step 4). Set A passed J23 on every facet in round 2 (2026-11-26). Set
+**Status**: set A chosen by Jonathan, 2026-11-26 (process step 4). In use from 2026-11-26: round 2 passed J23 on every facet ([review](./stage-2/rounds/round-2/review.md)). Set
 A's values have `candidate` glossary entries so the round-1 kit could be built meanwhile;
 they are redone if he picks another set. Samples: [`stage-2/samples.md`](./stage-2/samples.md);
 terms: [`stage-2/harvest.md`](./stage-2/harvest.md).
@@ -186,7 +186,7 @@ still apply to them; the questions below are the ones only this area asks.
 - **Checked against general categories** (OBO Foundry Table 1): `operation` is a
   happening, `content` a part (continuant), `reach` a quality of that part.
 
-### Set A (recommended): operation, content, reach
+### Set A (chosen): operation, content, reach
 
 ### Operation (`operation`)
 

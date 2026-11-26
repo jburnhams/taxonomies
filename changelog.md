@@ -4,6 +4,12 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Adopted stage 2 of the prompts taxonomy, the context area (branch `claude/project-thread-oneclm`, PR #15)**. Jonathan chose facet set A (operation, content, reach). With that, every ending condition holds on round 2.
+
+- `domains/prompts/facets.md`, `scope.md`: stage 2 is `in use`, set A is marked chosen.
+- `domains/prompts/glossary.md`: the stage-2 values and terms, and the changed `memory` and `context-file`, are `approved`. `work-note` stays `candidate`.
+- `domains/prompts/changelog.md`: the decide and adopt operations.
+
 **Scored the prompts stage-2 name test and reviewed stage 2 (branch `claude/project-thread-oneclm`, PR #15)**. Both fresh readers passed (94% and 97%). All seven competency questions are answered, and the heuristic review found nothing. Stage 2 waits only on Jonathan's choice of facet set.
 
 - `domains/prompts/stage-2/rounds/round-2/name-test/results.md`, `review.md`: **new**.

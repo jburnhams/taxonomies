@@ -580,7 +580,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A skill: loaded only when its description matches, not whenever the repo is open.
 - **Kind**: thing
 - **Related**: `system-prompt`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: AGENTS.md 425; CLAUDE.md 102; "context file" 18
 - **History**: 2026-11-26 added; label chosen because the repo has no single word (harvest synonym set 5). 2026-11-26 widened in stage 2: user and org files are context files too (stage-2 harvest).
 
@@ -606,7 +606,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A transcript: a record of one run, which becomes memory only if something extracts from it.
 - **Kind**: thing
 - **Related**: `context-window`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: memory 1,215 in 94 files
 - **History**: 2026-11-26 added. 2026-11-26 alias "learnings" moved to the narrower `learning` (stage 2).
 
@@ -754,7 +754,7 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 
 Values of the three facets proposed for the context area ([`facets.md`](./facets.md),
 "Stage 2"), drafted 2026-11-26 so the round-1 kit can be built while Jonathan chooses;
-all `candidate`, redone if he picks another set. Examples link to prompts at `e7d4fb2`.
+Jonathan chose set A on 2026-11-26; `approved` with stage 2's adoption the same day. Examples link to prompts at `e7d4fb2`.
 
 ### supply (`supply`)
 
@@ -765,7 +765,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Near miss**: A memory write: it stores content for a later run (`recording`); only the later read is a supply.
 - **Kind**: happening
 - **Facet**: `operation`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: inject 87, retrieval 78, loading (context-file-loading.md) in the context docs
 - **History**: 2026-11-26 added.
 
@@ -778,7 +778,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Near miss**: Choosing which files to load at all (`supply`). The wording of a label alone, with no change to where the text sits or how much it counts. Keeping the cached prefix stable for cost: `model` area, unless the change is to where the text goes.
 - **Kind**: happening
 - **Facet**: `operation`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: envelope 67, precedence 25, prefix 58 in the context docs
 - **History**: 2026-11-26 added.
 
@@ -791,7 +791,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Near miss**: Memory consolidation: it shortens a store between runs, for later runs (`recording`), not the content of this one.
 - **Kind**: happening
 - **Facet**: `operation`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: compaction 129, summar- 194, truncat- 36 in the context docs
 - **History**: 2026-11-26 added.
 
@@ -804,7 +804,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Near miss**: Reading a memory back into a later run (`supply`). A transcript the harness saves of every run: `operations`, until something extracts from it.
 - **Kind**: happening
 - **Facet**: `operation`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: memory 734, consolidat- 113, promot- 46 in the context docs
 - **History**: 2026-11-26 added.
 
@@ -817,7 +817,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Near miss**: A learning: written by or for a run from what happened, not in advance.
 - **Kind**: thing
 - **Facet**: `content`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: system prompt 49, context file 62, instruction 4 (file) in the context docs
 - **History**: 2026-11-26 added.
 
@@ -830,7 +830,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Near miss**: A compaction summary of the current run: it is this run's own record (`run-history`).
 - **Kind**: thing
 - **Facet**: `content`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: memory 734, learning 121, knowledge 50 in the context docs
 - **History**: 2026-11-26 added.
 
@@ -843,7 +843,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Near miss**: A transcript kept after the run for analysis (`operations` area).
 - **Kind**: thing
 - **Facet**: `content`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: summar- 194, tool result (kernel), history in compaction docs
 - **History**: 2026-11-26 added.
 
@@ -856,7 +856,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Near miss**: A reminder kept in the conversation once sent (`conversation-scope`).
 - **Kind**: property
 - **Facet**: `reach`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: request-scoped (agent-prompt-cache-health.md); task / turn level (agent-memory-learning.md §1)
 - **History**: 2026-11-26 added.
 
@@ -869,7 +869,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Near miss**: A memory written for later sessions, even when it is distilled from this one (`project-scope`, `user-scope` or `organization-scope`).
 - **Kind**: property
 - **Facet**: `reach`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: session level (agent-memory-learning.md §1)
 - **History**: 2026-11-26 added.
 
@@ -882,7 +882,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Near miss**: A user's global CLAUDE.md, which follows the person into every project (`user-scope`).
 - **Kind**: property
 - **Facet**: `reach`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: repo / project levels (agent-memory-learning.md §1); tier 139 in the context docs
 - **History**: 2026-11-26 added.
 
@@ -895,7 +895,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Near miss**: A team or org policy every member's runs read (`organization-scope`).
 - **Kind**: property
 - **Facet**: `reach`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: user level (agent-memory-learning.md §1)
 - **History**: 2026-11-26 added.
 
@@ -908,7 +908,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Near miss**: Content shared by several of one person's projects (`user-scope`).
 - **Kind**: property
 - **Facet**: `reach`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: org / team levels (agent-memory-learning.md §1)
 - **History**: 2026-11-26 added.
 
@@ -921,13 +921,13 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Near miss**: An org policy file every member's runs load (`organization-scope`): someone in the org wrote it, the product did not ship it.
 - **Kind**: property
 - **Facet**: `reach`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: round 1: four built-in prompts (`cr04`, `cr12`, `cr19`, `cr25`) had no value, and all three raters noted it
 - **History**: 2026-11-26 added after stage-2 round 1.
 
 ## Stage 2: context area terms
 
-Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candidate`, tested by the stage-2 name test.
+Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md), tested by the stage-2 name test, `approved` with stage 2's adoption; `work-note` stays `candidate` after its relabel.
 
 ### learning (`learning`)
 
@@ -938,7 +938,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Near miss**: A work note: a record kept for one pipeline or one decision, not advice for later runs.
 - **Kind**: thing
 - **Broader**: `memory`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: learning 121 in the context docs, 344 in all
 - **History**: 2026-11-26 added (stage 2).
 
@@ -964,7 +964,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Near miss**: A code review: it judges the change, not how the run went.
 - **Kind**: happening
 - **Related**: `memory`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: retrospective 39 in 17 files
 - **History**: 2026-11-26 added (stage 2).
 
@@ -977,7 +977,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Near miss**: A compaction: it shortens the current run's context to fit, not a store.
 - **Kind**: happening
 - **Related**: `memory`, `compaction`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: consolidat- 113 in the context docs; dream- 26
 - **History**: 2026-11-26 added (stage 2).
 
@@ -990,7 +990,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Near miss**: A write gate: the rule that decides whether to promote, not the act.
 - **Kind**: happening
 - **Related**: `write-gate`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: promot- 46 in the context docs
 - **History**: 2026-11-26 added (stage 2).
 
@@ -1003,7 +1003,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Near miss**: A memory: kept for later sessions, not for the rest of this one.
 - **Kind**: thing
 - **Related**: `compaction`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: summar- 194 in the context docs
 - **History**: 2026-11-26 added (stage 2).
 
@@ -1016,7 +1016,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Near miss**: A compaction summary: rewrites the removed text instead of cutting it.
 - **Kind**: happening
 - **Related**: `compaction`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: truncat- 36 in the context docs, 294 in all
 - **History**: 2026-11-26 added (stage 2).
 
@@ -1029,7 +1029,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Near miss**: Conditional loading: the harness adds the text when a rule matches; the model does not ask.
 - **Kind**: thing
 - **Related**: `conditional-loading`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: progressive disclosure 14; on demand 36
 - **History**: 2026-11-26 added (stage 2).
 
@@ -1042,7 +1042,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Near miss**: Progressive disclosure: the model chooses to read more.
 - **Kind**: thing
 - **Related**: `progressive-disclosure`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: just-in-time 35; conditional (context-file-loading.md §12)
 - **History**: 2026-11-26 added (stage 2).
 
@@ -1055,7 +1055,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Near miss**: A link the model may choose to follow: nothing is inserted.
 - **Kind**: thing
 - **Related**: `context-file`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: import 20, transclu- 9 in the context docs
 - **History**: 2026-11-26 added (stage 2).
 
@@ -1068,7 +1068,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Near miss**: Escaping: changing the content itself so it cannot break out.
 - **Kind**: thing
 - **Related**: `framing`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: envelope 67 in the context docs
 - **History**: 2026-11-26 added (stage 2).
 
@@ -1081,7 +1081,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Near miss**: Load order: text that comes later may win in practice without any rule saying so.
 - **Kind**: property
 - **Related**: `framing`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: precedence 25 in the context docs
 - **History**: 2026-11-26 added (stage 2).
 
@@ -1094,7 +1094,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Near miss**: Expiry: a time limit set in advance, whether or not the content changed.
 - **Kind**: property
 - **Related**: `memory`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: stale- 53 in the context docs
 - **History**: 2026-11-26 added (stage 2).
 
@@ -1107,7 +1107,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Near miss**: An approval: a person allows an action, not a write to a store.
 - **Kind**: thing
 - **Related**: `promotion`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: gate 53, digest 14 in the context docs
 - **History**: 2026-11-26 added (stage 2).
 
@@ -1119,7 +1119,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Example**: [agent-data-analysis.md](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-data-analysis.md), the scratchpad: a third position.
 - **Near miss**: A work note: kept for later runs.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: scratchpad 35 in 16 files
 - **History**: 2026-11-26 added (stage 2).
 
@@ -1132,6 +1132,6 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Near miss**: A search index: queried by a tool, not read in the prompt.
 - **Kind**: thing
 - **Related**: `progressive-disclosure`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: index 80 in the context docs
 - **History**: 2026-11-26 added (stage 2).

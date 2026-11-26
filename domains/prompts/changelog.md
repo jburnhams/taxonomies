@@ -92,3 +92,8 @@ named on each line (G1); Jonathan can reverse any of them.
 - **review** stage-2 T10 (all seven questions answered) and T11 (nothing found):
   `stage-2/rounds/round-2/review.md`. Every ending condition holds except Jonathan's
   choice of facet set.
+- **decide** stage-2 facet set A (`operation`, `content`, `reach`): chosen by Jonathan on
+  2026-11-26.
+- **adopt** stage 2 (process step 10): every ending condition met on round 2. Stage-2
+  entries, `memory` and `context-file` set to `approved`; `work-note` stays `candidate`
+  after its relabel. Approved by: Claude under G1; Jonathan can veto.
