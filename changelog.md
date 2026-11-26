@@ -4,6 +4,13 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Ran prompts stage 2 round 2 with three raters** (kit `a73ecfd`, 30 items). Every facet
+passes on the 28 in-area items: Fleiss' κ operation 0.89, content 1.00, reach 0.84;
+openai-gemini 0.83, 1.00, 0.83.
+
+- `domains/prompts/stage-2/rounds/round-2/answers/`: **new**. Each rater's CSV and raw
+  reply with run details. `results.md`: **new**, the three kappa.py runs.
+
 **Scored prompts stage-2 round 1 and prepared round 2 (branch `claude/project-thread-oneclm`, PR #15)**. On the 27 in-area items, `operation` and `content` pass both conditions. `reach` passes Fleiss' κ (0.68) but fails the non-Claude pair (0.53), because built-in prompts had no value and raters guessed how widely an unstated store is shared.
 
 - `domains/prompts/facets.md`, `glossary.md`: new `reach` value `built-in-scope`, two rules in the `reach` principle, agreement lines.

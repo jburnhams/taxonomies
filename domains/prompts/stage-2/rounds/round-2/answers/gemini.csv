@@ -1,0 +1,31 @@
+id,in_area,operation,content,reach,note
+ch01,yes,supply,instruction-text,built-in-scope,
+ch02,yes,recording,kept-knowledge,project-scope,
+ch03,yes,recording,kept-knowledge,project-scope,
+ch04,yes,framing,instruction-text,organization-scope,
+ch05,yes,supply,instruction-text,project-scope,
+ch06,yes,supply,kept-knowledge,project-scope,
+ch07,yes,recording,kept-knowledge,project-scope,
+ch08,no,supply,instruction-text,organization-scope,
+ch09,yes,framing,instruction-text,project-scope,
+ch10,yes,recording,kept-knowledge,project-scope,
+ch11,yes,recording,kept-knowledge,project-scope,
+ch12,yes,framing,instruction-text,organization-scope,
+ch13,yes,supply,instruction-text,project-scope,
+ch14,yes,recording,kept-knowledge,project-scope,
+ch15,yes,recording,kept-knowledge,project-scope,unsure covers whole memory subsystem
+ch16,yes,supply,instruction-text,organization-scope,
+ch17,yes,supply,instruction-text,project-scope,
+ch18,yes,recording,kept-knowledge,project-scope,unsure staleness rule vs framing age in prompt
+ch19,yes,recording,kept-knowledge,project-scope,
+ch20,yes,supply,instruction-text,organization-scope,unsure offline policy rewrite closest to supply
+ch21,yes,supply,instruction-text,project-scope,
+ch22,yes,recording,kept-knowledge,project-scope,
+ch23,yes,supply,kept-knowledge,project-scope,
+ch24,yes,framing,instruction-text,organization-scope,unsure file reach org vs harness framing built-in
+ch25,yes,framing,instruction-text,project-scope,
+ch26,yes,supply,kept-knowledge,project-scope,
+ch27,yes,recording,kept-knowledge,organization-scope,unsure about reach facet across scopes and operations
+ch28,no,framing,instruction-text,project-scope,
+ch29,yes,framing,instruction-text,project-scope,
+ch30,no,recording,run-history,conversation-scope,
