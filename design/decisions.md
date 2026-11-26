@@ -4,7 +4,8 @@
 Jonathan can make; the six needed before the first domain were decided on 2026-11-25,
 and thirteen can wait.
 
-**Status**: six decided (J1, J2, J5-J8), thirteen open, 2026-11-25.
+**Status**: six decided (J1, J2, J5-J8), thirteen open, 2026-11-25; seven more proposed
+(J20-J26, method v1.1), 2026-11-26.
 [`process.md`](./process.md) and [`spec.md`](./spec.md) follow the decisions, and follow
 the recommendation for each open row so they read as a whole. Rejecting an open
 recommendation means editing the rule or step named in its row. These include the five
@@ -25,6 +26,22 @@ Each row gives the recommendation, the stored source it rests on (paths are in
 | J6 | Who the two raters are | **Two model families** (for example Claude and another vendor's model) | Jonathan plus a model | spec T8 and process steps 8 and the light version. With no human rater, T9 (fresh reader) and Jonathan's veto are the human checks |
 | J7 | Sample sizes | **Build from 30-60 items, test on 30 fresh items per round**; light version under ~30 items | same; still no stored source (Tullis and Wood 2004 in `to-fetch.md`) | none |
 | J8 | Who has the final say | **Agents approve, Jonathan can veto**: an agent approves changes that pass T1-T6 with a logged reason; Jonathan is the named owner, reviews the changelog, can reverse anything and settles disputes | Jonathan approves every change | spec G1, G2 and the `scope.md` Owner field; process steps 1, 3, 6, 10, 12 and the tables. Departs from Z39.19 §11.3.1.1 (editor reviews each term); the veto and logged reasons keep it checkable |
+
+## Proposed 2026-11-26 (prompts domain, method v1.1)
+
+Raised while starting the prompts domain. Each is argued in
+[`method-v1.1.md`](./method-v1.1.md); `domains/prompts/` follows the recommendation
+while it is open. J14 (below) is needed now too: stage 1 is the kernel, and "agent" is in it.
+
+| # | Decision | Recommended | Rests on | Lands in |
+|---|---|---|---|---|
+| J20 | Build a large domain in stages (kernel and areas, then one area at a time) inside one context | Yes (M1) | Colon Classification rules 05112-05114 (a facet formula per main class); Evans pp. 2, 31; Denton §2.3 step 1; Clio §2 | process steps 1-2; spec §2 Stages field |
+| J21 | Write down the item unit and population, and draw by a stored, seeded script | Yes (M2) | Denton §2.3 step 1; Wan et al. §5.2.2 | process step 2 |
+| J22 | Test sample at least 30 and at least 5 per value of the largest facet | Yes (M3); 60 for prompts stage 1 | prior knowledge ⚠ (Tullis and Wood 2004 not stored); spec T8 "every value used" | process step 2; spec T8 |
+| J23 | Three raters from three families, strongest model each; pass on Fleiss' κ ≥ 0.6 and the non-author pair's Cohen's κ ≥ 0.6 | Yes (M4); Jonathan asked for OpenAI and a better Gemini on 2026-11-26 | Wan et al. §5.2.3 (Cohen for two, Fleiss for many) | spec T8; `tools/kappa.py` (done) |
+| J24 | With three raters, two-of-three is the round's label; three-way splits go to Unsorted | Yes (M5) | Wan et al. §4.2 (voting or deliberation); Z39.19 §11.2.2 | spec T7, T8 |
+| J25 | Rules for a rater run through an agent CLI (empty folder, read-only, record CLI and model) | Yes (M6) | spec T8 ("using only"); reasoning | process step 8 |
+| J26 | An item is a heading plus its opening text; raters sort the mechanism | Yes (M7) | Denton §2.3 step 4; the prompts bare-facet test | process steps 2, 5 |
 
 ## Can wait until it comes up
 

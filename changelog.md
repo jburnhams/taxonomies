@@ -4,6 +4,29 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Started the prompts taxonomy and proposed method v1.1 for large domains (branch `claude/project-thread-oneclm`)**.
+Jonathan asked for a taxonomy for `jburnhams/prompts` ("agents, mcps, llm, harnesses,
+evals, everything really"), to refine the process as it goes, and for better raters
+(OpenAI, and a stronger Gemini than Flash through `agy`). The repo is about 815,000 words
+in 281 files, so the plan changed from one pass to stages: the kernel words and an area
+facet first, then one area at a time.
+
+- `design/method-v1.1.md`: **new**. Seven proposed changes (M1-M7): stages inside one
+  context, a written population and seeded draw, test samples of at least 5 per value,
+  three raters from three families scored with Fleiss' and pairwise kappa, majority
+  labels, rules for raters run through agent CLIs, and items as heading plus text. Not
+  adopted; `process.md` and `spec.md` are unchanged.
+- `design/decisions.md`: J20-J26 for those proposals; J14 ("agent") flagged as needed now.
+- `tools/kappa.py`: takes three or more answer files and prints Fleiss' kappa, Cohen's
+  kappa per pair, and the majority value or SPLIT for each disagreement. Two files work as
+  before (checked on ux round 1: same table). Fleiss checked against the textbook
+  14-rater example (0.210).
+- `domains/prompts/`: **new**. `scope.md`, `harvest.md`, `samples.md`, `sample.py`,
+  `items-all.csv`, `facets.md`, `changelog.md`.
+- Looked for and found: `agent-design/keel/taxonomy.md` in prompts is an existing
+  glossary (Keel's own words) and is the seed; *Inside the Scaffold* (stored in
+  prompts' `papers/`) has a three-layer taxonomy not yet read in full for this.
+
 **Fixed the duplicate-ID check in `tools/check_domain.py` (branch `claude/project-thread-l3cp9e`)**.
 A review on PR #7 found that T1's duplicate-ID flag was lost when the second record replaced
 the first, so a glossary with a repeated ID passed. The fix was committed after PR #7 merged.
