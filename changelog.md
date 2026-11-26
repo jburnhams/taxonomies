@@ -4,6 +4,97 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Taxonomies T10 and T11 review after rounds 1 and 2 (branch `claude/project-thread-yet87g`, PR #10)**.
+Jonathan chose to adopt `check` if round 3 reaches κ 0.6; the review was done meanwhile.
+The changelog lines were left out of the review's own commit (`bb6baaf`) and added here.
+
+- `domains/taxonomies/rounds/round-2/review.md`: **new**. All twelve competency questions
+  answered; one near-synonym linked; `owner-decision` empty in the round items, kept.
+- `domains/taxonomies/glossary.md`: `script` gets Related `mechanical-check`.
+
+**Scored taxonomies round 2 and the name test; redefined `check`'s `script`; built an indicative round 3 (branch `claude/project-thread-yet87g`, PR #10)**.
+Round 2 (43 fresh items, ids removed) passed part (Fleiss' κ 0.94) and stage (0.84) but
+failed check (0.55; non-Claude pair 0.45): raters split on whether "a program could check
+it" means one does. Every fresh item is now used, so check is retested on used items.
+
+- `domains/taxonomies/rounds/round-2/results.md`: the reading, fixes and name-test result added.
+- `domains/taxonomies/glossary.md`: `script` and `judgement` redefined; `boundary` relabelled
+  "neighbours" (ID kept) after all three fresh readers misread it; label choice 6 added.
+- `domains/taxonomies/facets.md`, `scope.md`, `changelog.md`: agreement and status.
+- `domains/taxonomies/rounds/round-3/`: **new**. `check` only, 73 used items, recorded as indicative.
+
+**Ran taxonomies round 2 and the name test with three raters** (kit `7004a36`, 43 items,
+same models as round 1). Fleiss' κ part 0.94, stage 0.84, check 0.55 (misses);
+openai-gemini 0.97, 0.90, 0.45 (check misses). The name test ran in separate fresh sessions.
+
+- `domains/taxonomies/rounds/round-2/answers/`: **new**. Each rater's CSV and raw reply.
+  `results.md`: **new**, both kappa tables and the disagreement lists.
+- `domains/taxonomies/rounds/round-2/name-test/guesses-{claude,openai,gemini}.md`: **new**.
+
+**Scored taxonomies round 1, fixed `check`, built round 2 and the name test (branch `claude/project-thread-yet87g`, PR #10)**.
+The three raters (Claude Opus 5.5, GPT-6.2-Astra, Gemini 4 Carbon High) passed every facet:
+Fleiss' κ part 1.00, stage 1.00, check 0.78; non-Claude pair 1.00, 1.00, 0.74. Part and
+stage were probably easy because each item gave its own id, and 30 items is below M3's 35,
+so round 2 removes the ids and uses 43 items.
+
+- `domains/taxonomies/rounds/round-1/results.md`: the reading and the fixes table added.
+- `domains/taxonomies/glossary.md`: `script`, `judgement`, `owner-decision` redefined.
+- `domains/taxonomies/facets.md`, `scope.md`: agreement recorded; T8 target now 35 items (J22).
+- `domains/taxonomies/sample.py`, `items-all.csv`, `samples.md`: `--top-up` draws 25 new items
+  (M1-M7, J20-J26, spec §1's file table, the light version's steps) as set `s`.
+- `domains/taxonomies/rounds/round-2/`: **new**. 43 items without their own ids, three
+  prompts, the name test prompt (T9), README.
+- `domains/taxonomies/changelog.md`: the operations above.
+
+**Ran taxonomies round 1 with three raters** (kit `0db889f`, 30 items; Claude Opus 5.5,
+GPT-6.2-Astra, Gemini 4 Carbon High, as in the prompts rounds). Every facet passes:
+Fleiss' κ part 1.00, stage 1.00, check 0.78; openai-gemini 1.00, 1.00, 0.74.
+
+- `domains/taxonomies/rounds/round-1/answers/`: **new**. Each rater's CSV and raw reply
+  with run details. `results.md`: **new**, both kappa tables and the disagreement lists.
+
+**Put the taxonomies taxonomy through the full process, to the round-1 kit (branch `claude/project-thread-yet87g`, PR #10)**.
+Jonathan asked to "put the taxonomies taxonomy through full process". The draft sorted the
+method's concepts; the full process needs items to sort, so the items became the method's
+own rules, steps, file fields and decisions, and the facets were rebuilt for them. The
+facet choice is put to Jonathan; work went ahead on the recommended set.
+
+- `domains/taxonomies/scope.md`: rewritten (process step 1): items, purpose, twelve
+  competency questions, ending conditions with three rater families.
+- `domains/taxonomies/sample.py`, `items-all.csv`, `samples.md`: **new** (step 2). 106 items
+  (48 build, 10 bare-facet test, 30 round 1, 18 held), seed 20261126, each kind spread
+  evenly through the sets; steps carry their "Who" from the process's step table.
+- `domains/taxonomies/harvest.md`: **new** (step 3). Counts over `design/` and `domains/ux/`,
+  six synonym sets, nine homonyms (scope, round, kind, context, test, status, domain,
+  review, check).
+- `domains/taxonomies/facets.md`: rewritten (steps 4 and 5). Facets `part`, `stage`, `check`
+  (set A of three); the draft facet `kind` retired. Bare-facet test on ten items, with five
+  rules it produced.
+- `domains/taxonomies/glossary.md`: ten new `candidate` values, stage scope notes
+  rewritten, the four term kinds moved out of the facets, two more label choices. One
+  correction: the alias entry cited N7 where it meant N1.
+- `domains/taxonomies/rounds/round-1/`: **new**. 30 items, `make_prompts.py`, three
+  shuffled prompts, README with the run and scoring steps. Raters not yet run.
+
+**Added the explorer site, generated from the domain files, and drafted the method's own words as a domain (branch `claude/project-thread-yet87g`)**.
+Jonathan asked for a GitHub Pages site with an overview and a way to explore each taxonomy
+down to the raw data behind each term, generated from the structured files, built on
+strata-react, and starting with "taxonomies itself" as the first taxonomy. No domain held
+the method's vocabulary, so one was drafted (proposal, not adopted).
+
+- `site/`: **new**. `generate.py` reads every `domains/*/` (glossary, facets, samples,
+  rounds, answer CSVs, changelog) and the docs and sources, recomputes kappa from the
+  answers, and writes JSON; a Vite + strata-react app renders overview, domain, facet,
+  term, round, item, doc, CSV and source pages. `site/README.md` lists what the generator
+  relies on and what is published (no stored source copies). The repo was made public
+  the same day, which let Actions and Pages run.
+- `.github/workflows/pages.yml`: **new**. Builds on every pull request, deploys on push to
+  `main` once Pages is set to GitHub Actions.
+- `domains/taxonomies/`: **new**, `draft`. `scope.md`, `facets.md` (`kind`, `stage`),
+  `glossary.md` (39 method concepts and 8 facet values, all `candidate`, warrant counted over
+  `design/` and `domains/ux/`), `changelog.md`. `check_domain.py`: one T3 flag, "alias" as a
+  possible plural, listed as a label choice.
+- `README.md`: links the site and its folder.
 **Adopted stage 1 of the prompts taxonomy after the name test (branch `claude/project-thread-oneclm`, PR #11)**.
 Both fresh readers passed T9 (openai 94%, gemini 93%), so every stage-1 ending condition
 holds on round 3. The four missed labels were changed and are `candidate` again.

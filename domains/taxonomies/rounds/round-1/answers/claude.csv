@@ -1,0 +1,31 @@
+id,part,stage,check,note
+r01,change,governing,judgement,"unsure: about the method's own sources, not a domain's files; closest is keeping rules in force over time"
+r02,meaning,building,judgement,
+r03,structure,testing,script,
+r04,evidence,testing,judgement,
+r05,evidence,testing,script,
+r06,boundary,framing,judgement,
+r07,evidence,building,script,
+r08,structure,testing,script,
+r09,meaning,building,judgement,
+r10,structure,building,judgement,
+r11,structure,building,judgement,
+r12,naming,building,judgement,
+r13,purpose,framing,judgement,
+r14,change,governing,judgement,
+r15,meaning,building,judgement,
+r16,structure,building,judgement,
+r17,naming,building,judgement,
+r18,structure,building,owner-decision,"first named is finding facets, step 4 where Jonathan decides"
+r19,meaning,building,judgement,
+r20,naming,building,judgement,
+r21,change,governing,judgement,
+r22,change,governing,script,"unsure: kept record, ID and Replaced by field are mechanically checkable"
+r23,naming,building,judgement,
+r24,change,building,script,unsure: status first filled as candidate when an entry is written (step 6); value from a fixed list
+r25,naming,building,judgement,
+r26,purpose,framing,judgement,
+r27,naming,testing,judgement,
+r28,change,governing,script,unsure: presence of the link is mechanical; use is the in-use counts
+r29,change,governing,judgement,
+r30,evidence,testing,script,
