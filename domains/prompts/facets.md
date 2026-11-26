@@ -11,7 +11,8 @@ Stage 1 only needs facets that work across the whole repo; each area gets its ow
 finer questions in a later stage (proposal M1 in
 [`design/method-v1.1.md`](../../design/method-v1.1.md)).
 
-**Status**: set A chosen by Jonathan, 2026-11-26 (process step 4). Set A's values have draft glossary
+**Status**: set A chosen by Jonathan, 2026-11-26 (process step 4). Round 1 (2026-11-26):
+`area` and `moment` pass, `decider` misses at Fleiss' κ 0.58; fixed in the glossary, round 2 next. Set A's values have draft glossary
 entries (`candidate`) so the round-1 kit could be built while Jonathan chooses; they are
 redone if he picks another set.
 
@@ -65,6 +66,7 @@ redone if he picks another set.
 - **Order**: from the model outward: what is called, what it can do, what it knows, what
   it may do, how runs fit together, what comes out, how it is checked, how it is run.
 - **Unsorted**: none yet.
+- **Agreement**: Fleiss' κ = 0.93 (92% unanimous); non-Claude pair κ = 0.92. Round 1, 2026-11-26, 60 items, Claude Opus 5.5, GPT-6.2-Astra, Gemini 4 Carbon High ([results](./rounds/round-1/results.md)).
 
 ### Decider (`decider`)
 
@@ -77,9 +79,12 @@ redone if he picks another set.
   - `second-model`: a separate model call: a classifier, judge, monitor, grader or a
     small helper model (label to be chosen in the glossary; see harvest synonym set 3).
   - `rule`: fixed logic: harness code, a schema check, a configured setting applied by code.
+    Test (added after round 1): if the model ignored its instructions, would the outcome
+    still hold? Yes: `rule`. No: `working-model`.
   - `person`: a human answer at that moment (an approval, a reply, a typed command).
 - **Order**: from least to most outside the run.
 - **Unsorted**: none yet.
+- **Agreement**: Fleiss' κ = 0.58 (83% unanimous), **below 0.6**; non-Claude pair κ = 0.57. Round 1, 2026-11-26, 60 items. Scope notes redefined after scoring; retested in round 2.
 
 ### Moment (`moment`)
 
@@ -89,6 +94,7 @@ redone if he picks another set.
 - **Values**: `setup`, `turn`, `tool-call`, `failure`, `ending`, `after-run`
 - **Value notes**:
   - `setup`: before the first model request: configuration, loading context, choosing tools.
+    A format or store fixed in advance takes the moment it is used (added after round 1).
   - `turn`: on each model request or reply.
   - `tool-call`: on each tool call or its result.
   - `failure`: when something goes wrong or a limit is hit.
@@ -96,6 +102,7 @@ redone if he picks another set.
   - `after-run`: between or after runs: memory, evals, telemetry analysis, review of a PR.
 - **Order**: the run's own order.
 - **Unsorted**: none yet.
+- **Agreement**: Fleiss' κ = 0.72 (72% unanimous); non-Claude pair κ = 0.69. Round 1, 2026-11-26, 60 items. `setup` redefined after scoring; retested in round 2.
 
 ## Set B: area and decider only
 

@@ -4,6 +4,17 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Scored prompts round 1, fixed the decider and moment scope notes, built round 2 (branch `claude/project-thread-oneclm`)**.
+The three raters (Claude Opus 5.5, GPT-6.2-Astra via `codex exec`, Gemini 4 Carbon High via
+`agy -p`) were run on omarchy. Area and moment passed; decider missed at Fleiss' κ 0.58.
+
+- `domains/prompts/rounds/round-1/results.md`: written by the run; this commit adds the
+  reading of the numbers (decider's low kappa with 83% unanimity) and the fixes table.
+- `domains/prompts/glossary.md`: `working-model`, `rule`, `second-model`, `setup` redefined.
+- `domains/prompts/facets.md`: agreement recorded per facet; status line.
+- `domains/prompts/rounds/round-2/`: **new**. 56 items, three prompts, README.
+- `domains/prompts/changelog.md`: the operations above.
+
 **Ran prompts round 1 with three raters**. Each rater ran on omarchy from an empty
 directory with only its own prompt (kit `e923f21`); decider misses κ 0.6, so its
 definitions need fixing before round 2.

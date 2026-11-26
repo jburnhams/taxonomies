@@ -150,20 +150,20 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 ### working model (`working-model`)
 
 - **Definition**: A working model is a decider that is the model doing the task, acting on its own judgment and instructions.
-- **Scope**: Includes instructions in a prompt that the model follows or not, a model choosing which tool or ending to call, a model rating its own risk. Excludes a separate model call made to check it (`second-model`).
+- **Scope**: Includes instructions in a prompt or a tool description that the model follows or not, a model choosing which tool or ending to call, which lost calls to retry, or how to combine calls into a program, and a model rating its own risk. The test: if the model ignored its instructions, would the outcome still hold? If not, the decider is the working model. Excludes a separate model call made to check it (`second-model`).
 - **Aliases**: the model, agent judgment, model self-report
 - **Example**: [agent-risk-assessment.md](https://github.com/jburnhams/prompts/blob/a531474/agent-risk-assessment.md), "Who sets the level": model self-report.
-- **Near miss**: Rules written in the prompt as a table that the harness then checks: the check has the final say, so `rule`.
+- **Near miss**: Rules written in the prompt as a table that the harness then checks: the check has the final say, so `rule`. A reminder the harness inserts listing lost calls: the harness writes it, but the model decides what to do, so `working-model`.
 - **Kind**: role
 - **Facet**: `decider`
 - **Status**: candidate
 - **Warrant**: "the agent" 629; "model self-report" in agent-risk-assessment.md
-- **History**: 2026-11-26 added; renamed from the bare-test value "model" so the label differs from the area value.
+- **History**: 2026-11-26 added; renamed from the bare-test value "model" so the label differs from the area value. 2026-11-26 redefine: the ignore test added to the scope after round 1 split on instructions the harness does not enforce (`r05`, `r24`, `r34`, `r55`).
 
 ### second model (`second-model`)
 
 - **Definition**: A second model is a decider that is a separate model call, apart from the working model, whose answer has the final say.
-- **Scope**: Includes classifiers, blocking monitors, judges, graders, validators and small helper models (title writers, summarisers) when their output stands. Excludes the working model reviewing itself (`working-model`).
+- **Scope**: Includes classifiers, blocking monitors, judges, graders, validators, trajectory judges, background agents that review or curate memory, and small helper models (title writers, summarisers) when their output stands. Excludes the working model reviewing itself (`working-model`), and a model provider's own service withholding or filtering content, which is `rule` unless the source says a model there decides.
 - **Aliases**: judge, LLM judge, monitor, classifier, grader, verifier
 - **Example**: [agent-permissions-approval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-permissions-approval.md) §2c, Claude Code's auto-mode classifier.
 - **Near miss**: A sub-agent that does part of the task: it is a separate model call, but it works rather than decides; its work is judged by whoever accepts it.
@@ -171,12 +171,12 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Facet**: `decider`
 - **Status**: candidate
 - **Warrant**: judge 218, classifier 134, monitor 65, grader 39, verifier 30 (Jonathan's words: "llm judges")
-- **History**: 2026-11-26 added.
+- **History**: 2026-11-26 added. 2026-11-26 redefine: background curators and provider-side filtering placed after round 1 split on them (`r26`, `r54`).
 
 ### rule (`rule`)
 
 - **Definition**: A rule is a decider that is fixed logic applied without a model's judgment.
-- **Scope**: Includes harness code, schema and format checks, caps and budgets, a setting chosen beforehand and applied by code, and the default for stores and formats where nothing is chosen at run time.
+- **Scope**: Includes harness code, schema and format checks, caps and budgets, a setting chosen beforehand and applied by code, a model provider's service filtering content, and stores and formats where nothing is chosen at run time. The outcome holds even if the model ignores its instructions. Where a section names several mechanisms with different deciders, classify the first one named (reminders before a trajectory judge: `rule`).
 - **Aliases**: code, deterministic check, static rule
 - **Example**: [agent-self-verification.md](https://github.com/jburnhams/prompts/blob/a531474/agent-self-verification.md), "Deterministic, non-LLM completion gates".
 - **Near miss**: A person choosing a permission mode before the run: the choice is the person's, but at run time the mode is applied by code, so `rule`.
@@ -184,7 +184,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Facet**: `decider`
 - **Status**: candidate
 - **Warrant**: harness 1,544; "static rules" (agent-permissions-approval.md §2)
-- **History**: 2026-11-26 added.
+- **History**: 2026-11-26 added. 2026-11-26 redefine: the ignore test and the first-named rule added after round 1 (`r15`, `r34`).
 
 ### person (`person`)
 
@@ -204,7 +204,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 ### setup (`setup`)
 
 - **Definition**: A setup is a moment that comes before a run's first model request.
-- **Scope**: Includes configuration, choosing tools and models, loading context files, and anything fixed for the whole run, including protocol and format rules with no single moment.
+- **Scope**: Includes configuration, choosing tools and models, loading context files and the system prompt, provisioning a sandbox. Excludes a format, store or rule that is fixed in advance but takes effect later: it takes the moment at which it is used (a result format at `tool-call`, a risk tier computed at the end at `ending`, a memory store at `after-run`).
 - **Aliases**: start, startup, initialisation, configuration
 - **Example**: [agent-context-file-loading.md](https://github.com/jburnhams/prompts/blob/a531474/agent-context-file-loading.md).
 - **Near miss**: Loading a deeper context file when the model first reads that folder: it happens mid-run, so `tool-call`.
@@ -212,7 +212,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Facet**: `moment`
 - **Status**: candidate
 - **Warrant**: Keel taxonomy §8 "Starting work"
-- **History**: 2026-11-26 added.
+- **History**: 2026-11-26 added. 2026-11-26 redefine: "anything fixed for the whole run" removed after round 1, where one rater put fixed formats and stores at `setup` and the others at the moment of use (`r09`, `r14`, `r22`, `r23`, `r27`, `r46`, `r47`).
 
 ### turn (`turn`)
 

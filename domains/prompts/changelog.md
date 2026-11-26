@@ -29,3 +29,9 @@ named on each line (G1); Jonathan can reverse any of them.
   (IDs kept): the facet comparison in `facets.md` and two glossary entries drew on the
   four, so they were no longer fresh (review on PR #9). Round-1 prompts regenerated; they
   now also show the relabelled area values.
+- **score** round 1 (three raters, 60 items): area Fleiss' κ 0.93, decider 0.58 (fails),
+  moment 0.72; non-Claude pair 0.92 / 0.57 / 0.69. Run on omarchy by the coordinator's
+  session, commit `9778dc6`.
+- **redefine** `working-model`, `rule`, `second-model`, `setup`: scope notes after round 1
+  (table in `rounds/round-1/results.md`). Approved by: Claude.
+- **add** round-2 kit `rounds/round-2/` (56 items `h05`-`h60`, prompts with the new rules).

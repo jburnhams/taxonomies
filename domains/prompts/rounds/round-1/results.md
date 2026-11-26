@@ -102,3 +102,28 @@ Disagreements (openai / gemini):
 - `r55` moment: ending / setup
 - `h03` moment: setup / turn
 ```
+
+## Reading the numbers
+
+`decider` is 83% unanimous yet κ 0.58, because `rule` takes 49-52 of 60 answers per rater:
+with one value that common, chance agreement is high and kappa is low for the same
+agreement (prior knowledge, the "kappa paradox"; not in a stored source). The target is
+still κ ≥ 0.6 (J5), so it fails; but the fix is a clearer line between `rule` and
+`working-model` on a few items, not a new facet.
+
+## Fixes after scoring (2026-11-26)
+
+Each is a **redefine** in [`../../changelog.md`](../../changelog.md), made after all three
+raters had answered, so round 1 tested the files at `962c408`.
+
+| Items | Split | Fix |
+|---|---|---|
+| `r05`, `r24`, `r34`, `r55` | decider `rule` / `working-model`: instructions or reminders the harness does not enforce | `working-model` and `rule` scopes gain one test: "if the model ignored its instructions, would the outcome still hold?" |
+| `r15` | decider `rule` / `second-model`: reminders and a trajectory judge in one section | `rule` scope: classify the first mechanism named |
+| `r26` | decider `rule` / `second-model`: Hermes' background curator | `second-model` scope includes background agents that review or curate memory |
+| `r54` | decider `second-model` / `rule`: provider-side redaction | provider filtering is `rule` unless the source says a model decides |
+| `r09`, `r14`, `r22`, `r23`, `r27`, `r46`, `r47`, `r04` | moment `setup` / moment of use: fixed formats, stores and computations | `setup` narrowed to what happens before the first request; a fixed format takes the moment it is used |
+| `r29`, `r33`, `r34`, `r41`, `r19` | area, one rater each | none: area passes at 0.93, and each split has a two-rater majority (M5) |
+
+No facet added, split or merged. Round 2 uses `h05`-`h60` (56 items, never looked at),
+the same three models, and prompts with the new rules ([`../round-2/`](../round-2/README.md)).
