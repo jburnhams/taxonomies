@@ -52,7 +52,5 @@ python3 tools/kappa.py domains/taxonomies/rounds/round-1/answers/{claude,openai,
 python3 tools/kappa.py domains/taxonomies/rounds/round-1/answers/{openai,gemini}.csv
 ```
 
-The three-rater form needs the Fleiss version of `tools/kappa.py` from the prompts
-branch (PR #9); until it merges, score the three pairs with the two-file form, or let
-the explorer site's generator compute Fleiss' κ from `answers/`. Paste the results into `results.md` with the three model names. Do not edit `facets.md` or
+Paste the results into `results.md` with the three model names. Do not edit `facets.md` or
 `glossary.md` until all three have answered and been scored.

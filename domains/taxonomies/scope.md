@@ -69,8 +69,9 @@ to that domain.
 
 ## Neighbours
 
-Every other domain uses this vocabulary in its own files. `method-v1.1.md` (on the
-prompts branch, not merged) proposes rules M1 to M7; they join the items when merged.
+Every other domain uses this vocabulary in its own files. `design/method-v1.1.md`
+(merged with the prompts domain, 2026-11-26) proposes rules M1 to M7; they join the
+items in round 2, with decisions added after the sample was drawn.
 
 ## Ending conditions
 

@@ -125,7 +125,9 @@ Fresh items for round 1 (steps 7 and 8). Not read while building.
 
 ## Held for round 2 (18)
 
-Not read. For round 2, topped up from `method-v1.1.md` once it is merged.
+Not read. For round 2, topped up from `design/method-v1.1.md` (rules M1 to M7) and the decisions
+added since commit `c4fa001`. Re-running `sample.py` on a later commit draws a different
+set: run it at `c4fa001` to reproduce this one.
 
 | ID | Item | From |
 |---|---|---|

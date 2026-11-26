@@ -50,6 +50,14 @@ tests), with every rule citing a stored source by path and page.
 [`design/decisions.md`](./design/decisions.md) lists the choices only Jonathan can make.
 `python3 tools/check_citations.py` checks that each rule and step cites a stored file
 that exists.
+Changes for large domains are proposed in
+[`design/method-v1.1.md`](./design/method-v1.1.md) (not adopted).
+
+## Domains
+
+- [`domains/ux/`](./domains/ux/scope.md): `jburnhams/ux-research`, in use since 2026-11-26.
+- [`domains/prompts/`](./domains/prompts/scope.md): `jburnhams/prompts`, stage 1 (kernel
+  and areas) started 2026-11-26.
 
 ## Domains and the explorer site
 
