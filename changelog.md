@@ -33,6 +33,7 @@ facet first, then one area at a time.
   and a `README.md` for running all three through their CLIs on omarchy (M6).
 - Jonathan decided J14 on 2026-11-26: "agent" is a model configured to act (prompt and tools in a loop); products are harnesses. Moved to the decided table in `design/decisions.md`.
 - Jonathan chose facet set A on 2026-11-26; `facets.md`, the domain changelog and the kit README say so.
+- `domains/prompts/glossary.md`: 36 kernel terms drafted after J14; area values `model` and `tool` relabelled "model access" and "tool use" (IDs kept) so the plain words are kernel terms. T1-T6 clean apart from one heuristic flag.
 - `.gitignore`: **new**, ignores `__pycache__/` (one `.pyc` was committed by mistake and removed).
 - Looked for and found: `agent-design/keel/taxonomy.md` in prompts is an existing
   glossary (Keel's own words) and is the seed; *Inside the Scaffold* (stored in

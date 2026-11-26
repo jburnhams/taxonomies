@@ -15,3 +15,13 @@ named on each line (G1); Jonathan can reverse any of them.
 - **add** round-1 kit `rounds/round-1/` for three raters (Claude, OpenAI, Gemini Pro).
 - **decide** facet set A (area, decider, moment): chosen by Jonathan on 2026-11-26.
 - **decide** J14: `agent` = a model configured to act; Claude Code, Codex etc. are harnesses; sub-agent and reviewer are roles. Chosen by Jonathan on 2026-11-26.
+- **add** 36 kernel `candidate` entries (agent, harness, agent SDK, model, model provider,
+  run, session, transcript, trace, tool, tool surface, tool result, MCP, MCP server, MCP
+  App, skill, plugin, hook, sub-agent, orchestrator, system prompt, context window,
+  context file, compaction, memory, steer, approval, permission mode, sandbox, handoff,
+  trigger, pipeline, eval, benchmark, self-verification, code review). Drafted and
+  approved as candidates by: Claude; label choices 4-8 listed for Jonathan's veto.
+- **rename** area values `model` "model" → "model access" and `tool` "tool" → "tool use";
+  IDs unchanged. Area and decider aliases that named kernel concepts moved to them. The
+  round-1 prompts were generated before this (commit `91d01cf`) and show the old labels;
+  answers use IDs, so scoring is unaffected.
