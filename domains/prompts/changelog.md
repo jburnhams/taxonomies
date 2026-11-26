@@ -25,3 +25,7 @@ named on each line (G1); Jonathan can reverse any of them.
   IDs unchanged. Area and decider aliases that named kernel concepts moved to them. The
   round-1 prompts were generated before this (commit `91d01cf`) and show the old labels;
   answers use IDs, so scoring is unaffected.
+- **move** items `r06`, `r36`, `r48`, `r58` to the build sample and `h01`-`h04` into round 1
+  (IDs kept): the facet comparison in `facets.md` and two glossary entries drew on the
+  four, so they were no longer fresh (review on PR #9). Round-1 prompts regenerated; they
+  now also show the relabelled area values.

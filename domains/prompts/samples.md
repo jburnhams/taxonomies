@@ -1,8 +1,8 @@
 # Prompts taxonomy: samples
 
 **In one line**: 192 section headings from `jburnhams/prompts`, drawn by a seeded shuffle
-across 67 files and split into build (60), bare-facet test (12), round-1 test (60) and
-held (60) before anything was classified.
+across 67 files and split into build (64), bare-facet test (12), round-1 test (60) and
+held (56); four round-1 items moved to build after the facet work drew on them.
 
 **In plain words**: an *item* is one section of the repo's own analysis: a heading such as
 "Deterministic, non-LLM completion gates" plus the first lines under it. Each one
@@ -34,9 +34,9 @@ Taken from `jburnhams/prompts` at commit `a531474` (2026-11-26).
   [`items-all.csv`](./items-all.csv) has all 192 with the text under each heading. IDs
   never change when an item moves.
 
-## Build sample (60)
+## Build sample (64)
 
-Used in steps 3-4 (harvest, finding facets). Not for testing.
+Used in steps 3-4 (harvest, finding facets). Not for testing. The last four rows were moved in from the round-1 set on 2026-11-26, because the facet comparison and the glossary drew on them; `h01`-`h04` replaced them in round 1 (IDs kept).
 
 | ID | Item (section heading) | From |
 |---|---|---|
@@ -100,6 +100,10 @@ Used in steps 3-4 (harvest, finding facets). Not for testing.
 | `b58` | The null literal costs more than the delimiter | [agent-tabular-results.md](https://github.com/jburnhams/prompts/blob/a531474/agent-tabular-results.md) |
 | `b59` | Code Mode has converged from four directions | [agent-local-compute.md](https://github.com/jburnhams/prompts/blob/a531474/agent-local-compute.md) |
 | `b60` | Grounding: schema, semantics, verified queries | [agent-data-analysis.md](https://github.com/jburnhams/prompts/blob/a531474/agent-data-analysis.md) |
+| `r06` | Blocking monitors against an agent that is trying to get past them | [agent-permissions-approval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-permissions-approval.md) |
+| `r36` | How a run ends | [agent-design/keel/taxonomy.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/keel/taxonomy.md) |
+| `r48` | Deterministic, non-LLM completion gates | [agent-self-verification.md](https://github.com/jburnhams/prompts/blob/a531474/agent-self-verification.md) |
+| `r58` | The digest gate: most runs should produce nothing | [agent-design/memory.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/memory.md) |
 
 ## Bare-facet test (12)
 
@@ -131,7 +135,6 @@ Fresh items for the round-1 agreement test (step 8). Nobody classifies them befo
 | `r03` | Why archetype 2, not archetype 1, and what that changes | [agent-design/README.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/README.md) |
 | `r04` | Three channels, and why they are three | [agent-design/memory.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/memory.md) |
 | `r05` | Not an archetype: orchestration patterns/backends | [agent-archetypes.md](https://github.com/jburnhams/prompts/blob/a531474/agent-archetypes.md) |
-| `r06` | Blocking monitors against an agent that is trying to get past them | [agent-permissions-approval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-permissions-approval.md) |
 | `r07` | Sliding expiry, on the `persist` tier only | [agent-design/local.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/local.md) |
 | `r08` | Communication style & verbosity | [coding-agent-approaches.md](https://github.com/jburnhams/prompts/blob/a531474/coding-agent-approaches.md) |
 | `r09` | What runs the program: interpreters and their bounds (read 2026-11-09) | [code-mode/README.md](https://github.com/jburnhams/prompts/blob/a531474/code-mode/README.md) |
@@ -161,7 +164,6 @@ Fresh items for the round-1 agreement test (step 8). Nobody classifies them befo
 | `r33` | Pipeline runs are the durable record | [agent-design/keel/pipelines.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/keel/pipelines.md) |
 | `r34` | Browser surfaces: three postures | [agent-vision-multimodal.md](https://github.com/jburnhams/prompts/blob/a531474/agent-vision-multimodal.md) |
 | `r35` | A run behind a view | [agent-interactive-views.md](https://github.com/jburnhams/prompts/blob/a531474/agent-interactive-views.md) |
-| `r36` | How a run ends | [agent-design/keel/taxonomy.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/keel/taxonomy.md) |
 | `r37` | The result envelope — the largest single mismatch | [agent-design/adk.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/adk.md) |
 | `r38` | Budget, and saying when it bit | [agent-design/context-files.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/context-files.md) |
 | `r39` | A sandbox-writable `.git` is a channel out of the sandbox | [agent-git-vcs.md](https://github.com/jburnhams/prompts/blob/a531474/agent-git-vcs.md) |
@@ -173,7 +175,6 @@ Fresh items for the round-1 agreement test (step 8). Nobody classifies them befo
 | `r45` | Discovery, deferral, selection, authorisation, and skill-scoped tools (added 2026-11-11) | [agent-deferred-tool-loading.md](https://github.com/jburnhams/prompts/blob/a531474/agent-deferred-tool-loading.md) |
 | `r46` | What a risk output should contain | [agent-risk-assessment.md](https://github.com/jburnhams/prompts/blob/a531474/agent-risk-assessment.md) |
 | `r47` | How the tier is computed: a floor, then escalation only | [agent-design/risk.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/risk.md) |
-| `r48` | Deterministic, non-LLM completion gates | [agent-self-verification.md](https://github.com/jburnhams/prompts/blob/a531474/agent-self-verification.md) |
 | `r49` | Placing injected text so it does not move the prefix | [agent-prompt-cache-health.md](https://github.com/jburnhams/prompts/blob/a531474/agent-prompt-cache-health.md) |
 | `r50` | Deferred with a reason, not adopted | [agent-design/data.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/data.md) |
 | `r51` | Immutability is a property of the ref, and it is visible | [agent-design/artifacts.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/artifacts.md) |
@@ -183,20 +184,19 @@ Fresh items for the round-1 agreement test (step 8). Nobody classifies them befo
 | `r55` | Evidence, verification, and what is deferred | [agent-design/vision.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/vision.md) |
 | `r56` | What roles this design has, and the invariant they share | [agent-design/orchestration.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/orchestration.md) |
 | `r57` | Two entrypoints, one core | [agent-design/README.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/README.md) |
-| `r58` | The digest gate: most runs should produce nothing | [agent-design/memory.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/memory.md) |
 | `r59` | Minimalist / self-sufficient scaffold | [agent-archetypes.md](https://github.com/jburnhams/prompts/blob/a531474/agent-archetypes.md) |
 | `r60` | The capability paragraph is computed from the tool set | [agent-design/cloudflare.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/cloudflare.md) |
+| `h01` | Sandbox and isolation as a complementary layer | [agent-permissions-approval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-permissions-approval.md) |
+| `h02` | A table's expiry error carries its shape | [agent-design/local.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/local.md) |
+| `h03` | Identity & self-referential framing | [coding-agent-approaches.md](https://github.com/jburnhams/prompts/blob/a531474/coding-agent-approaches.md) |
+| `h04` | The honesty rules that come with charting | [agent-generative-output.md](https://github.com/jburnhams/prompts/blob/a531474/agent-generative-output.md) |
 
-## Held for round 2 (60)
+## Held for round 2 (56)
 
 Not looked at. Round 2 draws from here.
 
 | ID | Item (section heading) | From |
 |---|---|---|
-| `h01` | Sandbox and isolation as a complementary layer | [agent-permissions-approval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-permissions-approval.md) |
-| `h02` | A table's expiry error carries its shape | [agent-design/local.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/local.md) |
-| `h03` | Identity & self-referential framing | [coding-agent-approaches.md](https://github.com/jburnhams/prompts/blob/a531474/coding-agent-approaches.md) |
-| `h04` | The honesty rules that come with charting | [agent-generative-output.md](https://github.com/jburnhams/prompts/blob/a531474/agent-generative-output.md) |
 | `h05` | `/steward`: one pass per wake-up | [code-review-approaches.md](https://github.com/jburnhams/prompts/blob/a531474/code-review-approaches.md) |
 | `h06` | Four kinds of side channel | [agent-tool-implementations.md](https://github.com/jburnhams/prompts/blob/a531474/agent-tool-implementations.md) |
 | `h07` | Pattern D: routers and "auto" | [agent-multi-model.md](https://github.com/jburnhams/prompts/blob/a531474/agent-multi-model.md) |

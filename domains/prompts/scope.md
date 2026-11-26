@@ -101,5 +101,5 @@ Adopt a stage (process step 10) when all of these hold on the same round:
 
 ## Samples
 
-[`samples.md`](./samples.md): build (60), bare-facet test (12), round-1 test (60), held
-for round 2 (60), all drawn at `a531474`. Term harvest: [`harvest.md`](./harvest.md).
+[`samples.md`](./samples.md): build (64), bare-facet test (12), round-1 test (60), held
+for round 2 (56), all drawn at `a531474`. Term harvest: [`harvest.md`](./harvest.md).

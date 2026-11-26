@@ -12,7 +12,7 @@ Tests facet set A (chosen by Jonathan 2026-11-26) at the commit noted in `result
 
 ## Files
 
-- [`items.csv`](./items.csv): the 60 round-1 items `r01`-`r60` from
+- [`items.csv`](./items.csv): the 60 round-1 items (`r01`-`r60` less `r06`, `r36`, `r48`, `r58`, plus `h01`-`h04`) from
   [`../../samples.md`](../../samples.md): heading, opening text (`gist`), file.
 - `prompt-claude.md`, `prompt-openai.md`, `prompt-gemini.md`: the same prompt with values
   and definitions in a different order for each rater (spec T8). Each is self-contained:
@@ -40,7 +40,7 @@ For each rater (method v1.1 M6):
 4. The whole prompt file as the only user input. Save the reply as
    `answers/<rater>-raw.md`, with at the top: CLI and version, model id, effort, date
    and time, tokens if shown. The CLI's own system prompt cannot be removed; note that.
-5. Save the CSV block as `answers/<rater>.csv`. Check: 60 rows, ids `r01`-`r60`, only the
+5. Save the CSV block as `answers/<rater>.csv`. Check: 60 rows, the ids in `items.csv`, only the
    listed values. A value outside a list is kept in the raw file and left blank in the CSV.
 6. Never route the CLIs' sign-ins through a proxy (Google disables accounts for it).
    Stop if a plan's usage limit is near (record_cloud.py's 10% rule).

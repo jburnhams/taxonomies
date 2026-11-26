@@ -49,7 +49,7 @@ id,area,decider,moment,note
 
 - **Definition**: An ending is a moment that comes when a run or a sub-run finishes and hands back its result.
 - **Scope**: Includes completion tools and gates, the shape of a sub-agent's answer, hand-offs, escalation after a review, what a run's outcome records.
-- **Aliases**: completion, finish, handoff
+- **Aliases**: completion, finish
 - **Near miss**: A review of a merged PR the next day: it is after the run, so `after-run`.
 - **Kind**: happening
 - **Facet**: `moment`
@@ -81,11 +81,11 @@ id,area,decider,moment,note
 - **Kind**: happening
 - **Facet**: `moment`
 
-### tool (`tool`)
+### tool use (`tool`)
 
-- **Definition**: Tool is an area of an agent system that covers what the model can do and how its calls and their results move.
+- **Definition**: Tool use is an area of an agent system that covers what the model can do and how its calls and their results move.
 - **Scope**: Includes the tool surface, tool implementations, call and result formats, large results and refs, deferred tool loading, code mode, MCP servers and their protocol. Excludes whether a call is allowed (`control`).
-- **Aliases**: tools, tool use, MCP
+- **Aliases**: tooling
 - **Near miss**: An approval prompt before a shell command: the command is a tool, but asking whether it may run is `control`.
 - **Kind**: thing
 - **Facet**: `area`
@@ -94,7 +94,7 @@ id,area,decider,moment,note
 
 - **Definition**: Operations is an area of an agent system that covers running agents and keeping their records.
 - **Scope**: Includes telemetry, traces and transcripts, storage and dashboards, version control and commits, local compute, provenance of content, deployment. Excludes checking the quality of the work (`verification`).
-- **Aliases**: ops, observability, telemetry
+- **Aliases**: ops, observability
 - **Near miss**: A loop detector that stops a run: it reads telemetry, but stopping decides, so it is `control`.
 - **Kind**: thing
 - **Facet**: `area`
@@ -108,11 +108,11 @@ id,area,decider,moment,note
 - **Kind**: role
 - **Facet**: `decider`
 
-### model (`model`)
+### model access (`model`)
 
-- **Definition**: Model is an area of an agent system that covers how models are called and chosen.
+- **Definition**: Model access is an area of an agent system that covers how models are called and chosen.
 - **Scope**: Includes providers and their wire formats (dialects), routing between models, reasoning effort and thinking budgets, prompt caching, and what happens when a model's response is broken. Excludes what the model is told (`context`) and which tools it is offered (`tool`).
-- **Aliases**: LLM, model access, inference
+- **Aliases**: LLM access, inference
 - **Near miss**: Deferring tool definitions so the cache survives: the change is to how the request is assembled, so it is `model` when the point is the cache and `tool` when the point is which tools are loaded.
 - **Kind**: thing
 - **Facet**: `area`
@@ -121,7 +121,7 @@ id,area,decider,moment,note
 
 - **Definition**: Verification is an area of an agent system that covers checking whether the work is right.
 - **Scope**: Includes self-verification and completion gates, code review of a change, evals, benchmarks and their graders. Excludes checks on whether an action may happen (`control`).
-- **Aliases**: evaluation, eval, evals, review, testing
+- **Aliases**: checking, quality checks
 - **Near miss**: A blocking monitor that refuses a risky command: it checks an action before it happens, so it is `control`.
 - **Kind**: thing
 - **Facet**: `area`
@@ -148,7 +148,7 @@ id,area,decider,moment,note
 
 - **Definition**: Context is an area of an agent system that covers what the model is given to read and what is kept for later.
 - **Scope**: Includes system prompts, context files (AGENTS.md, CLAUDE.md), injected environment text, compaction and summaries, memory across runs. Excludes mid-run text that steers the model (`control`).
-- **Aliases**: context window, memory, prompt
+- **Aliases**: context engineering
 - **Near miss**: A reminder the harness injects when the model loops: it is text in the context, but its job is to redirect, so it is `control`.
 - **Kind**: thing
 - **Facet**: `area`
@@ -175,7 +175,7 @@ id,area,decider,moment,note
 
 - **Definition**: A rule is a decider that is fixed logic applied without a model's judgment.
 - **Scope**: Includes harness code, schema and format checks, caps and budgets, a setting chosen beforehand and applied by code, and the default for stores and formats where nothing is chosen at run time.
-- **Aliases**: harness, code, deterministic check, static rule, policy
+- **Aliases**: code, deterministic check, static rule
 - **Near miss**: A person choosing a permission mode before the run: the choice is the person's, but at run time the mode is applied by code, so `rule`.
 - **Kind**: role
 - **Facet**: `decider`
@@ -198,7 +198,6 @@ r02,"When it runs: at transitions, not continuously","The ledger re-reads a tick
 r03,"Why archetype 2, not archetype 1, and what that changes","`agent-archetypes.md` draws the sharpest line in this collection between agents driven turn-by-turn by a human in a chat/IDE loop (archetype 1: Claude Code, Cursor, Cline, OpenCode, ...) and agents that run one task to completion with no one watching (archetype 2:",agent-design/README.md
 r04,"Three channels, and why they are three","The single most common failure in the field's memory systems is putting things in a store that nothing will ever retrieve. Sorting by addressee separates them cleanly, and the three answers want different machinery:",agent-design/memory.md
 r05,Not an archetype: orchestration patterns/backends,"CodeAct + Hyperlight isn't a competing approach to the six above — it's a tool-use strategy* (collapse several tool calls into one generated program, run it in an isolated micro-VM) that any archetype-1 or archetype-2 agent could adopt on top of whatever else it already does.",agent-archetypes.md
-r06,Blocking monitors against an agent that is trying to get past them,"Added 2026-10-26.* §2b and §2c describe the two production blocking monitors (Codex's Guardian and Claude Code's auto mode) as designed. Remedios, Storf, Roger and Hughes, *Red-Teaming Auto Mode:",agent-permissions-approval.md
 r07,"Sliding expiry, on the `persist` tier only","*Amends `artifacts.md` §5.5. `expires=""run""` is unchanged — a run is short and last-use expiry within it means nothing. The amendment applies one tier up: A `persist` artifact expires after a configurable period from last use, not from mint.",agent-design/local.md
 r08,Communication style & verbosity,"The other major point of near-identical convergence in the Claude Code-descended family, and the clearest outlier from Cursor.",coding-agent-approaches.md
 r09,What runs the program: interpreters and their bounds (read 2026-11-09),"None of these runs model code in a container. Each puts a JavaScript engine next to the agent loop, gives it nothing but the tool functions, and bounds it in-process or in a sidecar. The exception is DeepSeek, which moved the other way. Read from code or shipped binary unless marked.",code-mode/README.md
@@ -228,7 +227,6 @@ r32,Rules common to every tool result,"*Payload lines must be distinguishable fr
 r33,Pipeline runs are the durable record,There is no ledger. Everything `../orchestration.md` designed a ledger for is a property of a pipeline run. Every run belongs to one: a template run on its own is a one-stage pipeline run named after the template.,agent-design/keel/pipelines.md
 r34,Browser surfaces: three postures,"*Playwright MCP is the clearest statement of the text-first doctrine. Its screenshot tool's own description forbids acting on it: *""Take a screenshot of the current page.",agent-vision-multimodal.md
 r35,A run behind a view,"Hex's connector renders another agent's progress and outputs inside Claude's conversation: thinking steps, then charts and tables with citations, while Claude's model reads a summary.",agent-interactive-views.md
-r36,How a run ends,"*Ending. Any way a run stops. The kind of ending is the *terminal: `complete`: through `Complete` or an ending tool; `suspend`: through `AskUser`; `handoff`: through `HandOff`; `infra_failure` and `stopped`: harness-side. *Complete. The generic ending tool, generated from the completion contract.",agent-design/keel/taxonomy.md
 r37,The result envelope — the largest single mismatch,"`AbstractMcpTool.wrapCallResult` converts an MCP `CallToolResult` into the `Map<String, Object>` the model receives. Its behaviour, read from source:",agent-design/adk.md
 r38,"Budget, and saying when it bit","*Per-file cap: 32 KiB. Total cap: 64 KiB. Both are harness constants, not configuration. Codex's 32 KiB shared budget is the only budget in the field, and its failure mode is the one to avoid:",agent-design/context-files.md
 r39,A sandbox-writable `.git` is a channel out of the sandbox,"Added 2026-10-26, from Claude Code 2.1.309 and 2.1.310 (`leaked/claude-code/piebald-2.1.310/`).* §4 treats worktrees as isolation for the *agent*. Two new Claude Code messages are about the reverse direction:",agent-git-vcs.md
@@ -240,7 +238,6 @@ r44,"Braintrust [secondary, Braintrust blog]","Built its own store, Brainstore: 
 r45,"Discovery, deferral, selection, authorisation, and skill-scoped tools (added 2026-11-11)","From the agentic-SDK deep dive (`agentic-sdks/`). Its most useful distinction is that four things get called ""tool search"":",agent-deferred-tool-loading.md
 r46,What a risk output should contain,"Combining the above, a complete answer to ""how much attention"" has: 1. A level, valid for one exact snapshot (`tier` + `bound_to`). 2. Typed reasons: a dimension (§2) and a domain category for each (ClawSweeper's merge-risk domains, made repo-configurable). 3. Who must decide what:",agent-risk-assessment.md
 r47,"How the tier is computed: a floor, then escalation only","Three contributors, combined with `max`. None of them can lower the tier another one set.",agent-design/risk.md
-r48,"Deterministic, non-LLM completion gates","Mechanisms that block a ""done"" signal on a structural precondition — no model judgment involved.",agent-self-verification.md
 r49,Placing injected text so it does not move the prefix,"The general rule the sources converge on: anything the harness adds mid-run goes at the tail, and stays put once sent. Pydantic's reminders are request-scoped by default (seen on the request they fire on, not after) and conversation-scoped when an obligation must outlast that step.",agent-prompt-cache-health.md
 r50,"Deferred with a reason, not adopted","*Shape assertions (`agent-data-analysis.md` §12, problem 1) — row counts across a join, null counts after a merge, groupby cardinality against expectation. These are the cheapest catch for the commonest silent failure in analysis, and no source does them.",agent-design/data.md
 r51,"Immutability is a property of the ref, and it is visible","`git://acme/payments@a1b2c3d/...` is immutable; `git://acme/payments@main/...` is not. `artifact://`, `dep://` and `run://` always are. This matters twice:",agent-design/artifacts.md
@@ -250,7 +247,10 @@ r54,"Redaction is sometimes the model provider's choice, not the scaffold's","Cl
 r55,"Evidence, verification, and what is deferred","Forge produces images only if something takes a screenshot, and v1 has no browser. So evidence is a direction, not a v1 feature. Recording the shape now because it decides two things in v1. *What v1 does commit to:",agent-design/vision.md
 r56,"What roles this design has, and the invariant they share","We already have more role structure than OpenClaw, which has none in code: `subagent_type` (`general-purpose` / `reviewer` / `validator`) with the reviewer's specialist as a second key (`tools.md`; `context-files.md` §""Kinds""). The ledger adds no role. It adds a *dispatcher*, which is not an agent.",agent-design/orchestration.md
 r57,"Two entrypoints, one core",┌─────────────────────────┐ │ Shared core tool set │ │ Read · Edit · Write │ │ Bash · Grep · List │ │ Task · AskUser │ │ FetchJira · AddComment │ │ InspectImage │ │ Complete │ └────────────┬─────────────┘ │ ┌──────────────────┴──────────────────┐ │ │ ┌────────▼─────────┐ ┌──────────▼──────────┐ │ Coding agent │ │ Review agent │,agent-design/README.md
-r58,The digest gate: most runs should produce nothing,"Gemini CLI computes a model-free per-session digest — tool sequence, touched paths, and whether a validation command passed, in ≤160 characters — and routes on it, so ""which of 50 sessions is worth reading"" is answered with no model call (`../agent-memory-learning.md` §2b).",agent-design/memory.md
 r59,Minimalist / self-sufficient scaffold,"Not a deployment context — a philosophy that cuts across archetypes 1 and 2: strip the tool surface down as far as it'll go and either trust the model's judgment to fill the gap, or explicitly let it extend its own capabilities. *Defining traits:",agent-archetypes.md
 r60,The capability paragraph is computed from the tool set,"*Amends `system-prompts.md`, and settles the open half of `README.md`'s *per-model prompt variation* row. That row adopts Codex's shape — one canonical prompt per mode, with *capability-conditional subtraction by heading as the upgrade path — and prices the cost honestly:",agent-design/cloudflare.md
+h01,Sandbox and isolation as a complementary layer,"A fully platform-branching sandbox description, stated directly in the prompt text rather than left implicit — Zed (genuinely open source):",agent-permissions-approval.md
+h02,A table's expiry error carries its shape,"*Extends `artifacts.md` §5.5. That section is already right that *expiry is a recoverable, self-describing error, never a null, and its worked example names the recovery through `origin`: <error tool=""Read"" ref=""artifact://img_7f3a2b9c""> !",agent-design/local.md
+h03,Identity & self-referential framing,"How the prompt introduces the agent, and what happens when the user asks ""are you X"" or ""can you do Y"".",coding-agent-approaches.md
+h04,The honesty rules that come with charting,"Worth quoting because nothing else in this collection puts truthfulness constraints in a layout skill. `artifact-dashboard`: *""Replace every placeholder number — and never invent one … The same goes for dates and metadata:",agent-generative-output.md
 ```
