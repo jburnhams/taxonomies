@@ -87,7 +87,7 @@ three ways that matter:
   and may give a sourced figure; check this rule when it is read.
 - **Changes**: process step 2 and spec T8 (sample line); J7 stays as the floor.
 
-## M4. Three raters from three families, scored with Fleiss' and pairwise kappa (◆ J23)
+## M4. Three raters from three families, scored with Fleiss' and pairwise kappa (J23, adopted by Jonathan 2026-11-26)
 
 - **Change**: T8 uses three raters, each from a different model family, each the
   strongest model that family offers on Jonathan's plans at the time (for 2026-11:
