@@ -163,7 +163,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 ### second model (`second-model`)
 
 - **Definition**: A second model is a decider that is a separate model call, apart from the working model, whose answer has the final say.
-- **Scope**: Includes classifiers, blocking monitors, judges, graders, validators, trajectory judges, background agents that review or curate memory, and small helper models (title writers, summarisers) when their output stands. Excludes the working model reviewing itself (`working-model`), and a model provider's own service withholding or filtering content, which is `rule` unless the source says a model there decides.
+- **Scope**: Includes classifiers, blocking monitors, judges, graders, validators, trajectory judges, background agents that review or curate memory, and small helper models (title writers, summarisers) when their output stands. A separate model call is the decider even when the harness assembles its prompt, chooses which of several prompts to send, or acts on its answer: a validator sub-agent's verdict, a summariser's summary, a trained risk predictor's score. Excludes the working model reviewing itself (`working-model`), and a model provider's own service withholding or filtering content, which is `rule` unless the source says a model there decides.
 - **Aliases**: judge, LLM judge, monitor, classifier, grader, verifier
 - **Example**: [agent-permissions-approval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-permissions-approval.md) §2c, Claude Code's auto-mode classifier.
 - **Near miss**: A sub-agent that does part of the task: it is a separate model call, but it works rather than decides; its work is judged by whoever accepts it.
@@ -171,12 +171,12 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Facet**: `decider`
 - **Status**: candidate
 - **Warrant**: judge 218, classifier 134, monitor 65, grader 39, verifier 30 (Jonathan's words: "llm judges")
-- **History**: 2026-11-26 added. 2026-11-26 redefine: background curators and provider-side filtering placed after round 1 split on them (`r26`, `r54`).
+- **History**: 2026-11-26 added. 2026-11-26 redefine: background curators and provider-side filtering placed after round 1 split on them (`r26`, `r54`). 2026-11-26 redefine: a harness-built prompt does not make the decider `rule`, after round 2's non-Claude pair split on it (`h22`, `h44`, `h57`, `h07`).
 
 ### rule (`rule`)
 
 - **Definition**: A rule is a decider that is fixed logic applied without a model's judgment.
-- **Scope**: Includes harness code, schema and format checks, caps and budgets, a setting chosen beforehand and applied by code, a model provider's service filtering content, and stores and formats where nothing is chosen at run time. The outcome holds even if the model ignores its instructions. Where a section names several mechanisms with different deciders, classify the first one named (reminders before a trajectory judge: `rule`).
+- **Scope**: Includes harness code, schema and format checks, caps and budgets, a setting chosen beforehand and applied by code, a model provider's service filtering content, and stores and formats where nothing is chosen at run time. The outcome holds even if the model ignores its instructions. Where a section names several mechanisms with different deciders, classify the first one named (reminders before a trajectory judge: `rule`); where it surveys a spectrum without naming one first, classify the one the section recommends or, failing that, mark `unsure`.
 - **Aliases**: code, deterministic check, static rule
 - **Example**: [agent-self-verification.md](https://github.com/jburnhams/prompts/blob/a531474/agent-self-verification.md), "Deterministic, non-LLM completion gates".
 - **Near miss**: A person choosing a permission mode before the run: the choice is the person's, but at run time the mode is applied by code, so `rule`.
@@ -189,7 +189,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 ### person (`person`)
 
 - **Definition**: A person is a decider that is a human answering at the moment the mechanism applies.
-- **Scope**: Includes approving or denying an action, replying to a question, typing a command or keyword, merging a PR. Excludes a setting a person chose earlier (`rule`).
+- **Scope**: Includes approving or denying an action, replying to a question, typing a command or keyword, handing an image or file to the agent, merging a PR. Excludes a setting a person chose earlier, and a person starting a run or a watch that then proceeds without them: the decider is whatever decides while it runs.
 - **Aliases**: human, user, human in the loop, operator
 - **Example**: [agent-permissions-approval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-permissions-approval.md) §1, approval modes.
 - **Near miss**: "ultrathink" typed by the user: the person decides, though code detects the word.
@@ -197,7 +197,7 @@ Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a53147
 - **Facet**: `decider`
 - **Status**: candidate
 - **Warrant**: approval 759; "human in the loop" in agent-design/vision.md
-- **History**: 2026-11-26 added.
+- **History**: 2026-11-26 added. 2026-11-26 redefine: starting something is not deciding it, after round 2 (`h05`, `h25`).
 
 ## Moment values (`moment`)
 

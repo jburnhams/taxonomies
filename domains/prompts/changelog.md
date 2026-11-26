@@ -35,3 +35,10 @@ named on each line (G1); Jonathan can reverse any of them.
 - **redefine** `working-model`, `rule`, `second-model`, `setup`: scope notes after round 1
   (table in `rounds/round-1/results.md`). Approved by: Claude.
 - **add** round-2 kit `rounds/round-2/` (56 items `h05`-`h60`, prompts with the new rules).
+- **score** round 2 (56 items `h05`-`h60`): Fleiss' κ area 0.87, decider 0.66, moment 0.72;
+  non-Claude pair 0.87 / 0.54 (fails M4) / 0.67. Run on omarchy, commit `152c23d`.
+- **redefine** `second-model`, `person`, `rule`: a separate model call decides however its
+  prompt is built; starting is not deciding; surveys take what they recommend. Approved by:
+  Claude.
+- **add** 80 more items `g01`-`g80` by the same seeded draw (`sample.py`), eight dropped as
+  meta; round-3 kit `rounds/round-3/` with `g01`-`g67` (60 items).

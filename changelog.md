@@ -4,6 +4,17 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Scored prompts round 2, fixed decider again, drew 80 more items for round 3 (branch `claude/project-thread-oneclm`)**.
+Round 2 passed Fleiss' κ ≥ 0.6 on every facet (0.87, 0.66, 0.72) but the two non-Claude
+raters agreed only 0.54 on decider, so the M4 rule (proposed, J23) fails. The held set
+was used up, so `sample.py` drew 80 more from the same seeded order.
+
+- `domains/prompts/glossary.md`: `second-model`, `person`, `rule` redefined.
+- `domains/prompts/rounds/round-2/results.md`: the reading and the fixes table added.
+- `domains/prompts/samples.md`, `items-all.csv`, `sample.py`: **new** set `g01`-`g80`.
+- `domains/prompts/rounds/round-3/`: **new** kit, 60 items.
+- `domains/prompts/facets.md`, `changelog.md`: agreement and operations.
+
 **Ran prompts round 2 with the same three raters** (kit `6145895`, 56 items). Fleiss' κ:
 area 0.87, decider 0.66, moment 0.72, all passing; openai-gemini: 0.87, 0.54, 0.67, so
 decider still misses for the non-Claude pair.

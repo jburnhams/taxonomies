@@ -9,7 +9,7 @@ import csv, collections, glob, os, random, re, sys
 
 SEED = 20261126
 EXCLUDE = {9, 16, 19, 27, 30, 41, 52, 69, 85, 95, 114, 125, 127, 148, 182, 184, 188, 189}
-SETS = [("b", 60), ("t", 12), ("r", 60), ("h", 60)]
+SETS = [("b", 60), ("t", 12), ("r", 60), ("h", 60), ("g", 80)]
 SKIP_FILES = {"README.md", "changelog.md", "sources.md"}
 SKIP_HEAD = re.compile(r"^(sources covered|design takeaways|absences|see also|sources cited|what follows|summary|contents|status|open questions|where each source sits)", re.I)
 META = re.compile(r"(open points|reading order|what it measures|layers|running|^tier \d|proposal|what this changes|for the design|takeaway|where .* stands|status|summary|overview|conclusion|recommendation|what we|next steps|changelog|references|glossary|words we)", re.I)

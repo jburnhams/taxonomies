@@ -254,4 +254,71 @@ Not looked at. Round 2 draws from here.
 | `h59` | What this document does not change | [agent-design/generative.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/generative.md) |
 | `h60` | Skills: a catalog in the prompt, a body on demand | [agent-context-file-loading.md](https://github.com/jburnhams/prompts/blob/a531474/agent-context-file-loading.md) |
 
+## Round-3 test (60)
+
+Drawn 2026-11-26 after round 2 used up the held set: `sample.py` continues the same seeded order for 80 more (`g01`-`g80`); eight meta sections were dropped by hand (`g17`, `g19`, `g34`, `g36`, `g38`, `g47`, `g60`, `g78`) and the first 60 of the rest (`g01`-`g67`) are the round-3 items. `g68`-`g80` are held.
+
+| ID | Item (section heading) | From |
+|---|---|---|
+| `g01` | How the quick agent is presented with them | [agent-design/models.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/models.md) |
+| `g02` | Writing, validation and moderation | [agent-design/keel/memory.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/keel/memory.md) |
+| `g03` | Five ways to delimit a call, and the tokenizer decides which | [agent-tool-call-dialects.md](https://github.com/jburnhams/prompts/blob/a531474/agent-tool-call-dialects.md) |
+| `g04` | Goose: resume a delegate by id | [agent-run-recovery.md](https://github.com/jburnhams/prompts/blob/a531474/agent-run-recovery.md) |
+| `g05` | Persistent memory & deployment as tools | [agent-tool-surfaces.md](https://github.com/jburnhams/prompts/blob/a531474/agent-tool-surfaces.md) |
+| `g06` | (b) A separate background agent reads finished transcripts | [agent-memory-learning.md](https://github.com/jburnhams/prompts/blob/a531474/agent-memory-learning.md) |
+| `g07` | The `<prior_attempt>` paragraph (all landings) | [agent-design/system-prompts.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/system-prompts.md) |
+| `g08` | Code changes in response to comments — the boundary | [agent-design/review.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/review.md) |
+| `g09` | Turn/output bounding and the result-handling contract | [agent-subagent-architectures.md](https://github.com/jburnhams/prompts/blob/a531474/agent-subagent-architectures.md) |
+| `g10` | Screenshots as verification evidence | [agent-vision-multimodal.md](https://github.com/jburnhams/prompts/blob/a531474/agent-vision-multimodal.md) |
+| `g11` | What reaches the model, and as whose words | [agent-interactive-views.md](https://github.com/jburnhams/prompts/blob/a531474/agent-interactive-views.md) |
+| `g12` | Where each harness-side rule actually lives | [agent-design/adk.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/adk.md) |
+| `g13` | Kinds: one vocabulary, three resolutions | [agent-design/context-files.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/context-files.md) |
+| `g14` | PR and push workflow | [agent-git-vcs.md](https://github.com/jburnhams/prompts/blob/a531474/agent-git-vcs.md) |
+| `g15` | Suite 3 — Review mode | [agent-design/eval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/eval.md) |
+| `g16` | The dialects in practice | [telemetry/standards.md](https://github.com/jburnhams/prompts/blob/a531474/telemetry/standards.md) |
+| `g18` | Pure JS vs WASM, and why the gap is architectural | [agent-local-compute.md](https://github.com/jburnhams/prompts/blob/a531474/agent-local-compute.md) |
+| `g20` | LangSmith [source for the client, inference for the store] | [telemetry/platforms-and-storage.md](https://github.com/jburnhams/prompts/blob/a531474/telemetry/platforms-and-storage.md) |
+| `g21` | Two granularities, one problem | [agent-risk-assessment.md](https://github.com/jburnhams/prompts/blob/a531474/agent-risk-assessment.md) |
+| `g22` | Pipeline changes (multi- and single-stage alike) | [agent-design/risk.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/risk.md) |
+| `g23` | Hook-based, user-configured verification gates | [agent-self-verification.md](https://github.com/jburnhams/prompts/blob/a531474/agent-self-verification.md) |
+| `g24` | Promoted to `future.md` with a stated shape | [agent-design/data.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/data.md) |
+| `g25` | MCP: central in the namespace, not in the block type | [agent-design/artifacts.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/artifacts.md) |
+| `g26` | What it means for Forge | [agent-content-provenance.md](https://github.com/jburnhams/prompts/blob/a531474/agent-content-provenance.md) |
+| `g27` | Roo Code — MCP-aware, and silently lossy | [agent-tool-result-transport.md](https://github.com/jburnhams/prompts/blob/a531474/agent-tool-result-transport.md) |
+| `g28` | A completed-reasoning-block micro-title — a second, smaller title-generation instance | [agent-turn-output.md](https://github.com/jburnhams/prompts/blob/a531474/agent-turn-output.md) |
+| `g29` | Injection, and the one honest mitigation | [agent-design/vision.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/vision.md) |
+| `g30` | Self-oversight inside a run | [agent-design/orchestration.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/orchestration.md) |
+| `g31` | `blocker` suspends, and it reuses machinery that exists | [agent-design/memory.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/memory.md) |
+| `g32` | Compaction needs a second budget, and a degradation says what it did not damage | [agent-design/cloudflare.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/cloudflare.md) |
+| `g33` | Claude Code's auto-mode classifier, read from the shipped prompt | [agent-permissions-approval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-permissions-approval.md) |
+| `g35` | Per-model / per-provider prompt variants | [coding-agent-approaches.md](https://github.com/jburnhams/prompts/blob/a531474/coding-agent-approaches.md) |
+| `g37` | The generated page is itself an injection surface | [agent-generative-output.md](https://github.com/jburnhams/prompts/blob/a531474/agent-generative-output.md) |
+| `g39` | The repair catalogue, and why it must run *after* validation | [agent-tool-implementations.md](https://github.com/jburnhams/prompts/blob/a531474/agent-tool-implementations.md) |
+| `g40` | Pattern C: the advisor tool (cheap executor, strong consultant) | [agent-multi-model.md](https://github.com/jburnhams/prompts/blob/a531474/agent-multi-model.md) |
+| `g41` | A saved tool group for Java agents, used against a repo | [agent-design/keel/README.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/keel/README.md) |
+| `g42` | Who pays, and from which budget | [agent-run-steering.md](https://github.com/jburnhams/prompts/blob/a531474/agent-run-steering.md) |
+| `g43` | One mechanism vs. a layered pipeline vs. a pluggable strategy | [agent-context-compaction.md](https://github.com/jburnhams/prompts/blob/a531474/agent-context-compaction.md) |
+| `g44` | `SearchSource` / `ReadSource` (ref-pinned source beyond the working tree) | [agent-design/medium.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/medium.md) |
+| `g45` | `AskUser` posts a decision record, not a prose question | [agent-design/generative.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/generative.md) |
+| `g46` | Templating: there is none | [agent-context-file-loading.md](https://github.com/jburnhams/prompts/blob/a531474/agent-context-file-loading.md) |
+| `g48` | How tools get advertised | [agent-tool-call-dialects.md](https://github.com/jburnhams/prompts/blob/a531474/agent-tool-call-dialects.md) |
+| `g49` | Stopped, not dead: a resource limit inside a live run | [agent-run-recovery.md](https://github.com/jburnhams/prompts/blob/a531474/agent-run-recovery.md) |
+| `g50` | Code execution as a distinct capability from "the shell" | [agent-tool-surfaces.md](https://github.com/jburnhams/prompts/blob/a531474/agent-tool-surfaces.md) |
+| `g51` | OpenClaw's memory architecture (read from source) | [agent-memory-learning.md](https://github.com/jburnhams/prompts/blob/a531474/agent-memory-learning.md) |
+| `g52` | General-purpose delegate prompt (coding mode) | [agent-design/system-prompts.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/system-prompts.md) |
+| `g53` | Stable finding identity across sessions (amends §7) | [agent-design/review.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/review.md) |
+| `g54` | Calling convention & protocol shape | [agent-subagent-architectures.md](https://github.com/jburnhams/prompts/blob/a531474/agent-subagent-architectures.md) |
+| `g55` | Transport: getting the bytes to the model | [agent-vision-multimodal.md](https://github.com/jburnhams/prompts/blob/a531474/agent-vision-multimodal.md) |
+| `g56` | Which tools a view may call | [agent-interactive-views.md](https://github.com/jburnhams/prompts/blob/a531474/agent-interactive-views.md) |
+| `g57` | Advertising is not enforcement | [agent-design/adk.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/adk.md) |
+| `g58` | Inlining, and when not to | [agent-design/context-files.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/context-files.md) |
+| `g59` | Output: a ship/no-ship log | [agent-design/eval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/eval.md) |
+| `g61` | Measurement one — token cost | [agent-tabular-results.md](https://github.com/jburnhams/prompts/blob/a531474/agent-tabular-results.md) |
+| `g62` | What breaks when you move compute into the tab | [agent-local-compute.md](https://github.com/jburnhams/prompts/blob/a531474/agent-local-compute.md) |
+| `g63` | It already works, and jupyter-mcp is the proof | [agent-data-analysis.md](https://github.com/jburnhams/prompts/blob/a531474/agent-data-analysis.md) |
+| `g64` | What the storage designs agree on [inference] | [telemetry/platforms-and-storage.md](https://github.com/jburnhams/prompts/blob/a531474/telemetry/platforms-and-storage.md) |
+| `g65` | Hosted products: what is shown and what is hidden | [agent-risk-assessment.md](https://github.com/jburnhams/prompts/blob/a531474/agent-risk-assessment.md) |
+| `g66` | The floor: path and kind rules (deterministic, harness) | [agent-design/risk.md](https://github.com/jburnhams/prompts/blob/a531474/agent-design/risk.md) |
+| `g67` | Verification authority handed to the user, not the model | [agent-self-verification.md](https://github.com/jburnhams/prompts/blob/a531474/agent-self-verification.md) |
+
 [den]: ../../sources/denton-2003-faceted-howto/denton-2003-faceted-howto.html

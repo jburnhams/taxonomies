@@ -117,3 +117,27 @@ Disagreements (openai / gemini):
 - `h58` moment: failure / after-run
 - `h60` moment: setup / tool-call
 ```
+
+## Reading the result
+
+Under the adopted rules (J5, J6: two families, κ ≥ 0.6 per facet) round 2 passes: Fleiss'
+κ clears 0.6 on every facet and so does every pair that includes Claude. It fails only
+method v1.1 M4's extra rule, the non-Claude pair on decider (0.54). M4 is a proposal
+(J23), not adopted; it is applied here because it is the stricter reading and the fix is
+cheap. The pair's ten splits are three patterns, not noise.
+
+## Fixes after scoring (2026-11-26)
+
+Each is a **redefine** in [`../../changelog.md`](../../changelog.md), made after all three
+raters had answered, so round 2 tested the files at `6145895`.
+
+| Items | Split (openai / gemini) | Fix |
+|---|---|---|
+| `h07`, `h22`, `h44`, `h57` | `rule` against `second-model`: a separate model call whose prompt the harness builds or picks | `second-model` scope: a separate model call decides even when the harness builds or picks its prompt |
+| `h37`, `h51` | `second-model` / `rule`: a trained risk predictor; a diff check | `second-model` scope names trained predictors; `h51` (a diff check) is `rule` as written |
+| `h05`, `h25` | `person` / `rule`: a person starts a watch, a person hands over an image | `person` scope: starting is not deciding; handing over input is |
+| `h36`, `h60` | `working-model` / `rule`: sections that survey a spectrum | `rule` scope and the prompt: classify what the section recommends, else mark `unsure` |
+
+No facet added, split or merged. Round 3 uses 60 newly drawn items (`g01`-`g67`, see
+[`../../samples.md`](../../samples.md#round-3-test-60)), the same three models, and the
+new rules ([`../round-3/`](../round-3/README.md)).
