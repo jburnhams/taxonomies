@@ -4,6 +4,11 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Recorded J23 (branch `claude/project-thread-oneclm`)**. Jonathan chose the three-rater pass rule: Fleiss' κ ≥ 0.6 per facet and the non-Claude pair κ ≥ 0.6.
+
+- `design/decisions.md`: J23 moved to the decided table.
+- `design/method-v1.1.md`: M4 marked adopted; the other six stay proposed.
+
 **Scored prompts round 2, fixed decider again, drew 80 more items for round 3 (branch `claude/project-thread-oneclm`)**.
 Round 2 passed Fleiss' κ ≥ 0.6 on every facet (0.87, 0.66, 0.72) but the two non-Claude
 raters agreed only 0.54 on decider, so the M4 rule (proposed, J23) fails. The held set
