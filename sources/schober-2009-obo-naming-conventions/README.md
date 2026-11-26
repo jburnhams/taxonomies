@@ -5,8 +5,8 @@
 - **Access**: open (CC BY 2.0)
 - **URL**: https://pmc.ncbi.nlm.nih.gov/articles/PMC2684543
 - **Read**: Read 2026-11-25: sections 1-2 of Table 1 verbatim; sections 3-4 only as a summary (marked).
-- **Stored here**: `schober-2009-obo-naming-conventions.html` (+ `.md`): the article from PMC (CC BY 2.0). Downloaded 2026-11-25; the parts of the notes marked as from a summary were checked against it the same day. `.md` beside a file is its text, extracted for searching.
-- **To fetch**: Nothing needed: the article is stored here.
+- **Stored** (private, in [`taxonomies-sources/schober-2009-obo-naming-conventions/`](https://github.com/jburnhams/taxonomies-sources/tree/main/schober-2009-obo-naming-conventions)): `schober-2009-obo-naming-conventions.html` (+ `.md`): the article from PMC (CC BY 2.0). Downloaded 2026-11-25; the parts of the notes marked as from a summary were checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the article is stored in `taxonomies-sources`.
 - **Used in**: [`03-naming.md`](../../03-naming.md), [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md)
 
 ## What is distinctive

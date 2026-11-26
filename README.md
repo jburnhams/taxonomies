@@ -49,7 +49,8 @@ changing in [`design/source-check-2026-11-25.md`](./design/source-check-2026-11-
 tests), with every rule citing a stored source by path and page.
 [`design/decisions.md`](./design/decisions.md) lists the choices only Jonathan can make.
 `python3 tools/check_citations.py` checks that each rule and step cites a stored file
-that exists.
+that exists (in `sources/stored-files.txt`, and on disk too if `taxonomies-sources` is
+checked out beside this repo).
 Changes for large domains are proposed in
 [`design/method-v1.1.md`](./design/method-v1.1.md) (not adopted).
 
@@ -73,7 +74,10 @@ answers. Published at <https://jburnhams.github.io/taxonomies/>.
 ## Sources
 
 - [`sources/`](./sources): one folder per source with citation, access, what was read,
-  and notes. Raw copies go in the same folder.
+  and notes. Stored copies (PDFs, saved pages, extracted text) are kept out of this public
+  repo, in the private [`jburnhams/taxonomies-sources`](https://github.com/jburnhams/taxonomies-sources)
+  repo under the same folder names; [`sources/stored-files.txt`](./sources/stored-files.txt)
+  lists them.
 - [`sources.md`](./sources.md): the full list by field, with read status.
 - [`to-fetch.md`](./to-fetch.md): paywalled or blocked items for Jonathan to fetch,
   most useful first.

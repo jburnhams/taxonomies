@@ -5,8 +5,8 @@
 - **Access**: open (footer reportedly CC BY 4.0; not seen verbatim)
 - **URL**: https://miskatonic.org/library/facet-web-howto.html
 - **Read**: Read in full 2026-11-25 (first half in the first pass, the rest from the stored page).
-- **Stored here**: `denton-2003-faceted-howto.html` (+ `.md`): the page from miskatonic.org. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
-- **To fetch**: Nothing needed: the page is stored here.
+- **Stored** (private, in [`taxonomies-sources/denton-2003-faceted-howto/`](https://github.com/jburnhams/taxonomies-sources/tree/main/denton-2003-faceted-howto)): `denton-2003-faceted-howto.html` (+ `.md`): the page from miskatonic.org. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the page is stored in `taxonomies-sources`.
 - **Used in**: [`05-building-and-testing.md`](../../05-building-and-testing.md), [`01-structures.md`](../../01-structures.md)
 
 ## What is distinctive

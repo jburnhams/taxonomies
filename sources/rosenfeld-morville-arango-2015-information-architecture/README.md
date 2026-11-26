@@ -5,7 +5,7 @@
 - **Access**: paywalled
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `rosenfeld-morville-arango-2015-information-architecture.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `rosenfeld-morville-arango-2015-information-architecture/` (for example `rosenfeld-morville-arango-2015-information-architecture.pdf`) and note it in this line.
 - **To fetch**: The book (chapters on organisation and labelling systems).
 - **Used in**: [`05-building-and-testing.md`](../../05-building-and-testing.md)
 

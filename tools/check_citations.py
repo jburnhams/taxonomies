@@ -2,7 +2,10 @@
 """Check that the design docs cite stored sources.
 
 For each file given (default: design/spec.md and design/process.md):
-  1. every relative link, inline or reference-style, points to a file that exists;
+  1. every relative link, inline or reference-style, points to a file that exists, and
+     every link into the private jburnhams/taxonomies-sources repo names a file listed in
+     sources/stored-files.txt (and present on disk, if that repo is checked out beside
+     this one or at $TAXONOMIES_SOURCES);
   2. every reference key used ([text][key]) is defined;
   3. every rule (a bullet starting "- **S1." style) and every "## Step" section cites
      at least one file under sources/, or carries a ⚠ marker saying its source is not
@@ -10,11 +13,16 @@ For each file given (default: design/spec.md and design/process.md):
 
 Exit status 1 if anything fails. Usage: python3 tools/check_citations.py [files...]
 """
+import os
 import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+STORE_URL = "https://github.com/jburnhams/taxonomies-sources/blob/main/"
+STORED = {l.strip() for l in (ROOT / "sources" / "stored-files.txt").read_text().splitlines() if l.strip()}
+_store = Path(os.environ.get("TAXONOMIES_SOURCES", ROOT.parent / "taxonomies-sources"))
+STORE_DIR = _store if (_store / ".git").exists() or any(_store.glob("*/")) else None
 DEFAULT = ["design/spec.md", "design/process.md"]
 
 REF_DEF = re.compile(r"^\[([^\]]+)\]:\s*(\S+)", re.M)
@@ -45,6 +53,13 @@ def check(path):
 
     targets = list(defs.values()) + INLINE.findall(text)
     for target in targets:
+        if target.startswith(STORE_URL):
+            stored = target[len(STORE_URL):].split("#", 1)[0]
+            if stored not in STORED:
+                errors.append(f"stored file not in sources/stored-files.txt: {stored}")
+            elif STORE_DIR and not (STORE_DIR / stored).exists():
+                errors.append(f"stored file missing from {STORE_DIR}: {stored}")
+            continue
         if re.match(r"^[a-z]+:", target) or target.startswith("#"):
             continue
         file_part = target.split("#", 1)[0]
@@ -58,7 +73,7 @@ def check(path):
             return True
         if any(f"][{k}]" in body for k in source_keys):
             return True
-        return "../sources/" in body
+        return "../sources/" in body or STORE_URL in body
 
     rule_stop = re.compile(r"^(- \*\*[A-Z]\d+\.|#{2,3} )", re.M)
     for label, body in blocks(text, RULE, rule_stop):

@@ -5,7 +5,7 @@
 - **Access**: book paywalled; Beck and Cunningham's paper free online
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: `beck-cunningham-1987-oopsla.html` (+ `.md`): Beck and Cunningham's OOPSLA-87 paper from c2.com. The Gamma et al. book is not stored. Downloaded 2026-11-25; the Beck and Cunningham point was checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **Stored** (private, in [`taxonomies-sources/gamma-1994-design-patterns/`](https://github.com/jburnhams/taxonomies-sources/tree/main/gamma-1994-design-patterns)): `beck-cunningham-1987-oopsla.html` (+ `.md`): Beck and Cunningham's OOPSLA-87 paper from c2.com. The Gamma et al. book is not stored. Downloaded 2026-11-25; the Beck and Cunningham point was checked against it the same day. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: The book (optional; Beck and Cunningham is stored).
 - **Used in**: [`08-pattern-languages.md`](../../08-pattern-languages.md)
 

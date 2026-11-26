@@ -5,8 +5,8 @@
 - **Access**: free to read
 - **URL**: https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html
 - **Read**: Read in part 2026-11-25: the first half or so verbatim; the rest only as a summary, so claims from it are marked.
-- **Stored here**: `noy-mcguinness-2001-ontology-101.html` (+ `.md`), with its figures in `img/`: the guide from protege.stanford.edu. Downloaded 2026-11-25; the parts of the notes marked as from a summary were checked against it the same day. `.md` beside a file is its text, extracted for searching.
-- **To fetch**: Nothing needed: the guide is stored here.
+- **Stored** (private, in [`taxonomies-sources/noy-mcguinness-2001-ontology-101/`](https://github.com/jburnhams/taxonomies-sources/tree/main/noy-mcguinness-2001-ontology-101)): `noy-mcguinness-2001-ontology-101.html` (+ `.md`), with its figures in `img/`: the guide from protege.stanford.edu. Downloaded 2026-11-25; the parts of the notes marked as from a summary were checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the guide is stored in `taxonomies-sources`.
 - **Used in**: [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md), [`05-building-and-testing.md`](../../05-building-and-testing.md)
 
 ## What is distinctive

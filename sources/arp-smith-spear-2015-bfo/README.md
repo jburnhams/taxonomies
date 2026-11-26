@@ -5,7 +5,7 @@
 - **Access**: book paywalled; MIT Press may have an open edition (not checked)
 - **URL**: none found
 - **Read**: Book not read; the 2007 OBO Foundry paper read in full 2026-11-25 from the stored copy.
-- **Stored here**: `smith-2007-obo-foundry.html` (+ `.md`): Smith et al. 2007, "The OBO Foundry", author manuscript from PMC (PMC2814061). The book is not stored. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **Stored** (private, in [`taxonomies-sources/arp-smith-spear-2015-bfo/`](https://github.com/jburnhams/taxonomies-sources/tree/main/arp-smith-spear-2015-bfo)): `smith-2007-obo-foundry.html` (+ `.md`): Smith et al. 2007, "The OBO Foundry", author manuscript from PMC (PMC2814061). The book is not stored. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: The book (the OBO Foundry paper is stored).
 - **Used in**: [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md)
 

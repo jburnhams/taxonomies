@@ -398,13 +398,15 @@ def main(check=False):
     top = [doc_entry(p) for p in sorted(ROOT.glob("*.md")) if p.name not in ("CLAUDE.md",)]
     design = [doc_entry(p) for p in sorted((ROOT / "design").glob("*.md"))]
     sources = []
-    for s in sorted((ROOT / "sources").iterdir()):
+    # stored copies live in the private jburnhams/taxonomies-sources repo; this list names them
+    stored_all = [l.strip() for l in (ROOT / "sources" / "stored-files.txt").read_text().splitlines() if l.strip()]
+    for s in sorted(p for p in (ROOT / "sources").iterdir() if p.is_dir()):
         rd = s / "README.md"
         if not rd.exists():
             continue
         md = rd.read_text()
         fld = lambda k: (re.search(rf"^- \*\*{k}\*\*:\s*(.*)$", md, re.M) or [None, ""])[1].strip()
-        stored = sorted(p.name for p in s.iterdir() if p.is_file() and p.name != "README.md")
+        stored = sorted(x.split("/", 1)[1] for x in stored_all if x.startswith(s.name + "/"))
         sources.append({"slug": s.name, "title": title_of(md, s.name), "source": fld("Source"), "type": fld("Type"),
                         "access": fld("Access"), "read": fld("Read"), "stored": stored})
 

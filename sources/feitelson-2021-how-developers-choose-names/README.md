@@ -5,8 +5,8 @@
 - **Access**: open preprints on arXiv
 - **URL**: https://arxiv.org/abs/2103.07487 ; https://arxiv.org/abs/2402.10022
 - **Read**: Read 2026-11-25 (online copy, see URL). (PDF partly; key figures read verbatim)
-- **Stored here**: `feitelson-2021-how-developers-choose-names.pdf` (+ `.md`): arXiv 2103.07487v1; `alpern-2024-reproducing-naming-experiments.pdf` (+ `.md`): arXiv 2402.10022v1. Downloaded 2026-11-25; figures checked against both PDFs the same day. `.md` beside a file is its text, extracted for searching.
-- **To fetch**: Nothing needed: both preprints are stored here.
+- **Stored** (private, in [`taxonomies-sources/feitelson-2021-how-developers-choose-names/`](https://github.com/jburnhams/taxonomies-sources/tree/main/feitelson-2021-how-developers-choose-names)): `feitelson-2021-how-developers-choose-names.pdf` (+ `.md`): arXiv 2103.07487v1; `alpern-2024-reproducing-naming-experiments.pdf` (+ `.md`): arXiv 2402.10022v1. Downloaded 2026-11-25; figures checked against both PDFs the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: both preprints are stored in `taxonomies-sources`.
 - **Used in**: [`03-naming.md`](../../03-naming.md), [`06-shared-language-in-software.md`](../../06-shared-language-in-software.md)
 
 ## What is distinctive

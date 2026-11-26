@@ -4,6 +4,29 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Moved stored source copies to the private `taxonomies-sources` repo (branch `claude/project-thread-plf8yz`)**.
+This repo is now public, and the 93 stored files (24 PDFs, saved pages, figures, OCR and
+extracted text in 32 source folders) were only allowed here while it was private. Jonathan
+asked for them to go into the new private repo `jburnhams/taxonomies-sources`. They are
+still in this repo's git history; no history rewrite was done.
+
+- `sources/*/`: every file except `README.md` removed; the same paths now sit at the root
+  of `taxonomies-sources` (`<slug>/<file>`).
+- **new** `sources/stored-files.txt`: the list of those paths, so tools and the site can
+  count stored copies without the private repo.
+- `sources/*/README.md`: **Stored here** renamed **Stored**; folders with copies link to
+  their folder in `taxonomies-sources`; "stored here" and "Drop a PDF here" now point there.
+- `design/spec.md`, `design/process.md`, `design/method-v1.1.md`,
+  `domains/prompts/samples.md`: 54 links to stored files now go to
+  `https://github.com/jburnhams/taxonomies-sources/blob/main/...`.
+- `tools/check_citations.py`: links into `taxonomies-sources` are checked against
+  `stored-files.txt`, and against the files on disk when that repo is checked out beside
+  this one (or at `$TAXONOMIES_SOURCES`).
+- `site/generate.py`, `site/src/pages/docs.tsx`, `site/README.md`: the "Stored copy"
+  count reads `stored-files.txt`; the page text says the copies are private.
+- `CLAUDE.md`, `README.md`, `sources.md`, `to-fetch.md`: stored copies go in the private
+  repo, never here.
+
 **Adopted the taxonomies taxonomy after round 3 (branch `claude/project-thread-yet87g`, PR #12)**.
 Round 3 (`check` only, 73 used items, indicative) passed: Fleiss' κ 0.73, non-Claude pair
 0.75. Jonathan had chosen to adopt on this retest, so the domain is adopted (process step

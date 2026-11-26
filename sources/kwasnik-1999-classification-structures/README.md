@@ -5,8 +5,8 @@
 - **Access**: free in the IDEALS repository
 - **URL**: https://www.ideals.illinois.edu/items/8222
 - **Read**: Read in full 2026-11-25 from the stored PDF (structures section closely; the closing section on classification and knowledge skimmed).
-- **Stored here**: `kwasnik-1999-classification-structures.pdf` (+ `.md`): the article from IDEALS (item 8222). Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
-- **To fetch**: Nothing needed: the article is stored here.
+- **Stored** (private, in [`taxonomies-sources/kwasnik-1999-classification-structures/`](https://github.com/jburnhams/taxonomies-sources/tree/main/kwasnik-1999-classification-structures)): `kwasnik-1999-classification-structures.pdf` (+ `.md`): the article from IDEALS (item 8222). Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the article is stored in `taxonomies-sources`.
 - **Used in**: [`01-structures.md`](../../01-structures.md)
 
 ## What is distinctive
