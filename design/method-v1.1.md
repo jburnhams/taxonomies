@@ -158,7 +158,7 @@ three ways that matter:
 
 [cc]: ../sources/ranganathan-prolegomena/ranganathan-1960-colon-classification-6th-ed.ocr.txt
 [den]: ../sources/denton-2003-faceted-howto/denton-2003-faceted-howto.html
-[ev]: ../sources/evans-2003-domain-driven-design/evans-2015-ddd-reference.pdf
-[tam]: ../sources/tamkin-2024-clio/tamkin-2024-clio.pdf
-[wan]: ../sources/wan-2024-tnt-llm/wan-2024-tnt-llm.pdf
-[z39]: ../sources/niso-z39-19-2005/ansi-niso-z39-19-2005-r2010.pdf
+[ev]: https://github.com/jburnhams/taxonomies-sources/blob/main/evans-2003-domain-driven-design/evans-2015-ddd-reference.pdf
+[tam]: https://github.com/jburnhams/taxonomies-sources/blob/main/tamkin-2024-clio/tamkin-2024-clio.pdf
+[wan]: https://github.com/jburnhams/taxonomies-sources/blob/main/wan-2024-tnt-llm/wan-2024-tnt-llm.pdf
+[z39]: https://github.com/jburnhams/taxonomies-sources/blob/main/niso-z39-19-2005/ansi-niso-z39-19-2005-r2010.pdf

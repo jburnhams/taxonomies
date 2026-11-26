@@ -5,7 +5,7 @@
 - **Access**: free download from NISO
 - **URL**: https://niso.org/publications/ansiniso-z3919-2005-r2010
 - **Read**: Read in part 2026-11-25 from the stored PDF: sections 5.3-6.6 and 8.1-8.4 (term choice, form and relationships); the display, interoperability and management sections not read.
-- **Stored here**: `ansi-niso-z39-19-2005-r2010.pdf` (+ `.md`): the full standard, free download from NISO. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **Stored here**: [`ansi-niso-z39-19-2005-r2010.pdf`](https://github.com/jburnhams/taxonomies-sources/blob/main/niso-z39-19-2005/ansi-niso-z39-19-2005-r2010.pdf) (+ `.md`): the full standard, free download from NISO. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: Nothing needed: the standard is stored here.
 - **Used in**: [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md), [`03-naming.md`](../../03-naming.md)
 

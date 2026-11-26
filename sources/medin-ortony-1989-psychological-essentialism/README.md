@@ -5,7 +5,7 @@
 - **Access**: paywalled
 - **URL**: none found
 - **Read**: Read 2026-11-25 from the stored scan, pp. 179-187 (the argument); the commentary on other chapters skimmed.
-- **Stored here**: `medin-ortony-1989-psychological-essentialism.pdf`: the chapter, scanned, from Medin's lab site at Northwestern. It is an image scan with no text layer, so no `.md` was extracted. Downloaded 2026-11-25; notes checked against it the same day.
+- **Stored here**: [`medin-ortony-1989-psychological-essentialism.pdf`](https://github.com/jburnhams/taxonomies-sources/blob/main/medin-ortony-1989-psychological-essentialism/medin-ortony-1989-psychological-essentialism.pdf): the chapter, scanned, from Medin's lab site at Northwestern. It is an image scan with no text layer, so no `.md` was extracted. Downloaded 2026-11-25; notes checked against it the same day.
 - **To fetch**: Nothing needed: the chapter is stored here.
 - **Used in**: [`02-how-minds-categorise.md`](../../02-how-minds-categorise.md)
 

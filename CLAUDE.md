@@ -5,7 +5,9 @@ domain. Layout and reading order are in [`README.md`](./README.md).
 
 - **Layers**: `sources/<slug>/` (one folder per source: README with citation, type,
   access, URL, what was read and when, stored files, notes; raw copies stored beside it,
-  which Jonathan has said is fine for this private repo), then topic docs at the root
+  which Jonathan has said is fine for this private repo; **PDFs go in the private
+  [`jburnhams/taxonomies-sources`](https://github.com/jburnhams/taxonomies-sources) repo**
+  at `<slug>/<file>.pdf`, linked from the README, with extracted text kept here as `.md`), then topic docs at the root
   (`NN-topic.md`, each opening with a one-line answer and a plain explanation), then
   `design/`.
 - **Every source** read or cited gets a folder and a row in `sources.md`. Paywalled or

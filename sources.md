@@ -1,6 +1,6 @@
 # Sources
 
-Every source read or cited for this repo, grouped by field. Each has a folder in [`sources/`](./sources) with the full citation, access, what was read and notes. **Read** means read online on the date shown; **part** means read in part; **not read** means the notes come from prior knowledge of a well-known work and are marked for checking. **Stored** says whether a copy of the source (PDF or saved page, with extracted text) is in its folder; *part* means only the named part is. Items still to get are listed in [`to-fetch.md`](./to-fetch.md).
+Every source read or cited for this repo, grouped by field. Each has a folder in [`sources/`](./sources) with the full citation, access, what was read and notes. **Read** means read online on the date shown; **part** means read in part; **not read** means the notes come from prior knowledge of a well-known work and are marked for checking. **Stored** says whether a copy of the source (PDF or saved page, with extracted text) is in its folder; *part* means only the named part is. PDFs are kept in the private [`jburnhams/taxonomies-sources`](https://github.com/jburnhams/taxonomies-sources) repo under the same folder name, and each README links to its copy; the extracted text (`.md`) stays here for searching. Items still to get are listed in [`to-fetch.md`](./to-fetch.md).
 
 ## Classification theory (library and information science)
 

@@ -4,6 +4,12 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Moved the stored PDFs to `jburnhams/taxonomies-sources` (branch `claude/project-thread-oneclm`)**. Jonathan made a separate private repo for them. All 24 PDFs (99 MB) moved there at the same `<slug>/<file>.pdf` paths. Extracted `.md` text, OCR `.txt`, saved HTML pages and their images stay here, since they are small and searchable.
+
+- `sources/*/README.md` (22): each stored PDF is now a link to its copy in the new repo.
+- `design/process.md`, `design/spec.md`, `design/method-v1.1.md`: citation links point at the new repo. `tools/check_citations.py` passes.
+- `CLAUDE.md`, `sources.md`: say where PDFs go.
+
 **Adopted the taxonomies taxonomy after round 3 (branch `claude/project-thread-yet87g`, PR #12)**.
 Round 3 (`check` only, 73 used items, indicative) passed: Fleiss' κ 0.73, non-Claude pair
 0.75. Jonathan had chosen to adopt on this retest, so the domain is adopted (process step

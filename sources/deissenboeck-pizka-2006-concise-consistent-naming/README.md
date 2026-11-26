@@ -5,7 +5,7 @@
 - **Access**: paywalled
 - **URL**: none found
 - **Read**: Read 2026-11-25 from the stored journal PDF: sections 1-4 closely, sections 5-6 skimmed.
-- **Stored here**: `deissenboeck-pizka-2006-sqj.pdf` (+ `.md`): the 2006 *Software Quality Journal* article, publisher layout, from itestra.com; `deissenboeck-pizka-2005-iwpc.pdf` (+ `.md`): the earlier IWPC 2005 conference version, from TU München. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **Stored here**: [`deissenboeck-pizka-2006-sqj.pdf`](https://github.com/jburnhams/taxonomies-sources/blob/main/deissenboeck-pizka-2006-concise-consistent-naming/deissenboeck-pizka-2006-sqj.pdf) (+ `.md`): the 2006 *Software Quality Journal* article, publisher layout, from itestra.com; [`deissenboeck-pizka-2005-iwpc.pdf`](https://github.com/jburnhams/taxonomies-sources/blob/main/deissenboeck-pizka-2006-concise-consistent-naming/deissenboeck-pizka-2005-iwpc.pdf) (+ `.md`): the earlier IWPC 2005 conference version, from TU München. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: Nothing needed: the journal article is stored here.
 - **Used in**: [`03-naming.md`](../../03-naming.md), [`06-shared-language-in-software.md`](../../06-shared-language-in-software.md)
 

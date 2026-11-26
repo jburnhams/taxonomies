@@ -5,7 +5,7 @@
 - **Access**: open
 - **URL**: https://arxiv.org/abs/2412.13678v1
 - **Read**: Read in part 2026-11-25 from the stored PDF: §1-2 (method and validation); the case studies and appendices not read.
-- **Stored here**: `tamkin-2024-clio.pdf` (+ `.md`): arXiv 2412.13678v1. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **Stored here**: [`tamkin-2024-clio.pdf`](https://github.com/jburnhams/taxonomies-sources/blob/main/tamkin-2024-clio/tamkin-2024-clio.pdf) (+ `.md`): arXiv 2412.13678v1. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
 - **To fetch**: Nothing needed: the paper is stored here.
 - **Used in**: [`05-building-and-testing.md`](../../05-building-and-testing.md)
 
