@@ -4,6 +4,25 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Added the explorer site, generated from the domain files, and drafted the method's own words as a domain (branch `claude/project-thread-yet87g`)**.
+Jonathan asked for a GitHub Pages site with an overview and a way to explore each taxonomy
+down to the raw data behind each term, generated from the structured files, built on
+strata-react, and starting with "taxonomies itself" as the first taxonomy. No domain held
+the method's vocabulary, so one was drafted (proposal, not adopted).
+
+- `site/`: **new**. `generate.py` reads every `domains/*/` (glossary, facets, samples,
+  rounds, answer CSVs, changelog) and the docs and sources, recomputes kappa from the
+  answers, and writes JSON; a Vite + strata-react app renders overview, domain, facet,
+  term, round, item, doc, CSV and source pages. `site/README.md` lists what the generator
+  relies on and what is published (no stored source copies).
+- `.github/workflows/pages.yml`: **new**. Builds on every pull request, deploys on push to
+  `main` once Pages is set to GitHub Actions.
+- `domains/taxonomies/`: **new**, `draft`. `scope.md`, `facets.md` (`kind`, `stage`),
+  `glossary.md` (39 method concepts and 8 facet values, all `candidate`, warrant counted over
+  `design/` and `domains/ux/`), `changelog.md`. `check_domain.py`: one T3 flag, "alias" as a
+  possible plural, listed as a label choice.
+- `README.md`: links the site and its folder.
+
 **Fixed the duplicate-ID check in `tools/check_domain.py` (branch `claude/project-thread-l3cp9e`)**.
 A review on PR #7 found that T1's duplicate-ID flag was lost when the second record replaced
 the first, so a glossary with a repeated ID passed. The fix was committed after PR #7 merged.

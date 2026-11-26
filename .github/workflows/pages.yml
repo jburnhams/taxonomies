@@ -1,0 +1,57 @@
+# Builds the taxonomy explorer (site/) from the files under domains/, design/ and sources/
+# and publishes it to GitHub Pages. Every push to main rebuilds it, so a new domain, term or
+# round shows up without anyone touching the site. Pull requests build it without publishing.
+# One-time setup: Settings > Pages > Build and deployment > Source: GitHub Actions.
+# Pages on a private repository needs a paid GitHub plan, and the published site is public:
+# see site/README.md for what is and is not published.
+name: Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 26
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - name: Parse the domains and typecheck
+        run: npm run check
+      - name: Build site
+        run: npm run build
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site/dist
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v6
+      - id: deployment
+        uses: actions/deploy-pages@v5
