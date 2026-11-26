@@ -4,6 +4,13 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Scored prompts stage-2 round 1 and prepared round 2 (branch `claude/project-thread-oneclm`, PR #15)**. On the 27 in-area items, `operation` and `content` pass both conditions. `reach` passes Fleiss' κ (0.68) but fails the non-Claude pair (0.53), because built-in prompts had no value and raters guessed how widely an unstated store is shared.
+
+- `domains/prompts/facets.md`, `glossary.md`: new `reach` value `built-in-scope`, two rules in the `reach` principle, agreement lines.
+- `domains/prompts/stage-2/rounds/round-1/results.md`: fixes table.
+- `domains/prompts/stage-2/rounds/round-2/`: **new**. Round-2 kit with items `ch01`-`ch30`.
+- `tools/kappa.py`: an empty sample after `--where` is reported instead of raising (Codex review on PR #15).
+
 **Ran prompts stage 2 round 1 (context area) with three raters** (kit `258f560`, 30 items,
 same models as stage 1). On the 27 in-area items: Fleiss' κ operation 0.82, content 0.88,
 reach 0.68; openai-gemini 0.84, 0.82, 0.53 (reach misses).

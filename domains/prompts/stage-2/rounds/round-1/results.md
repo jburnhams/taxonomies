@@ -82,3 +82,25 @@ Disagreements (openai / gemini):
 - `cr18` reach: user-scope / project-scope
 - `cr24` reach: user-scope / project-scope
 ```
+
+## Fixes after scoring (2026-11-26)
+
+`operation` and `content` pass on both conditions. `reach` fails the non-Claude pair
+(0.53). Its nine pair splits have two causes, and the `unsure` notes name both.
+
+| Cause | Items | Fix |
+|---|---|---|
+| Text shipped with the harness or a Keel configuration (a product's own system prompt, reviewer core, specialist wrapper, delegate prompt) had no value. All three raters forced `organization-scope` and noted it | `cr04`, `cr12`, `cr19`, `cr25` | new value **`built-in-scope`** |
+| A store, catalog or MCP server whose sharing the section does not state: raters guessed user or project | `cr03`, `cr06`, `cr08`, `cr14`, `cr18`, `cr24` | rule: unstated means `project-scope`, unless the text says the store follows a person or a team |
+| A recording judged by where its input came from (one session) rather than who reads its output | `cr05` | rule: a recording takes the reach of the runs that will read what it keeps |
+| A prior attempt handed to the next run | `cr12` | named in `conversation-scope`'s scope |
+
+`cr13` (a resolver by subject, project or org) is left as it is: the section names both.
+
+Adding a value is a change to the facet, so round 2 has to show it holds (ending
+condition "no facet added, split or merged in the last round").
+`in_area`: `cr10`, `cr16` and `cr21` were put outside the area by most raters
+(tool, tool, control), which agrees with stage 1's definitions. Not acted on.
+
+Round 2: `ch01`-`ch30`, kit in [`../round-2/`](../round-2/README.md).
+

@@ -863,10 +863,10 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 ### conversation scope (`conversation-scope`)
 
 - **Definition**: A conversation scope is a reach of content that lasts while one conversation continues.
-- **Scope**: Includes a run's history, its plan and todos, compaction summaries, a session resumed after a restart, and a sub-agent's own context. Ends when nothing carries the content into a new conversation.
+- **Scope**: Includes a run's history, its plan and todos, compaction summaries, a session resumed after a restart, a sub-agent's own context, and a prior attempt handed to the next run of the same task. Ends when nothing carries the content into a new conversation.
 - **Aliases**: session level, run-scoped, session-scoped
 - **Example**: [agent-memory-learning.md §1](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-memory-learning.md), the session level.
-- **Near miss**: A memory written for later sessions (`project-scope`, `user-scope` or `organization-scope`).
+- **Near miss**: A memory written for later sessions, even when it is distilled from this one (`project-scope`, `user-scope` or `organization-scope`).
 - **Kind**: property
 - **Facet**: `reach`
 - **Status**: candidate
@@ -876,7 +876,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 ### project scope (`project-scope`)
 
 - **Definition**: A project scope is a reach of content that applies to every run in one repository or project.
-- **Scope**: Includes committed context files, repo and path learnings, a project's private memory folder kept for one developer, and a team's notes kept in the repo.
+- **Scope**: Includes committed context files, repo and path learnings, a project's private memory folder kept for one developer, and a team's notes kept in the repo. The default when a section does not say how widely a store or server is shared.
 - **Aliases**: repo scope, repo level, project level
 - **Example**: [agent-context-file-loading.md §3](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-context-file-loading.md), where the walk starts and stops.
 - **Near miss**: A user's global CLAUDE.md, which follows the person into every project (`user-scope`).
@@ -911,3 +911,17 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Status**: candidate
 - **Warrant**: org / team levels (agent-memory-learning.md §1)
 - **History**: 2026-11-26 added.
+
+### built-in scope (`built-in-scope`)
+
+- **Definition**: A built-in scope is a reach of content that ships with a harness or an agent configuration and applies to every run of it.
+- **Scope**: Includes a product's own system prompt, its reviewer and delegate prompts, built-in reminders and tool guidance, and a Keel configuration's fixed prompt blocks. Excludes files a user or team adds (`project-scope`, `user-scope`, `organization-scope`).
+- **Aliases**: harness scope, shipped prompt, configuration scope
+- **Example**: [agent-design/system-prompts.md](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/system-prompts.md), Forge's prompts.
+- **Near miss**: An org policy file every member's runs load (`organization-scope`): someone in the org wrote it, the product did not ship it.
+- **Kind**: property
+- **Facet**: `reach`
+- **Status**: candidate
+- **Warrant**: round 1: four built-in prompts (`cr04`, `cr12`, `cr19`, `cr25`) had no value, and all three raters noted it
+- **History**: 2026-11-26 added after stage-2 round 1.
+

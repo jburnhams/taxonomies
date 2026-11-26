@@ -196,6 +196,7 @@ still apply to them; the questions below are the ones only this area asks.
 - **Values**: `supply`, `framing`, `reduction`, `recording`
 - **Order**: the life of content: chosen and put in, placed, cut down, kept for later.
 - **Unsorted**: none yet.
+- **Agreement**: round 1, 2026-11-26, 27 in-area items: Fleiss' κ 0.82, non-Claude pair 0.84.
 
 ### Content (`content`)
 
@@ -205,14 +206,16 @@ still apply to them; the questions below are the ones only this area asks.
 - **Values**: `instruction-text`, `kept-knowledge`, `run-history`
 - **Order**: written before the run, kept from earlier runs, made in this run.
 - **Unsorted**: none yet.
+- **Agreement**: round 1, 2026-11-26, 27 in-area items: Fleiss' κ 0.88, non-Claude pair 0.82.
 
 ### Reach (`reach`)
 
 - **Question**: How far does that text reach?
-- **Principle**: the widest set of requests and runs that read the same text.
+- **Principle**: the widest set of requests and runs that read the same text. For a recording, the runs that will read what it keeps, not the run it came from. When the text does not say, the usual home of that kind of store: per repo (`project-scope`) unless it is said to follow a person.
 - **Kind**: property
-- **Values**: `request-scope`, `conversation-scope`, `project-scope`, `user-scope`, `organization-scope`
-- **Order**: from one request outward.
+- **Values**: `request-scope`, `conversation-scope`, `project-scope`, `user-scope`, `organization-scope`, `built-in-scope`
+- **Order**: from one request outward; `built-in-scope` (added after round 1) is text shipped with the harness or the agent configuration, read by every run of it whoever runs it.
+- **Agreement**: round 1, 2026-11-26, 27 in-area items: Fleiss' κ 0.68, non-Claude pair 0.53 (fail) ([results](./stage-2/rounds/round-1/results.md)).
 - **Unsorted**: none yet.
 
 ### Set B: operation and content only

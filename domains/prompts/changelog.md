@@ -68,3 +68,11 @@ named on each line (G1); Jonathan can reverse any of them.
 - **add** competency questions 14-20 (stage 2) to `scope.md`.
 - **add** stage-2 round-1 kit `stage-2/rounds/round-1/` (30 items, three prompts with an
   `in_area` question).
+- **review** stage-2 round 1 (three raters on omarchy, commit `a52aea2`): Fleiss' κ on
+  27 in-area items operation 0.82, content 0.88, reach 0.68; non-Claude pair 0.84 /
+  0.82 / 0.53 (reach fails). `stage-2/rounds/round-1/results.md`.
+- **add** `built-in-scope` to facet `reach` (text shipped with the harness or a
+  configuration); **change** the `reach` principle (recordings take their readers'
+  reach; unstated stores are `project-scope`) and `conversation-scope`'s scope (prior
+  attempts). Approved by: Claude (G1), to be retested in round 2.
+- **add** stage-2 round-2 kit `stage-2/rounds/round-2/` (`ch01`-`ch30`).
