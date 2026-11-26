@@ -4,10 +4,10 @@
 words for it, a definition, an example and a near miss.
 
 **In plain words**: when you write the spec, the process or a domain's files, use the
-heading word of the entry. Everything here is `candidate`: drafted, not yet tested
-(spec G3).
+heading word of the entry. Everything here is `approved` (2026-11-26, after three rounds); new
+terms come in as `candidate` (spec G3).
 
-**Status**: draft, 2026-11-26, all `candidate`. 39 concepts of the method, the 4 term
+**Status**: in use, 2026-11-26, all `approved`. 39 concepts of the method, the 4 term
 kinds, and the 14 values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)). Field rules:
 [`design/spec.md` §4](../../design/spec.md#4-glossarymd). Warrant counts are whole-word,
 case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/` on
@@ -45,9 +45,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: An ontology: it adds formal rules a machine can reason with, which none of these domains has needed.
 - **Kind**: thing
 - **Related**: `glossary`, `facet`, `bounded-context`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "taxonomy" 38, "controlled vocabulary" 2 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### bounded context (`bounded-context`)
 
@@ -58,9 +58,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A repository: one repository can hold several contexts, and here a context's files live outside the repository its words govern.
 - **Kind**: thing
 - **Related**: `domain`, `shared-kernel`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "bounded context" 9, "context" 55 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### domain (`domain`)
 
@@ -70,9 +70,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: The domain's repository (`jburnhams/ux-research`): it links to the domain folder but does not hold it.
 - **Kind**: thing
 - **Related**: `bounded-context`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "domain" 73 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### owner (`owner`)
 
@@ -82,9 +82,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: An approving agent: it approves a change under G1 but cannot overrule the owner.
 - **Kind**: role
 - **Related**: `veto`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "owner" 13 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### competency question (`competency-question`)
 
@@ -94,9 +94,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A facet's question: asked of each item, where a competency question is asked of the whole taxonomy.
 - **Kind**: thing
 - **Related**: `ending-condition`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "competency question" 18 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### ending condition (`ending-condition`)
 
@@ -106,9 +106,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A mechanical check: one input to the ending conditions, run on every commit.
 - **Kind**: thing
 - **Related**: `adoption`, `competency-question`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "ending condition" 58 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### item (`item`)
 
@@ -118,9 +118,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A term: a term names a concept; an item is a case the terms are used to sort.
 - **Kind**: thing
 - **Related**: `sample`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "item" 166 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### sample (`sample`)
 
@@ -130,9 +130,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: The domain's whole material: a sample is chosen from it, for variety.
 - **Kind**: thing
 - **Related**: `item`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "sample" 46 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### build sample (`build-sample`)
 
@@ -142,9 +142,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A test sample: never read while building.
 - **Kind**: thing
 - **Broader**: `sample`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "build sample" 14 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### test sample (`test-sample`)
 
@@ -156,9 +156,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Kind**: thing
 - **Broader**: `sample`
 - **Related**: `round`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "test sample" 4, "fresh items" 13 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### harvest (`harvest`)
 
@@ -169,9 +169,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: Warrant: the evidence a harvest yields for one term.
 - **Kind**: happening
 - **Related**: `warrant`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "harvest" 57, "term harvest" 2 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### warrant (`warrant`)
 
@@ -182,9 +182,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: An example: one clear case of the concept, not a count of the word.
 - **Kind**: property
 - **Related**: `harvest`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "warrant" 72 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### facet (`facet`)
 
@@ -195,9 +195,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A level of a tree: a tree asks one question at each level, so an item's place depends on every question above it.
 - **Kind**: thing
 - **Related**: `facet-value`, `taxonomy`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "facet" 222, "sorting question" 3, "dimension" 13 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### facet value (`facet-value`)
 
@@ -209,9 +209,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Kind**: thing
 - **Broader**: `term`
 - **Related**: `facet`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "facet value" 10, "value" 112 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### term (`term`)
 
@@ -222,9 +222,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A label: one of the words for a term; a term can have several.
 - **Kind**: thing
 - **Related**: `label`, `glossary`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "term" 109, "concept" 42, "entry" 23 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### glossary (`glossary`)
 
@@ -234,9 +234,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A dictionary of the field: a glossary records only the words this context agrees on.
 - **Kind**: thing
 - **Related**: `term`, `taxonomy`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "glossary" 62 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### label (`label`)
 
@@ -247,9 +247,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: An identifier: it never changes, while a label can be renamed.
 - **Kind**: thing
 - **Related**: `identifier`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "label" 84, "name" 156 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### preferred label (`preferred-label`)
 
@@ -260,9 +260,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: An alias: in use, but not the one to write.
 - **Kind**: thing
 - **Broader**: `label`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "preferred label" 14, "heading word" 1, "prefLabel" 2 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### alias (`alias`)
 
@@ -273,9 +273,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A hidden label: kept for search, never offered as a word to use.
 - **Kind**: thing
 - **Broader**: `label`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "alias" 113, "altLabel" 1 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### hidden label (`hidden-label`)
 
@@ -286,9 +286,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A deprecated term: a whole record kept for lookup, where a hidden label is one string on a live record.
 - **Kind**: thing
 - **Broader**: `label`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "hidden label" 1, "hiddenLabel" 2 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### identifier (`identifier`)
 
@@ -299,9 +299,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A label: what people read, and what a rename changes.
 - **Kind**: thing
 - **Related**: `label`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "identifier" 3, "ID" 49 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### definition (`definition`)
 
@@ -312,9 +312,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A scope note: it says where the edges are, not what the thing is.
 - **Kind**: thing
 - **Related**: `scope-note`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "definition" 126, "genus-differentia" 9 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### scope note (`scope-note`)
 
@@ -325,9 +325,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A near miss: one named case it is not, where a scope note draws the line.
 - **Kind**: thing
 - **Related**: `definition`, `near-miss`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "scope note" 28, "scopeNote" 2 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### near miss (`near-miss`)
 
@@ -337,9 +337,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: An alias: the same concept under another word, where a near miss is a different concept.
 - **Kind**: thing
 - **Related**: `scope-note`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "near miss" 99 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### operation (`operation`)
 
@@ -350,9 +350,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: An edit with no name: not allowed, because the changelog could not say what happened.
 - **Kind**: happening
 - **Related**: `changelog`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "operation" 14, "named operation" 8 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### changelog (`changelog`)
 
@@ -362,9 +362,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A term's History field: the same events, kept on each term.
 - **Kind**: thing
 - **Related**: `operation`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "changelog" 25 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### status (`status`)
 
@@ -373,9 +373,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Example**: [spec §9, G3](../../design/spec.md#9-governance-how-a-taxonomy-changes)
 - **Near miss**: The status of a domain in `scope.md` (`draft`, `in use`, `retired`), which covers the whole taxonomy.
 - **Kind**: property
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "status" 83 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### round (`round`)
 
@@ -385,9 +385,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A build pass: it reads the build sample, which a round never does.
 - **Kind**: happening
 - **Related**: `rater`, `agreement-test`, `test-sample`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "round" 166 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### rater (`rater`)
 
@@ -398,9 +398,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: An approving agent: it decides whether a change is accepted, not where an item goes.
 - **Kind**: role
 - **Related**: `round`, `kappa`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "rater" 57, "judge" 15 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### agreement test (`agreement-test`)
 
@@ -411,9 +411,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A name test: it asks what a label means, not where an item goes.
 - **Kind**: happening
 - **Related**: `kappa`, `round`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "agreement test" 8, "T8" 11 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### kappa (`kappa`)
 
@@ -424,9 +424,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: Raw agreement: the share of items answered the same, which chance alone can make high.
 - **Kind**: property
 - **Related**: `agreement-test`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "kappa" 23, "Cohen's kappa" 3, "Fleiss' kappa" 2, "κ" 15 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### name test (`name-test`)
 
@@ -436,9 +436,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Example**: [ux name test](../ux/rounds/round-1/name-test/results.md)
 - **Near miss**: An agreement test: it sorts items with the definitions in hand.
 - **Kind**: happening
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "name test" 9, "T9" 13, "guess the name" 3 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### unsorted list (`unsorted-list`)
 
@@ -449,9 +449,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A disagreement: there the raters chose different values; an unsorted item has none that fits.
 - **Kind**: thing
 - **Related**: `facet`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "unsorted list" 1, "Unsorted" 31 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### mechanical check (`mechanical-check`)
 
@@ -460,9 +460,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Example**: [spec §10](../../design/spec.md#mechanical-every-commit)
 - **Near miss**: A judgement test (T7-T11): it needs a rater or reviewer.
 - **Kind**: happening
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "mechanical check" 2 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### adoption (`adoption`)
 
@@ -472,9 +472,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: Approving one term: an operation on one entry, where adoption covers the domain.
 - **Kind**: happening
 - **Related**: `ending-condition`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "adoption" 3 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### veto (`veto`)
 
@@ -484,9 +484,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A deprecation: a named operation any approver may make under G1.
 - **Kind**: happening
 - **Related**: `owner`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "veto" 64 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### alias drift (`alias-drift`)
 
@@ -495,9 +495,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Example**: [spec §10, in use](../../design/spec.md#in-use-after-adoption)
 - **Near miss**: A new word with no entry (T13): drift is a known word used in place of the agreed one.
 - **Kind**: property
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "alias drift" 2 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### shared kernel (`shared-kernel`)
 
@@ -507,9 +507,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Near miss**: A map entry: it links two contexts' terms without making them one.
 - **Kind**: thing
 - **Related**: `bounded-context`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "shared kernel" 8 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### pattern (`pattern`)
 
@@ -518,9 +518,9 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Example**: [spec §7](../../design/spec.md#7-patterns-design-domains-only)
 - **Near miss**: A term: a term names a concept; a pattern names a solution and links to other patterns.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "pattern" 54 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ## Term kinds
 
@@ -533,9 +533,9 @@ The values of every entry's Kind field (spec S4). They were the draft facet `kin
 - **Example**: [spec S4](../../design/spec.md#structure)
 - **Near miss**: A role: a part a thing plays for a while (a model is a thing; rater is one of its roles).
 - **Kind**: property
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "thing" 95 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 moved (no longer a facet value: facet `kind` retired in step 4; kept as a value of the Kind field)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 moved (no longer a facet value: facet `kind` retired in step 4; kept as a value of the Kind field); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### property (`property`)
 
@@ -544,9 +544,9 @@ The values of every entry's Kind field (spec S4). They were the draft facet `kin
 - **Example**: [spec S4](../../design/spec.md#structure)
 - **Near miss**: A thing: it exists on its own; a property exists only in what has it.
 - **Kind**: property
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "property" 50 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 moved (no longer a facet value: facet `kind` retired in step 4; kept as a value of the Kind field)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 moved (no longer a facet value: facet `kind` retired in step 4; kept as a value of the Kind field); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### role (`role`)
 
@@ -555,9 +555,9 @@ The values of every entry's Kind field (spec S4). They were the draft facet `kin
 - **Example**: [spec S4](../../design/spec.md#structure)
 - **Near miss**: A thing: a model stays a model when it stops rating.
 - **Kind**: property
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "role" 38 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 moved (no longer a facet value: facet `kind` retired in step 4; kept as a value of the Kind field)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 moved (no longer a facet value: facet `kind` retired in step 4; kept as a value of the Kind field); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### happening (`happening`)
 
@@ -566,9 +566,9 @@ The values of every entry's Kind field (spec S4). They were the draft facet `kin
 - **Example**: [spec S4](../../design/spec.md#structure)
 - **Near miss**: A thing that records a happening: the changelog is a thing; the operation it records is a happening.
 - **Kind**: property
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "happening" 12 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 moved (no longer a facet value: facet `kind` retired in step 4; kept as a value of the Kind field)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 moved (no longer a facet value: facet `kind` retired in step 4; kept as a value of the Kind field); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ## Facet values
 
@@ -582,9 +582,9 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Near miss**: Out of scope: it marks the edge of the domain's own subject, so `purpose`; a link to a neighbouring context is `boundary`.
 - **Kind**: property
 - **Facet**: `part`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "purpose" 25 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### neighbours (`boundary`)
 
@@ -595,9 +595,9 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Near miss**: A shared kernel change: it needs every owner's agreement, but it is about two contexts meeting, so `boundary` (neighbours), with check `owner-decision`.
 - **Kind**: property
 - **Facet**: `part`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "boundary" 12, "context" 38 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested); 2026-11-26 renamed from "boundary" (name test: all three fresh readers read "boundary" as the domain's own scope, in or out)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested); 2026-11-26 renamed from "boundary" (name test: all three fresh readers read "boundary" as the domain's own scope, in or out); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### structure (`structure`)
 
@@ -607,9 +607,9 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Near miss**: A facet value's label: the value is structure, the word for it is `naming`.
 - **Kind**: property
 - **Facet**: `part`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "structure" 22 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### naming (`naming`)
 
@@ -620,9 +620,9 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Near miss**: Warrant: it is counted evidence, but it exists to choose a label, so `naming`, not `evidence`.
 - **Kind**: property
 - **Facet**: `part`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "naming" 8, "names" (spec §8 heading) (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### meaning (`meaning`)
 
@@ -633,9 +633,9 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Near miss**: The Kind field: D5 asks for it, but it places the term among kinds (S4), so `structure`.
 - **Kind**: property
 - **Facet**: `part`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "meaning" 10, "definitions" 131 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### evidence (`evidence`)
 
@@ -645,9 +645,9 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Near miss**: A competency question: it is asked of the finished taxonomy, but it states what the taxonomy is for, so `purpose`.
 - **Kind**: property
 - **Facet**: `part`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "evidence" 12, "round" 191, "sample" 47 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### change (`change`)
 
@@ -657,9 +657,9 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Near miss**: A rule about when a label should be updated (N6): a change happens, but the rule is about the label, so `naming`.
 - **Kind**: property
 - **Facet**: `part`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "change" 41, "governance" 8 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### script (`script`)
 
@@ -670,9 +670,9 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Kind**: role
 - **Related**: `mechanical-check`
 - **Facet**: `check`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "script" 6, "mechanical" 5 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested); 2026-11-26 redefined (round 1 splits r14, r18, r22, r28); 2026-11-26 redefined (round 2: `script` is what a stored script checks today, a closed list, not what a program could check)
+- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested); 2026-11-26 redefined (round 1 splits r14, r18, r22, r28); 2026-11-26 redefined (round 2: `script` is what a stored script checks today, a closed list, not what a program could check); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### judgement (`judgement`)
 
@@ -682,9 +682,9 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Near miss**: A step "checked by Jonathan": he looks, but the step's work is settled by whoever does it, so `judgement`.
 - **Kind**: role
 - **Facet**: `check`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "judgement" 50 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested); 2026-11-26 redefined (round 1 splits r14, r18, r22, r28); 2026-11-26 redefined (round 2: includes what no stored script checks)
+- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested); 2026-11-26 redefined (round 1 splits r14, r18, r22, r28); 2026-11-26 redefined (round 2: includes what no stored script checks); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### owner decision (`owner-decision`)
 
@@ -695,9 +695,9 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Near miss**: G1, agents approve and Jonathan can veto: the veto is his, but what settles a change day to day is an agent's approval, so `judgement`. A decision that adds a step in which Jonathan decides (J13 adds step 4): the decision settles how the step is done, so it takes that work's check, not the step's Who.
 - **Kind**: role
 - **Facet**: `check`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "owner" 13, "Jonathan decides" (process step table) (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested); 2026-11-26 redefined (round 1 splits r14, r18, r22, r28)
+- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested); 2026-11-26 redefined (round 1 splits r14, r18, r22, r28); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### framing (`framing`)
 
@@ -707,9 +707,9 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Near miss**: Building: it starts once the frame is written.
 - **Kind**: happening
 - **Facet**: `stage`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "framing" 3 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 redefined (scope note: which items take this stage, after the bare-facet test)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 redefined (scope note: which items take this stage, after the bare-facet test); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### building (`building`)
 
@@ -719,9 +719,9 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Near miss**: Testing: building may read the build sample; testing may not.
 - **Kind**: happening
 - **Facet**: `stage`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "building" 10 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 redefined (scope note: which items take this stage, after the bare-facet test)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 redefined (scope note: which items take this stage, after the bare-facet test); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### testing (`testing`)
 
@@ -731,9 +731,9 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Near miss**: A rule a test checks, such as N7 checked by T3: the rule first applies when a label is chosen, so `building`; the test is `testing`.
 - **Kind**: happening
 - **Facet**: `stage`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "testing" 1 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 redefined (scope note: which items take this stage, after the bare-facet test)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 redefined (scope note: which items take this stage, after the bare-facet test); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
 ### governing (`governing`)
 
@@ -744,6 +744,6 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Near miss**: Building: a change after adoption is an operation, never a redraft.
 - **Kind**: happening
 - **Facet**: `stage`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "governing" 0, "governance" 4, "maintenance" 2 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 redefined (scope note: which items take this stage, after the bare-facet test)
+- **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 redefined (scope note: which items take this stage, after the bare-facet test); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)

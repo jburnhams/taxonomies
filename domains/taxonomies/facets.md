@@ -10,11 +10,8 @@ building, testing or governing? And will a script tell me if I break it, or does
 someone's judgement, or is it Jonathan's call? Each question has a short list of answers,
 and every item gets one answer to each.
 
-**Status**: draft, 2026-11-26. Set A of three put to Jonathan (recommended; his choice
-is open, and he can veto). Bare-tested on 10 items (below); round 1 passed on every facet;
-round 2 (fresh items, ids removed) passed `part` and `stage` and failed `check`, which is
-redefined and retested in round 3 (2026-11-26). Every
-value has a `candidate` glossary entry.
+**Status**: in use, 2026-11-26. Set A chosen by Jonathan; adopted after three rounds
+(agreement on each facet below). Every value has an `approved` glossary entry.
 
 ## How these were found
 
@@ -42,7 +39,7 @@ value has a `candidate` glossary entry.
 
 | Set | Facets | Why not chosen (if not) |
 |---|---|---|
-| **A** (recommended) | `part`, `stage`, `check` | |
+| **A** (chosen by Jonathan, 2026-11-26) | `part`, `stage`, `check` | |
 | B | `part`, `stage`, `kind` | `kind` asks what sort of thing a rule is about; most rules are about several, and the field already sorts concepts |
 | C | the draft `kind`, `stage` | two facets (a grid, S2); sorts terms, not rules |
 
@@ -81,7 +78,7 @@ What it changed, before the glossary was written:
 
 No facet was added, dropped or split.
 
-## Proposed: part, stage, check
+## Chosen: part, stage, check
 
 ### Part (`part`)
 
@@ -113,7 +110,7 @@ No facet was added, dropped or split.
 - **Values**: `script`, `judgement`, `owner-decision`
 - **Order**: from the cheapest to the most expensive to get.
 - **Unsorted**: none yet.
-- **Agreement**: round 2 **failed**: 0.55 Fleiss, 0.45 non-Claude pair, 2026-11-26, 43 items (round 1: 0.78, 0.74). `script` redefined as a closed list; round 3 retests it on used items, indicative.
+- **Agreement**: 0.73 Fleiss, 0.75 non-Claude pair; round 3, 2026-11-26, 73 used items, indicative (round 2: 0.55, 0.45 on 43 fresh; round 1: 0.78, 0.74 on 30 fresh).
 
 ## Retired
 
