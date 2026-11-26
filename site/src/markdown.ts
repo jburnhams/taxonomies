@@ -53,7 +53,10 @@ export function resolveHref(href: string, ctx: LinkContext): { href: string; ext
   if (!pathPart) return { href: `#/doc/${ctx.base}${a}`, external: false };
   const isDir = pathPart.endsWith("/");
   const target = joinPath(dirOf(ctx.base), pathPart);
-  const route = routeForPath(target, isDir, ctx.docs);
+  let route = routeForPath(target, isDir, ctx.docs);
+  // A section link into a file the explorer shows as a tab (glossary, facets) keeps its
+  // section: the tabs do not carry the Markdown's heading ids, so it goes to the doc itself.
+  if (route && anchor && route.includes("?") && ctx.docs.has(target)) route = `/doc/${target}`;
   if (route) return { href: `#${route}${a}`, external: false };
   const kind = isDir || !/\.[a-z0-9]+$/i.test(target) ? "tree" : "blob";
   return { href: `https://github.com/${ctx.repo}/${kind}/${ctx.commit || "main"}/${target}${anchor ? "#" + anchor : ""}`, external: true };
