@@ -78,6 +78,9 @@ def main(argv):
         print(f"--where {col}={val}: kept {len(kept)} of {len(ids)} items "
               f"(dropped: {', '.join(i for i in ids if i not in kept) or 'none'})")
         ids = kept
+        if not ids:
+            print("no items left after --where; agreement cannot be calculated")
+            return
     if not facets:
         first = next(iter(R[0].values()))
         facets = [k for k in first if k not in ("id", "note") and (not where or k != where[0])]
