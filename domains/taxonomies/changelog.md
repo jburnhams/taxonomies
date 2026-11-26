@@ -5,6 +5,10 @@ named on each line (G1); Jonathan can reverse any of them.
 
 ## 2026-11-26
 
+- **redefine** `script` (a closed list of what the repo's scripts check today) and
+  `judgement` (whatever no stored script checks), after round 2 failed on `check`.
+  **rename** `boundary` to "neighbours" (ID kept, N6) after the name test. Approved by:
+  Claude (G1); T1-T6 clean apart from two listed plural flags.
 - **redefine** `script`, `judgement`, `owner-decision` after round 1 (all four splits
   were on `check`): every condition must be testable for `script`, a purpose clause is
   not a condition, and a decision adding a step Jonathan decides takes the check of the

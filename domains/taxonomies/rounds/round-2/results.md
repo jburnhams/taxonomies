@@ -86,3 +86,34 @@ Disagreements (openai / gemini):
 - `s23` check: script / judgement
 - `s25` check: script / judgement
 ```
+
+## Reading the numbers
+
+`part` and `stage` pass with the items' own ids removed, so round 1's unanimity was not
+only the id lookup. `check` fails, and the failure has one main cause: eight of the
+eleven splits are Gemini saying `judgement` where Claude and GPT said `script`, on items
+whose conditions a program *could* test but no script in the repo does (a file present,
+a seed stated, a majority label). The round-1 fix ("every condition must be one a program
+can test") was read as "could", and Gemini read the question as "does". The other
+splits: `h10` (Kind field: a value list a script checks, a choice that needs reading),
+`s24` (changelog.md), `s17` and `s19` (the CLI rater rules), and `s07` (light version
+steps 0 and 1, which GPT took as Jonathan's).
+
+## Fixes after scoring (2026-11-26)
+
+| Items | Split | Fix |
+|---|---|---|
+| `s09` `s13` `s15` `s18` `s21` `s23` `s25` `h17` `s24` `s17` `s19` | script / judgement | `script` redefined as a closed list: what `tools/check_domain.py`, `tools/kappa.py` and a domain's `sample.py` check today, each listed. Anything else is `judgement`, even where a program could check it. This is also the question an agent asks: "will a script catch me?" |
+| `h10` | judgement / script | covered: T1 and T5 check the Kind value, so `script` |
+| `s07` | owner-decision | none: the light step names no decider; the majority stands |
+
+Every fresh item is now used. `check` is retested on the 73 round items as an
+indicative round 3 ([`../round-3/`](../round-3/README.md)); `part` and `stage` stand.
+
+## Name test (T9)
+
+[`name-test/`](./name-test/): three fresh sessions (Claude, GPT, Gemini) guessed each of
+the 14 value labels with no definitions. 13 of 14 were guessed right by all three.
+`boundary` was guessed wrong by all three, as the domain's own scope ("which items are
+in or out"), which is `purpose`. Renamed to **neighbours** (ID unchanged, N6), after the
+`scope.md` field it covers.

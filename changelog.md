@@ -4,6 +4,17 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Scored taxonomies round 2 and the name test; redefined `check`'s `script`; built an indicative round 3 (branch `claude/project-thread-yet87g`, PR #10)**.
+Round 2 (43 fresh items, ids removed) passed part (Fleiss' κ 0.94) and stage (0.84) but
+failed check (0.55; non-Claude pair 0.45): raters split on whether "a program could check
+it" means one does. Every fresh item is now used, so check is retested on used items.
+
+- `domains/taxonomies/rounds/round-2/results.md`: the reading, fixes and name-test result added.
+- `domains/taxonomies/glossary.md`: `script` and `judgement` redefined; `boundary` relabelled
+  "neighbours" (ID kept) after all three fresh readers misread it; label choice 6 added.
+- `domains/taxonomies/facets.md`, `scope.md`, `changelog.md`: agreement and status.
+- `domains/taxonomies/rounds/round-3/`: **new**. `check` only, 73 used items, recorded as indicative.
+
 **Ran taxonomies round 2 and the name test with three raters** (kit `7004a36`, 43 items,
 same models as round 1). Fleiss' κ part 0.94, stage 0.84, check 0.55 (misses);
 openai-gemini 0.97, 0.90, 0.45 (check misses). The name test ran in separate fresh sessions.

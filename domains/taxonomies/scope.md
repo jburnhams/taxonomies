@@ -27,9 +27,8 @@ and the file rules in [`design/spec.md`](../../design/spec.md), at Jonathan's re
   Jonathan's reading wins.
 - **Owner**: Jonathan. Agents approve changes that pass T1-T6 with a logged reason; he
   can veto any change ([spec G1](../../design/spec.md#9-governance-how-a-taxonomy-changes)).
-- **Status**: `draft`, 2026-11-26. Testing. Round 1 passed on every facet ([results](./rounds/round-1/results.md));
-  round 2 (43 items, ids removed) and the name test are ready in
-  [`rounds/round-2/`](./rounds/round-2/README.md).
+- **Status**: `draft`, 2026-11-26. Testing. Round 1 passed; round 2 passed `part` and `stage`, failed
+  `check` ([results](./rounds/round-2/results.md)); round 3 retests `check`, indicative.
 
 ## Items
 

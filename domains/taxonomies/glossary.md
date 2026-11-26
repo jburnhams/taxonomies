@@ -29,6 +29,10 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
    taxonomy the rules govern, and "definitions" reads as the `definition` entry's plural.
    "names" and "definitions" are aliases; "governance" stays an alias of `governing`
    only (T2), so `change` has none.
+6. **`neighbours`** (ID `boundary`) for how a context meets others, after the name test:
+   all three fresh readers took "boundary" to mean the domain's own scope. "Neighbours"
+   is the `scope.md` field it covers. T3 flags it as a possible plural; it is a mass
+   noun here, like "contents".
 
 ## Entries
 
@@ -582,18 +586,18 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Warrant**: "purpose" 25 (design/ and domains/ux/, 2026-11-26)
 - **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
 
-### boundary (`boundary`)
+### neighbours (`boundary`)
 
-- **Definition**: A boundary is a part of a taxonomy that covers how its context meets other contexts.
+- **Definition**: Neighbours is a part of a taxonomy that covers how its context meets other contexts.
 - **Scope**: Includes one context per domain, `map.md` and its mappings (closeMatch and the rest), the shared kernel, and the `scope.md` fields Context and Neighbours (spec §8 Contexts, C1-C3, G7). Excludes what the domain itself covers (`purpose`).
-- **Aliases**: contexts
+- **Aliases**: boundary, contexts
 - **Example**: [spec §8, Contexts](../../design/spec.md#contexts)
-- **Near miss**: A shared kernel change: it needs every owner's agreement, but it is about two contexts meeting, so `boundary`, with check `owner-decision`.
+- **Near miss**: A shared kernel change: it needs every owner's agreement, but it is about two contexts meeting, so `boundary` (neighbours), with check `owner-decision`.
 - **Kind**: property
 - **Facet**: `part`
 - **Status**: candidate
 - **Warrant**: "boundary" 12, "context" 38 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested)
+- **History**: 2026-11-26 added (step 6, for facet `part`; not yet tested); 2026-11-26 renamed from "boundary" (name test: all three fresh readers read "boundary" as the domain's own scope, in or out)
 
 ### structure (`structure`)
 
@@ -659,27 +663,27 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 
 ### script (`script`)
 
-- **Definition**: A script is a check in which a program decides from the files whether an item holds.
-- **Scope**: Includes counts, uniqueness, presence of fields, formats and computed figures: the mechanical tests T1-T6, kappa against its target (T8's pass), sample sizes, and the in-use counts (T12, T13). A program must be able to decide pass or fail without anyone reading for sense: every condition the item sets must be one a program can test (a record kept, a field present, a link in place). A clause saying what the item is for ("so agents use it") is not a condition. Excludes a script that only flags candidates for a person to decide (`judgement`).
+- **Definition**: A script is a check in which a program stored in this repo decides whether an item holds.
+- **Scope**: Only what these scripts check today: `tools/check_domain.py` (the mechanical tests T1-T6: IDs unique, required fields present, references exist, no cycles in broader, no label used twice, name form, definition form, kinds, every facet value has an entry and a facet has 2 to 12 values), which reads `glossary.md` and `facets.md`; `tools/kappa.py` (kappa per facet against the 0.6 target, the majority label and splits: T8's pass, J23, J24); and a domain's `sample.py` (the seeded draw, J21). Excludes anything no script checks yet, even where a program could (a file present, a link in place, a count of aliases in use, T12, T13), and the rules the mechanical tests only flag for a person (N4, N7): those are `judgement`.
 - **Example**: [`tools/check_domain.py`](../../tools/check_domain.py)
-- **Near miss**: N7, no evaluative words: T3 flags words from a short list, but a person decides, so `judgement`. G4, named operations only: the list of operations looks checkable, but saying which operation a change is takes reading, so `judgement`.
+- **Near miss**: `scope.md` must exist (spec §1): a program could check it, but none does, so `judgement` until a script is added.
 - **Kind**: role
 - **Facet**: `check`
 - **Status**: candidate
 - **Warrant**: "script" 6, "mechanical" 5 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested); 2026-11-26 redefined (round 1 splits r14, r18, r22, r28)
+- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested); 2026-11-26 redefined (round 1 splits r14, r18, r22, r28); 2026-11-26 redefined (round 2: `script` is what a stored script checks today, a closed list, not what a program could check)
 
 ### judgement (`judgement`)
 
 - **Definition**: A judgement is a check in which a person or a model reads for sense and decides whether an item holds.
-- **Scope**: Includes writing and reviewing definitions, choosing facets and labels, rating items, the name test, the heuristic review and agent approval under G1, where Jonathan can veto but an agent settles it. Includes any item with at least one condition that needs reading for sense, such as naming which operation a change is (G4). Excludes an item whose every condition a program can test (`script`) and a call the text reserves for the owner (`owner-decision`).
+- **Scope**: Includes writing and reviewing definitions, choosing facets and labels, rating items, the name test, the heuristic review and agent approval under G1, where Jonathan can veto but an agent settles it. Includes any item that no stored script checks: one with a condition that needs reading for sense, such as naming which operation a change is (G4), and one a program could check but none yet does (a file present, a link in place). Excludes what a stored script checks (`script`) and a call the text reserves for the owner (`owner-decision`).
 - **Example**: [spec §10, Judgement](../../design/spec.md#judgement-while-building-and-at-each-review)
 - **Near miss**: A step "checked by Jonathan": he looks, but the step's work is settled by whoever does it, so `judgement`.
 - **Kind**: role
 - **Facet**: `check`
 - **Status**: candidate
 - **Warrant**: "judgement" 50 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested); 2026-11-26 redefined (round 1 splits r14, r18, r22, r28)
+- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested); 2026-11-26 redefined (round 1 splits r14, r18, r22, r28); 2026-11-26 redefined (round 2: includes what no stored script checks)
 
 ### owner decision (`owner-decision`)
 
