@@ -23,6 +23,15 @@ facet first, then one area at a time.
   14-rater example (0.210).
 - `domains/prompts/`: **new**. `scope.md`, `harvest.md`, `samples.md`, `sample.py`,
   `items-all.csv`, `facets.md`, `changelog.md`.
+- `domains/prompts/glossary.md`: **new**. Draft `candidate` entries for set A's 18 values,
+  written before Jonathan's choice so the kit could be built; the decider value `model`
+  became `working-model` so it does not share a label with the area `model`.
+  `tools/check_domain.py domains/prompts`: one heuristic flag (`operations`, a mass noun,
+  kept).
+- `domains/prompts/rounds/round-1/`: **new**. Three-rater kit: `items.csv` (60 items),
+  `prompt-{claude,openai,gemini}.md` with values shuffled per rater, `make_prompts.py`,
+  and a `README.md` for running all three through their CLIs on omarchy (M6).
+- `.gitignore`: **new**, ignores `__pycache__/` (one `.pyc` was committed by mistake and removed).
 - Looked for and found: `agent-design/keel/taxonomy.md` in prompts is an existing
   glossary (Keel's own words) and is the seed; *Inside the Scaffold* (stored in
   prompts' `papers/`) has a three-layer taxonomy not yet read in full for this.

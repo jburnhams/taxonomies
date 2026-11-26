@@ -11,8 +11,9 @@ Stage 1 only needs facets that work across the whole repo; each area gets its ow
 finer questions in a later stage (proposal M1 in
 [`design/method-v1.1.md`](../../design/method-v1.1.md)).
 
-**Status**: proposal, 2026-11-26 (process step 4). Values have no glossary entries yet;
-they are written after Jonathan picks a set (step 6).
+**Status**: proposal, 2026-11-26 (process step 4). Set A's values have draft glossary
+entries (`candidate`) so the round-1 kit could be built while Jonathan chooses; they are
+redone if he picks another set.
 
 ## How these were found
 
@@ -43,7 +44,8 @@ they are written after Jonathan picks a set (step 6).
 - **Question**: Which part of an agent system is it about?
 - **Principle**: the part that would have to change to change the mechanism.
 - **Kind**: thing
-- **Values**, with one line each for the bare test:
+- **Values**: `model`, `tool`, `context`, `control`, `coordination`, `output`, `verification`, `operations`
+- **Value notes** (the one-line descriptions used in the bare test):
   - `model`: calling and choosing models: providers, dialects, routing, reasoning
     effort, prompt caching.
   - `tool`: what the model can do and how calls and results move: tool surfaces,
@@ -69,8 +71,9 @@ they are written after Jonathan picks a set (step 6).
 - **Question**: Who makes the call when it applies?
 - **Principle**: the party whose decision has the final say at that moment.
 - **Kind**: role
-- **Values**:
-  - `model`: the working model's own judgment, guided by its instructions.
+- **Values**: `working-model`, `second-model`, `rule`, `person`
+- **Value notes**:
+  - `working-model`: the working model's own judgment, guided by its instructions.
   - `second-model`: a separate model call: a classifier, judge, monitor, grader or a
     small helper model (label to be chosen in the glossary; see harvest synonym set 3).
   - `rule`: fixed logic: harness code, a schema check, a configured setting applied by code.
@@ -83,7 +86,8 @@ they are written after Jonathan picks a set (step 6).
 - **Question**: When does it act?
 - **Principle**: the point in a run's life at which the mechanism takes effect.
 - **Kind**: happening
-- **Values**:
+- **Values**: `setup`, `turn`, `tool-call`, `failure`, `ending`, `after-run`
+- **Value notes**:
   - `setup`: before the first model request: configuration, loading context, choosing tools.
   - `turn`: on each model request or reply.
   - `tool-call`: on each tool call or its result.
@@ -106,7 +110,7 @@ reads), `schema` (a tool or protocol definition), `code` (harness logic), `confi
 setting a person chooses). This is the repo's other recurring question ("Where the
 enforcement actually lives: harness vs. prompt", `agent-permissions-approval.md` §7), but
 classified for the bare-test items afterwards, it followed `decider` (`model` with
-`prompt`, `rule` with `code` or `schema`) in seven of twelve, so it would add rater work
+`prompt`, `rule` with `code` or `schema`; the decider value was then called `model`) in seven of twelve, so it would add rater work
 for little new sorting. Three of the five where it did not were in `control` (`t03`,
 `t06`, `t10`), so stage 2 can add it there, where the two come apart.
 
@@ -120,9 +124,9 @@ names and one-line values above, 2026-11-26. Hesitations are the point.
 | `t01` | Arize Phoenix's store | operations | rule | after-run | nothing is decided: a store, not a choice |
 | `t02` | Why the cache survives (deferred tools) | model | rule | turn | model or tool: the fix is in how the request is built |
 | `t03` | Escalation after validation | control | rule | ending | the rules are in the prompt but the harness checks them; moment is a pipeline step |
-| `t04` | OpenHands' risk-assessment prompt is not self-review | control | model | tool-call | — |
+| `t04` | OpenHands' risk-assessment prompt is not self-review | control | working-model | tool-call | — |
 | `t05` | `WarnOnCacheBusts` | model | rule | turn | model or operations: it only observes |
-| `t06` | Tools marked as endings | control | model | ending | control or coordination |
+| `t06` | Tools marked as endings | control | working-model | ending | control or coordination |
 | `t07` | MCP elicitation and task handles in a hands-off run | tool | rule | tool-call | — |
 | `t08` | A third entrypoint, `analyse` | coordination | person | setup | an entrypoint is a kind of run, not a mechanism |
 | `t09` | Large results come back as refs | tool | rule | tool-call | — |
@@ -145,4 +149,5 @@ What it shows:
 4. **Item quality**: two items (`t08`, `t11`) describe a design change or a revision
    rather than a mechanism. The round-1 prompt will tell raters to classify the
    mechanism the section describes.
-5. **No facet added or dropped**; `second-model` replaces a first draft's `judge`.
+5. **No facet added or dropped**; `second-model` replaces a first draft's `judge`, and
+   the decider `model` became `working-model` so it does not share a label with the area.
