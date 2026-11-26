@@ -157,3 +157,112 @@ What it shows:
    mechanism the section describes.
 5. **No facet added or dropped**; `second-model` replaces a first draft's `judge`, and
    the decider `model` became `working-model` so it does not share a label with the area.
+
+## Stage 2: context area (proposed)
+
+**Status**: proposed 2026-11-26, awaiting Jonathan's choice of set (process step 4). Set
+A's values have `candidate` glossary entries so the round-1 kit could be built meanwhile;
+they are redone if he picks another set. Samples: [`stage-2/samples.md`](./stage-2/samples.md);
+terms: [`stage-2/harvest.md`](./stage-2/harvest.md).
+
+These facets sort items whose `area` is `context`. Stage 1's `decider` and `moment`
+still apply to them; the questions below are the ones only this area asks.
+
+### How these were found
+
+- **Compared unlike build items**: a request-scoped reminder placed at the tail (`c02`), Goose's import expander (`c26`),
+  Codex's ten-times-shorter memory prompts (`c24`) and Open Interpreter's tail truncation
+  (`c37`). Each does a different thing to the context (sets where text goes, brings files
+  in, keeps knowledge for later, cuts what is there), carries a different kind of text
+  (instructions written in advance, knowledge from earlier runs, this run's own record),
+  and its text lasts a different time and reaches a different set of runs (one request,
+  every run in a repo, one person's runs, one conversation).
+- **Reused the repo's own recurring questions**: memory "Levels: what scope does a memory
+  belong to?" (`agent-memory-learning.md` §1, "the single most useful lens on this
+  topic") is `reach`; the split into instruction files, memory and compaction that the
+  repo's three context docs follow is `content`; the repo's verbs (load, place, compact,
+  write) are `operation`. Memory §2 (who writes it) and §3 (six trigger points) are
+  stage 1's `decider` and `moment`, so they are not repeated.
+- **Checked against general categories** (OBO Foundry Table 1): `operation` is a
+  happening, `content` a part (continuant), `reach` a quality of that part.
+
+### Set A (recommended): operation, content, reach
+
+### Operation (`operation`)
+
+- **Question**: What does it do to the context?
+- **Principle**: the change it makes to what the model reads.
+- **Kind**: happening
+- **Values**: `supply`, `framing`, `reduction`, `recording`
+- **Order**: the life of content: chosen and put in, placed, cut down, kept for later.
+- **Unsorted**: none yet.
+
+### Content (`content`)
+
+- **Question**: What kind of text is it about?
+- **Principle**: where the text came from, as the model receives it.
+- **Kind**: thing
+- **Values**: `instruction-text`, `kept-knowledge`, `run-history`
+- **Order**: written before the run, kept from earlier runs, made in this run.
+- **Unsorted**: none yet.
+
+### Reach (`reach`)
+
+- **Question**: How far does that text reach?
+- **Principle**: the widest set of requests and runs that read the same text.
+- **Kind**: property
+- **Values**: `request-scope`, `conversation-scope`, `project-scope`, `user-scope`, `organization-scope`
+- **Order**: from one request outward.
+- **Unsorted**: none yet.
+
+### Set B: operation and content only
+
+Drops `reach`, the facet with the most hesitations in the bare test below (four of nine).
+Two facets is a grid (spec S2), and it loses the repo's own "most useful lens" (memory
+levels) and competency question 16 in [`scope.md`](./scope.md).
+
+### Set C: Set A plus arrival
+
+Adds **Arrival** (`arrival`): *How does the text reach the model?* `always` (in every
+request), `on-demand` (an index is in the prompt and the model reads or searches for the
+rest: progressive disclosure, memory search tools), `on-match` (the harness adds it when
+a path, keyword or feature matches). This is memory §5's "pasted in, pointed at,
+searched, or triggered" and context-file loading §12. In the bare test it had no answer
+for five of nine in-area items (every `recording` and `framing` item), so as a facet it
+would need a `none` value. Its three ideas can be glossary terms instead (stage 2 term
+list in [`stage-2/harvest.md`](./stage-2/harvest.md)).
+
+### Bare-facet test (step 5), Set A
+
+Twelve items `ct01`-`ct12` from [`stage-2/samples.md`](./stage-2/samples.md), classified
+by Claude with the names and value entries above, 2026-11-26. Arrival is noted for Set C.
+
+| ID | Item | In area | operation | content | reach | arrival | Hesitation |
+|---|---|---|---|---|---|---|---|
+| `ct01` | Codex: memory, learnings and retrospectives | yes | recording | kept-knowledge | user-scope | on-demand | a survey of a whole pipeline (write and read): took the first named |
+| `ct02` | Conditional format notes | yes | supply | instruction-text | request-scope | on-match | — |
+| `ct03` | Goose: memory, learnings and retrospectives | yes | supply | kept-knowledge | user-scope | always | survey; reach is user or project |
+| `ct04` | Memory is where Codex uses output schemas | no (`tool`) | — | — | — | — | a tool definition, stage 1 sorts it |
+| `ct05` | Conditional and just-in-time loading | yes | supply | instruction-text | project-scope | on-match | — |
+| `ct06` | Analysis prompts: the quick run and its landings | yes | supply | instruction-text | conversation-scope | always | a prompt's text, not a mechanism |
+| `ct07` | Detecting a collapse: `WarnOnCacheBusts` | no (`model`) | — | — | — | — | prompt caching is stage 1's `model` (`t05`) |
+| `ct08` | Requests are not context | no (`operations`) | — | — | — | — | its point is that this channel is not context |
+| `ct09` | Writing, validation and moderation | yes | recording | kept-knowledge | organization-scope | none | reach varies by store; took the widest |
+| `ct10` | What a learning may and may not do | yes | framing | kept-knowledge | project-scope | none | — |
+| `ct11` | Incremental vs. from-scratch summarization | yes | reduction | run-history | conversation-scope | always | — |
+| `ct12` | The writer that may place but may not author | yes | recording | kept-knowledge | project-scope | none | reach not stated |
+
+What it shows:
+
+1. **Three of twelve are not in the area** (`tool`, `model`, `operations`), from sections
+   in context docs and from the heading screen. Raters will answer `in_area` (yes/no,
+   with stage 1's area definitions) and stage-2 facets are scored on items the majority
+   puts in the area. That also re-tests stage 1's `context` boundary.
+2. **`operation` works** on all nine; every value is used.
+3. **`content` works**; `kept-knowledge` dominates (five of nine), as memory dominates the
+   population (memory 734 against compaction 129 in the context docs). Round 1 checks
+   whether that makes κ low, as `rule` did for stage 1's decider.
+4. **`reach` is the weakest**: surveys and stores with several readerships (`ct01`,
+   `ct03`, `ct09`, `ct12`). Proposed rule for raters: the widest reach the section
+   describes; if none is stated, the store's usual home.
+5. **Arrival does not apply** to five of nine, so it is Set C, not Set A.

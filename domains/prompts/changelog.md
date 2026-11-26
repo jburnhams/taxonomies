@@ -58,3 +58,13 @@ named on each line (G1); Jonathan can reverse any of them.
   by: Claude (G1).
 - **adopt** stage 1 (process step 10): every ending condition met on round 3. 50 terms
   `approved`, 4 `candidate` (the four above). Approved by: Claude under G1; Jonathan can veto.
+- **add** stage 2 (context area), chosen over `control` for size and the repo's own
+  memory-levels lens: `stage-2/sample2.py`, `samples.md`, `items.csv` (130 items from 32
+  files at prompts `e7d4fb2`; build 40, bare test 12, round 1 30, held 48),
+  `stage-2/harvest.md`. Drafted by: Claude.
+- **add** stage-2 facet sets A-C to `facets.md` with a bare-facet test; set A
+  (`operation`, `content`, `reach`) recommended, Jonathan to choose.
+- **add** 12 `candidate` entries for set A's values to `glossary.md`.
+- **add** competency questions 14-20 (stage 2) to `scope.md`.
+- **add** stage-2 round-1 kit `stage-2/rounds/round-1/` (30 items, three prompts with an
+  `in_area` question).

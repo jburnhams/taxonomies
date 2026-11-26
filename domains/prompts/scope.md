@@ -31,7 +31,7 @@ Built with the method in [`design/process.md`](../../design/process.md) (version
 - **Status**: stage 1 `in use`, 2026-11-26, after round 3 met the ending conditions below
   ([results](./rounds/round-3/results.md), [review](./rounds/round-3/review.md),
   [name test](./rounds/round-3/name-test/results.md)). Approved by Claude under G1;
-  Jonathan can veto. Stage 2 not started.
+  Jonathan can veto. Stage 2 (context area) started 2026-11-26: facets proposed, round 1 prepared.
 
 ## Stages (proposal M1)
 
@@ -43,7 +43,7 @@ samples and rounds, inside this one context (one meaning per word across all sta
 | Stage | Covers | Facets | Status |
 |---|---|---|---|
 | 1. Kernel | the 30-40 words every area uses (agent, harness, model, run, turn, tool, MCP server, skill, sub-agent, context file, approval, eval, ...) and the split into areas | `area`, `decider`, `moment` (set A, Jonathan 2026-11-26) | in use 2026-11-26 after three rounds |
-| 2. First area | `context` or `control`, the two areas the repo's `changelog.md` mentions most (context and memory docs 79 times; permission, risk, recovery and steering docs 59; tool docs 45) | that area's own facets, such as channel or risk dimension | not started |
+| 2. Context | the `context` area: system prompts, context files, compaction, memory. Chosen over `control` because it has the most words in the repo (memory 1,567 uses; compaction 551) and the repo's own "most useful lens" (memory levels) to start from | `operation`, `content`, `reach` (proposed, [`facets.md`](./facets.md) "Stage 2") | started 2026-11-26; samples in [`stage-2/`](./stage-2/samples.md) |
 | 3+. Other areas | one at a time, in the order the repo's work reaches them (J10) | per area | not started |
 
 A later stage may sort *sources* (harnesses, SDKs, products, protocols) as a second kind
@@ -66,6 +66,16 @@ Answered from `facets.md` and `glossary.md` alone (T10).
 11. What is the difference between a judge, a monitor, a classifier, a grader and a reviewer?
 12. What is the difference between an eval, a benchmark and self-verification?
 13. What is an MCP server, an MCP App, a skill, a plugin and a connector, and how do they differ?
+
+## Competency questions (stage 2, context area)
+
+14. Which mechanisms put content in front of the model, and which keep it for later runs?
+15. Which mechanisms cut down what the model already has?
+16. Which content reaches every run in a repo, and which only one person, one request or one conversation?
+17. Which mechanisms decide where text sits in the prompt or how much it counts?
+18. What is the difference between compaction, truncation, consolidation and a summary?
+19. What is the difference between a memory, a learning, a note and a retrospective?
+20. What is the difference between progressive disclosure and conditional loading?
 
 ## Out of scope
 

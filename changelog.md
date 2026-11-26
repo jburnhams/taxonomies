@@ -4,6 +4,15 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Started stage 2 of the prompts taxonomy: the context area (branch `claude/project-thread-oneclm`)**. Jonathan said go on stage 2. I chose the context area over control, because it has the most words in the repo and its own classification to start from (memory levels). This adds the samples, the term harvest, three proposed facet sets for him to choose from, candidate entries for the recommended set, and the round-1 rater kit.
+
+- `domains/prompts/stage-2/`: **new**. `sample2.py`, `samples.md`, `items.csv` (130 items), `harvest.md`, and `rounds/round-1/` (README, items, `make_prompts.py`, three prompts).
+- `domains/prompts/facets.md`: "Stage 2" section with sets A-C and the bare-facet test.
+- `domains/prompts/glossary.md`: 12 `candidate` entries for set A's values (`supply`, `framing`, `reduction`, `recording`; `instruction-text`, `kept-knowledge`, `run-history`; five `reach` values).
+- `domains/prompts/scope.md`: stage table and competency questions 14-20.
+- `tools/kappa.py`: `--where col=value` (with `--ref` voters) scores only the items a majority puts in the area. The stage-1 round-3 figures reproduce unchanged.
+- `domains/prompts/changelog.md`: the operations above.
+
 **Adopted the taxonomies taxonomy after round 3 (branch `claude/project-thread-yet87g`, PR #12)**.
 Round 3 (`check` only, 73 used items, indicative) passed: Fleiss' κ 0.73, non-Claude pair
 0.75. Jonathan had chosen to adopt on this retest, so the domain is adopted (process step
