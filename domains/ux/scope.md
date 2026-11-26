@@ -28,7 +28,8 @@ file rules in [`design/spec.md`](../../design/spec.md).
 - **Owner**: Jonathan. Agents approve changes that pass T1-T6 with a logged reason;
   Jonathan reviews [`changelog.md`](./changelog.md) and can veto any change (J8,
   [spec G1](../../design/spec.md#9-governance-how-a-taxonomy-changes)).
-- **Status**: `draft`, 2026-11-25. The facets await Jonathan's choice (process step 4).
+- **Status**: `in use`, 2026-11-26, after round 1 met the ending conditions below
+  ([results](./rounds/round-1/results.md)). Approved by Claude under G1; Jonathan can veto.
 
 ## Competency questions
 
