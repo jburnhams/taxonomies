@@ -1,0 +1,31 @@
+id,in_area,operation,content,reach,note
+cr01,yes,supply,instruction-text,project-scope,unsure cross-cutting vocabulary before narrowing exists
+cr02,yes,recording,kept-knowledge,user-scope,
+cr03,yes,supply,instruction-text,user-scope,unsure MCP server reach depends on server config
+cr04,yes,supply,instruction-text,organization-scope,unsure built-in prompt mapped to widest reach
+cr05,yes,recording,kept-knowledge,project-scope,
+cr06,yes,recording,kept-knowledge,user-scope,unsure spans session notes to durable memory
+cr07,yes,reduction,run-history,conversation-scope,
+cr08,yes,recording,kept-knowledge,user-scope,
+cr09,yes,supply,instruction-text,organization-scope,
+cr10,no,reduction,run-history,conversation-scope,
+cr11,yes,reduction,instruction-text,project-scope,
+cr12,yes,supply,instruction-text,organization-scope,unsure fixed prompt block that also frames prior_attempt
+cr13,yes,supply,kept-knowledge,organization-scope,
+cr14,yes,supply,kept-knowledge,user-scope,unsure covers both storage substrate and retrieval
+cr15,yes,reduction,run-history,conversation-scope,
+cr16,yes,recording,kept-knowledge,user-scope,unsure surveys read-write asymmetry across recording and supply
+cr17,yes,framing,instruction-text,project-scope,
+cr18,yes,supply,instruction-text,project-scope,
+cr19,yes,supply,instruction-text,organization-scope,unsure built-in prompt mapped to widest reach
+cr20,yes,recording,kept-knowledge,project-scope,
+cr21,no,supply,instruction-text,conversation-scope,
+cr22,yes,recording,kept-knowledge,user-scope,unsure covers full memory architecture across recording and supply
+cr23,yes,supply,instruction-text,project-scope,
+cr24,yes,supply,instruction-text,project-scope,
+cr25,yes,supply,instruction-text,organization-scope,unsure built-in prompt mapped to widest reach
+cr26,yes,framing,kept-knowledge,project-scope,
+cr27,yes,reduction,run-history,conversation-scope,
+cr28,yes,framing,kept-knowledge,user-scope,
+cr29,yes,framing,instruction-text,project-scope,
+cr30,yes,supply,instruction-text,project-scope,

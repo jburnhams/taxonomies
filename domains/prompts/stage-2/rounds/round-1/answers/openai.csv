@@ -1,0 +1,31 @@
+id,in_area,operation,content,reach,note
+cr01,yes,supply,instruction-text,project-scope,unsure kinds suggest filtering
+cr02,yes,recording,kept-knowledge,user-scope,
+cr03,yes,supply,instruction-text,project-scope,unsure server configuration scope unstated
+cr04,yes,supply,instruction-text,organization-scope,unsure shared across coding delegates
+cr05,yes,recording,run-history,conversation-scope,unsure digest represents one session
+cr06,yes,recording,run-history,project-scope,unsure notes first and durable scope unstated
+cr07,yes,reduction,run-history,conversation-scope,
+cr08,yes,recording,kept-knowledge,project-scope,unsure memory store scope unstated
+cr09,yes,supply,instruction-text,organization-scope,unsure tiers beyond repo unnamed
+cr10,no,reduction,run-history,conversation-scope,tool read implementation
+cr11,yes,reduction,instruction-text,project-scope,
+cr12,yes,framing,run-history,conversation-scope,
+cr13,yes,supply,kept-knowledge,project-scope,unsure resolver implies retrieval by subject
+cr14,yes,recording,kept-knowledge,project-scope,unsure curated store scope unstated
+cr15,yes,reduction,run-history,conversation-scope,
+cr16,no,recording,kept-knowledge,user-scope,unsure tool surface with unspecified store scope
+cr17,yes,framing,instruction-text,project-scope,
+cr18,yes,supply,instruction-text,user-scope,unsure skill catalog scope unstated
+cr19,yes,framing,instruction-text,organization-scope,unsure shared across Forge reviewer runs
+cr20,yes,recording,kept-knowledge,project-scope,unsure promotion scope unstated
+cr21,no,supply,instruction-text,request-scope,escalating prompts redirect the model
+cr22,yes,recording,kept-knowledge,user-scope,unsure architecture and reach unspecified
+cr23,yes,supply,instruction-text,project-scope,
+cr24,no,supply,instruction-text,user-scope,workspace trust controls loading
+cr25,yes,supply,instruction-text,organization-scope,unsure shared across Forge specialist runs
+cr26,yes,framing,kept-knowledge,project-scope,default binding for returned learnings
+cr27,yes,reduction,run-history,conversation-scope,templates govern compaction summaries
+cr28,yes,framing,kept-knowledge,user-scope,unsure memory store scope unstated
+cr29,yes,framing,instruction-text,project-scope,
+cr30,yes,supply,instruction-text,project-scope,
