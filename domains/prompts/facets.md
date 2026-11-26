@@ -11,7 +11,7 @@ Stage 1 only needs facets that work across the whole repo; each area gets its ow
 finer questions in a later stage (proposal M1 in
 [`design/method-v1.1.md`](../../design/method-v1.1.md)).
 
-**Status**: proposal, 2026-11-26 (process step 4). Set A's values have draft glossary
+**Status**: set A chosen by Jonathan, 2026-11-26 (process step 4). Set A's values have draft glossary
 entries (`candidate`) so the round-1 kit could be built while Jonathan chooses; they are
 redone if he picks another set.
 
@@ -37,7 +37,7 @@ redone if he picks another set.
   occurs in four areas and `tool-call` in two; twelve items cannot show independence,
   so round 1 checks it on 60.
 
-## Set A (recommended): area, decider, moment
+## Set A (chosen): area, decider, moment
 
 ### Area (`area`)
 

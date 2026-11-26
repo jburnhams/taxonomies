@@ -13,3 +13,4 @@ named on each line (G1); Jonathan can reverse any of them.
   renamed `working-model` before first use (label clash with area `model`). Drafted by:
   Claude; redone if Jonathan picks another set.
 - **add** round-1 kit `rounds/round-1/` for three raters (Claude, OpenAI, Gemini Pro).
+- **decide** facet set A (area, decider, moment): chosen by Jonathan on 2026-11-26.

@@ -8,8 +8,7 @@ using only the definitions, without seeing each other's answers. If they agree o
 enough (Fleiss' κ ≥ 0.6 on each question, and the two non-Claude raters κ ≥ 0.6 with each
 other), the definitions are clear; where they disagree, the disagreements show what to fix.
 
-Tests facet set A (recommended) at the commit noted in `results.md`. If Jonathan picks
-another set, the glossary and these prompts are regenerated before anyone answers.
+Tests facet set A (chosen by Jonathan 2026-11-26) at the commit noted in `results.md`.
 
 ## Files
 

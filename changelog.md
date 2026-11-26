@@ -31,6 +31,7 @@ facet first, then one area at a time.
 - `domains/prompts/rounds/round-1/`: **new**. Three-rater kit: `items.csv` (60 items),
   `prompt-{claude,openai,gemini}.md` with values shuffled per rater, `make_prompts.py`,
   and a `README.md` for running all three through their CLIs on omarchy (M6).
+- Jonathan chose facet set A on 2026-11-26; `facets.md`, the domain changelog and the kit README say so.
 - `.gitignore`: **new**, ignores `__pycache__/` (one `.pyc` was committed by mistake and removed).
 - Looked for and found: `agent-design/keel/taxonomy.md` in prompts is an existing
   glossary (Keel's own words) and is the seed; *Inside the Scaffold* (stored in
