@@ -4,6 +4,13 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Ran taxonomies round 1 with three raters** (kit `0db889f`, 30 items; Claude Opus 5.5,
+GPT-6.2-Astra, Gemini 4 Carbon High, as in the prompts rounds). Every facet passes:
+Fleiss' κ part 1.00, stage 1.00, check 0.78; openai-gemini 1.00, 1.00, 0.74.
+
+- `domains/taxonomies/rounds/round-1/answers/`: **new**. Each rater's CSV and raw reply
+  with run details. `results.md`: **new**, both kappa tables and the disagreement lists.
+
 **Put the taxonomies taxonomy through the full process, to the round-1 kit (branch `claude/project-thread-yet87g`, PR #10)**.
 Jonathan asked to "put the taxonomies taxonomy through full process". The draft sorted the
 method's concepts; the full process needs items to sort, so the items became the method's
