@@ -4,6 +4,15 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Ran prompts round 1 with three raters**. Each rater ran on omarchy from an empty
+directory with only its own prompt (kit `e923f21`); decider misses κ 0.6, so its
+definitions need fixing before round 2.
+
+- `domains/prompts/rounds/round-1/answers/`: **new**. Round 1 answers from three raters
+  (Claude Opus 5.5, GPT-6.2-Astra, Gemini 4 Carbon High), each with its raw reply and run
+  details; `results.md`: **new**, the scores. Fleiss' κ: area 0.93, decider 0.58 (misses
+  0.6), moment 0.72; openai-gemini: 0.92, 0.57, 0.69.
+
 **Started the prompts taxonomy and proposed method v1.1 for large domains (branch `claude/project-thread-oneclm`)**.
 Jonathan asked for a taxonomy for `jburnhams/prompts` ("agents, mcps, llm, harnesses,
 evals, everything really"), to refine the process as it goes, and for better raters
