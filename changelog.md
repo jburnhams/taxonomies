@@ -4,6 +4,14 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Taxonomies T10 and T11 review after rounds 1 and 2 (branch `claude/project-thread-yet87g`, PR #10)**.
+Jonathan chose to adopt `check` if round 3 reaches κ 0.6; the review was done meanwhile.
+The changelog lines were left out of the review's own commit (`bb6baaf`) and added here.
+
+- `domains/taxonomies/rounds/round-2/review.md`: **new**. All twelve competency questions
+  answered; one near-synonym linked; `owner-decision` empty in the round items, kept.
+- `domains/taxonomies/glossary.md`: `script` gets Related `mechanical-check`.
+
 **Scored taxonomies round 2 and the name test; redefined `check`'s `script`; built an indicative round 3 (branch `claude/project-thread-yet87g`, PR #10)**.
 Round 2 (43 fresh items, ids removed) passed part (Fleiss' κ 0.94) and stage (0.84) but
 failed check (0.55; non-Claude pair 0.45): raters split on whether "a program could check
