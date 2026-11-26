@@ -5,7 +5,7 @@
 - **Access**: paywalled
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `murphy-2002-big-book-of-concepts.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `murphy-2002-big-book-of-concepts/` (for example `murphy-2002-big-book-of-concepts.pdf`) and note it in this line.
 - **To fetch**: The book (ch. 2-3 and 6-7).
 - **Used in**: [`02-how-minds-categorise.md`](../../02-how-minds-categorise.md)
 

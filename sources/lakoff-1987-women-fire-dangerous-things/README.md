@@ -5,7 +5,7 @@
 - **Access**: paywalled
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `lakoff-1987-women-fire-dangerous-things.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `lakoff-1987-women-fire-dangerous-things/` (for example `lakoff-1987-women-fire-dangerous-things.pdf`) and note it in this line.
 - **To fetch**: The book (chapters 1-8 are the part that matters here).
 - **Used in**: [`02-how-minds-categorise.md`](../../02-how-minds-categorise.md)
 

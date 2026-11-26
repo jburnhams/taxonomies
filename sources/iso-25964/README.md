@@ -5,7 +5,7 @@
 - **Access**: paywalled (ISO)
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `iso-25964.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `iso-25964/` (for example `iso-25964.pdf`) and note it in this line.
 - **To fetch**: Optional: Z39.19 and SKOS cover most of it for free.
 - **Used in**: [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md)
 

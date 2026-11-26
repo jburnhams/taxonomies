@@ -5,7 +5,7 @@
 - **Access**: paywalled
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `arnaoudova-2016-linguistic-antipatterns.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `arnaoudova-2016-linguistic-antipatterns/` (for example `arnaoudova-2016-linguistic-antipatterns.pdf`) and note it in this line.
 - **To fetch**: The article.
 - **Used in**: [`06-shared-language-in-software.md`](../../06-shared-language-in-software.md)
 

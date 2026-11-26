@@ -5,8 +5,8 @@
 - **Access**: WordNet is free (open licence); article on ACM DL
 - **URL**: https://wordnet.princeton.edu/
 - **Read**: Read in full 2026-11-25 from the stored PDF (three pages).
-- **Stored here**: `miller-1995-wordnet.pdf` (+ `.md`): the CACM article, from a University of Pennsylvania course page. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
-- **To fetch**: Nothing needed: the article is stored here.
+- **Stored** (private, in [`taxonomies-sources/wordnet-1995/`](https://github.com/jburnhams/taxonomies-sources/tree/main/wordnet-1995)): `miller-1995-wordnet.pdf` (+ `.md`): the CACM article, from a University of Pennsylvania course page. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the article is stored in `taxonomies-sources`.
 - **Used in**: [`03-naming.md`](../../03-naming.md)
 
 ## What is distinctive

@@ -5,7 +5,7 @@
 - **Access**: abstract free; full text on the ACM Digital Library (ACM's archive is now free to read; not checked from here)
 - **URL**: https://cacm.acm.org/research/the-vocabulary-problem-in-human-system-communication
 - **Read**: Abstract only (cut off before the figure). Figures below are the widely cited ones and need checking against the paper.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `furnas-1987-vocabulary-problem.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `furnas-1987-vocabulary-problem/` (for example `furnas-1987-vocabulary-problem.pdf`) and note it in this line.
 - **To fetch**: The full text from the ACM Digital Library (doi 10.1145/32206.32212), to confirm the figures.
 - **Used in**: [`03-naming.md`](../../03-naming.md)
 

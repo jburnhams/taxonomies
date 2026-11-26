@@ -5,8 +5,8 @@
 - **Access**: paywalled (preprints circulate)
 - **URL**: none found
 - **Read**: Read 2026-11-25 from the stored preprint: sections 1-2 closely; the Ontolingua sections skimmed.
-- **Stored here**: `gruber-1993-ksl-92-71.pdf` (+ `.md`): Stanford KSL technical report 92-71 (revised April 1993), the preprint of the *Knowledge Acquisition* article, from a University of Utah course page. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
-- **To fetch**: Nothing needed: the preprint is stored here.
+- **Stored** (private, in [`taxonomies-sources/gruber-1993-ontology-definition/`](https://github.com/jburnhams/taxonomies-sources/tree/main/gruber-1993-ontology-definition)): `gruber-1993-ksl-92-71.pdf` (+ `.md`): Stanford KSL technical report 92-71 (revised April 1993), the preprint of the *Knowledge Acquisition* article, from a University of Utah course page. Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the preprint is stored in `taxonomies-sources`.
 - **Used in**: [`04-vocabularies-and-ontologies.md`](../../04-vocabularies-and-ontologies.md)
 
 ## What is distinctive

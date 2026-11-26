@@ -5,8 +5,8 @@
 - **Access**: free in IEKO
 - **URL**: https://isko.org/cyclo/knowledge_organization
 - **Read**: Read in part 2026-11-25 from the stored IEKO version: definitions (§§1-2), the four approaches (§4.2c) and natural vs artificial (§4.3a).
-- **Stored here**: `ieko-classification.html` (+ `.md`), with its figures in `img/`: Hjørland's "Classification" article as it stands in the ISKO Encyclopedia (isko.org/cyclo/classification). Note the URL above points to the IEKO *knowledge organization* article, which is stored in [`isko-encyclopedia/`](../isko-encyclopedia/). Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
-- **To fetch**: Nothing needed: the IEKO version is stored here.
+- **Stored** (private, in [`taxonomies-sources/hjorland-2017-classification/`](https://github.com/jburnhams/taxonomies-sources/tree/main/hjorland-2017-classification)): `ieko-classification.html` (+ `.md`), with its figures in `img/`: Hjørland's "Classification" article as it stands in the ISKO Encyclopedia (isko.org/cyclo/classification). Note the URL above points to the IEKO *knowledge organization* article, which is stored in [`isko-encyclopedia/`](../isko-encyclopedia/). Downloaded 2026-11-25; notes checked against it the same day. `.md` beside a file is its text, extracted for searching.
+- **To fetch**: Nothing needed: the IEKO version is stored in `taxonomies-sources`.
 - **Used in**: [`07-limits-and-politics.md`](../../07-limits-and-politics.md)
 
 ## What is distinctive

@@ -1,6 +1,6 @@
 # To fetch
 
-Papers and books still missing from [`sources/`](./sources), in the order they would most improve the research. Jonathan offered to fetch these. Drop each file into its folder under [`sources/`](./sources), note it in that folder's README, and the next pass will read it and replace the "from prior knowledge" notes.
+Papers and books still missing from [`sources/`](./sources), in the order they would most improve the research. Jonathan offered to fetch these. Drop each file into the same-named folder of the private [`jburnhams/taxonomies-sources`](https://github.com/jburnhams/taxonomies-sources) repo (not this public one, which holds only the notes), add its path to [`sources/stored-files.txt`](./sources/stored-files.txt), note it in the folder's README here, and the next pass will read it and replace the "from prior knowledge" notes.
 
 On 2026-11-25 a second pass, in a cloud environment that can reach most publisher and preprint hosts, downloaded 32 sources (see [`changelog.md`](./changelog.md) and the **Stored** column in [`sources.md`](./sources.md)). Only legitimately free copies were taken: open access, author or repository copies, course reading lists, public-domain scans. Books held only as Internet Archive loans, or as anonymous uploads of in-copyright books, were left alone.
 

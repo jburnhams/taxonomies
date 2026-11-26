@@ -5,7 +5,7 @@
 - **Access**: paywalled
 - **URL**: https://miskatonic.org/library/facet-web-howto.html (Denton quotes it in full)
 - **Read**: Read second-hand 2026-11-25 through Denton's page, which lists the principles.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `spiteri-1998-facet-model.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `spiteri-1998-facet-model/` (for example `spiteri-1998-facet-model.pdf`) and note it in this line.
 - **To fetch**: The article itself.
 - **Used in**: [`01-structures.md`](../../01-structures.md), [`05-building-and-testing.md`](../../05-building-and-testing.md)
 

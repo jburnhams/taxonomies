@@ -5,7 +5,7 @@
 - **Access**: paywalled
 - **URL**: none found
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `lambe-2007-organising-knowledge.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `lambe-2007-organising-knowledge/` (for example `lambe-2007-organising-knowledge.pdf`) and note it in this line.
 - **To fetch**: The book.
 - **Used in**: [`01-structures.md`](../../01-structures.md), [`05-building-and-testing.md`](../../05-building-and-testing.md)
 

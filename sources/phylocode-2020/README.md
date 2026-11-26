@@ -5,7 +5,7 @@
 - **Access**: book paywalled; earlier versions free online
 - **URL**: https://en.wikipedia.org/wiki/PhyloCode
 - **Read**: Not read this pass. The notes are from prior knowledge of a well-known work and need checking against the text.
-- **Stored here**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF here (for example `phylocode-2020.pdf`) and note it in this line.
+- **Stored**: Nothing yet. This cloud container's network policy blocks the publisher's site, so no copy could be downloaded. Drop a PDF in the private `taxonomies-sources` repo at `phylocode-2020/` (for example `phylocode-2020.pdf`) and note it in this line.
 - **To fetch**: The 2020 printed code (optional).
 - **Used in**: [`03-naming.md`](../../03-naming.md)
 
