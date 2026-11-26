@@ -4,6 +4,12 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Ran taxonomies round 3 (check only) with three raters** (kit `cac7f1f`, 73 items, same
+models). Check passes: Fleiss' κ 0.73, openai-gemini 0.75.
+
+- `domains/taxonomies/rounds/round-3/answers/`: **new**. Each rater's CSV and raw reply.
+  `results.md`: **new**, both kappa tables and the disagreement lists.
+
 **Recorded Jonathan's choice of facets for the taxonomies taxonomy (branch `claude/project-thread-yet87g`)**.
 He chose set A (`part`, `stage`, `check`), and to adopt `check` if the indicative round 3 reaches κ 0.6.
 
