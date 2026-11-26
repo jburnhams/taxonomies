@@ -4,6 +4,12 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Ran the prompts stage 2 name test (T9)** with the two non-Claude readers (GPT-6.2-Astra
+via `codex exec`, Gemini 4 Carbon High via `agy -p`), same isolation as the rounds.
+
+- `domains/prompts/stage-2/rounds/round-2/name-test/guesses-openai.md`, `guesses-gemini.md`:
+  **new**. Each reply verbatim, with run details at the top.
+
 **Prompts stage-2 round 2 passes; context terms drafted; name-test prompt (branch `claude/project-thread-oneclm`, PR #15)**. On the 28 in-area items, Fleiss' κ is operation 0.89, content 1.00 and reach 0.84, and the non-Claude pair scores 0.83, 1.00 and 0.83. Every facet passes. Jonathan's choice of facet set is still open.
 
 - `domains/prompts/facets.md`: round-2 agreement lines and status.
