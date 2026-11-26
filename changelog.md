@@ -4,6 +4,13 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Ran prompts round 2 with the same three raters** (kit `6145895`, 56 items). Fleiss' κ:
+area 0.87, decider 0.66, moment 0.72, all passing; openai-gemini: 0.87, 0.54, 0.67, so
+decider still misses for the non-Claude pair.
+
+- `domains/prompts/rounds/round-2/answers/`: **new**. Each rater's CSV and raw reply with
+  run details. `results.md`: **new**, both kappa tables and the disagreement lists.
+
 **Scored prompts round 1, fixed the decider and moment scope notes, built round 2 (branch `claude/project-thread-oneclm`)**.
 The three raters (Claude Opus 5.5, GPT-6.2-Astra via `codex exec`, Gemini 4 Carbon High via
 `agy -p`) were run on omarchy. Area and moment passed; decider missed at Fleiss' κ 0.58.
