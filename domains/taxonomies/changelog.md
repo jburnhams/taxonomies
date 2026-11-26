@@ -5,6 +5,10 @@ named on each line (G1); Jonathan can reverse any of them.
 
 ## 2026-11-26
 
+- **redefine** `script`, `judgement`, `owner-decision` after round 1 (all four splits
+  were on `check`): every condition must be testable for `script`, a purpose clause is
+  not a condition, and a decision adding a step Jonathan decides takes the check of the
+  work. Approved by: Claude (G1); T1-T6 clean apart from the listed `alias` flag.
 - **redefine** `framing`, `building`, `testing`, `governing` (scope notes say which
   items take each stage, after the bare-facet test); **add** the seven values of facet
   `part` (`purpose`, `boundary`, `structure`, `naming`, `meaning`, `evidence`, `change`)

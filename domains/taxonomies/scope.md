@@ -27,9 +27,9 @@ and the file rules in [`design/spec.md`](../../design/spec.md), at Jonathan's re
   Jonathan's reading wins.
 - **Owner**: Jonathan. Agents approve changes that pass T1-T6 with a logged reason; he
   can veto any change ([spec G1](../../design/spec.md#9-governance-how-a-taxonomy-changes)).
-- **Status**: `draft`, 2026-11-26. Building (steps 0 to 6 done: [`harvest.md`](./harvest.md),
-  [`facets.md`](./facets.md) set A, [`glossary.md`](./glossary.md)); round 1 kit ready in
-  [`rounds/round-1/`](./rounds/round-1/README.md), raters not yet run.
+- **Status**: `draft`, 2026-11-26. Testing. Round 1 passed on every facet ([results](./rounds/round-1/results.md));
+  round 2 (43 items, ids removed) and the name test are ready in
+  [`rounds/round-2/`](./rounds/round-2/README.md).
 
 ## Items
 
@@ -81,7 +81,7 @@ The full version (spec §10):
 |---|---|
 | T1-T6 | `python3 tools/check_domain.py domains/taxonomies` clean, apart from flags listed as label choices |
 | T7 | every round item placed or Unsorted; at most 2 Unsorted |
-| T8 | κ ≥ 0.6 on every facet, 30 fresh items, raters from at least two model families (three planned: Claude, OpenAI, Gemini) |
+| T8 | κ ≥ 0.6 on every facet, Fleiss' over three raters and Cohen's for the non-Claude pair (J23), on at least 35 fresh items (J22: 5 per `part` value) |
 | T9 | name test run on every preferred label of the facet values; wrong guesses renamed |
 | T10 | the twelve questions above answered |
 | T11 | no unmarked synonym, no missing facet |

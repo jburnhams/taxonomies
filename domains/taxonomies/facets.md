@@ -11,7 +11,8 @@ someone's judgement, or is it Jonathan's call? Each question has a short list of
 and every item gets one answer to each.
 
 **Status**: draft, 2026-11-26. Set A of three put to Jonathan (recommended; his choice
-is open, and he can veto). Bare-tested on 10 items (below); round 1 not yet run. Every
+is open, and he can veto). Bare-tested on 10 items (below); round 1 passed on every facet
+(2026-11-26); round 2, with the items' ids removed, is ready. Every
 value has a `candidate` glossary entry.
 
 ## How these were found
@@ -91,7 +92,7 @@ No facet was added, dropped or split.
   arranged, what things are called, what they mean, how that is shown to work, and how it
   changes.
 - **Unsorted**: none yet.
-- **Agreement**: not tested.
+- **Agreement**: 1.00 Fleiss (3 raters), 1.00 non-Claude pair; round 1, 2026-11-26, 30 items (see the caveat in [round 1](./rounds/round-1/results.md#reading-the-numbers)).
 
 ### Stage (`stage`)
 
@@ -101,7 +102,7 @@ No facet was added, dropped or split.
 - **Values**: `framing`, `building`, `testing`, `governing`
 - **Order**: the order of the process steps (0-1, 2-6, 7-9, 10-12).
 - **Unsorted**: none yet.
-- **Agreement**: not tested.
+- **Agreement**: 1.00 Fleiss (3 raters), 1.00 non-Claude pair; round 1, 2026-11-26, 30 items (same caveat).
 
 ### Check (`check`)
 
@@ -111,7 +112,7 @@ No facet was added, dropped or split.
 - **Values**: `script`, `judgement`, `owner-decision`
 - **Order**: from the cheapest to the most expensive to get.
 - **Unsorted**: none yet.
-- **Agreement**: not tested.
+- **Agreement**: 0.78 Fleiss (3 raters), 0.74 non-Claude pair; round 1, 2026-11-26, 30 items.
 
 ## Retired
 

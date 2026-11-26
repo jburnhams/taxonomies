@@ -11,6 +11,13 @@ which is cut into the sets, so every set has rules, steps, fields and decisions 
 Denton §2.3 step 1, not at random as a whole).
 
 Usage: python3 domains/taxonomies/sample.py > domains/taxonomies/items-all.csv
+(at commit c4fa001, where the first 106 were drawn).
+
+Top-up for round 2 (2026-11-26): the population grew after the draw (method v1.1's rules
+M1-M7 and decisions J20-J26 were merged), and the files table of spec §1 and the light
+version's steps were added as kinds of item. `--top-up` prints only the items whose
+source is not already in items-all.csv, as set `s`, shuffled with SEED + 1:
+python3 domains/taxonomies/sample.py --top-up >> domains/taxonomies/items-all.csv
 """
 import csv, random, re, sys
 from pathlib import Path
@@ -76,6 +83,40 @@ def decisions():
             yield ("decision", f"decision {jid}", f"{what}: {clean(answer)}", f"design/decisions.md ({jid})")
 
 
+def method_rules():
+    m11 = (ROOT / "design/method-v1.1.md").read_text()
+    for m in re.finditer(r"^## (M\d+)\. (.+?)\n(.*?)(?=^## |\Z)", m11, re.M | re.S):
+        mid, title, body = m.groups()
+        ch = re.search(r"^- \*\*Change\*\*: (.*?)(?=^- \*\*|\Z)", body, re.M | re.S)
+        yield ("rule", f"method {mid}", f"{clean(title).split(' (')[0]}. {first_sentences(ch.group(1))}", f"design/method-v1.1.md ({mid})")
+
+
+def files():
+    spec = (ROOT / "design/spec.md").read_text()
+    part = spec.split("## 1. Files and where they live")[1].split("\n## ")[0]
+    for m in re.finditer(r"^\| `domains/<name>/([^`]+)` \| ([^|]+) \| ([^|]+) \|$", part, re.M):
+        f, holds, req = (x.strip() for x in m.groups())
+        yield ("file", f"file {f}", f"{f}: holds {holds}; required: {req}", f"design/spec.md (file {f})")
+
+
+def light():
+    pr = (ROOT / "design/process.md").read_text()
+    part = pr.split("## Light version (small domains)")[1].split("\n## ")[0]
+    for m in re.finditer(r"^(\d+)\. (.*?)(?=^\d+\. |\Z)", part, re.M | re.S):
+        n, body = m.groups()
+        yield ("step", f"light version step {n}", first_sentences(body), f"design/process.md (light step {n})")
+
+
+def top_up():
+    have = {r["from"] for r in csv.DictReader(open(Path(__file__).parent / "items-all.csv"))}
+    new = [x for g in (rules, steps, fields, decisions, method_rules, files, light) for x in g() if x[3] not in have]
+    random.Random(SEED + 1).shuffle(new)
+    w = csv.writer(sys.stdout)
+    for k, (kind, ref, text, src) in enumerate(new):
+        w.writerow([f"s{k + 1:02d}", f"{ref}. {text}", kind, src])
+    print(f"{len(new)} new items", file=sys.stderr)
+
+
 def main():
     rnd = random.Random(SEED)
     pools = [list(g()) for g in (rules, steps, fields, decisions)]
@@ -97,4 +138,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    top_up() if "--top-up" in sys.argv else main()

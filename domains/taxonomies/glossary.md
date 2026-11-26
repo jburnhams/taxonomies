@@ -660,26 +660,26 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 ### script (`script`)
 
 - **Definition**: A script is a check in which a program decides from the files whether an item holds.
-- **Scope**: Includes counts, uniqueness, presence of fields, formats and computed figures: the mechanical tests T1-T6, kappa against its target (T8's pass), sample sizes, and the in-use counts (T12, T13). A program must be able to decide pass or fail without anyone reading for sense. Excludes a script that only flags candidates for a person to decide (`judgement`).
+- **Scope**: Includes counts, uniqueness, presence of fields, formats and computed figures: the mechanical tests T1-T6, kappa against its target (T8's pass), sample sizes, and the in-use counts (T12, T13). A program must be able to decide pass or fail without anyone reading for sense: every condition the item sets must be one a program can test (a record kept, a field present, a link in place). A clause saying what the item is for ("so agents use it") is not a condition. Excludes a script that only flags candidates for a person to decide (`judgement`).
 - **Example**: [`tools/check_domain.py`](../../tools/check_domain.py)
-- **Near miss**: N7, no evaluative words: T3 flags words from a short list, but a person decides, so `judgement`.
+- **Near miss**: N7, no evaluative words: T3 flags words from a short list, but a person decides, so `judgement`. G4, named operations only: the list of operations looks checkable, but saying which operation a change is takes reading, so `judgement`.
 - **Kind**: role
 - **Facet**: `check`
 - **Status**: candidate
 - **Warrant**: "script" 6, "mechanical" 5 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested)
+- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested); 2026-11-26 redefined (round 1 splits r14, r18, r22, r28)
 
 ### judgement (`judgement`)
 
 - **Definition**: A judgement is a check in which a person or a model reads for sense and decides whether an item holds.
-- **Scope**: Includes writing and reviewing definitions, choosing facets and labels, rating items, the name test, the heuristic review and agent approval under G1, where Jonathan can veto but an agent settles it. Excludes a computed pass (`script`) and a call the text reserves for the owner (`owner-decision`).
+- **Scope**: Includes writing and reviewing definitions, choosing facets and labels, rating items, the name test, the heuristic review and agent approval under G1, where Jonathan can veto but an agent settles it. Includes any item with at least one condition that needs reading for sense, such as naming which operation a change is (G4). Excludes an item whose every condition a program can test (`script`) and a call the text reserves for the owner (`owner-decision`).
 - **Example**: [spec §10, Judgement](../../design/spec.md#judgement-while-building-and-at-each-review)
 - **Near miss**: A step "checked by Jonathan": he looks, but the step's work is settled by whoever does it, so `judgement`.
 - **Kind**: role
 - **Facet**: `check`
 - **Status**: candidate
 - **Warrant**: "judgement" 50 (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested)
+- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested); 2026-11-26 redefined (round 1 splits r14, r18, r22, r28)
 
 ### owner decision (`owner-decision`)
 
@@ -687,12 +687,12 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Scope**: Includes deciding to start a domain, choosing the facets (process step 4, "Jonathan decides"), a veto, design changes, open questions left for him, and shared-kernel changes needing every owner. A decision record is sorted by what it settles, not by the fact that Jonathan made it. Excludes "can veto" and "checked by Jonathan", where an agent still settles it (`judgement`).
 - **Aliases**: Jonathan's decision
 - **Example**: [spec G1](../../design/spec.md#9-governance-how-a-taxonomy-changes)
-- **Near miss**: G1, agents approve and Jonathan can veto: the veto is his, but what settles a change day to day is an agent's approval, so `judgement`.
+- **Near miss**: G1, agents approve and Jonathan can veto: the veto is his, but what settles a change day to day is an agent's approval, so `judgement`. A decision that adds a step in which Jonathan decides (J13 adds step 4): the decision settles how the step is done, so it takes that work's check, not the step's Who.
 - **Kind**: role
 - **Facet**: `check`
 - **Status**: candidate
 - **Warrant**: "owner" 13, "Jonathan decides" (process step table) (design/ and domains/ux/, 2026-11-26)
-- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested)
+- **History**: 2026-11-26 added (step 6, for facet `check`; not yet tested); 2026-11-26 redefined (round 1 splits r14, r18, r22, r28)
 
 ### framing (`framing`)
 

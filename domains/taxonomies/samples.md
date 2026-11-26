@@ -1,6 +1,6 @@
 # Taxonomies taxonomy: samples
 
-**In one line**: the 106 items the taxonomy is built from and tested on, fixed before any
+**In one line**: the 131 items the taxonomy is built from and tested on, fixed before any
 classification so the test items stay fresh (process step 2).
 
 **In plain words**: an *item* is one rule, step, file field or decision of the method.
@@ -149,3 +149,39 @@ set: run it at `c4fa001` to reproduce this one.
 | `h16` | decision J9. Whose needs win: Jonathan's first, then the agents' (proposal 8) | [design/decisions.md (J9)](../../design/decisions.md) |
 | `h17` | glossary.md field. Matches: see `map.md` (C3) | [design/spec.md (glossary.md)](../../design/spec.md) |
 | `h18` | spec T2. Labels. No label (preferred, alias or hidden) used twice in the context, after folding case and hyphens, counting deprecated records too (G5 keeps an old label on its deprecated record only); every deprecated record has a Replaced by that exists (SKOS S13-S14; potential duplicates, Z39.19 §11.4.6). | [design/spec.md (T2)](../../design/spec.md) |
+
+## Top-up for round 2 (25)
+
+Drawn 2026-11-26 after round 1 by `sample.py --top-up` (seed 20261127) at commit
+`0db889f`: method v1.1's rules M1-M7 and decisions J20-J26, merged after the first draw,
+and two kinds of item the first draw missed, the file table of spec §1 and the light
+version's steps. Not read before round 2. Round 2 tests these with the 18 held items:
+43, above method v1.1 M3's floor of 35 (5 × 7 `part` values).
+
+| ID | Item | From |
+|---|---|---|
+| `s01` | light version step 4. One round of step 7 and the agreement test of step 8 on the held-back items, with two model families as raters (J6). With fewer than 30 items, kappa is recorded as indicative: it guides fixes but is not an ending condition (spec T8). | [design/process.md (light step 4)](../../design/process.md) |
+| `s02` | decision J26. An item is a heading plus its opening text; raters sort the mechanism: Yes (M7) | [design/decisions.md (J26)](../../design/decisions.md) |
+| `s03` | light version step 3. Steps 3 to 6 in one sitting on the remaining items. | [design/process.md (light step 3)](../../design/process.md) |
+| `s04` | method M7. An item is a section's heading and its opening text, and raters sort the mechanism. where items are sections of prose rather than catalogue rows, each item is the heading plus the first lines under it (up to about 300 characters), and the rater prompt says to classify the mechanism the section describes, not the doc it is in. | [design/method-v1.1.md (M7)](../../design/method-v1.1.md) |
+| `s05` | method M4. Three raters from three families, scored with Fleiss' and pairwise kappa. T8 uses three raters, each from a different model family, each the strongest model that family offers on Jonathan's plans at the time (for 2026-11: Claude, an OpenAI model through `codex exec`, and a Gemini Pro model through Antigravity's `agy -p`; not a Flash model). | [design/method-v1.1.md (M4)](../../design/method-v1.1.md) |
+| `s06` | file scope.md. scope.md: holds purpose, readers, owner, competency questions, out of scope, neighbours, ending conditions; required: yes | [design/spec.md (file scope.md)](../../design/spec.md) |
+| `s07` | light version step 1. Steps 0 and 1 as usual. | [design/process.md (light step 1)](../../design/process.md) |
+| `s08` | decision J23. Three raters from three families, strongest model each; pass on Fleiss' κ ≥ 0.6 and the non-author pair's Cohen's κ ≥ 0.6: Yes (M4); Jonathan asked for OpenAI and a better Gemini on 2026-11-26 | [design/decisions.md (J23)](../../design/decisions.md) |
+| `s09` | method M5. With three raters, the majority answer is the round's label. an item where two of three raters agree takes that value for T7; an item where all three differ goes to the facet's Unsorted list and is the first thing the next round's fixes address. Fixes still use the disagreements, not the majority. | [design/method-v1.1.md (M5)](../../design/method-v1.1.md) |
+| `s10` | decision J20. Build a large domain in stages (kernel and areas, then one area at a time) inside one context: Yes (M1) | [design/decisions.md (J20)](../../design/decisions.md) |
+| `s11` | file facets.md. facets.md: holds the facets and their values; required: yes | [design/spec.md (file facets.md)](../../design/spec.md) |
+| `s12` | decision J22. Test sample at least 30 and at least 5 per value of the largest facet: Yes (M3); 60 for prompts stage 1 | [design/decisions.md (J22)](../../design/decisions.md) |
+| `s13` | file glossary.md. glossary.md: holds one entry per concept; required: yes | [design/spec.md (file glossary.md)](../../design/spec.md) |
+| `s14` | light version step 5. Adopt when T1 to T7, T10 and T11 pass. Alexander's warning applies most here: keep it piecemeal and inside real work (Gabriel 2023, App. E.2). | [design/process.md (light step 5)](../../design/process.md) |
+| `s15` | file patterns/<id>.md. patterns/<id>.md: holds one pattern per file (design domains only); required: no | [design/spec.md (file patterns/<id>.md)](../../design/spec.md) |
+| `s16` | method M1. Build a large domain in stages, inside one context. when a domain has more than about 300 candidate items or more than about six distinct areas, build it in stages. Stage 1 covers the kernel (the words every area uses) and one facet that sorts every item into an area. | [design/method-v1.1.md (M1)](../../design/method-v1.1.md) |
+| `s17` | method M6. A rater run through an agent CLI is kept to the prompt. when a rater is called through a vendor's agent CLI rather than an API (Jonathan's ChatGPT and Google AI plans have no API credit), run it in a new, empty directory, read-only, with tools and web access off where the CLI allows, the whole rater prompt as the only user input, and record the CLI name and version, the model, the reasoning effort and the date. | [design/method-v1.1.md (M6)](../../design/method-v1.1.md) |
+| `s18` | light version step 2. Before building, hold back a third of the items (at least 10; if the domain has fewer than about 15 items, skip the held-out set and the kappa test altogether and rely on T7, T10 and T11). | [design/process.md (light step 2)](../../design/process.md) |
+| `s19` | decision J25. Rules for a rater run through an agent CLI (empty folder, read-only, record CLI and model): Yes (M6) | [design/decisions.md (J25)](../../design/decisions.md) |
+| `s20` | decision J24. With three raters, two-of-three is the round's label; three-way splits go to Unsorted: Yes (M5) | [design/decisions.md (J24)](../../design/decisions.md) |
+| `s21` | file map.md. map.md: holds links to other contexts' terms and the shared kernel; required: once a second context exists | [design/spec.md (file map.md)](../../design/spec.md) |
+| `s22` | method M3. Test sample: at least 30, and at least 5 per value of the largest facet. each round's fresh sample is at least 30 items and at least five times the number of values in the largest facet. For prompts stage 1 (`area` has 8 values) that is 40; the domain uses 60, the round size J7 allowed for building. | [design/method-v1.1.md (M3)](../../design/method-v1.1.md) |
+| `s23` | method M2. Write the item unit and population down, and draw by a seeded rule. before drawing, `samples.md` states what one item is, which files the population comes from, the filters, and the seed. | [design/method-v1.1.md (M2)](../../design/method-v1.1.md) |
+| `s24` | file changelog.md. changelog.md: holds every change as a named operation; required: yes | [design/spec.md (file changelog.md)](../../design/spec.md) |
+| `s25` | decision J21. Write down the item unit and population, and draw by a stored, seeded script: Yes (M2) | [design/decisions.md (J21)](../../design/decisions.md) |

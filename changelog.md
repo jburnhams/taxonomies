@@ -4,6 +4,21 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Scored taxonomies round 1, fixed `check`, built round 2 and the name test (branch `claude/project-thread-yet87g`, PR #10)**.
+The three raters (Claude Opus 5.5, GPT-6.2-Astra, Gemini 4 Carbon High) passed every facet:
+Fleiss' κ part 1.00, stage 1.00, check 0.78; non-Claude pair 1.00, 1.00, 0.74. Part and
+stage were probably easy because each item gave its own id, and 30 items is below M3's 35,
+so round 2 removes the ids and uses 43 items.
+
+- `domains/taxonomies/rounds/round-1/results.md`: the reading and the fixes table added.
+- `domains/taxonomies/glossary.md`: `script`, `judgement`, `owner-decision` redefined.
+- `domains/taxonomies/facets.md`, `scope.md`: agreement recorded; T8 target now 35 items (J22).
+- `domains/taxonomies/sample.py`, `items-all.csv`, `samples.md`: `--top-up` draws 25 new items
+  (M1-M7, J20-J26, spec §1's file table, the light version's steps) as set `s`.
+- `domains/taxonomies/rounds/round-2/`: **new**. 43 items without their own ids, three
+  prompts, the name test prompt (T9), README.
+- `domains/taxonomies/changelog.md`: the operations above.
+
 **Ran taxonomies round 1 with three raters** (kit `0db889f`, 30 items; Claude Opus 5.5,
 GPT-6.2-Astra, Gemini 4 Carbon High, as in the prompts rounds). Every facet passes:
 Fleiss' κ part 1.00, stage 1.00, check 0.78; openai-gemini 1.00, 1.00, 0.74.
