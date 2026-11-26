@@ -2,6 +2,18 @@
 
 All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md).
 
+## 2026-11-26
+
+**Scored ux round 1 with Gemini as the second rater (branch `claude/ux-round-1-gemini`)**.
+Gemini 3.8 Flash sorted the 30 round-1 items from `prompt-second.md` alone, run through
+strata-models on omarchy. Every facet clears κ ≥ 0.6: aspect 0.92, brief_override 0.92,
+detection 0.78, mode 1.00, with six disagreements listed for the fix-up.
+
+- `domains/ux/rounds/round-1/answers/gemini.csv`: **new**. Rater B's 30 answers.
+- `domains/ux/rounds/round-1/answers/gemini-raw.md`: **new**. Rater B's whole reply.
+- `domains/ux/rounds/round-1/results.md`: rater B's run details, the kappa table and
+  the disagreement list.
+
 ## 2026-11-25
 
 **Started the ux-research domain (branch `claude/project-thread-l3cp9e`)**. Jonathan
