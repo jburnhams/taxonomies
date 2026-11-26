@@ -775,7 +775,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Scope**: Includes position in the prompt (prefix, tail, first user message), envelopes and nonces, the authority a file is given (overrides, subordinate, untrusted data), precedence between sources, escaping, and whether a learning may only inform or may veto.
 - **Aliases**: placement, prompt placement
 - **Example**: [agent-context-file-loading.md §13](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-context-file-loading.md), three postures on authority.
-- **Near miss**: Choosing which files to load at all (`supply`). Keeping the cached prefix stable for cost: `model` area, unless the change is to where the text goes.
+- **Near miss**: Choosing which files to load at all (`supply`). The wording of a label alone, with no change to where the text sits or how much it counts. Keeping the cached prefix stable for cost: `model` area, unless the change is to where the text goes.
 - **Kind**: happening
 - **Facet**: `operation`
 - **Status**: candidate
@@ -935,25 +935,25 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Scope**: Includes repo conventions discovered in a run, a reviewer's declined pattern, and a dead end not to walk into again. Excludes facts about the task itself (its todos, its plan).
 - **Aliases**: learnings, lesson
 - **Example**: [agent-design/memory.md §2b](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/memory.md), a learning is a section.
-- **Near miss**: A note: a record kept for one pipeline or one decision, not advice for later runs.
+- **Near miss**: A work note: a record kept for one pipeline or one decision, not advice for later runs.
 - **Kind**: thing
 - **Broader**: `memory`
 - **Status**: candidate
 - **Warrant**: learning 121 in the context docs, 344 in all
 - **History**: 2026-11-26 added (stage 2).
 
-### note (`note`)
+### work note (`note`)
 
-- **Definition**: A note is a memory that one run or pipeline writes for its own later runs, about the work in hand rather than how to work.
+- **Definition**: A work note is a memory that one run or pipeline writes for its own later runs, about the work in hand rather than how to work.
 - **Scope**: Includes Keel's per-pipeline notes and DeepSeek's Agent Notes (decision records with a status). Excludes the everyday sense of a remark.
-- **Aliases**: agent note, decision note
+- **Aliases**: note, agent note, decision note
 - **Example**: [agent-design/keel/memory.md §16c](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/keel/memory.md), notes, memory and consolidation are three things.
 - **Near miss**: A learning: advice to any later run in the place, not one pipeline's record.
 - **Kind**: thing
 - **Broader**: `memory`
 - **Status**: candidate
 - **Warrant**: note 119 in the context docs
-- **History**: 2026-11-26 added (stage 2).
+- **History**: 2026-11-26 added (stage 2). 2026-11-26 label "note" → "work note" after the stage-2 name test (both readers took the everyday sense).
 
 ### retrospective (`retrospective`)
 
@@ -1117,7 +1117,7 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candi
 - **Scope**: Includes a notebook kernel's throwaway globals and a todo list kept as a file.
 - **Aliases**: working notes, scratch file
 - **Example**: [agent-data-analysis.md](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-data-analysis.md), the scratchpad: a third position.
-- **Near miss**: A note: kept for later runs.
+- **Near miss**: A work note: kept for later runs.
 - **Kind**: thing
 - **Status**: candidate
 - **Warrant**: scratchpad 35 in 16 files

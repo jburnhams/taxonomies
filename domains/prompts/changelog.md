@@ -86,3 +86,9 @@ named on each line (G1); Jonathan can reverse any of them.
   `context-file` (widened to user and org files); both back to `candidate`. `framing`
   aliases trimmed. Approved by: Claude (G1).
 - **add** stage-2 name-test prompt (31 labels): `stage-2/rounds/round-2/name-test/prompt.md`.
+- **review** stage-2 name test (T9): openai 29/31 (94%), gemini 30/31 (97%):
+  `stage-2/rounds/round-2/name-test/results.md`. **rename** `note` label "note" → "work
+  note" (alias kept); **add** near miss to `framing`. Approved by: Claude (G1).
+- **review** stage-2 T10 (all seven questions answered) and T11 (nothing found):
+  `stage-2/rounds/round-2/review.md`. Every ending condition holds except Jonathan's
+  choice of facet set.
