@@ -4,6 +4,14 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Prompts round 3 passes; competency and heuristic review; name-test prompt (branch `claude/project-thread-oneclm`, PR #11)**.
+Round 3 passed J23 on every facet. The remaining ending conditions are T9 (name test,
+waiting on two fresh readers) and adoption.
+
+- `domains/prompts/rounds/round-3/review.md`: **new**. T10 and T11.
+- `domains/prompts/rounds/round-3/name-test/prompt.md`: **new**. 54 labels.
+- `domains/prompts/changelog.md`: the operations above.
+
 **Ran prompts round 3 with the same three raters** (kit `5d0ad9e`, 60 items). Every facet
 passes: Fleiss' κ area 0.80, decider 0.77, moment 0.86; openai-gemini 0.76, 0.76, 0.83.
 

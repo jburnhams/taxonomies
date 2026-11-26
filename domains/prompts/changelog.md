@@ -42,3 +42,9 @@ named on each line (G1); Jonathan can reverse any of them.
   Claude.
 - **add** 80 more items `g01`-`g80` by the same seeded draw (`sample.py`), eight dropped as
   meta; round-3 kit `rounds/round-3/` with `g01`-`g67` (60 items).
+- **score** round 3 (60 items `g01`-`g67`): Fleiss' κ area 0.80, decider 0.77, moment 0.86;
+  non-Claude pair 0.76 / 0.76 / 0.83. Every facet passes J23. No three-way split, so
+  **Unsorted** is empty (T7). Run on omarchy, commit `bcdd92c`.
+- **review** T10 (12 of 13 competency questions answered; "artifact" left for stage 2) and
+  T11 (no unmarked synonym, no missing facet): `rounds/round-3/review.md`.
+- **add** name-test prompt (T9) for the 54 labels: `rounds/round-3/name-test/prompt.md`.
