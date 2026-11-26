@@ -668,6 +668,7 @@ Values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)).
 - **Example**: [`tools/check_domain.py`](../../tools/check_domain.py)
 - **Near miss**: `scope.md` must exist (spec §1): a program could check it, but none does, so `judgement` until a script is added.
 - **Kind**: role
+- **Related**: `mechanical-check`
 - **Facet**: `check`
 - **Status**: candidate
 - **Warrant**: "script" 6, "mechanical" 5 (design/ and domains/ux/, 2026-11-26)
