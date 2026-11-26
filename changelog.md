@@ -4,6 +4,12 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Ran the prompts name test (T9)** with the two non-Claude raters (GPT-6.2-Astra via
+`codex exec`, Gemini 4 Carbon High via `agy -p`), same isolation as the rounds.
+
+- `domains/prompts/rounds/round-3/name-test/guesses-openai.md`, `guesses-gemini.md`:
+  **new**. Each reply verbatim, with CLI, model and run details at the top.
+
 **Prompts round 3 passes; competency and heuristic review; name-test prompt (branch `claude/project-thread-oneclm`, PR #11)**.
 Round 3 passed J23 on every facet. The remaining ending conditions are T9 (name test,
 waiting on two fresh readers) and adoption.

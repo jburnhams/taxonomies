@@ -1,0 +1,63 @@
+# Name test: gemini guesses
+
+- **CLI**: Antigravity `agy` 1.5.18, `agy -p "<prompt>" --output-format json --print-timeout 1800s --disable-slash-commands --sandbox --model gemini-4-carbon-high`.
+- **Model**: `gemini-4-carbon-high` (Gemini 4 Carbon, High).
+- **Run**: 2026-11-26T07:35:27Z to 2026-11-26T07:38:38Z (UTC), 188 s. Tokens: 10996 in, 9847 out (8020 thinking).
+- Prompt: the whole of `prompt.md` (commit `a3261b3`), copied alone into a fresh empty temp directory and run from there, as the only input. API keys removed from the environment (billed to the plan).
+
+## Reply (verbatim)
+
+- after run: The lifecycle phase immediately after an agent run finishes, when post-run work such as cleanup, trace logging, memory extraction, or evaluation takes place.
+- agent: An autonomous or semi-autonomous actor formed by pairing a language model with instructions, context, and tools inside an execution loop so it can pursue a goal.
+- agent SDK: A software library that exposes an agent harness's loop, tool abstractions, and state management as programmable APIs for embedding agents into applications.
+- approval: A checkpoint during a run where a person or policy must explicitly allow or reject a proposed tool call or risky action before it executes.
+- benchmark: A standardized, shared suite of tasks and scoring metrics used to compare the capabilities of different models or agent systems on equal footing.
+- code review: A step or workflow in which a person, sub-agent, or second model inspects proposed code changes for correctness, safety, and quality before acceptance.
+- compaction: Summarizing or pruning older messages and tool outputs from history when context grows full so a session or run can continue within the context window.
+- context: All information assembled and passed to the model on a given call, including system instructions, project files, conversation history, tool schemas, and tool outputs.
+- context file: A repository- or user-level file (such as `CLAUDE.md`, `AGENTS.md`, or `GEMINI.md`) loaded automatically to give the agent persistent project instructions and conventions.
+- context window: The maximum token budget a language model can attend to in a single inference call, bounding how much context can fit at once.
+- control: How authority and guardrails over agent behavior are exercised and divided among the person, deterministic harness code, and the model.
+- coordination: The mechanisms and patterns by which multiple agents, sub-agents, or tasks divide work, share state, and stay aligned without stepping on one another.
+- ending: The moment and condition by which an agent run exits its loop, whether because the model declares completion, verification passes, or the harness hits a stop limit.
+- eval: A targeted automated test suite and grading harness created for a specific agent or platform to measure task quality and catch regressions across changes.
+- failure: A breakdown during a step or run—such as a tool error, bad edit, stuck loop, or missed objective—that the agent or harness must recover from or report.
+- handoff: The transfer of active task ownership and curated context from one agent, session, or person to another so work can continue smoothly.
+- harness: The deterministic host software around the model that runs the execution loop, builds prompts, dispatches tools, enforces permissions and sandboxes, and stores state.
+- hook: A deterministic callback or script registered to fire at specific harness lifecycle moments (such as before or after a tool call, turn, or run) to inspect, block, or modify behavior.
+- MCP: The Model Context Protocol, an open standard for connecting agent harnesses to external tools, data resources, and prompts through a uniform client-server protocol.
+- MCP App: An interactive UI component served by an MCP server (via the MCP Apps extension) that renders rich visual views and controls directly inside a compatible agent client.
+- MCP server: A local or remote process implementing the Model Context Protocol to expose a specific collection of tools, resources, or prompts to an agent harness.
+- memory: Durable notes, facts, or preferences saved across separate runs and sessions so the agent can recall prior context, user habits, and learned lessons over time.
+- model: A language model capability invoked via inference to read context and generate text, reasoning, and structured tool-call decisions.
+- model access: The authentication, billing, quota, and routing layer—such as API keys, consumer subscriptions, or enterprise gateways—through which a person or harness reaches models.
+- model provider: The organization or hosting service (such as Anthropic, OpenAI, Google, Bedrock, or Vertex) that serves language model inference endpoints.
+- operations: The day-to-day production concerns of running an agent platform, including deployment, observability, cost and token tracking, reliability, and fleet management.
+- orchestrator: A lead agent or deterministic controller that breaks a high-level goal into subtasks, dispatches them to sub-agents or stages, and combines their outputs.
+- output: The final message, structured data, or artifact (such as a code diff or report) produced by a run and delivered to the caller or person.
+- permission mode: A configurable policy preset (such as plan-only, ask-on-edit, auto-edit, or full-auto) that determines which actions execute automatically versus requiring approval.
+- person: The human user or operator who supplies intent, exercises judgment, steers work in progress, approves sensitive actions, and accepts or rejects outcomes.
+- pipeline: A fixed sequence of stages—mixing scripts, prompts, or agent runs—where deterministic code controls the flow from one step's output to the next step's input.
+- plugin: A packaged, installable bundle that extends a harness with a cohesive set of skills, rules, hooks, commands, sub-agents, or MCP server configurations.
+- rule: A short, persistent instruction—applied globally or conditionally by file path or context—that constrains how the agent behaves or writes code.
+- run: One end-to-end execution of the agent loop from initial trigger and setup through one or more turns to its ending in pursuit of a task.
+- sandbox: An OS-, container-, or VM-level isolation boundary that restricts filesystem, network, and process access when an agent executes commands or untrusted code.
+- second model: An auxiliary language model—distinct from the working model in tier, provider, or context—used for independent review, verification, routing, or cheap background tasks.
+- self-verification: When the working agent checks its own work during a run—by running tests, inspecting logs or UI, or reviewing its diff—before deciding the task is complete.
+- session: A stateful, resumable interaction thread that preserves transcript history, configuration, and working context across multiple prompts or runs.
+- setup: The moment before the main agent loop begins when the harness prepares the workspace, dependencies, sandbox, credentials, context files, and available tools.
+- skill: A reusable, self-contained bundle of domain instructions (and optional helper scripts or reference docs) loaded into context on demand when relevant to the task.
+- steer: Sending mid-run human feedback or course-correcting instructions into an active agent run so it adjusts direction without aborting and restarting.
+- sub-agent: A delegated child agent launched with its own isolated context window and scoped tools to handle a focused subtask and return a summary to its caller.
+- system prompt: The foundational instructions assembled by the harness at the start of context to define the agent's identity, behavioral constraints, environment, and tool conventions.
+- tool: A discrete callable capability with a name, description, and input schema (such as reading files or running shell commands) that the harness exposes to the model.
+- tool call: A single structured request emitted by the model during a turn naming a specific tool and arguments for the harness to execute.
+- tool result: The output payload or error returned by the harness after executing a tool call and appended back into context for the model's next turn.
+- tool surface: The full set, granularity, and design of tools and schemas exposed to an agent at a given moment, shaping what actions the model can discover and take.
+- tool use: The runtime interaction pattern in which a model decides to invoke external tools, supplies arguments, and incorporates their results to inspect or change external state.
+- trace: A structured telemetry record of a run—capturing execution spans, model calls, sub-agent trees, latency, and token costs—used for debugging, observability, and evals.
+- transcript: The chronological message log of prompts, model responses, reasoning blocks, tool calls, and tool results recorded for a run or session.
+- trigger: The initiating event—such as a person's prompt, a webhook, a schedule, or another system's signal—that kicks off an agent run.
+- turn: One cycle of the agent loop in which the model reads the current context and produces a response and/or batch of tool calls (followed by their results).
+- verification: Confirming through objective checks—such as tests, typechecks, builds, runtime inspection, or independent review—that an agent's work actually meets requirements.
+- working model: The primary language model actively driving the main agent loop, making tool decisions, and producing the core work of a run.
