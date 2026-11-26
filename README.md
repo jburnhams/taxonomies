@@ -58,12 +58,14 @@ Changes for large domains are proposed in
 - [`domains/ux/`](./domains/ux/scope.md): `jburnhams/ux-research`, in use since 2026-11-26.
 - [`domains/prompts/`](./domains/prompts/scope.md): `jburnhams/prompts`, stage 1 (kernel
   and areas) started 2026-11-26.
+- [`domains/taxonomies/`](./domains/taxonomies/scope.md): this repo's own method, in use
+  since 2026-11-26.
 
 ## Domains and the explorer site
 
 Each domain's taxonomy lives in `domains/<name>/` (spec §1):
 [`ux`](./domains/ux/scope.md) (in use), `prompts` (in progress) and
-[`taxonomies`](./domains/taxonomies/scope.md) (the method's own words, draft).
+[`taxonomies`](./domains/taxonomies/scope.md) (the method's own words, in use).
 **[`site/`](./site/README.md)** builds a browsable site from them on every push to `main`:
 an overview, then each domain's facets, terms, items and rounds, down to each rater's
 answers. Published at <https://jburnhams.github.io/taxonomies/>.

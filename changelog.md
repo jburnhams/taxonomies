@@ -4,6 +4,18 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Adopted the taxonomies taxonomy after round 3 (branch `claude/project-thread-yet87g`, PR #12)**.
+Round 3 (`check` only, 73 used items, indicative) passed: Fleiss' κ 0.73, non-Claude pair
+0.75. Jonathan had chosen to adopt on this retest, so the domain is adopted (process step
+10) and linked from this repo's `CLAUDE.md` (step 11).
+
+- `domains/taxonomies/rounds/round-3/`: answers and `results.md` from the run on omarchy;
+  this commit adds the reading.
+- `domains/taxonomies/glossary.md`: all 57 terms `approved`, with a history line each.
+- `domains/taxonomies/scope.md`: status `in use`; the ending conditions' results at adoption.
+- `domains/taxonomies/facets.md`, `changelog.md`: agreement and the adopt operation.
+- `CLAUDE.md`: new **Vocabulary** rule linking the glossary. `README.md`: domain listed.
+
 **Ran taxonomies round 3 (check only) with three raters** (kit `cac7f1f`, 73 items, same
 models). Check passes: Fleiss' κ 0.73, openai-gemini 0.75.
 

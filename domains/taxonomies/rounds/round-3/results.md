@@ -56,3 +56,13 @@ Disagreements (openai / gemini):
 - `h07` check: script / judgement
 - `h16` check: owner-decision / judgement
 ```
+
+## Reading and outcome
+
+`check` passes on both targets with `script` as a closed list. Most remaining splits are
+still at the `script` / `judgement` edge (`h01`, `h04`, `h05`, `h07` Gemini alone; `s08`,
+`s25` Claude alone), and two at `owner-decision` (`h16`, `s07`, one rater each). The
+result is **indicative** (used items, fix written after reading round 2), and Jonathan
+chose beforehand to adopt on it. No facet or value changed in this round, so the domain
+is adopted (`../../changelog.md`). At the first review (step 12), re-test `check` on
+fresh items once the method has grown by 35 rules, steps or decisions.

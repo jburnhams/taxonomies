@@ -27,8 +27,10 @@ and the file rules in [`design/spec.md`](../../design/spec.md), at Jonathan's re
   Jonathan's reading wins.
 - **Owner**: Jonathan. Agents approve changes that pass T1-T6 with a logged reason; he
   can veto any change ([spec G1](../../design/spec.md#9-governance-how-a-taxonomy-changes)).
-- **Status**: `draft`, 2026-11-26. Testing. Round 1 passed; round 2 passed `part` and `stage`, failed
-  `check` ([results](./rounds/round-2/results.md)); round 3 retests `check`, indicative.
+- **Status**: `in use`, 2026-11-26, after rounds 1 to 3 met the ending conditions below
+  ([round 3 results](./rounds/round-3/results.md)). Approved by Claude under G1, with
+  Jonathan's choice of facets and of adopting `check` on an indicative retest; Jonathan
+  can veto.
 
 ## Items
 
@@ -85,3 +87,15 @@ The full version (spec §10):
 | T10 | the twelve questions above answered |
 | T11 | no unmarked synonym, no missing facet |
 | Stability | no facet added, split or merged in the last round |
+
+### Result at adoption (2026-11-26)
+
+| Test | Result |
+|---|---|
+| T1-T6 | clean apart from two listed plural flags (`alias`, `neighbours`) |
+| T7 | every item placed in rounds 1-3; none Unsorted |
+| T8 | `part` 0.94 and `stage` 0.84 Fleiss on 43 fresh items (round 2; non-Claude pair 0.97, 0.90); `check` 0.78 on 30 fresh items (round 1) and 0.73 on 73 used items (round 3, indicative; non-Claude pair 0.75), adopted on the retest by Jonathan's choice |
+| T9 | 13 of 14 value labels guessed right by three fresh readers; `boundary` relabelled "neighbours" |
+| T10 | all twelve answered ([review](./rounds/round-2/review.md)) |
+| T11 | one near-synonym linked, no missing facet; `owner-decision` rare in the items, kept |
+| Stability | no facet added, split or merged since step 5 |

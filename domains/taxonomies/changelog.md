@@ -5,6 +5,10 @@ named on each line (G1); Jonathan can reverse any of them.
 
 ## 2026-11-26
 
+- **adopt** the domain (process step 10): all 57 terms `approved`, `scope.md` status
+  `in use`, after round 3 passed `check` (Fleiss' κ 0.73, non-Claude pair 0.75) and the
+  ending conditions held (table in `scope.md`). Approved by: Claude (G1), on Jonathan's
+  choice to adopt on the retest; Jonathan can veto.
 - **record** Jonathan's choice of facet set A (`part`, `stage`, `check`) on the decision card, process step 4. By: Jonathan.
 - **redefine** `script`: Related `mechanical-check` added (T11 review). Approved by: Claude (G1).
 - **redefine** `script` (a closed list of what the repo's scripts check today) and

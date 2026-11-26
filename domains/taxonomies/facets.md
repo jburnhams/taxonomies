@@ -10,11 +10,8 @@ building, testing or governing? And will a script tell me if I break it, or does
 someone's judgement, or is it Jonathan's call? Each question has a short list of answers,
 and every item gets one answer to each.
 
-**Status**: draft, 2026-11-26. Set A chosen by Jonathan (2026-11-26, from three put to
-him). Bare-tested on 10 items (below); round 1 passed on every facet;
-round 2 (fresh items, ids removed) passed `part` and `stage` and failed `check`, which is
-redefined and retested in round 3 (2026-11-26). Every
-value has a `candidate` glossary entry.
+**Status**: in use, 2026-11-26. Set A chosen by Jonathan; adopted after three rounds
+(agreement on each facet below). Every value has an `approved` glossary entry.
 
 ## How these were found
 
@@ -113,7 +110,7 @@ No facet was added, dropped or split.
 - **Values**: `script`, `judgement`, `owner-decision`
 - **Order**: from the cheapest to the most expensive to get.
 - **Unsorted**: none yet.
-- **Agreement**: round 2 **failed**: 0.55 Fleiss, 0.45 non-Claude pair, 2026-11-26, 43 items (round 1: 0.78, 0.74). `script` redefined as a closed list; round 3 retests it on used items, indicative.
+- **Agreement**: 0.73 Fleiss, 0.75 non-Claude pair; round 3, 2026-11-26, 73 used items, indicative (round 2: 0.55, 0.45 on 43 fresh; round 1: 0.78, 0.74 on 30 fresh).
 
 ## Retired
 

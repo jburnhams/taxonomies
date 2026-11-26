@@ -15,3 +15,9 @@ domain. Layout and reading order are in [`README.md`](./README.md).
 - **Changelog**: every change adds an entry to `changelog.md` in the same commit, grouped
   under `## YYYY-MM-DD`, newest first.
 - **Design changes** are Jonathan's decisions: the design is a proposal until he adopts it.
+- **Vocabulary**: the method's own words (facet, round, rater, warrant, near miss, ...)
+  are defined once in [`domains/taxonomies/glossary.md`](./domains/taxonomies/glossary.md),
+  in use since 2026-11-26. Use each entry's heading word, not its aliases, when writing
+  `design/` and any domain's files; a concept with no entry gets a `candidate` entry
+  there. Its facets ([`facets.md`](./domains/taxonomies/facets.md)) sort every rule:
+  `check` says whether a script, a judgement or Jonathan settles it.
