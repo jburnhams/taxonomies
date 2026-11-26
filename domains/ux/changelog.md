@@ -3,6 +3,21 @@
 Every change as a named operation (spec G4), newest day first. The approving agent is
 named on each line (G1); Jonathan can reverse any of them.
 
+## 2026-11-26
+
+- **redefine** `colour`, `component`, `imagery`, `typography`, `interaction`, `copy`,
+  `defect`, `code`, `judgement`: scope notes widened where the round-1 raters split or
+  were unsure (table in `rounds/round-1/results.md`). Approved by: Claude.
+- **move** item `r20` to **Unsorted** under `aspect`: a whole-page failure fits no value.
+- **rename** `one-question` "one question" → "screen question" and `one-finding` "one
+  finding" → "screen finding": a fresh reader guessed both wrong (T9). Old labels are
+  aliases. Approved by: Claude; listed for Jonathan's veto.
+- **redefine** `stack-layer`, `subject`: definitions reworded to genus-differentia (T4).
+- **move** alias "fingerprint" from `tell` to `model-signature` (T11).
+- **adopt**: round 1 met every ending condition in `scope.md`; scope status `in use`;
+  40 terms `approved`, the 13 changed above stay `candidate` for round 2. Approved by:
+  Claude under G1; Jonathan can veto.
+
 ## 2026-11-25
 
 - **add** set A, chosen by Jonathan: facets `aspect`, `brief-override`, `detection`, `mode`

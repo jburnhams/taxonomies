@@ -4,6 +4,25 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Fixed what round 1 showed and adopted the ux taxonomy (branch `claude/project-thread-l3cp9e`, built on PR #6)**.
+Round 1 passed κ ≥ 0.6 on every facet. The six disagreements were fixed in scope notes,
+the name test and the remaining checks were run, and the domain was adopted under G1,
+with Jonathan able to veto.
+
+- `domains/ux/glossary.md`: nine scope notes widened; "one question" and "one finding"
+  renamed to "screen question" and "screen finding" after the name test; two definitions
+  reworded for T4; alias "fingerprint" moved; 40 terms `approved`, 13 `candidate`.
+- `domains/ux/facets.md`: kappa per facet recorded; `r20` in Unsorted under `aspect`.
+- `domains/ux/scope.md`: status `in use`, 2026-11-26.
+- `domains/ux/rounds/round-1/results.md`: fixes and the ending-conditions table.
+- `domains/ux/rounds/round-1/review.md`: **new**. Competency questions (T10) and the
+  Z39.19 review (T11).
+- `domains/ux/rounds/round-1/name-test/`: **new**. Prompt, a fresh reader's guesses and
+  the results (T9): 41 of 53 right, 4 wrong; WordNet sense counts.
+- `domains/ux/changelog.md`: the operations above.
+- `tools/check_domain.py`: **new**. Mechanical checks T1-T6 for a domain (J19's
+  recommendation, built for this round).
+
 **Scored ux round 1 with Gemini as the second rater (branch `claude/ux-round-1-gemini`)**.
 Gemini 3.8 Flash sorted the 30 round-1 items from `prompt-second.md` alone, run through
 strata-models on omarchy. Every facet clears κ ≥ 0.6: aspect 0.92, brief_override 0.92,

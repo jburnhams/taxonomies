@@ -1,0 +1,57 @@
+# Name test (T9): labels shown to a fresh reader
+
+The repo is research about how AI agents design React + Tailwind user interfaces, and what makes the result look generic ("AI slop") or good. For each label below, say in one sentence what you think it means in that repo. Do not look anything up. Answer as a markdown list in the same order: `- <label>: <your guess>`.
+
+- any mode
+- brief
+- character
+- code
+- colour
+- competitor test
+- component
+- copy
+- dark mode
+- defect
+- direction
+- drift
+- editorial
+- Experience
+- ground
+- imagery
+- interaction
+- judgement
+- layout
+- mode
+- model signature
+- moment
+- mood word
+- motion
+- one finding
+- one question
+- Operate
+- palette role
+- Persuade
+- quality floor
+- Read
+- reference sentence
+- render
+- screen
+- signature move
+- silhouette test
+- slop
+- slop-lint
+- stack layer
+- stock whimsy
+- subject
+- subject inventory
+- surface
+- swap test
+- tell
+- tell registry
+- theme
+- token
+- token contract
+- treatment
+- typography
+- utilitarian
+- wave

@@ -4,12 +4,13 @@
 words people use for it, a definition, an example and a near miss.
 
 **In plain words**: when you write about ux-research, use the heading word of the entry.
-If you reach for one of its aliases, it points you here. Every entry is a `candidate`
-until the agreement test passes (spec G3).
+If you reach for one of its aliases, it points you here. `approved` terms are agreed;
+`candidate` terms are usable but were changed after the last test (spec G3).
 
-**Status**: round 1 draft, 2026-11-25. General terms, and the values of the four facets
-Jonathan chose on 2026-11-25 (set A in [`facets.md`](./facets.md)). Read and Experience
-are modes but not yet facet values.
+**Status**: in use from 2026-11-26, after round 1 (see [`scope.md`](./scope.md)). 40 terms
+`approved`; 13 `candidate`, because round 1 or the name test changed them, and they wait
+for round 2. Facet values are those of set A, chosen by Jonathan on 2026-11-25
+([`facets.md`](./facets.md)). Read and Experience are modes but not yet facet values.
 
 Field rules: [`design/spec.md` §4](../../design/spec.md#4-glossarymd). Counts:
 [`harvest.md`](./harvest.md). Examples link to ux-research at commit `c742019`.
@@ -33,8 +34,10 @@ Where warrant did not settle a label, the approving agent chose one (process ste
    adjective in a brief) and not the feeling.
 5. **"Signature" goes to `signature move`**; a model's identifying habits are
    **`model signature`**.
-6. **`one question` and `one finding`** without the article "the" (N4), with "the one
-   question" as an alias.
+6. **`screen question` and `screen finding`** for the repo's "the one question" and "the
+   one finding" (kept as aliases). First drafted as "one question" and "one finding"
+   without the article (N4); a fresh reader guessed both wrong in the name test (T9), so
+   they were renamed on 2026-11-26.
 7. **Definition form for mass nouns and names.** D1 and T4 expect "A <label> is a ...".
    Mass nouns and mode names cannot take "a", so those entries read "<Label> is a ..."
    ("Slop is a property ...", "Operate is a mode ..."). The T4 check should accept both.
@@ -54,9 +57,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: An item the repo relaxes on one mode but still counts there (the eyebrow, one allowed on Operate): still any mode.
 - **Kind**: property
 - **Facet**: `mode`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: no single word in the repo; the default for rows with no mode named
-- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### brief (`brief`)
 
@@ -65,9 +68,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Example**: [SKILL.md, Precedence](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/SKILL.md)
 - **Near miss**: The subject: the brief is what was asked; the subject is what the product is.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "brief" 56
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### character (`character`)
 
@@ -77,14 +80,14 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Example**: [character.md](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/character.md)
 - **Near miss**: Stock whimsy: playfulness that fits any product.
 - **Kind**: property
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "character" 125, "personality" 17, "playful" 40, "delight" 30
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### code (`code`)
 
 - **Definition**: Code is a detection method that finds an item by reading the source.
-- **Scope**: Includes rules in `slop-lint` and anything a reader of the source could spot without running it. Take it whenever reading the code is enough, even if the brief may still allow the item.
+- **Scope**: Includes rules in `slop-lint` and anything a reader of the source could spot without running it. Take it whenever reading the code is enough, even if the brief may still allow the item. For copy: code when a fixed word or phrase list finds it (benefit-speak, "Submit", "X theater"); `judgement` when you must read what the words mean for this product (does the button name its action, is the joke stock).
 - **Aliases**: src, lint, source check
 - **Example**: [ux-design/README.md §3](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/README.md#3-what-the-linter-covers)
 - **Near miss**: A contrast check on token pairs done by `palette.mjs`: it reads values, not the page, so it is code; a contrast check on the rendered overrides is render.
@@ -92,12 +95,12 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Facet**: `detection`
 - **Status**: candidate
 - **Warrant**: catalogue "src" (and `tells.md` rule ids); "src" was mostly paths, so not counted
-- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan); 2026-11-26 redefined: scope note widened after round 1 (`r13`, `r19`, `r30`, raters split code / judgement)
 
 ### colour (`colour`)
 
 - **Definition**: Colour is an aspect of an interface that covers the hues, lightness and contrast of its fills, text, borders, shadows and glows.
-- **Scope**: Includes gradients, including gradient text, coloured glows and halos, palette choice, and contrast between text and its surface. Excludes the shape of a shadow or a radius (use `component`).
+- **Scope**: Includes gradients, including gradient text, coloured glows and halos, palette choice, and contrast between text and its surface. Excludes the shape of a shadow or a radius (use `component`). On a chart, the fill (a gradient area, a hue per bar) is colour; how the chart is drawn (smoothing, markers) is `component`.
 - **Aliases**: color, palette, colour and surface
 - **Example**: [ux-slop-taxonomy.md §3a](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3a-colour-and-surface)
 - **Near miss**: Gradient text: it is about colour even though the target is a headline, because removing it means changing the fill, not the type.
@@ -105,7 +108,7 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Facet**: `aspect`
 - **Status**: candidate
 - **Warrant**: catalogue §3a "Colour and surface"; "colour" in the repo's own docs throughout
-- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan); 2026-11-26 redefined: scope note widened after round 1 (`r02`, raters split colour / component)
 
 ### competitor test (`competitor-test`)
 
@@ -115,14 +118,14 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: The swap test: the same idea applied to a finished character touch, not to a reference.
 - **Kind**: happening
 - **Related**: `swap-test`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "competitor test" 8
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### component (`component`)
 
 - **Definition**: A component is an aspect of an interface that covers which UI parts are used and how each is shaped and configured.
-- **Scope**: Includes cards, badges, chips, buttons, modals, charts as parts, and their radius, borders and shadows. Excludes the icon or picture inside a part (use `imagery`).
+- **Scope**: Includes cards, badges, chips, buttons, modals, charts as parts, and their radius, borders and shadows. Excludes the icon or picture inside a part (use `imagery`). Includes how a chart is drawn as a part: line smoothing, markers, gridlines.
 - **Aliases**: components, chrome, UI part
 - **Example**: [ux-slop-taxonomy.md §3d](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3d-components-and-chrome)
 - **Near miss**: An icon in a tinted square chip: the chip is the tell, so it is component; the choice of which icons to draw is imagery.
@@ -130,12 +133,12 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Facet**: `aspect`
 - **Status**: candidate
 - **Warrant**: catalogue §3d "Components and chrome"; "component(s)" 86
-- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan); 2026-11-26 redefined: scope note widened after round 1 (`r02`)
 
 ### copy (`copy`)
 
 - **Definition**: Copy is an aspect of an interface that covers the words and numbers it shows.
-- **Scope**: Includes headlines, labels, button text, error messages, invented proof and number formats.
+- **Scope**: Includes headlines, labels, button text, error messages, invented proof and number formats. Excludes whether a control has a label or where an error appears (use `interaction`); what the label or error says is copy.
 - **Aliases**: text, wording, microcopy
 - **Example**: [ux-slop-taxonomy.md §3f](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3f-copy)
 - **Near miss**: A stat strip of round numbers: the numbers are invented copy, though they sit in a layout block.
@@ -143,7 +146,7 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Facet**: `aspect`
 - **Status**: candidate
 - **Warrant**: catalogue §3f "Copy"; "copy" in `tells.md`
-- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan); 2026-11-26 redefined: scope note widened after round 1 (`r18`)
 
 ### dark mode (`dark-mode`)
 
@@ -152,14 +155,14 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Example**: [audit.md, Robust](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/audit.md)
 - **Near miss**: A near-black Persuade page with one neon accent: a tell (wave 2), not a dark-mode theme.
 - **Kind**: property
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "dark mode" 11
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### defect (`defect`)
 
 - **Definition**: A defect is a fault that makes an interface fail some user whatever the brief says.
-- **Scope**: Includes accessibility, robustness and input faults: low contrast, no visible focus, blocked paste, a blank render, content left invisible, an error that does not say what failed. Excludes tells, which the brief may ask for.
+- **Scope**: Includes accessibility, robustness and input faults: low contrast, no visible focus, blocked paste, a blank render, content left invisible, an error that does not say what failed. Excludes tells, which the brief may ask for. Includes performance faults (`transition: all`) and a dark mode made by inverting the light theme instead of designing it.
 - **Aliases**: quality issue, quality error
 - **Example**: [audit.md](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/audit.md)
 - **Near miss**: A font declared but never loaded: listed in the catalogue as a tell, but it is a defect, because no brief asks for a font that does not load.
@@ -168,7 +171,7 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Facet**: `brief-override`
 - **Status**: candidate
 - **Warrant**: "defect(s)" 4; `audit.md`: "These are defects, not taste"; `slop-lint` category `quality`
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 redefined: scope note widened after round 1 (`r22`, raters split defect / slop; `r17`, rater A unsure)
 
 ### direction (`direction`)
 
@@ -179,9 +182,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: A mood word: an input to choosing the direction, not the direction.
 - **Kind**: thing
 - **Related**: `reference-sentence`, `mood-word`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "direction" 42, "aesthetic(s)" 12
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### drift (`drift`)
 
@@ -192,9 +195,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: Slop: slop is convergence on the corpus; drift is divergence from one's own system.
 - **Kind**: property
 - **Related**: `token-contract`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "drift" 15
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### editorial (`editorial`)
 
@@ -204,9 +207,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: Broadsheet cosplay (hairlines and dense columns on something that is not a publication): a wave 3 tell.
 - **Kind**: property
 - **Broader**: `treatment`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "editorial" 15
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### Experience (`experience`)
 
@@ -217,9 +220,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: Persuade: a showcase that exists to sell is Persuade.
 - **Kind**: property
 - **Broader**: `mode`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "Experience" 11
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### ground (`ground`)
 
@@ -230,14 +233,14 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: The background image of a hero: an image on the ground, not the ground.
 - **Kind**: thing
 - **Broader**: `surface`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "ground" 49, "background" 33, "page ground" 6
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### imagery (`imagery`)
 
 - **Definition**: Imagery is an aspect of an interface that covers its icons, illustrations, images, emoji and mascots.
-- **Scope**: Includes icon sets, illustration kits, image alt text and dimensions.
+- **Scope**: Includes icon sets, illustration kits, image alt text and dimensions. Includes decorative shapes drawn as pictures, such as blobs and squiggles.
 - **Aliases**: icons, illustration, images
 - **Example**: [tells.md, Playful slop](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md)
 - **Near miss**: A decorative sparkline: a chart drawn as decoration is a `component`, not an image.
@@ -245,12 +248,12 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Facet**: `aspect`
 - **Status**: candidate
 - **Warrant**: no catalogue section; added after the bare-facet test (`t02`)
-- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan); 2026-11-26 redefined: scope note widened after round 1 (`r11`, raters split colour / imagery)
 
 ### interaction (`interaction`)
 
 - **Definition**: Interaction is an aspect of an interface that covers how it responds to a person's input.
-- **Scope**: Includes keyboard access, focus, hit targets, form behaviour, semantic controls and what happens after an action.
+- **Scope**: Includes keyboard access, focus, hit targets, form behaviour, semantic controls and what happens after an action. Includes form behaviour (labels on controls, where errors appear, focus on submit) and sound the interface plays, with its controls.
 - **Aliases**: behaviour, input
 - **Example**: [audit.md, Operable](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/audit.md)
 - **Near miss**: A hover lift on every card: it moves, so it is `motion`; it does not change what the input does.
@@ -258,12 +261,12 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Facet**: `aspect`
 - **Status**: candidate
 - **Warrant**: `audit.md` "Operable" section; no catalogue section
-- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan); 2026-11-26 redefined: scope note widened after round 1 (`r08` and `r18`, both raters unsure)
 
 ### judgement (`judgement`)
 
 - **Definition**: Judgement is a detection method that needs the brief or the subject to find an item.
-- **Scope**: Includes items that no rule can decide without knowing what the product is or what was asked: a stock section order, a direction borrowed from the category.
+- **Scope**: Includes items that no rule can decide without knowing what the product is or what was asked: a stock section order, a direction borrowed from the category. For copy, see the note on `code`: reading for meaning is judgement, matching a list is code.
 - **Aliases**: judge, judgment
 - **Example**: [tells.md](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md)
 - **Near miss**: A tell the brief may allow: whether the brief allows it is the `brief-override` facet; detection only asks how it is found.
@@ -271,7 +274,7 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Facet**: `detection`
 - **Status**: candidate
 - **Warrant**: "judge" 40, "judgement" 5
-- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan); 2026-11-26 redefined: scope note widened after round 1 (`r13`, `r19`, `r30`)
 
 ### layout (`layout`)
 
@@ -282,9 +285,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: A row of identical cards: layout when the item names the arrangement (three in a row, a stock order), `component` when it names how the card is styled (stripe, shadow, nesting).
 - **Kind**: thing
 - **Facet**: `aspect`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: catalogue §3c "Layout and page structure"
-- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### mode (`mode`)
 
@@ -294,21 +297,21 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Example**: [SKILL.md §1](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/SKILL.md)
 - **Near miss**: Treatment: the mode says what the screen is for; the treatment says how much decoration it gets.
 - **Kind**: property
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "mode" 73 (11 of them "dark mode")
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### model signature (`model-signature`)
 
 - **Definition**: A model signature is a set of tells that identifies the model or generator that made an interface.
 - **Scope**: Includes generator fingerprints left in the code (`lovable-tagger`) and model-family tells (Impeccable's `<codex>` block).
-- **Aliases**: generator fingerprint, model-family tell
+- **Aliases**: generator fingerprint, fingerprint, model-family tell
 - **Example**: [ux-slop-taxonomy.md §3g](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3g-signatures-and-drift)
 - **Near miss**: A signature move, which is chosen on purpose from the subject.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "model-family" and "generator fingerprint" 3
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 alias "fingerprint" moved from `tell` to `model-signature`, where the repo uses it (T11 review); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### moment (`moment`)
 
@@ -318,9 +321,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Example**: [character.md §4](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/character.md)
 - **Near miss**: A celebration on a routine action (confetti on save): stock whimsy.
 - **Kind**: happening
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "moment" 52 (general word; the repo's sense is "the moment")
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### mood word (`mood-word`)
 
@@ -331,9 +334,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: A reference sentence: a mood word names a region, a reference names a point.
 - **Kind**: thing
 - **Related**: `direction`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "mood" 38, "vibe" 9
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### motion (`motion`)
 
@@ -344,33 +347,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: A slow response to a click: the wait is `interaction` (what happens when the person acts), not motion.
 - **Kind**: thing
 - **Facet**: `aspect`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: catalogue §3e "Motion"
-- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
-
-### one finding (`one-finding`)
-
-- **Definition**: The one finding is a fact in the current data that most needs the attention of a person on an Operate screen.
-- **Scope**: Placed where it is read first, next to the action it drives. Excludes linter or review results (lint findings).
-- **Aliases**: the one finding
-- **Example**: [ui-library/patterns.md §1](https://github.com/jburnhams/ux-research/blob/c742019/ui-library/patterns.md#1-before-any-component-mode-question-finding)
-- **Near miss**: A KPI: a KPI is always shown; the finding is the one fact that matters today.
-- **Kind**: thing
-- **Status**: candidate
-- **Warrant**: "one finding" 11; "finding(s)" in the lint sense 14
-- **History**: 2026-11-25 added (round 1 harvest)
-
-### one question (`one-question`)
-
-- **Definition**: The one question is a question that an Operate screen exists to answer.
-- **Scope**: Decides what is biggest on the screen. Any block that answers no question is deleted.
-- **Aliases**: the one question
-- **Example**: [ui-library/patterns.md §1](https://github.com/jburnhams/ux-research/blob/c742019/ui-library/patterns.md#1-before-any-component-mode-question-finding)
-- **Near miss**: A heading: the question is decided first and may not appear as text.
-- **Kind**: thing
-- **Status**: candidate
-- **Warrant**: "one question" 12
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### Operate (`operate`)
 
@@ -382,9 +361,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Kind**: property
 - **Broader**: `mode`
 - **Facet**: `mode`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "Operate" 97
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### palette role (`palette-role`)
 
@@ -395,9 +374,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: A ramp step (`--primary-9`): a step is a position on a scale; a role is a job.
 - **Kind**: thing
 - **Broader**: `token`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "role(s)" 43, of which palette or colour role 17, ARIA role 10
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### Persuade (`persuade`)
 
@@ -409,9 +388,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Kind**: property
 - **Broader**: `mode`
 - **Facet**: `mode`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "Persuade" 33
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### quality floor (`quality-floor`)
 
@@ -422,9 +401,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: The token contract: also not overridable, but it says how values are expressed, not what must work.
 - **Kind**: thing
 - **Related**: `defect`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "quality floor" 9, "the floor" 9, "craft floor" 4 (Impeccable's word)
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### Read (`read`)
 
@@ -435,9 +414,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: An Operate screen with long help text: the task decides the mode, not the amount of text.
 - **Kind**: property
 - **Broader**: `mode`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "Read surfaces" 7 ("Read" 105, mostly the verb)
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### reference sentence (`reference-sentence`)
 
@@ -448,9 +427,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: A style name ("brutalist", "editorial"): a style fits any subject, so it fails the competitor test.
 - **Kind**: thing
 - **Related**: `direction`, `competitor-test`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "reference sentence(s)" 12
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### render (`render`)
 
@@ -461,9 +440,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: A font declared but never loaded: the declaration is in the code, but whether it loaded needs the render.
 - **Kind**: property
 - **Facet**: `detection`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "render" 64
-- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### screen (`screen`)
 
@@ -473,9 +452,33 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Example**: [SKILL.md §1](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/SKILL.md)
 - **Near miss**: A component: a screen is made of components and has one job.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "screen(s)" 215, "page(s)" 196, "view(s)" 61, "surface(s)" in "Operate/Persuade surfaces" 31
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
+
+### screen finding (`one-finding`)
+
+- **Definition**: A screen finding is a fact in the current data that most needs the attention of a person on an Operate screen.
+- **Scope**: Placed where it is read first, next to the action it drives. Excludes linter or review results (lint findings).
+- **Aliases**: the one finding, one finding
+- **Example**: [ui-library/patterns.md §1](https://github.com/jburnhams/ux-research/blob/c742019/ui-library/patterns.md#1-before-any-component-mode-question-finding)
+- **Near miss**: A KPI: a KPI is always shown; the finding is the one fact that matters today.
+- **Kind**: thing
+- **Status**: candidate
+- **Warrant**: "one finding" 11; "finding(s)" in the lint sense 14
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 renamed from "one finding" (ID kept): a fresh reader guessed the old label wrong (T9, round 1)
+
+### screen question (`one-question`)
+
+- **Definition**: A screen question is a question that an Operate screen exists to answer.
+- **Scope**: Decides what is biggest on the screen. Any block that answers no question is deleted.
+- **Aliases**: the one question, one question
+- **Example**: [ui-library/patterns.md §1](https://github.com/jburnhams/ux-research/blob/c742019/ui-library/patterns.md#1-before-any-component-mode-question-finding)
+- **Near miss**: A heading: the question is decided first and may not appear as text.
+- **Kind**: thing
+- **Status**: candidate
+- **Warrant**: "one question" 12
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 renamed from "one question" (ID kept): a fresh reader guessed the old label wrong (T9, round 1)
 
 ### signature move (`signature-move`)
 
@@ -485,9 +488,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Example**: [SKILL.md §3](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/SKILL.md)
 - **Near miss**: A model signature: the habits that identify the model that made a page.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "signature move" 12, "the signature" 7
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### silhouette test (`silhouette-test`)
 
@@ -496,9 +499,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Example**: [tells.md, Structure](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md)
 - **Near miss**: The competitor test, which checks one idea, not the page outline.
 - **Kind**: happening
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "silhouette test" 3
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### slop (`slop`)
 
@@ -509,9 +512,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: Generic but deliberate design, such as a house style a team chose and wrote down: it is chosen, so it is not slop.
 - **Kind**: property
 - **Facet**: `brief-override`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "slop" 194, "AI slop" 8, "generic" 23, "median" 25 (own docs)
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### slop-lint (`slop-lint`)
 
@@ -521,13 +524,13 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Example**: [slop-lint.mjs](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/scripts/slop-lint.mjs)
 - **Near miss**: A render check, which needs the running page; slop-lint reads only the code.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "slop-lint" 49, "linter" 13
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### stack layer (`stack-layer`)
 
-- **Definition**: A stack layer is one of the five levels of a React and Tailwind project where a design decision can live.
+- **Definition**: A stack layer is a level of a React and Tailwind project at which a design decision is written down.
 - **Scope**: The five: brief and DESIGN.md, theme tokens, primitive variants, composition, call-site className. Excludes the part of the interface a tell is about (the catalogue's "by layer").
 - **Aliases**: layer
 - **Example**: [ux-react-tailwind.md §1](https://github.com/jburnhams/ux-research/blob/c742019/ux-react-tailwind.md#1-the-layers)
@@ -535,7 +538,7 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Kind**: thing
 - **Status**: candidate
 - **Warrant**: "layer(s)" 49, split between this sense and the catalogue's
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 redefined: definition reworded to genus-differentia form (T4), meaning unchanged
 
 ### stock whimsy (`stock-whimsy`)
 
@@ -546,20 +549,20 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: A moment, which comes from the subject and passes the swap test.
 - **Kind**: property
 - **Broader**: `slop`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "stock whimsy" 8, "playful slop" 3, "whimsy" 16
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### subject (`subject`)
 
-- **Definition**: A subject is the product, place or activity that an interface is for.
+- **Definition**: A subject is a product, place or activity that an interface is made for.
 - **Scope**: Includes its name, audience, numbers, materials and rituals. Distinctive choices are taken from the subject, not from the product category.
 - **Example**: [SKILL.md §2](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/SKILL.md)
 - **Near miss**: The category (a "SaaS dashboard"): many subjects share a category, and choices taken from it are tells.
 - **Kind**: thing
 - **Status**: candidate
 - **Warrant**: "subject" 121
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 redefined: definition reworded to genus-differentia form (T4), meaning unchanged
 
 ### subject inventory (`subject-inventory`)
 
@@ -569,9 +572,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Example**: [SKILL.md §2](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/SKILL.md)
 - **Near miss**: A mood board: it collects looks, while the inventory collects facts.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "subject inventory" 6, "inventory" 26
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### surface (`surface`)
 
@@ -582,9 +585,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: A component such as a card: a card sits on a surface and may have one, but is not one.
 - **Kind**: thing
 - **Related**: `ground`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "surface" 90, of which 31 are the screen sense and the rest this sense or unclear; strata-react token names `--surface-sunken`, `--radius-surface`
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### swap test (`swap-test`)
 
@@ -594,22 +597,22 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: The competitor test (see there).
 - **Kind**: happening
 - **Related**: `stock-whimsy`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "swap test" 12
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### tell (`tell`)
 
 - **Definition**: A tell is a design pattern that appears in generated interfaces regardless of their subject.
 - **Scope**: Includes patterns in colour, typography, layout, components, imagery, motion and copy. A tell is slop by default and becomes a choice when the brief asks for it with a reason. Excludes defects.
-- **Aliases**: AI tell, slop tell, fingerprint
+- **Aliases**: AI tell, slop tell
 - **Example**: [tells.md, Wave 1](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/references/tells.md)
 - **Near miss**: A pattern that is common because it works (a top bar with side navigation on an Operate screen): it is expected there, so it is not a tell.
 - **Kind**: thing
 - **Related**: `slop`, `tell-registry`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "tell(s)" 154 (own docs); `tells.md` defines it
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 alias "fingerprint" moved from `tell` to `model-signature`, where the repo uses it (T11 review); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### tell registry (`tell-registry`)
 
@@ -620,9 +623,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: The tell catalogue in `ux-slop-taxonomy.md` §3: the research behind the registry, with sources and severity.
 - **Kind**: thing
 - **Related**: `wave`, `tell`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "registry" 24
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### theme (`theme`)
 
@@ -632,9 +635,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: A direction: the direction is the idea; the theme is its values.
 - **Kind**: thing
 - **Related**: `token`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "theme" 100
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### token (`token`)
 
@@ -644,9 +647,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Example**: [ui-library/tokens.md](https://github.com/jburnhams/ux-research/blob/c742019/ui-library/tokens.md)
 - **Near miss**: A Tailwind utility class such as `bg-primary`: the class uses the token; it is not the token.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "token(s)" 123
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### token contract (`token-contract`)
 
@@ -656,9 +659,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: The theme: the theme is the set of values; the contract is the rule that only those values are used.
 - **Kind**: thing
 - **Related**: `token`, `theme`, `drift`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "token contract" 14
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### treatment (`treatment`)
 
@@ -667,14 +670,14 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Example**: [SKILL.md §1](https://github.com/jburnhams/ux-research/blob/c742019/ux-design/skill/SKILL.md)
 - **Near miss**: Mode: see the near miss on `mode`.
 - **Kind**: property
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "treatment" 9 (from Claude `artifact-design`)
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### typography (`typography`)
 
 - **Definition**: Typography is an aspect of an interface that covers its typefaces, sizes, weights, tracking, line length and line height.
-- **Scope**: Includes font choice and loading, the type scale, casing of headings and display headlines.
+- **Scope**: Includes font choice and loading, the type scale, casing of headings and display headlines. Includes figures: tabular or proportional digits and how numbers align.
 - **Aliases**: type, fonts
 - **Example**: [ux-slop-taxonomy.md §3b](https://github.com/jburnhams/ux-research/blob/c742019/ux-slop-taxonomy.md#3b-typography)
 - **Near miss**: The words of a headline: what it says is `copy`; how it is set is typography.
@@ -682,7 +685,7 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Facet**: `aspect`
 - **Status**: candidate
 - **Warrant**: catalogue §3b "Typography"; the catalogue writes "type", which N4 bars as a claim word
-- **History**: 2026-11-25 added (facet set A chosen by Jonathan)
+- **History**: 2026-11-25 added (facet set A chosen by Jonathan); 2026-11-26 redefined: scope note widened after round 1 (`r04`, rater B unsure typography / layout)
 
 ### utilitarian (`utilitarian`)
 
@@ -692,9 +695,9 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: Plain or unstyled: utilitarian screens still have a real palette and type scale.
 - **Kind**: property
 - **Broader**: `treatment`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "utilitarian" 10
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)
 
 ### wave (`wave`)
 
@@ -704,6 +707,6 @@ Where warrant did not settle a label, the approving agent chose one (process ste
 - **Near miss**: Drift: a wave is across products over time; drift is within one product.
 - **Kind**: happening
 - **Related**: `tell-registry`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: "wave(s)" 31
-- **History**: 2026-11-25 added (round 1 harvest)
+- **History**: 2026-11-25 added (round 1 harvest); 2026-11-26 approved (round 1 ending conditions met; approved by Claude, Jonathan can veto)

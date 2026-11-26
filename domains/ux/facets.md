@@ -9,7 +9,8 @@ answers. Each item gets one answer per question. With four questions you can fin
 example, "every slop tell in the copy that a linter can catch on Operate screens" without
 a special list for it.
 
-**Status**: set A chosen by Jonathan, 2026-11-25 (process step 4). Every value has a
+**Status**: set A chosen by Jonathan, 2026-11-25 (process step 4); in use after round 1,
+2026-11-26 (κ 0.78 to 1.00 per facet). Every value has a
 glossary entry in [`glossary.md`](./glossary.md), status `candidate`. Sets B to D are kept
 below as the record of what was weighed.
 
@@ -45,8 +46,8 @@ below as the record of what was weighed.
 - **Values**: `colour`, `typography`, `layout`, `component`, `imagery`, `motion`, `copy`, `interaction`
 - **Order**: as the catalogue orders its sections, from the ground up to behaviour
   (colour, typography, layout, component), then imagery and motion, then words, then input.
-- **Unsorted**: none yet.
-- **Agreement**: not tested.
+- **Unsorted**: `r20` (the page renders blank; a whole-page failure, not one part), 2026-11-26. Both raters put it under `component`, neither sure.
+- **Agreement**: κ = 0.92 (93% agreement), round 1, 2026-11-25, 30 fresh items, Claude and Gemini 3.8 Flash ([results](./rounds/round-1/results.md)).
 
 This is the catalogue's "layer". It is not labelled "layer" because `ux-react-tailwind.md`
 uses "layer" for the five layers of the stack (harvest homonym 2), and not "element"
@@ -62,7 +63,7 @@ which N4 bars as a claim word and which reads as "kind".
   `defect` (no: it fails some user whatever the brief says)
 - **Order**: slop, defect (the repo's own order: slop axis, then quality axis).
 - **Unsorted**: none yet.
-- **Agreement**: not tested.
+- **Agreement**: κ = 0.92 (97%), round 1, 2026-11-25, 30 fresh items, Claude and Gemini 3.8 Flash ([results](./rounds/round-1/results.md)).
 
 The repo already splits these as `slop` and `quality` lint categories and as two axes
 (`ux-slop-taxonomy.md` §4: "Brief can override? Yes, always / No"). The facet is named by
@@ -79,7 +80,7 @@ that question because both "axis" (also "named axes" of a direction) and "qualit
   pass), `judgement` (it needs the brief or the subject to decide)
 - **Order**: from least evidence to most.
 - **Unsorted**: none yet.
-- **Agreement**: not tested.
+- **Agreement**: κ = 0.78 (90%), round 1, 2026-11-25, 30 fresh items, Claude and Gemini 3.8 Flash ([results](./rounds/round-1/results.md)).
 
 Rule for raters: take the least evidence that finds the item as written. Whether the
 brief allows it is the other facet, so a slop tell that a rule can find is `code`, not
@@ -94,7 +95,7 @@ folders (harvest homonym 7); `src` and `lint` become aliases of `code`.
 - **Values**: `any-mode`, `persuade`, `operate`
 - **Order**: widest first.
 - **Unsorted**: none yet.
-- **Agreement**: not tested.
+- **Agreement**: κ = 1.00 (100%), round 1, 2026-11-25, 30 fresh items, Claude and Gemini 3.8 Flash ([results](./rounds/round-1/results.md)).
 
 Read and Experience are modes (and glossary terms) but no item so far applies only to
 them, so they are not values yet (T6: no empty value). An item that applies to two modes

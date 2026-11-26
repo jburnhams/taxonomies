@@ -1,0 +1,55 @@
+# Name test (T9): fresh-reader guesses (Claude)
+
+- any mode: A rule or finding that holds whatever the interface's mode is (for example light or dark, or whichever kind of screen), not just one of them.
+- brief: The short written request or spec given to the agent that says what interface to build and for whom.
+- character: The distinct personality an interface has that makes it feel like itself and not generic.
+- code: The implementation layer (React/Tailwind source) as opposed to the visual result, or a finding about how the code is written.
+- colour: The design aspect covering the palette and how colours are chosen and used.
+- competitor test: A check of whether the design could pass as a competitor's product; if it could, it lacks distinctiveness.
+- component: A reusable UI building block such as a button, card or dialog, as in a component library.
+- copy: The words in the interface: headings, labels, button text and microcopy.
+- dark mode: The dark colour scheme variant of the interface, and whether it is designed properly rather than just inverted.
+- defect: An objective fault in the output (broken, inaccessible, wrong) as opposed to a merely generic choice.
+- direction: The chosen overall design concept or aesthetic the interface commits to before building.
+- drift: The output gradually moving away from the chosen direction or token contract over a session or across screens.
+- editorial: A design direction modelled on magazines and print: strong type, considered layout, content first.
+- Experience: A top-level mode or category of interface whose job is to give the user an experience (immersive, brand or entertainment) rather than a task.
+- ground: The background surface the content sits on (page or canvas colour/texture), as in figure and ground.
+- imagery: The photos, illustrations and icons used in the interface.
+- interaction: How the interface responds to user input: states, feedback, hover, focus and behaviour.
+- judgement: A design call that cannot be checked mechanically and needs taste or reasoning to evaluate.
+- layout: The spatial arrangement of elements: grid, spacing, hierarchy and composition.
+- mode: The basic purpose class of a screen (such as Read, Operate, Persuade, Experience) that changes which design rules apply.
+- model signature: The recognisable habits a particular AI model leaves in its designs that reveal which model made it.
+- moment: A single specially designed point in the interface (a highlight, transition or detail) meant to be memorable.
+- mood word: An adjective chosen to describe the intended feeling of the design, used to steer the direction.
+- motion: Animation and transitions in the interface.
+- one finding: A rule that each review or critique should report a single most important finding rather than a long list.
+- one question: A rule that the agent should ask at most one clarifying question before designing.
+- Operate: The mode for interfaces where the user does tasks, such as dashboards, tools and admin screens.
+- palette role: The semantic job a colour plays in the palette (background, surface, text, accent, danger) as opposed to its raw value.
+- Persuade: The mode for interfaces meant to convince or convert, such as landing and marketing pages.
+- quality floor: The minimum set of standards every output must meet (accessibility, responsiveness, no defects) regardless of direction.
+- Read: The mode for interfaces mainly for reading content, such as articles, docs and blogs.
+- reference sentence: A one-sentence description that names a real-world reference the design should feel like, to anchor the direction.
+- render: Turning the code into a screenshot so the visual result can be inspected or judged.
+- screen: One full view or page of the interface.
+- signature move: The one distinctive design choice that gives a design its identity.
+- silhouette test: A check of whether the layout is recognisable or distinct from its blocked-out shape alone, without the details.
+- slop: Generic, default-looking AI-generated design that could have come from any prompt.
+- slop-lint: An automated linter that scans the code for known slop tells.
+- stack layer: One level of the technology stack (Tailwind, shadcn/ui, React, the primitives) where a decision or problem sits.
+- stock whimsy: Cliched decorative playfulness (sparkles, emoji, bouncy blobs, cute illustrations) used by default rather than with purpose.
+- subject: What the interface is about: the product, domain or content it serves.
+- subject inventory: A list of the specific things, nouns and materials of the subject, gathered to draw design ideas from.
+- surface: A layer or panel the UI places content on (card, sheet, popover), or the type of product surface such as web app or site.
+- swap test: A check of whether the design would still work if you swapped in a different subject; if it would, it is generic.
+- tell: A specific visible sign that an interface was AI-generated (for example purple gradients or emoji headings).
+- tell registry: The catalogue of known tells with descriptions and how to detect them.
+- theme: The set of token values (colours, fonts, radii) applied to style the interface, such as a light or dark theme.
+- token: A named design variable (colour, spacing, radius, font) used instead of a raw value.
+- token contract: The agreed set of tokens and rules for using them that all components must follow.
+- treatment: How a particular element is styled visually (its specific finish or styling choice).
+- typography: Font choice, sizes, weights, line spacing and type hierarchy.
+- utilitarian: A plain, function-first design direction with no decoration.
+- wave: A batch or round of work (generations, experiments or research) carried out together.
