@@ -160,7 +160,7 @@ What it shows:
 
 ## Stage 2: context area (proposed)
 
-**Status**: proposed 2026-11-26, awaiting Jonathan's choice of set (process step 4). Set
+**Status**: proposed 2026-11-26, awaiting Jonathan's choice of set (process step 4). Set A passed J23 on every facet in round 2 (2026-11-26). Set
 A's values have `candidate` glossary entries so the round-1 kit could be built meanwhile;
 they are redone if he picks another set. Samples: [`stage-2/samples.md`](./stage-2/samples.md);
 terms: [`stage-2/harvest.md`](./stage-2/harvest.md).
@@ -196,7 +196,7 @@ still apply to them; the questions below are the ones only this area asks.
 - **Values**: `supply`, `framing`, `reduction`, `recording`
 - **Order**: the life of content: chosen and put in, placed, cut down, kept for later.
 - **Unsorted**: none yet.
-- **Agreement**: round 1, 2026-11-26, 27 in-area items: Fleiss' κ 0.82, non-Claude pair 0.84.
+- **Agreement**: Fleiss' κ 0.89, non-Claude pair 0.83. Round 2, 2026-11-26, 28 in-area items (round 1: 0.82 / 0.84) ([results](./stage-2/rounds/round-2/results.md)).
 
 ### Content (`content`)
 
@@ -206,7 +206,7 @@ still apply to them; the questions below are the ones only this area asks.
 - **Values**: `instruction-text`, `kept-knowledge`, `run-history`
 - **Order**: written before the run, kept from earlier runs, made in this run.
 - **Unsorted**: none yet.
-- **Agreement**: round 1, 2026-11-26, 27 in-area items: Fleiss' κ 0.88, non-Claude pair 0.82.
+- **Agreement**: Fleiss' κ 1.00, non-Claude pair 1.00. Round 2, 2026-11-26, 28 in-area items (round 1: 0.88 / 0.82).
 
 ### Reach (`reach`)
 
@@ -215,7 +215,7 @@ still apply to them; the questions below are the ones only this area asks.
 - **Kind**: property
 - **Values**: `request-scope`, `conversation-scope`, `project-scope`, `user-scope`, `organization-scope`, `built-in-scope`
 - **Order**: from one request outward; `built-in-scope` (added after round 1) is text shipped with the harness or the agent configuration, read by every run of it whoever runs it.
-- **Agreement**: round 1, 2026-11-26, 27 in-area items: Fleiss' κ 0.68, non-Claude pair 0.53 (fail) ([results](./stage-2/rounds/round-1/results.md)).
+- **Agreement**: Fleiss' κ 0.84, non-Claude pair 0.83. Round 2, 2026-11-26, 28 in-area items, after `built-in-scope` was added (round 1: 0.68 / 0.53, fail) ([results](./stage-2/rounds/round-2/results.md)).
 - **Unsorted**: none yet.
 
 ### Set B: operation and content only

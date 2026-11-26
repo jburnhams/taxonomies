@@ -573,16 +573,16 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 
 ### context file (`context-file`)
 
-- **Definition**: A context file is a file in a repo that tells agents how to work there and that a harness loads into the context window.
-- **Scope**: Includes AGENTS.md, CLAUDE.md, GEMINI.md, .cursorrules and nested per-folder files.
+- **Definition**: A context file is a file of instructions for agents that a harness finds by a fixed rule and loads into the context window.
+- **Scope**: Includes AGENTS.md, CLAUDE.md, GEMINI.md, .cursorrules and nested per-folder files in a repo, a user's global file (`~/.claude/CLAUDE.md`), and an org policy file. Excludes memory files a run writes for itself (`memory`).
 - **Aliases**: AGENTS.md, CLAUDE.md, instruction file, rules file, conventions file
 - **Example**: [agent-context-file-loading.md](https://github.com/jburnhams/prompts/blob/a531474/agent-context-file-loading.md)
 - **Near miss**: A skill: loaded only when its description matches, not whenever the repo is open.
 - **Kind**: thing
 - **Related**: `system-prompt`
-- **Status**: approved
+- **Status**: candidate
 - **Warrant**: AGENTS.md 425; CLAUDE.md 102; "context file" 18
-- **History**: 2026-11-26 added; label chosen because the repo has no single word (harvest synonym set 5).
+- **History**: 2026-11-26 added; label chosen because the repo has no single word (harvest synonym set 5). 2026-11-26 widened in stage 2: user and org files are context files too (stage-2 harvest).
 
 ### compaction (`compaction`)
 
@@ -601,14 +601,14 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 
 - **Definition**: A memory is a body of information that an agent system keeps across runs so that later runs can use it.
 - **Scope**: Includes curated notes, learnings, episodic logs and their stores. Excludes the context window of one run.
-- **Aliases**: long-term memory, learnings
+- **Aliases**: long-term memory, agent memory
 - **Example**: [agent-memory-learning.md](https://github.com/jburnhams/prompts/blob/a531474/agent-memory-learning.md)
 - **Near miss**: A transcript: a record of one run, which becomes memory only if something extracts from it.
 - **Kind**: thing
 - **Related**: `context-window`
-- **Status**: approved
+- **Status**: candidate
 - **Warrant**: memory 1,215 in 94 files
-- **History**: 2026-11-26 added.
+- **History**: 2026-11-26 added. 2026-11-26 alias "learnings" moved to the narrower `learning` (stage 2).
 
 ### steer (`steer`)
 
@@ -773,7 +773,7 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 
 - **Definition**: A framing is an operation on the context window that sets where chosen content sits and how much it counts.
 - **Scope**: Includes position in the prompt (prefix, tail, first user message), envelopes and nonces, the authority a file is given (overrides, subordinate, untrusted data), precedence between sources, escaping, and whether a learning may only inform or may veto.
-- **Aliases**: placement, envelope, precedence
+- **Aliases**: placement, prompt placement
 - **Example**: [agent-context-file-loading.md §13](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-context-file-loading.md), three postures on authority.
 - **Near miss**: Choosing which files to load at all (`supply`). Keeping the cached prefix stable for cost: `model` area, unless the change is to where the text goes.
 - **Kind**: happening
@@ -925,3 +925,213 @@ all `candidate`, redone if he picks another set. Examples link to prompts at `e7
 - **Warrant**: round 1: four built-in prompts (`cr04`, `cr12`, `cr19`, `cr25`) had no value, and all three raters noted it
 - **History**: 2026-11-26 added after stage-2 round 1.
 
+## Stage 2: context area terms
+
+Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md); all `candidate`, tested by the stage-2 name test.
+
+### learning (`learning`)
+
+- **Definition**: A learning is a memory that records what a run found out about how to work in a place, so that later runs act on it.
+- **Scope**: Includes repo conventions discovered in a run, a reviewer's declined pattern, and a dead end not to walk into again. Excludes facts about the task itself (its todos, its plan).
+- **Aliases**: learnings, lesson
+- **Example**: [agent-design/memory.md §2b](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/memory.md), a learning is a section.
+- **Near miss**: A note: a record kept for one pipeline or one decision, not advice for later runs.
+- **Kind**: thing
+- **Broader**: `memory`
+- **Status**: candidate
+- **Warrant**: learning 121 in the context docs, 344 in all
+- **History**: 2026-11-26 added (stage 2).
+
+### note (`note`)
+
+- **Definition**: A note is a memory that one run or pipeline writes for its own later runs, about the work in hand rather than how to work.
+- **Scope**: Includes Keel's per-pipeline notes and DeepSeek's Agent Notes (decision records with a status). Excludes the everyday sense of a remark.
+- **Aliases**: agent note, decision note
+- **Example**: [agent-design/keel/memory.md §16c](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/keel/memory.md), notes, memory and consolidation are three things.
+- **Near miss**: A learning: advice to any later run in the place, not one pipeline's record.
+- **Kind**: thing
+- **Broader**: `memory`
+- **Status**: candidate
+- **Warrant**: note 119 in the context docs
+- **History**: 2026-11-26 added (stage 2).
+
+### retrospective (`retrospective`)
+
+- **Definition**: A retrospective is a happening in which a run's outcome is reviewed to decide what should be done differently next time.
+- **Scope**: Includes outcome triage, failure-to-prevention rules and end-of-session reviews. Excludes storing facts with no judgement of what happened (`recording` of a memory).
+- **Aliases**: retro, post-mortem
+- **Example**: [agent-memory-learning.md §7](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-memory-learning.md).
+- **Near miss**: A code review: it judges the change, not how the run went.
+- **Kind**: happening
+- **Related**: `memory`
+- **Status**: candidate
+- **Warrant**: retrospective 39 in 17 files
+- **History**: 2026-11-26 added (stage 2).
+
+### consolidation (`consolidation`)
+
+- **Definition**: A consolidation is a happening in which a memory store is merged, shortened and cleaned between runs.
+- **Scope**: Includes Codex's phase 2, "dreaming", distillation of many transcripts into a few entries, and dropping duplicates.
+- **Aliases**: dreaming, distillation, memory consolidation
+- **Example**: [agent-design/keel/memory.md §16g](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/keel/memory.md).
+- **Near miss**: A compaction: it shortens the current run's context to fit, not a store.
+- **Kind**: happening
+- **Related**: `memory`, `compaction`
+- **Status**: candidate
+- **Warrant**: consolidat- 113 in the context docs; dream- 26
+- **History**: 2026-11-26 added (stage 2).
+
+### promotion (`promotion`)
+
+- **Definition**: A promotion is a happening in which a candidate written during a run is accepted into a memory store that other runs read.
+- **Scope**: Includes Keel's learnings run promoting `Retrospect` candidates, and moving a private note to a shared store.
+- **Aliases**: promote
+- **Example**: [agent-design/memory.md §3c](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/memory.md).
+- **Near miss**: A write gate: the rule that decides whether to promote, not the act.
+- **Kind**: happening
+- **Related**: `write-gate`
+- **Status**: candidate
+- **Warrant**: promot- 46 in the context docs
+- **History**: 2026-11-26 added (stage 2).
+
+### compaction summary (`compaction-summary`)
+
+- **Definition**: A compaction summary is a text that a compaction writes to stand for the parts of the conversation it removed.
+- **Scope**: Includes structured summaries with fixed headings and anchored summaries that build on the previous one.
+- **Aliases**: summary, handoff summary, continuation summary
+- **Example**: [agent-context-compaction.md §2](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-context-compaction.md).
+- **Near miss**: A memory: kept for later sessions, not for the rest of this one.
+- **Kind**: thing
+- **Related**: `compaction`
+- **Status**: candidate
+- **Warrant**: summar- 194 in the context docs
+- **History**: 2026-11-26 added (stage 2).
+
+### truncation (`truncation`)
+
+- **Definition**: A truncation is a happening in which text is cut to a limit without being rewritten.
+- **Scope**: Includes cutting a tool result to its head or tail, a context file to a byte budget, and the notice that says what was cut.
+- **Aliases**: truncating, cut-off
+- **Example**: [agent-context-file-loading.md §16](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-context-file-loading.md), budgets, truncation and staleness.
+- **Near miss**: A compaction summary: rewrites the removed text instead of cutting it.
+- **Kind**: happening
+- **Related**: `compaction`
+- **Status**: candidate
+- **Warrant**: truncat- 36 in the context docs, 294 in all
+- **History**: 2026-11-26 added (stage 2).
+
+### progressive disclosure (`progressive-disclosure`)
+
+- **Definition**: Progressive disclosure is a loading pattern in which the prompt carries only an index and the model reads the detail when it decides to.
+- **Scope**: Includes skill catalogs with bodies on demand, memory index files with detail files, and MCP tool search.
+- **Aliases**: index then detail, on-demand loading
+- **Example**: [agent-context-file-loading.md §12a](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-context-file-loading.md), skills: a catalog in the prompt, a body on demand.
+- **Near miss**: Conditional loading: the harness adds the text when a rule matches; the model does not ask.
+- **Kind**: thing
+- **Related**: `conditional-loading`
+- **Status**: candidate
+- **Warrant**: progressive disclosure 14; on demand 36
+- **History**: 2026-11-26 added (stage 2).
+
+### conditional loading (`conditional-loading`)
+
+- **Definition**: Conditional loading is a loading pattern in which the harness adds text only when a path, keyword or feature matches a rule.
+- **Scope**: Includes nested context files loaded when a file in that folder is touched, trigger-matched microagents, and format notes added when a feature is present.
+- **Aliases**: just-in-time loading, JIT loading, trigger-matched injection
+- **Example**: [agent-context-file-loading.md §12](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-context-file-loading.md).
+- **Near miss**: Progressive disclosure: the model chooses to read more.
+- **Kind**: thing
+- **Related**: `progressive-disclosure`
+- **Status**: candidate
+- **Warrant**: just-in-time 35; conditional (context-file-loading.md §12)
+- **History**: 2026-11-26 added (stage 2).
+
+### context-file import (`context-file-import`)
+
+- **Definition**: A context-file import is a reference inside a context file that makes the harness insert another file in its place.
+- **Scope**: Includes `@path` transclusion in CLAUDE.md, Goose's import expander and their depth and cycle limits.
+- **Aliases**: @path import, transclusion
+- **Example**: [agent-context-file-loading.md §7](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-context-file-loading.md).
+- **Near miss**: A link the model may choose to follow: nothing is inserted.
+- **Kind**: thing
+- **Related**: `context-file`
+- **Status**: candidate
+- **Warrant**: import 20, transclu- 9 in the context docs
+- **History**: 2026-11-26 added (stage 2).
+
+### envelope (`envelope`)
+
+- **Definition**: An envelope is a wrapper of tags and labels that a harness puts around loaded content to say where it came from and how to treat it.
+- **Scope**: Includes the source path and revision, a nonce that loaded text cannot forge, and an untrusted-data label. Excludes Keel's run input, also called an envelope there (homonym).
+- **Aliases**: wrapper, context envelope
+- **Example**: [agent-design/context-files.md §4](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/context-files.md), the envelope and the nonce.
+- **Near miss**: Escaping: changing the content itself so it cannot break out.
+- **Kind**: thing
+- **Related**: `framing`
+- **Status**: candidate
+- **Warrant**: envelope 67 in the context docs
+- **History**: 2026-11-26 added (stage 2).
+
+### precedence (`precedence`)
+
+- **Definition**: Precedence is a rule that says which of two sources of instructions wins when they conflict.
+- **Scope**: Includes the order of nested context files, user over repo files, and a system prompt's core mandates over repo text.
+- **Aliases**: override order, authority
+- **Example**: [agent-context-file-loading.md §4](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-context-file-loading.md), order and the gap between claimed and structural precedence.
+- **Near miss**: Load order: text that comes later may win in practice without any rule saying so.
+- **Kind**: property
+- **Related**: `framing`
+- **Status**: candidate
+- **Warrant**: precedence 25 in the context docs
+- **History**: 2026-11-26 added (stage 2).
+
+### staleness (`staleness`)
+
+- **Definition**: Staleness is a property of kept content that it no longer matches the thing it describes.
+- **Scope**: Includes memories about code that has changed, context files from another revision, and an old screenshot still in context; also the checks that compute it.
+- **Aliases**: stale memory, drift
+- **Example**: [agent-design/memory.md §5b](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/memory.md), staleness, computed rather than declared.
+- **Near miss**: Expiry: a time limit set in advance, whether or not the content changed.
+- **Kind**: property
+- **Related**: `memory`
+- **Status**: candidate
+- **Warrant**: stale- 53 in the context docs
+- **History**: 2026-11-26 added (stage 2).
+
+### write gate (`write-gate`)
+
+- **Definition**: A write gate is a check that decides whether a candidate memory may be written or promoted.
+- **Scope**: Includes Keel's digest gate (most runs should produce nothing), per-category gates, and a second model asked whether a fact is durable.
+- **Aliases**: digest gate, memory gate
+- **Example**: [agent-design/memory.md §3d](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/memory.md), the digest gate.
+- **Near miss**: An approval: a person allows an action, not a write to a store.
+- **Kind**: thing
+- **Related**: `promotion`
+- **Status**: candidate
+- **Warrant**: gate 53, digest 14 in the context docs
+- **History**: 2026-11-26 added (stage 2).
+
+### scratchpad (`scratchpad`)
+
+- **Definition**: A scratchpad is a store that a run writes and reads during its own work and that is dropped when it ends.
+- **Scope**: Includes a notebook kernel's throwaway globals and a todo list kept as a file.
+- **Aliases**: working notes, scratch file
+- **Example**: [agent-data-analysis.md](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-data-analysis.md), the scratchpad: a third position.
+- **Near miss**: A note: kept for later runs.
+- **Kind**: thing
+- **Status**: candidate
+- **Warrant**: scratchpad 35 in 16 files
+- **History**: 2026-11-26 added (stage 2).
+
+### index file (`index-file`)
+
+- **Definition**: An index file is a file of short entries, each pointing to detail elsewhere, that is loaded into the prompt in place of the detail.
+- **Scope**: Includes MEMORY.md-style indexes and Codex's memory summary file.
+- **Aliases**: memory index, index
+- **Example**: [agent-memory-learning.md §4](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-memory-learning.md), the index-plus-detail convergence.
+- **Near miss**: A search index: queried by a tool, not read in the prompt.
+- **Kind**: thing
+- **Related**: `progressive-disclosure`
+- **Status**: candidate
+- **Warrant**: index 80 in the context docs
+- **History**: 2026-11-26 added (stage 2).

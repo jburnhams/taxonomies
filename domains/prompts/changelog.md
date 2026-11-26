@@ -76,3 +76,13 @@ named on each line (G1); Jonathan can reverse any of them.
   reach; unstated stores are `project-scope`) and `conversation-scope`'s scope (prior
   attempts). Approved by: Claude (G1), to be retested in round 2.
 - **add** stage-2 round-2 kit `stage-2/rounds/round-2/` (`ch01`-`ch30`).
+- **review** stage-2 round 2 (commit `733d917`, 28 in-area items): Fleiss' κ operation
+  0.89, content 1.00, reach 0.84; non-Claude pair 0.83 / 1.00 / 0.83. Every facet passes
+  J23; no three-way split.
+- **add** 16 stage-2 `candidate` terms (learning, note, retrospective, consolidation,
+  promotion, compaction summary, truncation, progressive disclosure, conditional
+  loading, context-file import, envelope, precedence, staleness, write gate, scratchpad,
+  index file). **change** `memory` (alias "learnings" moved to `learning`) and
+  `context-file` (widened to user and org files); both back to `candidate`. `framing`
+  aliases trimmed. Approved by: Claude (G1).
+- **add** stage-2 name-test prompt (31 labels): `stage-2/rounds/round-2/name-test/prompt.md`.

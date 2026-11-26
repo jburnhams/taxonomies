@@ -4,6 +4,13 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Prompts stage-2 round 2 passes; context terms drafted; name-test prompt (branch `claude/project-thread-oneclm`, PR #15)**. On the 28 in-area items, Fleiss' κ is operation 0.89, content 1.00 and reach 0.84, and the non-Claude pair scores 0.83, 1.00 and 0.83. Every facet passes. Jonathan's choice of facet set is still open.
+
+- `domains/prompts/facets.md`: round-2 agreement lines and status.
+- `domains/prompts/glossary.md`: 16 new context-area `candidate` terms; `memory` and `context-file` changed (see the domain changelog).
+- `domains/prompts/stage-2/rounds/round-2/name-test/prompt.md`: **new**.
+- `domains/prompts/changelog.md`: the operations above.
+
 **Ran prompts stage 2 round 2 with three raters** (kit `a73ecfd`, 30 items). Every facet
 passes on the 28 in-area items: Fleiss' κ operation 0.89, content 1.00, reach 0.84;
 openai-gemini 0.83, 1.00, 0.83.
