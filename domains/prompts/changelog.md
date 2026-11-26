@@ -58,3 +58,42 @@ named on each line (G1); Jonathan can reverse any of them.
   by: Claude (G1).
 - **adopt** stage 1 (process step 10): every ending condition met on round 3. 50 terms
   `approved`, 4 `candidate` (the four above). Approved by: Claude under G1; Jonathan can veto.
+- **add** stage 2 (context area), chosen over `control` for size and the repo's own
+  memory-levels lens: `stage-2/sample2.py`, `samples.md`, `items.csv` (130 items from 32
+  files at prompts `e7d4fb2`; build 40, bare test 12, round 1 30, held 48),
+  `stage-2/harvest.md`. Drafted by: Claude.
+- **add** stage-2 facet sets A-C to `facets.md` with a bare-facet test; set A
+  (`operation`, `content`, `reach`) recommended, Jonathan to choose.
+- **add** 12 `candidate` entries for set A's values to `glossary.md`.
+- **add** competency questions 14-20 (stage 2) to `scope.md`.
+- **add** stage-2 round-1 kit `stage-2/rounds/round-1/` (30 items, three prompts with an
+  `in_area` question).
+- **review** stage-2 round 1 (three raters on omarchy, commit `a52aea2`): Fleiss' κ on
+  27 in-area items operation 0.82, content 0.88, reach 0.68; non-Claude pair 0.84 /
+  0.82 / 0.53 (reach fails). `stage-2/rounds/round-1/results.md`.
+- **add** `built-in-scope` to facet `reach` (text shipped with the harness or a
+  configuration); **change** the `reach` principle (recordings take their readers'
+  reach; unstated stores are `project-scope`) and `conversation-scope`'s scope (prior
+  attempts). Approved by: Claude (G1), to be retested in round 2.
+- **add** stage-2 round-2 kit `stage-2/rounds/round-2/` (`ch01`-`ch30`).
+- **review** stage-2 round 2 (commit `733d917`, 28 in-area items): Fleiss' κ operation
+  0.89, content 1.00, reach 0.84; non-Claude pair 0.83 / 1.00 / 0.83. Every facet passes
+  J23; no three-way split.
+- **add** 16 stage-2 `candidate` terms (learning, note, retrospective, consolidation,
+  promotion, compaction summary, truncation, progressive disclosure, conditional
+  loading, context-file import, envelope, precedence, staleness, write gate, scratchpad,
+  index file). **change** `memory` (alias "learnings" moved to `learning`) and
+  `context-file` (widened to user and org files); both back to `candidate`. `framing`
+  aliases trimmed. Approved by: Claude (G1).
+- **add** stage-2 name-test prompt (31 labels): `stage-2/rounds/round-2/name-test/prompt.md`.
+- **review** stage-2 name test (T9): openai 29/31 (94%), gemini 30/31 (97%):
+  `stage-2/rounds/round-2/name-test/results.md`. **rename** `note` label "note" → "work
+  note" (alias kept); **add** near miss to `framing`. Approved by: Claude (G1).
+- **review** stage-2 T10 (all seven questions answered) and T11 (nothing found):
+  `stage-2/rounds/round-2/review.md`. Every ending condition holds except Jonathan's
+  choice of facet set.
+- **decide** stage-2 facet set A (`operation`, `content`, `reach`): chosen by Jonathan on
+  2026-11-26.
+- **adopt** stage 2 (process step 10): every ending condition met on round 2. Stage-2
+  entries, `memory` and `context-file` set to `approved`; `work-note` stays `candidate`
+  after its relabel. Approved by: Claude under G1; Jonathan can veto.

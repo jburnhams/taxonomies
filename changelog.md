@@ -4,6 +4,61 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-26
 
+**Adopted stage 2 of the prompts taxonomy, the context area (branch `claude/project-thread-oneclm`, PR #15)**. Jonathan chose facet set A (operation, content, reach). With that, every ending condition holds on round 2.
+
+- `domains/prompts/facets.md`, `scope.md`: stage 2 is `in use`, set A is marked chosen.
+- `domains/prompts/glossary.md`: the stage-2 values and terms, and the changed `memory` and `context-file`, are `approved`. `work-note` stays `candidate`.
+- `domains/prompts/changelog.md`: the decide and adopt operations.
+
+**Scored the prompts stage-2 name test and reviewed stage 2 (branch `claude/project-thread-oneclm`, PR #15)**. Both fresh readers passed (94% and 97%). All seven competency questions are answered, and the heuristic review found nothing. Stage 2 waits only on Jonathan's choice of facet set.
+
+- `domains/prompts/stage-2/rounds/round-2/name-test/results.md`, `review.md`: **new**.
+- `domains/prompts/glossary.md`: `note` relabelled "work note"; a near miss added to `framing`.
+- `domains/prompts/changelog.md`: the operations above.
+
+**Ran the prompts stage 2 name test (T9)** with the two non-Claude readers (GPT-6.2-Astra
+via `codex exec`, Gemini 4 Carbon High via `agy -p`), same isolation as the rounds.
+
+- `domains/prompts/stage-2/rounds/round-2/name-test/guesses-openai.md`, `guesses-gemini.md`:
+  **new**. Each reply verbatim, with run details at the top.
+
+**Prompts stage-2 round 2 passes; context terms drafted; name-test prompt (branch `claude/project-thread-oneclm`, PR #15)**. On the 28 in-area items, Fleiss' κ is operation 0.89, content 1.00 and reach 0.84, and the non-Claude pair scores 0.83, 1.00 and 0.83. Every facet passes. Jonathan's choice of facet set is still open.
+
+- `domains/prompts/facets.md`: round-2 agreement lines and status.
+- `domains/prompts/glossary.md`: 16 new context-area `candidate` terms; `memory` and `context-file` changed (see the domain changelog).
+- `domains/prompts/stage-2/rounds/round-2/name-test/prompt.md`: **new**.
+- `domains/prompts/changelog.md`: the operations above.
+
+**Ran prompts stage 2 round 2 with three raters** (kit `a73ecfd`, 30 items). Every facet
+passes on the 28 in-area items: Fleiss' κ operation 0.89, content 1.00, reach 0.84;
+openai-gemini 0.83, 1.00, 0.83.
+
+- `domains/prompts/stage-2/rounds/round-2/answers/`: **new**. Each rater's CSV and raw
+  reply with run details. `results.md`: **new**, the three kappa.py runs.
+
+**Scored prompts stage-2 round 1 and prepared round 2 (branch `claude/project-thread-oneclm`, PR #15)**. On the 27 in-area items, `operation` and `content` pass both conditions. `reach` passes Fleiss' κ (0.68) but fails the non-Claude pair (0.53), because built-in prompts had no value and raters guessed how widely an unstated store is shared.
+
+- `domains/prompts/facets.md`, `glossary.md`: new `reach` value `built-in-scope`, two rules in the `reach` principle, agreement lines.
+- `domains/prompts/stage-2/rounds/round-1/results.md`: fixes table.
+- `domains/prompts/stage-2/rounds/round-2/`: **new**. Round-2 kit with items `ch01`-`ch30`.
+- `tools/kappa.py`: an empty sample after `--where` is reported instead of raising (Codex review on PR #15).
+
+**Ran prompts stage 2 round 1 (context area) with three raters** (kit `258f560`, 30 items,
+same models as stage 1). On the 27 in-area items: Fleiss' κ operation 0.82, content 0.88,
+reach 0.68; openai-gemini 0.84, 0.82, 0.53 (reach misses).
+
+- `domains/prompts/stage-2/rounds/round-1/answers/`: **new**. Each rater's CSV and raw
+  reply with run details. `results.md`: **new**, the three kappa.py runs.
+
+**Started stage 2 of the prompts taxonomy: the context area (branch `claude/project-thread-oneclm`)**. Jonathan said go on stage 2. I chose the context area over control, because it has the most words in the repo and its own classification to start from (memory levels). This adds the samples, the term harvest, three proposed facet sets for him to choose from, candidate entries for the recommended set, and the round-1 rater kit.
+
+- `domains/prompts/stage-2/`: **new**. `sample2.py`, `samples.md`, `items.csv` (130 items), `harvest.md`, and `rounds/round-1/` (README, items, `make_prompts.py`, three prompts).
+- `domains/prompts/facets.md`: "Stage 2" section with sets A-C and the bare-facet test.
+- `domains/prompts/glossary.md`: 12 `candidate` entries for set A's values (`supply`, `framing`, `reduction`, `recording`; `instruction-text`, `kept-knowledge`, `run-history`; five `reach` values).
+- `domains/prompts/scope.md`: stage table and competency questions 14-20.
+- `tools/kappa.py`: `--where col=value` (with `--ref` voters) scores only the items a majority puts in the area. The stage-1 round-3 figures reproduce unchanged.
+- `domains/prompts/changelog.md`: the operations above.
+
 **Moved stored source copies to the private `taxonomies-sources` repo (branch `claude/project-thread-plf8yz`)**.
 This repo is now public, and the 93 stored files (24 PDFs, saved pages, figures, OCR and
 extracted text in 32 source folders) were only allowed here while it was private. Jonathan

@@ -13,7 +13,11 @@ when not shared by all). Rows are matched by id; only ids every file has are com
   (prior knowledge; Fleiss 1971 is not stored).
 
 Usage: python3 tools/kappa.py a.csv b.csv [c.csv ...] [--facets aspect,mode,...]
-Rater names are the file names without `.csv`.
+                              [--where col=value [--ref other.csv ...]]
+Rater names are the file names without `.csv`. `--where` keeps only items where more than
+half of the raters (the files given, plus any `--ref` files, which vote but are not
+scored) answered `value` in column `col`; stage 2 uses it to score only the items the
+majority puts in the area (`--where in_area=yes`).
 """
 import csv, sys
 from collections import Counter
@@ -52,15 +56,34 @@ def main(argv):
         i = argv.index("--facets")
         facets = argv[i + 1].split(",")
         argv = argv[:i] + argv[i + 2:]
+    where, refs = None, []
+    if "--where" in argv:
+        i = argv.index("--where")
+        where = argv[i + 1].split("=", 1)
+        argv = argv[:i] + argv[i + 2:]
+    while "--ref" in argv:
+        i = argv.index("--ref")
+        refs.append(argv[i + 1])
+        argv = argv[:i] + argv[i + 2:]
     if len(argv) < 2:
         sys.exit(__doc__)
     names = [Path(p).stem for p in argv]
     R = [load(p) for p in argv]
     ids = [i for i in R[0] if all(i in r for r in R[1:])]
     missing = sorted(set().union(*R) - set(ids))
+    if where:
+        voters = R + [load(p) for p in refs]
+        col, val = where[0], where[1].lower()
+        kept = [i for i in ids if sum(r.get(i, {}).get(col) == val for r in voters) * 2 > len(voters)]
+        print(f"--where {col}={val}: kept {len(kept)} of {len(ids)} items "
+              f"(dropped: {', '.join(i for i in ids if i not in kept) or 'none'})")
+        ids = kept
+        if not ids:
+            print("no items left after --where; agreement cannot be calculated")
+            return
     if not facets:
         first = next(iter(R[0].values()))
-        facets = [k for k in first if k not in ("id", "note")]
+        facets = [k for k in first if k not in ("id", "note") and (not where or k != where[0])]
     print(f"raters: {', '.join(names)}; items compared: {len(ids)}"
           + (f"; missing in some file: {missing}" if missing else ""))
 
