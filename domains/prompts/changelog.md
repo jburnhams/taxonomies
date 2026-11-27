@@ -5,6 +5,11 @@ named on each line (G1); Jonathan can reverse any of them.
 
 ## 2026-11-27
 
+- **record** stage-3 round 1 (run on omarchy by the coordinator, `cc4b0e8`): Fleiss' κ
+  target 0.83, response 0.80; non-Claude pair 0.75, 0.70; pass (J23). Name test 94% and
+  97%, all seven revised entries right. **rename** value `grade` → "set a level" (ID
+  kept); **redefine** `replay` (near miss for trace replay). `stage-3/rounds/round-1/review.md`:
+  every ending condition holds apart from Jonathan's facet choice. Approved by: Claude (G1).
 - **add** stage 3 (control area), `draft`: `stage-3/sample3.py`, `items.csv` (104 items
   at prompts `e7d4fb2`), `samples.md`, `count3.py`, `harvest.md`; facet set A (`target`,
   `response`) with sets B and C and a bare test in `facets.md`; 10 `candidate` value

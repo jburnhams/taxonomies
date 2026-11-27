@@ -272,7 +272,7 @@ What it shows:
 
 ## Stage 3: control area (proposed)
 
-**Status**: proposed 2026-11-27, awaiting Jonathan's choice of set (process step 4). Set
+**Status**: proposed 2026-11-27, awaiting Jonathan's choice of set (process step 4). Round 1 passed J23 on both facets and every other ending condition holds ([review](./stage-3/rounds/round-1/review.md)). Set
 A's values have `candidate` glossary entries so the round-1 kit could be built meanwhile;
 they are redone if he picks another set. Samples: [`stage-3/samples.md`](./stage-3/samples.md);
 terms: [`stage-3/harvest.md`](./stage-3/harvest.md); earlier entries this stage changed:
@@ -315,6 +315,7 @@ still apply to them; the questions below are the ones only this area asks.
 - **Values**: `tool-action`, `run-course`, `incoming-text`, `work-product`
 - **Order**: from the smallest unit (one action) to the run, then what comes into it and
   what goes out of it.
+- **Agreement**: Fleiss' κ 0.83, non-Claude pair 0.75. Round 1, 2026-11-27, 24 in-area items ([results](./stage-3/rounds/round-1/results.md)).
 - **Unsorted**: none yet.
 
 ### Response (`response`)
@@ -327,6 +328,7 @@ still apply to them; the questions below are the ones only this area asks.
 - **Values**: `gate`, `ask-person`, `grade`, `redirect`, `recover`, `halt`
 - **Order**: decide it now, pass it up, set a level for later, change course, try
   again, stop.
+- **Agreement**: Fleiss' κ 0.80, non-Claude pair 0.70. Round 1, 2026-11-27, 24 in-area items.
 - **Unsorted**: none yet.
 
 ### Set B: target only

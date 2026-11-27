@@ -4,6 +4,13 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-27
 
+**Scored prompts stage-3 round 1 and the name test (branch `claude/project-thread-oneclm`, PR #17)**. Both facets pass J23 (Fleiss 0.83 and 0.80, non-Claude pair 0.75 and 0.70) and both name-test readers passed (94%, 97%), including the seven entries the revision pass changed. Stage 3 waits only on Jonathan's choice of facet set.
+
+- `domains/prompts/stage-3/rounds/round-1/name-test/results.md`, `review.md`: **new**.
+- `domains/prompts/glossary.md`: value `grade` relabelled "set a level"; near miss added to `replay`.
+- `domains/prompts/facets.md`: agreement lines for `target` and `response`.
+- `domains/prompts/changelog.md`: the operations above.
+
 **Ran prompts stage 3 round 1 (control area) and its name test** (kit `9d2b864`, 30 items,
 same three raters). On the 24 in-area items: Fleiss' κ target 0.83, response 0.80;
 openai-gemini 0.75, 0.70. Both pass.

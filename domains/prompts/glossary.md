@@ -1223,18 +1223,18 @@ drafted 2026-11-27 so the round-1 kit could be built while Jonathan chooses a se
 - **Warrant**: approv- 189, confirm- 58 in the control docs
 - **History**: 2026-11-27 added (stage 3).
 
-### grade (`grade`)
+### set a level (`grade`)
 
-- **Definition**: Grade is a control response: the control sets a level, such as a risk tier or a trust level, that other rules then read.
+- **Definition**: Set a level is a control response: the control sets a level, such as a risk tier or a trust level, that other rules then read.
 - **Scope**: Includes risk tiers and their drivers, a predictor's score, a context file's authority posture, and what a risk output should contain.
-- **Aliases**: tiering, scoring
+- **Aliases**: grade, tiering, scoring
 - **Example**: [agent-design/risk.md §3](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/risk.md), how the tier is computed.
 - **Near miss**: An eval's score: grades the quality of work, `verification`.
 - **Kind**: happening
 - **Facet**: `response`
 - **Status**: candidate
 - **Warrant**: risk 129, tier 102, driver 28 in the control docs
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 rename: "grade" → "set a level" (ID kept), after both name-test readers took "grade" for a quality score.
 
 ### redirect (`redirect`)
 
@@ -1402,12 +1402,12 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Scope**: Includes workflow engines re-executing a node after a restart, and the idempotency keys that make that safe.
 - **Aliases**: re-execution
 - **Example**: [agent-run-recovery.md §6](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-run-recovery.md), when a framework runs your step again.
-- **Near miss**: A `retry`: chosen because the step failed.
+- **Near miss**: A `retry`: chosen because the step failed. Replaying a recorded run to audit it or to test a harness change: a trace replay, which re-executes nothing for real.
 - **Kind**: happening
 - **Related**: `retry`
 - **Status**: candidate
 - **Warrant**: replay 14 in the control docs, 132 in all; idempot- 79 in all
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 redefine: near miss added after a name-test reader took replay to be re-running a recorded trace.
 
 ### resume (`resume`)
 
