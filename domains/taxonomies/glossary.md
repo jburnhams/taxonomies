@@ -354,6 +354,32 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Warrant**: "operation" 14, "named operation" 8 (design/ and domains/ux/, 2026-11-26)
 - **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
 
+### term backlog (`term-backlog`)
+
+- **Definition**: A term backlog is a list of concepts that settled terms have opened and that no stage has defined yet.
+- **Scope**: One row per concept, with the term that opened it, its warrant and the stage expected to take it (method v1.1 M8). Kept in `domains/<name>/backlog.md`.
+- **Aliases**: backlog
+- **Example**: [prompts backlog](../prompts/backlog.md)
+- **Near miss**: Candidate terms: already drafted entries; a backlog row has no entry yet.
+- **Kind**: thing
+- **Related**: `harvest`
+- **Status**: candidate
+- **Warrant**: Jonathan, 2026-11-27 ("one decided concept opens up far more"); Z39.19 §11.3.1.1 (nominating candidate terms)
+- **History**: 2026-11-27 added with method v1.1 M8 (proposed).
+
+### revision pass (`revision-pass`)
+
+- **Definition**: A revision pass is a happening in which a stage re-reads the earlier entries its harvest touches and records each change as an operation.
+- **Scope**: Clarifications are redefinitions or new near misses; breaking changes are splits, merges, moves or deprecations (G4, G5). Changed entries go back to `candidate` and are retested in that stage (method v1.1 M8).
+- **Aliases**: revision, review of earlier terms
+- **Example**: [prompts stage 3 revision pass](../prompts/stage-3/revision.md)
+- **Near miss**: A round's fixes: they change the entries that round tested, not earlier stages' entries.
+- **Kind**: happening
+- **Related**: `operation`, `term-backlog`
+- **Status**: candidate
+- **Warrant**: Z39.19 §11.3.1 ("periodic review of terminology"); Denton §2.3 step 7
+- **History**: 2026-11-27 added with method v1.1 M8 (proposed).
+
 ### changelog (`changelog`)
 
 - **Definition**: A changelog is a file that records every operation on a taxonomy, newest day first.

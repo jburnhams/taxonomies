@@ -1,4 +1,4 @@
-# Prompts taxonomy: facets (stage 1)
+# Prompts taxonomy: facets
 
 **In one line**: three proposed sorting questions for every mechanism the prompts repo
 describes (which part of an agent system, who makes the call, when it acts), plus two
@@ -269,3 +269,114 @@ What it shows:
    `ct03`, `ct09`, `ct12`). Proposed rule for raters: the widest reach the section
    describes; if none is stated, the store's usual home.
 5. **Arrival does not apply** to five of nine, so it is Set C, not Set A.
+
+## Stage 3: control area
+
+**Status**: set A chosen by Jonathan, 2026-11-27 (process step 4). In use from 2026-11-27: round 1 passed J23 on both facets and every other ending condition holds ([review](./stage-3/rounds/round-1/review.md)). Samples: [`stage-3/samples.md`](./stage-3/samples.md);
+terms: [`stage-3/harvest.md`](./stage-3/harvest.md); earlier entries this stage changed:
+[`stage-3/revision.md`](./stage-3/revision.md).
+
+These facets sort items whose `area` is `control`. Stage 1's `decider` and `moment`
+still apply to them; the questions below are the ones only this area asks.
+
+### How these were found
+
+- **Compared unlike build items**: SQL safety by AST (`k01`), retries that make
+  non-idempotent tools dangerous (`k02`), and the run, risk and steering sections around
+  them. What they govern differs: one command before it runs, the course of a whole run,
+  text arriving from outside, or a finished change waiting to merge. So does what they do
+  when they act: let it through or refuse it, put it to a person, set a level that
+  other rules read, add text that changes course, run something again, or stop the run.
+- **Reused the repo's own recurring questions**: approval's "Risk classification: static
+  rules vs. LLM-based judgment" is stage 1's `decider`; risk's "Two granularities, one
+  problem" (action-level and PR-level, `kr25`) is `target`; steering's "Whether it blocks
+  the run" and recovery's resume, retry and replay sections are `response`. Approval's
+  "Where the enforcement actually lives: harness vs. prompt" (`kr02`) is Set C's
+  `enforcement`.
+- **Checked against general categories** (OBO Foundry Table 1): `target` is the thing
+  governed (continuant or process), `response` a happening.
+- **Checked against a general lens** (prior knowledge ⚠, not a stored source): security
+  practice sorts controls as preventive, detective and corrective. Tried as a facet on the
+  bare items, it had no answer for the endings items (`kt04`) and put risk grading and loop
+  warnings together, so it is not proposed; `response` keeps its distinctions finer.
+
+### Set A (chosen): target, response
+
+### Target (`target`)
+
+- **Question**: What does it govern?
+- **Principle**: the thing the control decides about. A limit set once for a whole run on
+  what its tools may do (a permission mode, a sandbox, a sub-agent's tool scope or
+  authority) governs actions, so it is `tool-action`; whether the run goes on, where it
+  goes and how it ends is `run-course`.
+- **Kind**: thing
+- **Values**: `tool-action`, `run-course`, `incoming-text`, `work-product`
+- **Order**: from the smallest unit (one action) to the run, then what comes into it and
+  what goes out of it.
+- **Agreement**: Fleiss' κ 0.83, non-Claude pair 0.75. Round 1, 2026-11-27, 24 in-area items ([results](./stage-3/rounds/round-1/results.md)).
+- **Unsorted**: none yet.
+
+### Response (`response`)
+
+- **Question**: What does it do when it acts?
+- **Principle**: the outcome it can produce. When it can produce several (a classifier
+  that allows, asks or refuses), the one the item is about; if the item is about the
+  whole choice, `gate`.
+- **Kind**: happening
+- **Values**: `gate`, `ask-person`, `grade`, `redirect`, `recover`, `halt`
+- **Order**: decide it now, pass it up, set a level for later, change course, try
+  again, stop.
+- **Agreement**: Fleiss' κ 0.80, non-Claude pair 0.70. Round 1, 2026-11-27, 24 in-area items.
+- **Unsorted**: none yet.
+
+### Set B: target only
+
+Drops `response`. One facet with stage 1's `decider` and `moment` is still three
+questions, but it loses the repo's own split between blocking and non-blocking control
+(steering §"Whether it blocks the run") and competency questions 22 and 23 in
+[`scope.md`](./scope.md).
+
+### Set C: Set A plus enforcement
+
+Adds **Enforcement** (`enforcement`): *What makes it hold?* `prompt-only` (text the model
+is asked to follow; nothing stops it), `harness-check` (code or a second model in the
+harness checks and can refuse), `environment-boundary` (the operating system, container
+or network makes the action impossible), `outside-system` (a system outside the harness,
+such as branch protection or CI). This is approval's "harness vs. prompt" finding
+(`kr02`). In the bare test it was `harness-check` for six of the seven items it applied
+to, the pattern that made stage 1's `rule` hard to score, and it overlaps `decider`
+(`prompt-only` is nearly always `working-model`). Its ideas can stay glossary terms
+(`sandbox`, `blocking-monitor`).
+
+### Bare-facet test (step 5), Set A
+
+Ten items `kt01`-`kt10` from [`stage-3/samples.md`](./stage-3/samples.md), classified
+by Claude with the names and value entries above, 2026-11-27. Enforcement is noted for
+Set C.
+
+| ID | Item | In area | target | response | enforcement | Hesitation |
+|---|---|---|---|---|---|---|
+| `kt01` | What code enforces: labels, readiness and authority | yes | work-product | gate | harness-check | labels live on GitHub, so enforcement could be `outside-system` |
+| `kt02` | `blocker` suspends, and it reuses machinery that exists | yes | run-course | halt | harness-check | in a memory doc; suspension is control |
+| `kt03` | Trust gating, and why CI defeats it | yes | incoming-text | gate | harness-check | — |
+| `kt04` | Tools marked as endings | yes | run-course | halt | harness-check | designing how a run may end, not stopping one: `halt` by rule |
+| `kt05` | What a risk output should contain | yes | work-product | grade | — | a spec of an output; enforcement does not apply |
+| `kt06` | A history-based predictor as an input, not a replacement | yes | work-product | grade | harness-check | — |
+| `kt07` | How long the text lasts | yes | run-course | redirect | prompt-only | — |
+| `kt08` | `Edit` gains a whitespace-normalised retry | no (`tool`) | — | — | — | a tool's own matching, not whether it may run |
+| `kt09` | Replay: when a framework runs your step again | yes | tool-action | recover | harness-check | the step is a tool call or a whole node; took the item's examples |
+| `kt10` | Escalation triggers (v1 ships simple; upgrade only on evidence) | no (`operations`) | — | — | — | a design roadmap; "escalation" here means upgrading a mechanism (harvest homonym 1) |
+
+What it shows:
+
+1. **Two of ten are not in the area**, so raters answer `in_area` as in stage 2, and
+   stage-3 facets are scored on items the majority puts in the area.
+2. **`target` works** on all eight; every value is used. `kt09` needs the principle's
+   rule (a step a framework replays is an action).
+3. **`response` works** on all eight; five of six values used. `ask-person` did not come
+   up in ten items; the round-1 items include approvals that put a call to a person
+   (`kr13`, `kr29`), so round 1 tests it.
+4. **`halt` covers both stopping a run and designing its endings** (`kt02`, `kt04`). The
+   value entry says so; round 1 checks raters read it the same way.
+5. **Enforcement is nearly constant** (six of seven `harness-check`), so it is Set C,
+   not Set A.

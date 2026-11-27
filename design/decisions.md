@@ -4,8 +4,8 @@
 Jonathan can make; the six needed before the first domain were decided on 2026-11-25,
 and thirteen can wait.
 
-**Status**: eight decided (J1, J2, J5-J8 on 2026-11-25, J14 and J23 on 2026-11-26), twelve open; six more proposed
-(J20-J26, method v1.1), 2026-11-26; six more (J27-J32, growth), 2026-11-27.
+**Status**: eight decided (J1, J2, J5-J8 on 2026-11-25, J14 and J23 on 2026-11-26), twelve open; seven more proposed
+(J20-J22, J24-J26 and J33, method v1.1), 2026-11-26 and 2026-11-27; six more (J27-J32, growth), 2026-11-27.
 [`process.md`](./process.md) and [`spec.md`](./spec.md) follow the decisions, and follow
 the recommendation for each open row so they read as a whole. Rejecting an open
 recommendation means editing the rule or step named in its row. These include the five
@@ -58,6 +58,7 @@ and that terms grow, get clarified or change as research goes. Each is argued in
 | J30 | Version a glossary by its changelog date; mark breaking lines `Breaking: ...`; domain repos catch up at their next pass, not in the same commit (amends G6 across repos) (R6) | Yes | Evans pp. 3-4; reasoning (one owner) | spec §6, G6, T12 |
 | J31 | Run intake at each review, at the start of any thread on a domain, and on a weekly scheduled task the day after the prompts pass (R7) | Yes; the scheduled task only once Jonathan says so | Z39.19 §11.3.1 | spec G7, process step 12 |
 | J32 | Each domain repo's `CLAUDE.md` says: look up first, request on a miss, request clarify or change rather than work round a term, run `changes` at the start of a pass | Yes | Feitelson §III (6.9% agreement unaided) | process step 11 |
+| J33 | Each stage keeps a term backlog, revises earlier entries by G4 operations, and retests what it changed | Yes (M8), asked for by Jonathan 2026-11-27 | Z39.19 §11.3.1, §11.3.1.1, §11.3.1.3; Denton §2.3 step 7 | process steps 3, 10; spec §1 |
 
 ## Can wait until it comes up
 
