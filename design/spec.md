@@ -45,6 +45,7 @@ what shows whether agents in the domain repo actually use it.
 | `domains/<name>/glossary.md` | one entry per concept | yes |
 | `domains/<name>/map.md` | links to other contexts' terms and the shared kernel | once a second context exists |
 | `domains/<name>/changelog.md` | every change as a named operation | yes |
+| `domains/<name>/requests.md` | every term request with its outcome and date ([growth R1](./growth.md#rules-for-an-intake), J27) | yes, once in use |
 | `domains/<name>/patterns/<id>.md` | one pattern per file (design domains only) | no |
 
 The structure and format are fixed here, before any terms are collected, because the
@@ -339,6 +340,8 @@ the same **Status** field as terms; Alexander's asterisk ratings are ⚠ not sto
   term or a change, with its reason and evidence. The proposal is recorded as a `candidate`
   ([Z39.19 §§11.1.6, 11.3.1.1-11.3.1.2, pp. 93-97][z39]). An agent writing docs that
   needs a term not in the glossary adds a candidate entry rather than inventing a word.
+  From a domain repo, a proposal arrives as a `term-request` issue in this repo, and is
+  answered and approved by [`growth.md`](./growth.md) R1-R5 (J27-J29, 2026-11-27).
 - **G3. Status.** `candidate` (proposed, usable, not yet agreed), `approved`, or
   `deprecated` (kept for lookup, points to its replacement). Candidates are marked so
   they cannot be mistaken for agreed terms ([Z39.19 §11.1.6][z39]). This replaces the
@@ -359,7 +362,8 @@ the same **Status** field as terms; Alexander's asterisk ratings are ⚠ not sto
   term"). Delete only a term added in error and never used ([same][z39]).
 - **G6. A rename is a model change.** Update the glossary, the aliases and every use in
   the repo in the same commit: "a change in the language is a change to the model"
-  ([Evans pp. 3-4][ev]).
+  ([Evans pp. 3-4][ev]). Uses in a domain repo change at its next pass, from the
+  `Breaking:` line in the domain changelog ([`growth.md`](./growth.md) R6, J30).
 - **G7. Review.** Review the unsorted lists and candidates at intervals set by how fast
   terms change ([Z39.19 §11.3.1, p. 96][z39]), and at least whenever the domain is being
   actively worked on (◆ J10). Shared-kernel changes need every affected context's owner

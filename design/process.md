@@ -245,6 +245,8 @@ commitment to a common ontology is a guarantee of consistency, but not completen
   in the same commit as the decision (G6).
 - Add the mechanical checks (T1 to T6) and the alias-drift count (T12) to the repo's
   checks once a script exists (◆ J19).
+- Add the four lines on looking up and requesting terms to the domain repo's
+  `CLAUDE.md` (J32; [`growth.md`](./growth.md#what-a-domain-repos-instructions-say)).
 
 ## Step 12. Maintain
 
@@ -262,6 +264,10 @@ commitment to a common ontology is a guarantee of consistency, but not completen
 - **Across contexts**: once a second domain exists, write `map.md` with `closeMatch` as
   the default (C3), and move only truly shared terms to the shared kernel, changed only
   with every owner's agreement (C2; [Evans p. 31][ev]).
+- **Requests** (J27-J31, 2026-11-27): run `python3 tools/term.py intake --write` at each
+  review, at the start of any thread on the domain, and in the Tuesday scheduled task;
+  answer each `term-request` issue by [`growth.md`](./growth.md) R1-R6, comment the
+  outcome and close it ([Z39.19 §§11.3.1.1-11.3.1.2, pp. 96-97][z39]).
 
 ## Light version (small domains)
 

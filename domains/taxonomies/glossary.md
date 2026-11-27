@@ -527,8 +527,8 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 
 ### request (`request`)
 
-- **Definition**: A request is a record in which a domain repo asks for a new term, a clarification or a change, and which keeps its outcome.
-- **Scope**: Written in the domain repo's `term-requests.md` with an Ask of `new`, `clarify` or `change`; collected into `domains/<name>/requests.md` and answered there with an outcome and date. Excludes a `candidate` entry an agent adds to a glossary directly (G2), which is a term, not a request.
+- **Definition**: A request is an issue in which a domain repo asks for a new term, a clarification or a change, and which keeps its outcome.
+- **Scope**: A `term-request` issue in this repo with an Ask of `new`, `clarify` or `change`; logged in `domains/<name>/requests.md` and answered there with an outcome and date. Excludes a `candidate` entry an agent adds to a glossary directly (G2), which is a term, not a request.
 - **Aliases**: term request
 - **Example**: [growth.md, the request record](../../design/growth.md#the-request-record)
 - **Near miss**: An unsorted list entry: an item waiting for a facet value, not a word waiting for a term.
@@ -536,7 +536,7 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Related**: `operation`, `warrant`
 - **Status**: candidate
 - **Warrant**: Jonathan's words ("for clients to ask what existing terms to use for a concept or for a new one to be created", 2026-11-27); "request" 33 in design/growth.md (2026-11-27)
-- **History**: 2026-11-27 added (design/growth.md, proposed)
+- **History**: 2026-11-27 added (design/growth.md, proposed); 2026-11-27 redefine (an issue, not a file record, after Jonathan chose issues for J27)
 
 ### breaking operation (`breaking-operation`)
 

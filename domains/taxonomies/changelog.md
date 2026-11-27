@@ -5,6 +5,7 @@ named on each line (G1); Jonathan can reverse any of them.
 
 ## 2026-11-27
 
+- **redefine** `request`: a `term-request` issue in this repo, not a record in a domain repo's file (Jonathan chose issues for J27). Approved by: Claude (G1).
 - **add** `term-backlog` and `revision-pass` as `candidate` terms, for method v1.1 M8
   (proposed, J33): each stage keeps a backlog of opened concepts and revises earlier
   entries by named operations. Proposed by: Claude, after Jonathan asked for it.

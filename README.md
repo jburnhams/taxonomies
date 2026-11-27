@@ -74,9 +74,10 @@ answers. Published at <https://jburnhams.github.io/taxonomies/>.
 **Asking for a term.** From any repo, with no checkout:
 `curl -fsSL https://raw.githubusercontent.com/jburnhams/taxonomies/main/tools/term.py | python3 - lookup prompts "approval mode"`
 gives the term to use, or the closest ones; `changes <domain> --since <date>` lists what
-changed, breaking changes marked. When nothing fits, the domain repo adds a request to its
-own `term-requests.md`; this repo collects and answers them in `domains/<name>/requests.md`.
-The flow and its rules (proposed) are in [`design/growth.md`](./design/growth.md).
+changed, breaking changes marked. When nothing fits, file a
+[term request](https://github.com/jburnhams/taxonomies/issues/new?template=term-request.yml)
+issue here; a weekly intake (Tuesdays) answers it on the issue and logs it in
+`domains/<name>/requests.md`. Rules (adopted 2026-11-27): [`design/growth.md`](./design/growth.md).
 
 ## Sources
 
