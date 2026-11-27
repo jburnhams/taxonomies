@@ -7,7 +7,7 @@ named on each line (G1); Jonathan can reverse any of them.
 
 - **add** the round-1 kit in `rounds/round-1/` (40 items `r01`-`r40`, three shuffled
   prompts, name test of 62 labels). Proposed by: Claude.
-- **add** `map.md`: `eval`, `benchmark` exactMatch `prompts`; `language-model` closeMatch;
+- **add** `map.md` (requests filed as issues #20, #21): `eval`, `benchmark` exactMatch `prompts`; `language-model` closeMatch;
   `llm-judge` broadMatch `prompts:second-model`; `recording-session` relatedMatch
   `prompts:session`; two requests to `prompts` (clarify "prompt", new `retrieval`).
   Proposed by: Claude, after Jonathan asked that voice align with `prompts`.

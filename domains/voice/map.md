@@ -38,4 +38,4 @@ the same concept.
 - **new `prompts: retrieval`**: no term in `prompts`, though the prompts repo uses
   "retriev-" about 400 times; voice has `retrieval` (stage 1 candidate) and would map to it.
 
-Issue numbers are added when the requests are filed.
+Filed 2026-11-27 as [#20](https://github.com/jburnhams/taxonomies/issues/20) (clarify "prompt") and [#21](https://github.com/jburnhams/taxonomies/issues/21) (new `retrieval`); the Tuesday intake answers them.
