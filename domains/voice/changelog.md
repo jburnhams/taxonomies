@@ -5,6 +5,17 @@ named on each line (G1); Jonathan can reverse any of them.
 
 ## 2026-11-27
 
+- **adopt** stage 1 (process step 10): `scope.md` status `in use`; 58 entries `approved`,
+  4 left `candidate` (changed below) for round 2. T10: all 13 competency questions are
+  answered (`rounds/round-1/review.md`). Approved by: Claude (G1). Jonathan can veto.
+- **rename** `demonstration` → "coaching demo" (ID kept, "demonstration" kept as an
+  alias): both name-test readers read it as an example shown to a model. **Redefine**
+  `coaching` (excludes feedback after a take), `style` (near miss for the habit sense) and
+  `whole-voice` (a part named through a metric or model counts as named; stored features
+  default to `expression`). Approved by: Claude (G1).
+- **record** round 1 (run on omarchy, `f05f2e0`): Fleiss' κ area 0.96, modality 1.00,
+  trait 0.81; openai-gemini 0.97, 1.00, 0.77; pass (J23). `r20` goes to Unsorted (three
+  different values). Name test: 59 of 62 labels (95%), each reader 60 of 62.
 - **decide** facet set A (`area`, `modality`, `trait`), by Jonathan on the decision card,
   process step 4.
 - **add** the round-1 kit in `rounds/round-1/` (40 items `r01`-`r40`, three shuffled

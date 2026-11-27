@@ -10,8 +10,8 @@ the expression of the spoken voice" without anyone having written that list. Sta
 needs facets that work across the whole repo; each area gets its own finer questions in a
 later stage (proposal M1 in [`design/method-v1.1.md`](../../design/method-v1.1.md)).
 
-**Status**: set A chosen by Jonathan, 2026-11-27 (process step 4). Its values are
-`candidate` until round 1 passes.
+**Status**: set A chosen by Jonathan, 2026-11-27 (process step 4). In use from 2026-11-27,
+after round 1 passed J23 on every facet ([results](./rounds/round-1/results.md)).
 
 ## How these were found
 
@@ -64,8 +64,8 @@ later stage (proposal M1 in [`design/method-v1.1.md`](../../design/method-v1.1.m
   - `governance`: rights and protection: privacy, memorisation, consent, licences,
     watermarks, provenance.
 - **Order**: by sequence (the order the work happens), then the two cross-cutting areas.
-- **Unsorted**: none yet.
-- **Agreement**: not yet tested.
+- **Unsorted**: none.
+- **Agreement**: Fleiss' κ 0.96, openai-gemini 0.97; 2026-11-27, 40 items (round 1), Claude Opus 5.5, GPT-6.2-Astra, Gemini 4 Carbon High.
 
 ### Modality (`modality`)
 
@@ -79,8 +79,8 @@ later stage (proposal M1 in [`design/method-v1.1.md`](../../design/method-v1.1.m
   - `both`: the item applies to both voices as written (a rule about held-out data, a
     privacy rule, a judge bias that holds for audio and text).
 - **Order**: by size of the repo's share, then the shared value.
-- **Unsorted**: none yet.
-- **Agreement**: not yet tested.
+- **Unsorted**: none.
+- **Agreement**: Fleiss' κ 1.00, openai-gemini 1.00; 2026-11-27, 40 items (round 1), same raters. Only 2 items were `both`.
 
 ### Trait (`trait`)
 
@@ -99,8 +99,8 @@ later stage (proposal M1 in [`design/method-v1.1.md`](../../design/method-v1.1.m
   - `whole-voice`: the voice as a whole, with no one part named: a licence for a cloning
     model, a runtime size, a privacy rule about the archive.
 - **Order**: from who, to how, to what, to how well; the whole last.
-- **Unsorted**: none yet.
-- **Agreement**: not yet tested.
+- **Unsorted**: [`r20`](./samples.md#round-1-test-40) (stored F0, energy and durations; three different values), 2026-11-27.
+- **Agreement**: Fleiss' κ 0.81, openai-gemini 0.77; 2026-11-27, 40 items (round 1), same raters. 6 of 8 disagreements involved `whole-voice`, which has been redefined.
 
 ## Set B (alternative): area, modality, origin
 

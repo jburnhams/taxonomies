@@ -33,7 +33,10 @@ Built with the method in [`design/process.md`](../../design/process.md) (version
   app. Where they conflict, Jonathan's reading wins.
 - **Owner**: Jonathan. Agents approve changes that pass T1-T6 with a logged reason;
   Jonathan reviews [`changelog.md`](./changelog.md) and can veto (J8, spec G1).
-- **Status**: `draft`, stage 1 started 2026-11-27. Item excerpts are public in this repo
+- **Status**: stage 1 `in use`, 2026-11-27, after round 1 met the ending conditions
+  ([results](./rounds/round-1/results.md), [review](./rounds/round-1/review.md),
+  [name test](./rounds/round-1/name-test/results.md)). Approved by Claude under G1;
+  Jonathan can veto. Stage 1 started 2026-11-27. Item excerpts are public in this repo
   by Jonathan's choice (2026-11-27), though voice-research is private.
 
 ## Stages (proposal M1)
@@ -44,7 +47,7 @@ seven parts (the agendas' areas A-K). So it is built in stages inside one contex
 
 | Stage | Covers | Facets | Status |
 |---|---|---|---|
-| 1. Kernel | the words every part uses (voice, take, teacher, student, reference clip, style, synthetic data, held-out set, listening test, LLM judge, ...) and the split into areas | set A (Jonathan 2026-11-27): `area`, `modality`, `trait` ([`facets.md`](./facets.md)) | draft 2026-11-27 |
+| 1. Kernel | the words every part uses (voice, take, teacher, student, reference clip, style, synthetic data, held-out set, listening test, LLM judge, ...) and the split into areas | set A (Jonathan 2026-11-27): `area`, `modality`, `trait` ([`facets.md`](./facets.md)) | in use 2026-11-27 after one round |
 | 2+. Areas | one at a time, in the order the repo's work reaches them (J10). Likely first: `evaluation` (most warrant: MOS 189, WER 247, judge 264, metric 151 uses) or `generation` (teacher 223, student 206, fine-tun- 329) | per area | not started |
 
 ## Competency questions (stage 1)
