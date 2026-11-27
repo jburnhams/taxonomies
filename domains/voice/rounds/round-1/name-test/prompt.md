@@ -1,0 +1,66 @@
+# Name test (T9), voice stage 1: labels shown to a fresh reader
+
+The repo is research into cloning one person's voice, spoken and written: making a small local text-to-speech model that sounds like him, from his own recordings plus audio from a larger voice-cloning model, and a writing assistant that writes his emails and messages like him. These labels name things in that repo: parts of the work, which voice, parts of a voice, and the data, models and tests involved. For each label below, say in one sentence what you think it means in that repo. Do not look anything up and do not read any files. Answer as a markdown list in the same order: `- <label>: <your guess>`.
+
+- accent
+- adapter
+- automatic metric
+- baseline
+- benchmark
+- both
+- calibration
+- coaching
+- content
+- coverage
+- demonstration
+- elicitation
+- emotion
+- eval
+- evaluation
+- expression
+- few-shot example
+- fine-tuning
+- generation
+- governance
+- held-out set
+- identity
+- identity embedding
+- language model
+- leakage
+- listening test
+- LLM judge
+- markup
+- memorisation
+- message
+- naturalness
+- observed style
+- operations
+- pairwise judgement
+- preparation
+- prosody
+- real data
+- recording prompt
+- recording session
+- reference clip
+- representation
+- requested style
+- retrieval
+- speaker similarity
+- spoken
+- stance
+- student
+- style
+- style embedding
+- style label
+- style profile
+- synthetic data
+- take
+- teacher
+- text-to-speech model
+- vocal event
+- voice
+- voice cloning
+- watermark
+- whole voice
+- written
+- zero-shot cloning

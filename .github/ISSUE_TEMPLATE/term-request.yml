@@ -14,7 +14,7 @@ body:
     id: domain
     attributes:
       label: Domain
-      options: [prompts, ux, taxonomies]
+      options: [prompts, ux, taxonomies, voice]
     validations: { required: true }
   - type: dropdown
     id: ask
