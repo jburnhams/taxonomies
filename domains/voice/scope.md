@@ -44,7 +44,7 @@ seven parts (the agendas' areas A-K). So it is built in stages inside one contex
 
 | Stage | Covers | Facets | Status |
 |---|---|---|---|
-| 1. Kernel | the words every part uses (voice, take, teacher, student, reference clip, style, synthetic data, held-out set, listening test, LLM judge, ...) and the split into areas | proposed set A: `area`, `modality`, `trait` ([`facets.md`](./facets.md)) | draft 2026-11-27 |
+| 1. Kernel | the words every part uses (voice, take, teacher, student, reference clip, style, synthetic data, held-out set, listening test, LLM judge, ...) and the split into areas | set A (Jonathan 2026-11-27): `area`, `modality`, `trait` ([`facets.md`](./facets.md)) | draft 2026-11-27 |
 | 2+. Areas | one at a time, in the order the repo's work reaches them (J10). Likely first: `evaluation` (most warrant: MOS 189, WER 247, judge 264, metric 151 uses) or `generation` (teacher 223, student 206, fine-tun- 329) | per area | not started |
 
 ## Competency questions (stage 1)
