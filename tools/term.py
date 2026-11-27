@@ -97,7 +97,7 @@ def labels(t):
 
 # ---------- lookup ----------
 
-def lookup(root, domain, query):
+def lookup(root, domain, query, with_issues=False):
     terms = {t["id"]: t for t in records(read(root, f"domains/{domain}/glossary.md"))}
     if not terms:
         sys.exit(f"term.py: no glossary for domain '{domain}' (domains/{domain}/glossary.md)")
@@ -118,6 +118,15 @@ def lookup(root, domain, query):
     scored.sort(key=lambda x: (-x[0], x[1]["id"]))
     near = [t for s, t in scored[:5] if s >= max(2, scored[0][0] // 2)] if scored else []
     asked = [r for r in reqs if q == fold(r["label"]) or (qw and len(qw & words(r["label"] + " " + r.get("Concept", ""))) >= max(1, len(qw) - 1))]
+    if with_issues:  # open issues not yet logged, so both output modes report the same requests
+        try:
+            known = {r["id"] for r in asked}
+            for i in request_issues("open"):
+                if issue_domain(i) == domain and f"issue-{i['number']}" not in known and (
+                        fold(issue_word(i)) == q or (qw and qw <= words(issue_word(i) + " " + i.get("Concept", "")))):
+                    asked.append({"label": issue_word(i), "id": f"issue-{i['number']}", "Outcome": "open", "Asked": i["url"]})
+        except Exception:
+            pass
     return terms, exact, near, asked
 
 
@@ -141,7 +150,7 @@ def show_term(terms, t, why):
 def cmd_lookup(a):
     root = find_root(a.root)
     query = " ".join(a.words)
-    terms, exact, near, asked = lookup(root, a.domain, query)
+    terms, exact, near, asked = lookup(root, a.domain, query, with_issues=True)
     if a.json:
         print(json.dumps({"query": query, "exact": exact, "near": near, "requests": asked}, ensure_ascii=False, indent=1))
     else:
@@ -159,15 +168,6 @@ def cmd_lookup(a):
                 print(show_term(terms, t, "near"))
         else:
             print("No term found.")
-        try:
-            open_issues = [i for i in request_issues("open") if issue_domain(i) == a.domain
-                           and (fold(issue_word(i)) == fold(query) or words(query) <= words(issue_word(i) + " " + i.get("Concept", "")))]
-        except Exception:
-            open_issues = []
-        known = {r["id"] for r in asked}
-        for i in open_issues:
-            if f"issue-{i['number']}" not in known:
-                asked.append({"label": issue_word(i), "id": f"issue-{i['number']}", "Outcome": "open", "Asked": i["url"]})
         if asked:
             print("Already requested:")
             for r in asked:
