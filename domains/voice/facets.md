@@ -1,8 +1,8 @@
 # Voice taxonomy: facets
 
-**In one line**: three proposed sorting questions for every source and finding in
-voice-research (which part of the work, which voice, which part of the voice), plus two
-alternatives, awaiting Jonathan's choice.
+**In one line**: three sorting questions for every source and finding in
+voice-research (which part of the work, which voice, which part of the voice), set A,
+chosen by Jonathan 2026-11-27, with the two alternatives he did not take.
 
 **In plain words**: a facet is a question you can ask of any item, with a short list of
 answers. With these three you could find, for example, "every finding about evaluating
@@ -10,9 +10,8 @@ the expression of the spoken voice" without anyone having written that list. Sta
 needs facets that work across the whole repo; each area gets its own finer questions in a
 later stage (proposal M1 in [`design/method-v1.1.md`](../../design/method-v1.1.md)).
 
-**Status**: proposed 2026-11-27 (process step 4); Jonathan chooses the set. Set A's values
-have draft glossary entries (`candidate`) so the round-1 kit can be built while he
-chooses; they are redone if he picks another set.
+**Status**: set A chosen by Jonathan, 2026-11-27 (process step 4). Its values are
+`candidate` until round 1 passes.
 
 ## How these were found
 
@@ -38,7 +37,7 @@ chooses; they are redone if he picks another set.
 - **Structure (spec S2)**: three dimensions, so facets. In the build sample every `trait`
   value occurs in at least three areas, and both voices occur in five of the seven areas.
 
-## Set A (proposed): area, modality, trait
+## Set A (chosen): area, modality, trait
 
 ### Area (`area`)
 

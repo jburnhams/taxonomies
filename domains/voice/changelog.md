@@ -5,6 +5,8 @@ named on each line (G1); Jonathan can reverse any of them.
 
 ## 2026-11-27
 
+- **decide** facet set A (`area`, `modality`, `trait`), by Jonathan on the decision card,
+  process step 4.
 - **add** the round-1 kit in `rounds/round-1/` (40 items `r01`-`r40`, three shuffled
   prompts, name test of 62 labels). Proposed by: Claude.
 - **add** `map.md` (requests filed as issues #20, #21): `eval`, `benchmark` exactMatch `prompts`; `language-model` closeMatch;

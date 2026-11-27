@@ -7,7 +7,7 @@ the other words people use for it, a definition, an example and a near miss.
 If you reach for one of its aliases, it points you here. Everything here is `candidate`
 until stage 1 passes its rounds (spec G3).
 
-**Status**: stage 1 draft, 2026-11-27. 15 values of proposed facet set A
+**Status**: stage 1 draft, 2026-11-27. 15 values of facet set A (chosen by Jonathan 2026-11-27)
 ([`facets.md`](./facets.md)) and 47 kernel terms, all `candidate`. Field rules:
 [`design/spec.md` §4](../../design/spec.md#4-glossarymd). Counts:
 [`harvest.md`](./harvest.md). Examples link to voice-research (private) at `d02cddc`.
