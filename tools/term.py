@@ -12,7 +12,7 @@ Standard library only, one file, so it runs without a checkout of this repo:
 Commands:
   lookup DOMAIN WORDS...       the term for these words: an exact label match, else the
                                closest terms, plus any request already made for them
-  changes DOMAIN --since DATE  operations logged since DATE (YYYY-MM-DD), breaking ones
+  changes DOMAIN --since DATE  operations logged on or after DATE (YYYY-MM-DD), breaking ones
                                marked, and requests answered since then
   intake [--repos DIR] [--write]
                                (taxonomies repo) new requests in each domain repo's
@@ -102,7 +102,9 @@ def lookup(root, domain, query):
         sys.exit(f"term.py: no glossary for domain '{domain}' (domains/{domain}/glossary.md)")
     reqs = records(read(root, f"domains/{domain}/requests.md"))
     q, qw = fold(query), words(query)
-    exact = [t for t in terms.values() if q in (fold(l) for l in labels(t)) or q == t["id"].replace("-", " ")]
+    # a label match wins; an identifier is a fallback only when no label matches (prompts IDs `model`, `tool` name areas)
+    exact = [t for t in terms.values() if q in (fold(l) for l in labels(t))] \
+        or [t for t in terms.values() if q == t["id"].replace("-", " ")]
     scored = []
     for t in terms.values():
         if t in exact:
@@ -116,6 +118,10 @@ def lookup(root, domain, query):
     near = [t for s, t in scored[:5] if s >= max(2, scored[0][0] // 2)] if scored else []
     asked = [r for r in reqs if q == fold(r["label"]) or (qw and len(qw & words(r["label"] + " " + r.get("Concept", ""))) >= max(1, len(qw) - 1))]
     return terms, exact, near, asked
+
+
+def q_in_labels(t, query):
+    return fold(query) in (fold(l) for l in labels(t))
 
 
 def show_term(terms, t, why):
@@ -142,7 +148,9 @@ def cmd_lookup(a):
         if exact:
             print("Use:")
             for t in exact:
-                why = "preferred label" if fold(t["label"]) == fold(query) else "you used an alias; write the preferred label"
+                why = ("preferred label" if fold(t["label"]) == fold(query)
+                       else "you used an alias or old label; write the preferred label" if q_in_labels(t, query)
+                       else "you used its identifier; write the preferred label")
                 print(show_term(terms, t, why))
         elif near:
             print("No term has this label. Closest terms (check each one's scope and near miss):")
@@ -182,13 +190,13 @@ def changelog_ops(md):
 
 def cmd_changes(a):
     root = find_root(a.root)
-    rows = [r for r in changelog_ops(read(root, f"domains/{a.domain}/changelog.md")) if r[0] > a.since]
+    rows = [r for r in changelog_ops(read(root, f"domains/{a.domain}/changelog.md")) if r[0] >= a.since]
     tids = {t["id"] for t in records(read(root, f"domains/{a.domain}/glossary.md"))}
     # breaking: a rename, split, merge, move or deprecate that names a term, or a line marked "Breaking:"
     brk = lambda t, ops: "Breaking:" in t or bool({o.split()[0] for o in ops} & BREAKING and set(ids_in(t)) & tids)
     reqs = [r for r in records(read(root, f"domains/{a.domain}/requests.md"))
-            if (r.get("Answered") or "")[:10] > a.since]
-    print(f"{a.domain}: changes after {a.since}, newest first")
+            if (r.get("Answered") or "")[:10] >= a.since]
+    print(f"{a.domain}: changes on or after {a.since}, newest first (the day itself is included, so lines seen last time may repeat)")
     if not rows and not reqs:
         print("  none")
     for day, text, ops in rows:

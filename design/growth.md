@@ -147,7 +147,7 @@ near miss, from the asker's side), and the asker's warrant (N2).
   any rename, split, merge, move or deprecate that names a term. The version of a
   glossary is the changelog's date: a domain repo's own changelog says which date it
   checked against ("glossary checked to 2026-11-30"), and its next pass asks for changes
-  since then (◆ J30; reasoning: one owner, so dates are enough and nothing else has to be
+  from that day on, the day itself included so a later change that day is not missed (◆ J30; reasoning: one owner, so dates are enough and nothing else has to be
   kept in step). This amends G6 across repos: in this repo, the rename and every use
   change in one commit as before; in a domain repo, at its next pass, in the docs it
   touches, with T12 (alias drift) counting what is left ([Evans pp. 3-4][ev]).
