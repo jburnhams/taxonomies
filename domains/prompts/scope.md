@@ -15,7 +15,7 @@ same thing the same way.
 
 Built with the method in [`design/process.md`](../../design/process.md) (version 1) and
 [`design/spec.md`](../../design/spec.md), with the large-domain changes proposed in
-[`design/method-v1.1.md`](../../design/method-v1.1.md) (M1-M6, not yet adopted).
+[`design/method-v1.1.md`](../../design/method-v1.1.md) (M1-M8, not yet adopted; M8, the term backlog and revision pass, from stage 3).
 
 - **Context**: [`jburnhams/prompts`](https://github.com/jburnhams/prompts): the research
   docs at the root, the per-source folders' READMEs, and the designs in `agent-design/`
@@ -31,7 +31,7 @@ Built with the method in [`design/process.md`](../../design/process.md) (version
 - **Status**: stage 1 `in use`, 2026-11-26, after round 3 met the ending conditions below
   ([results](./rounds/round-3/results.md), [review](./rounds/round-3/review.md),
   [name test](./rounds/round-3/name-test/results.md)). Approved by Claude under G1;
-  Jonathan can veto. Stage 2 (context area) `in use`, 2026-11-26, after its round 2 met the ending conditions ([review](./stage-2/rounds/round-2/review.md)); set A chosen by Jonathan.
+  Jonathan can veto. Stage 2 (context area) `in use`, 2026-11-26, after its round 2 met the ending conditions ([review](./stage-2/rounds/round-2/review.md)); set A chosen by Jonathan. Stage 3 (control area) `draft`, 2026-11-27: facets proposed, round-1 kit ready ([`stage-3/`](./stage-3/)).
 
 ## Stages (proposal M1)
 
@@ -44,7 +44,8 @@ samples and rounds, inside this one context (one meaning per word across all sta
 |---|---|---|---|
 | 1. Kernel | the 30-40 words every area uses (agent, harness, model, run, turn, tool, MCP server, skill, sub-agent, context file, approval, eval, ...) and the split into areas | `area`, `decider`, `moment` (set A, Jonathan 2026-11-26) | in use 2026-11-26 after three rounds |
 | 2. Context | the `context` area: system prompts, context files, compaction, memory. Chosen over `control` because it has the most words in the repo (memory 1,567 uses; compaction 551) and the repo's own "most useful lens" (memory levels) to start from | `operation`, `content`, `reach` (set A, Jonathan 2026-11-26) | in use 2026-11-26 after two rounds |
-| 3+. Other areas | one at a time, in the order the repo's work reaches them (J10) | per area | not started |
+| 3. Control | the `control` area: approval, permission modes, sandboxes, risk tiers, blocking monitors, steers, recovery, endings. Next by count (approv- 1,313 uses; risk 593) and the area Jonathan's Forge risk design works in. Starts from the [term backlog](./backlog.md) and a [revision pass](./stage-3/revision.md) over earlier entries (M8) | `target`, `response` (set A proposed, awaiting Jonathan) | draft 2026-11-27, round 1 pending |
+| 4+. Other areas | one at a time, in the order the repo's work reaches them (J10) | per area | not started |
 
 A later stage may sort *sources* (harnesses, SDKs, products, protocols) as a second kind
 of item, with `agent-archetypes.md` as its starting point. Stage 1 sorts mechanisms only.
@@ -77,6 +78,16 @@ Answered from `facets.md` and `glossary.md` alone (T10).
 19. What is the difference between a memory, a learning, a note and a retrospective?
 20. What is the difference between progressive disclosure and conditional loading?
 
+## Competency questions (stage 3, control area)
+
+21. Which controls govern one action, which the course of a whole run, which incoming text, and which a finished change?
+22. Which controls settle a case themselves, and which put it to a person?
+23. Which controls change what the agent does next without stopping it, and which stop or suspend the run?
+24. Which mechanisms run something again after a failure, and what is the difference between a retry, a replay and a resume?
+25. What is the difference between an approval, an escalation and a handoff?
+26. What is the difference between a steer and a system reminder?
+27. What sets a change's risk tier, and what records why?
+
 ## Out of scope
 
 - **Stored prompts and source code**: `leaked/`, `skills/` and each source folder's
@@ -107,7 +118,7 @@ Adopt a stage (process step 10) when all of these hold on the same round:
   **Unsorted** with a note, and **Unsorted** holds at most 4 items (about 7%, as in ux).
 - T8 (proposal M4): Fleiss' κ ≥ 0.6 on every facet across three raters from three model
   families, and Cohen's κ ≥ 0.6 on every facet between the two non-Claude raters.
-- T9: a fresh reader guesses at least 80% of the stage's preferred labels right.
+- T9: a fresh reader guesses at least 80% of the stage's preferred labels right, including every earlier entry the stage's revision pass changed (M8).
 - T10: every competency question above is answered, with the answer in `changelog.md`.
 - T11: the Z39.19 §11.2.2 review finds no unmarked synonym and no missing facet.
 - No facet added, split or merged in the last round.

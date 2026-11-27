@@ -13,6 +13,8 @@ model configured to act). The moment values `turn`, `tool-call` and `ending` are
 kernel entries for those concepts. Field rules: [`design/spec.md` §4](../../design/spec.md#4-glossarymd).
 Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a531474`.
 
+**Stage 3** (control area, 2026-11-27, `draft`): 10 values of the proposed set A and 16 terms, all `candidate`; seven earlier entries (`compaction`, `steer`, `handoff`, `approval`, `permission-mode`, `sandbox`, `precedence`) changed by the [revision pass](./stage-3/revision.md) and back to `candidate` until the stage-3 name test.
+
 ## Label choices for Jonathan's veto (J8)
 
 1. **`second-model`** for a separate model call that makes the call, rather than "judge",
@@ -587,15 +589,15 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 ### compaction (`compaction`)
 
 - **Definition**: A compaction is a happening in which a harness replaces older parts of the context window with a shorter form to stay within its limit.
-- **Scope**: Includes summarisation, truncation of old tool results, and anchored or incremental summaries.
+- **Scope**: Includes summarisation, anchored or incremental summaries, and clearing or cutting old tool results already in the context window when the harness does it to fit the limit. Excludes cutting a tool result as it arrives, which is a `truncation` on its own.
 - **Aliases**: summarisation, context compression, auto-compact
 - **Example**: [agent-context-compaction.md](https://github.com/jburnhams/prompts/blob/a531474/agent-context-compaction.md)
-- **Near miss**: Memory consolidation: between runs, for later runs, not to fit this one.
+- **Near miss**: Memory consolidation: between runs, for later runs, not to fit this one. A tool result cut to 30,000 characters when it is returned: that is a `truncation` and nothing older is replaced.
 - **Kind**: happening
-- **Related**: `context-window`
-- **Status**: approved
+- **Related**: `context-window`, `truncation`
+- **Status**: candidate
 - **Warrant**: compaction 501 in 63 files
-- **History**: 2026-11-26 added.
+- **History**: 2026-11-26 added. 2026-11-27 redefine (stage-3 revision pass R1): its scope said "truncation of old tool results" after `truncation` became its own entry in stage 2; scope now says when cutting is part of a compaction and when it is not, and a near miss was added. Back to `candidate` for the stage-3 name test.
 
 ### memory (`memory`)
 
@@ -613,27 +615,28 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 ### steer (`steer`)
 
 - **Definition**: A steer is a message that a harness or second model adds during a run to redirect the agent.
-- **Scope**: Includes system reminders, nudges, loop warnings and a trajectory judge's feedback.
-- **Aliases**: nudge, system reminder, reminder, system-reminder
+- **Scope**: Includes nudges, loop warnings, a reminder of a rule the agent is drifting from, and a trajectory judge's feedback, whatever channel carries them.
+- **Aliases**: nudge
 - **Example**: [agent-run-steering.md](https://github.com/jburnhams/prompts/blob/a531474/agent-run-steering.md)
-- **Near miss**: An approval prompt: asks a person, does not redirect the model. A person's message typed while the agent works (which some harnesses call steering): it is the person's input, `person` deciding, not a steer.
+- **Near miss**: An approval prompt: asks a person, does not redirect the model. A person's message typed while the agent works (which some harnesses call steering): it is the person's input, `person` deciding, not a steer. A `system-reminder` that only reports a fact, such as which tool calls were lost to a restart: it informs, and the agent decides what to do.
 - **Kind**: thing
+- **Related**: `system-reminder`, `loop-detection`
 - **Status**: candidate
-- **Warrant**: steer 103; nudge 108; system-reminder 46
-- **History**: 2026-11-26 added. 2026-11-26 redefine: near miss added after a name-test reader took steer to be a person's mid-run message.
+- **Warrant**: steer 103; nudge 108
+- **History**: 2026-11-26 added. 2026-11-26 redefine: near miss added after a name-test reader took steer to be a person's mid-run message. 2026-11-27 split (stage-3 revision pass R2): the aliases "system reminder", "reminder" and "system-reminder" named a channel that also carries notices that redirect nothing ([agent-run-recovery.md](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-run-recovery.md), "Claude Code: two reminders and a requeue tool"); they moved to the new `system-reminder`. ID and label kept.
 
 ### approval (`approval`)
 
-- **Definition**: An approval is a happening in which a person or a rule allows an action before it runs.
-- **Scope**: Includes permission prompts, allow lists applied by code and an auto-mode classifier's allow.
+- **Definition**: An approval is a happening in which a person, a rule or a second model allows an action before it runs.
+- **Scope**: Includes permission prompts, an `allow-list` applied by code and an auto-mode classifier's allow.
 - **Aliases**: permission prompt, confirmation, consent
 - **Example**: [agent-permissions-approval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-permissions-approval.md)
-- **Near miss**: A review of finished work: after the fact, `code-review`.
+- **Near miss**: A review of finished work: after the fact, `code-review`. A reviewer approving a pull request: allows a change to merge, not an action to run.
 - **Kind**: happening
-- **Related**: `permission-mode`
-- **Status**: approved
+- **Related**: `permission-mode`, `allow-list`, `blocking-monitor`, `escalation`
+- **Status**: candidate
 - **Warrant**: approval 759 in 113 files
-- **History**: 2026-11-26 added.
+- **History**: 2026-11-26 added. 2026-11-27 redefine (stage-3 revision pass R4): the definition named only a person or a rule while its scope included a classifier, which is a `second-model`; near miss for a PR approval added.
 
 ### permission mode (`permission-mode`)
 
@@ -641,12 +644,12 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Scope**: Includes Claude Code's default, plan, accept-edits and auto modes, Codex's approval modes. Excludes other uses of "mode" (Forge's `mode: implement`, Roo Code's personas), which are not this term.
 - **Aliases**: approval mode, approval policy
 - **Example**: [agent-permissions-approval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-permissions-approval.md)
-- **Near miss**: Plan mode as a way of working: it also restricts tools, but its point is planning first.
+- **Near miss**: Plan mode as a way of working: it also restricts tools, but its point is planning first. An approval policy file such as Cursor's `APPROVAL_POLICY.md`: it sets which pull requests need a person's review, not which of a run's actions need an approval ([agent-design/risk.md §12g](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/risk.md)).
 - **Kind**: thing
 - **Related**: `approval`
-- **Status**: approved
+- **Status**: candidate
 - **Warrant**: approval mode 17; permission mode 11; plan mode 81; auto mode 31
-- **History**: 2026-11-26 added; "mode" alone is a homonym (harvest 2) and gets no entry.
+- **History**: 2026-11-26 added; "mode" alone is a homonym (harvest 2) and gets no entry. 2026-11-27 redefine (stage-3 revision pass R5): alias "approval policy" kept (Codex's `approval_policy` setting is this), near miss added for the review-policy file of the same name.
 
 ### sandbox (`sandbox`)
 
@@ -654,23 +657,24 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Scope**: Includes OS sandboxes, containers, micro-VMs and in-process interpreters for code mode.
 - **Aliases**: isolation, container
 - **Example**: [agent-local-compute.md](https://github.com/jburnhams/prompts/blob/a531474/agent-local-compute.md)
-- **Near miss**: A permission mode: decides what is asked, not what can be reached.
+- **Near miss**: A permission mode: decides what is asked, not what can be reached. A git worktree per sub-agent ("worktree isolation"): keeps runs' file changes apart, but each can still reach everything its tools can.
 - **Kind**: thing
-- **Status**: approved
+- **Status**: candidate
 - **Warrant**: sandbox 457 in 102 files
-- **History**: 2026-11-26 added.
+- **History**: 2026-11-26 added. 2026-11-27 redefine (stage-3 revision pass R6): near miss added because the alias "isolation" is also used for worktrees, which limit nothing.
 
 ### handoff (`handoff`)
 
 - **Definition**: A handoff is a happening in which a run passes its work to a person or another run instead of finishing it.
-- **Scope**: Includes Keel's `HandOff` ending and escalation to a human.
-- **Aliases**: hand-off, hand off, escalation
+- **Scope**: Includes Keel's `HandOff` ending and giving a task to a person to finish.
+- **Aliases**: hand-off, hand off
 - **Example**: [agent-permissions-approval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-permissions-approval.md)
-- **Near miss**: A sub-agent's report: returned to its spawner, which carries on.
+- **Near miss**: A sub-agent's report: returned to its spawner, which carries on. An `escalation`: passes one decision to a stricter check and the run carries on once it is answered.
 - **Kind**: happening
-- **Status**: approved
+- **Related**: `escalation`
+- **Status**: candidate
 - **Warrant**: handoff 261; hand-off 17
-- **History**: 2026-11-26 added.
+- **History**: 2026-11-26 added. 2026-11-27 redefine (stage-3 revision pass R3): alias "escalation" removed, because the repo uses it for passing a decision up (a risk tier raised, a command sent to the user for approval: [agent-design/risk.md §3](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/risk.md)), not for passing the work; that sense is the new `escalation`.
 
 ### trigger (`trigger`)
 
@@ -1076,14 +1080,14 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md), tested by 
 
 - **Definition**: Precedence is a rule that says which of two sources of instructions wins when they conflict.
 - **Scope**: Includes the order of nested context files, user over repo files, and a system prompt's core mandates over repo text.
-- **Aliases**: override order, authority
+- **Aliases**: override order
 - **Example**: [agent-context-file-loading.md §4](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-context-file-loading.md), order and the gap between claimed and structural precedence.
-- **Near miss**: Load order: text that comes later may win in practice without any rule saying so.
+- **Near miss**: Load order: text that comes later may win in practice without any rule saying so. A run's `authority`: what the run may do, not which text wins.
 - **Kind**: property
-- **Related**: `framing`
-- **Status**: approved
+- **Related**: `framing`, `authority`
+- **Status**: candidate
 - **Warrant**: precedence 25 in the context docs
-- **History**: 2026-11-26 added (stage 2).
+- **History**: 2026-11-26 added (stage 2). 2026-11-27 redefine (stage-3 revision pass R7): alias "authority" removed, because in the control docs it means what a run may do (the new `authority`); the context docs' "authority" of a file's text stays findable through this entry's near miss and the backlog row on authority postures.
 
 ### staleness (`staleness`)
 
@@ -1135,3 +1139,350 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md), tested by 
 - **Status**: approved
 - **Warrant**: index 80 in the context docs
 - **History**: 2026-11-26 added (stage 2).
+
+## Stage 3: control area, facet values (proposed)
+
+Values of facet set A for the control area ([`facets.md`](./facets.md#stage-3-control-area-proposed)),
+drafted 2026-11-27 so the round-1 kit could be built while Jonathan chooses a set.
+
+### tool action (`tool-action`)
+
+- **Definition**: A tool action is a control target: one action a run's tools would take, or the set of actions a run or sub-agent may take at all.
+- **Scope**: Includes a command or file write waiting for approval, a sandbox's limits, a sub-agent's tool scope and authority, and a step a framework replays. Excludes whether the run as a whole goes on (`run-course`).
+- **Aliases**: command
+- **Example**: [agent-permissions-approval.md §2](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-permissions-approval.md), risk classification of a command.
+- **Near miss**: A tool's own matching or parsing rules (a whitespace-tolerant edit): how the tool works, area `tool`, not whether it may run.
+- **Kind**: thing
+- **Facet**: `target`
+- **Status**: candidate
+- **Warrant**: approv- 189, permission 64, sandbox 48 in the control docs
+- **History**: 2026-11-27 added (stage 3).
+
+### run course (`run-course`)
+
+- **Definition**: A run course is a control target: whether a run goes on, where it is pointed and how it ends.
+- **Scope**: Includes budgets, loop detection, steers, recovery after a crash or a limit, suspension and the allowed endings.
+- **Aliases**: the run
+- **Example**: [agent-run-recovery.md §3](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-run-recovery.md), a resource limit inside a live run.
+- **Near miss**: A run's sub-agent spawning: where work goes next is `coordination`, unless the item is about what the sub-agent may do (`tool-action`).
+- **Kind**: thing
+- **Facet**: `target`
+- **Status**: candidate
+- **Warrant**: retr(y|ies) 40, resume- 26, steer 13, nudge 12 in the control docs
+- **History**: 2026-11-27 added (stage 3).
+
+### incoming text (`incoming-text`)
+
+- **Definition**: Incoming text is a control target: text that reaches the model from outside the people running it, and how much it may direct the agent.
+- **Scope**: Includes tool results, web pages, files from an untrusted workspace, emails and messages from other sessions; trust gating and defences against prompt injection.
+- **Aliases**: untrusted input, external content
+- **Example**: [agent-context-file-loading.md §14](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-context-file-loading.md), trust gating.
+- **Near miss**: A context file's precedence over another one: which instruction text wins, area `context` (`precedence`), unless the item is about refusing text that is not trusted.
+- **Kind**: thing
+- **Facet**: `target`
+- **Status**: candidate
+- **Warrant**: trust 18, prompt injection 7 in the control docs; trust 324 in all
+- **History**: 2026-11-27 added (stage 3).
+
+### work product (`work-product`)
+
+- **Definition**: A work product is a control target: a change or other output a run has finished, before it is merged, published or acted on.
+- **Scope**: Includes a pull request's risk tier, merge gates, protected labels and required reviewers.
+- **Aliases**: the change
+- **Example**: [agent-design/risk.md §6](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/risk.md), the gate.
+- **Near miss**: Checking whether the change is right (tests, review findings): `verification`. How much scrutiny it gets, and whether it may merge without a person, is control.
+- **Kind**: thing
+- **Facet**: `target`
+- **Status**: candidate
+- **Warrant**: risk 129, tier 102 in the control docs
+- **History**: 2026-11-27 added (stage 3).
+
+### gate (`gate`)
+
+- **Definition**: Gate is a control response: the control settles the case itself, letting it through or refusing it.
+- **Scope**: Includes an allow list match, a blocking monitor's verdict, a sandbox refusal, a trust gate and a merge gate. Use it for an item about the whole choice of a control that can allow, ask or refuse.
+- **Aliases**: allow or refuse, allow/deny
+- **Example**: [agent-permissions-approval.md §2g](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-permissions-approval.md), denying in place of prompting.
+- **Near miss**: `ask-person`: the control does not settle it.
+- **Kind**: happening
+- **Facet**: `response`
+- **Status**: candidate
+- **Warrant**: deny 49, refus- 21 in the control docs
+- **History**: 2026-11-27 added (stage 3).
+
+### ask a person (`ask-person`)
+
+- **Definition**: Ask a person is a control response: the control passes the decision to a person and waits for the answer.
+- **Scope**: Includes permission prompts, a command escalated to the user, a pull request held for a required human reviewer, and what counts as the person's answer.
+- **Aliases**: prompt the user
+- **Example**: [agent-permissions-approval.md §2e](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-permissions-approval.md), whose words count and what a bare "yes" approves.
+- **Near miss**: A `handoff`: gives the person the work, not one decision.
+- **Kind**: happening
+- **Facet**: `response`
+- **Status**: candidate
+- **Warrant**: approv- 189, confirm- 58 in the control docs
+- **History**: 2026-11-27 added (stage 3).
+
+### grade (`grade`)
+
+- **Definition**: Grade is a control response: the control sets a level, such as a risk tier or a trust level, that other rules then read.
+- **Scope**: Includes risk tiers and their drivers, a predictor's score, a context file's authority posture, and what a risk output should contain.
+- **Aliases**: tiering, scoring
+- **Example**: [agent-design/risk.md §3](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/risk.md), how the tier is computed.
+- **Near miss**: An eval's score: grades the quality of work, `verification`.
+- **Kind**: happening
+- **Facet**: `response`
+- **Status**: candidate
+- **Warrant**: risk 129, tier 102, driver 28 in the control docs
+- **History**: 2026-11-27 added (stage 3).
+
+### redirect (`redirect`)
+
+- **Definition**: Redirect is a control response: the control adds text that changes what the agent does next, and the run goes on.
+- **Scope**: Includes steers, nudges, loop warnings and a reminder of a rule.
+- **Aliases**: course correction
+- **Example**: [agent-run-steering.md §1](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-run-steering.md), the mechanisms.
+- **Near miss**: A `system-reminder` that only reports a fact: `supply` in the context area, not a control response.
+- **Kind**: happening
+- **Facet**: `response`
+- **Status**: candidate
+- **Warrant**: steer 13, nudge 12, reminder 35 in the control docs
+- **History**: 2026-11-27 added (stage 3).
+
+### recover (`recover`)
+
+- **Definition**: Recover is a control response: the control runs something again or carries it on after it failed or stopped.
+- **Scope**: Includes retries, replays, resuming a run or a delegate, and requeueing lost tool calls.
+- **Aliases**: re-run
+- **Example**: [agent-run-recovery.md §1](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-run-recovery.md), the four positions.
+- **Near miss**: `halt` with a later resume: when the item is about the stop and its wake condition, `halt`; when it is about how the work picks up, `recover`.
+- **Kind**: happening
+- **Facet**: `response`
+- **Status**: candidate
+- **Warrant**: retr(y|ies) 40, resume- 26, replay 14 in the control docs
+- **History**: 2026-11-27 added (stage 3).
+
+### halt (`halt`)
+
+- **Definition**: Halt is a control response: the control stops or suspends a run, or fixes the ways it is allowed to end.
+- **Scope**: Includes run budgets that stop a run, suspension until something resolves, interrupts and aborts, and completion tools that are a run's only endings.
+- **Aliases**: stop
+- **Example**: [agent-design/keel/endings.md §5](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/keel/endings.md), completion tools.
+- **Near miss**: Refusing one action while the run goes on: `gate`.
+- **Kind**: happening
+- **Facet**: `response`
+- **Status**: candidate
+- **Warrant**: interrupt 15, budget 12, suspend- 3 in the control docs; suspend- 132 in all
+- **History**: 2026-11-27 added (stage 3).
+
+## Stage 3: control area terms
+
+Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](./stage-3/harvest.md); all `candidate` until the stage-3 name test.
+
+### escalation (`escalation`)
+
+- **Definition**: An escalation is a happening in which a control passes a decision to a stricter check or a higher risk tier instead of settling it.
+- **Scope**: Includes asking a person to approve a command a rule would not allow, Codex's request to run outside the sandbox, a repeated call that re-triggers an approval, and raising a pull request's tier after validation.
+- **Aliases**: escalate, re-ask
+- **Example**: [agent-permissions-approval.md §5](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-permissions-approval.md), escalation behaviour.
+- **Near miss**: A `handoff`: passes the work, not a decision. "Escalation triggers" in a design roadmap (agent-design/medium.md): conditions for upgrading a mechanism, not this term.
+- **Kind**: happening
+- **Related**: `approval`, `risk-tier`, `handoff`
+- **Status**: candidate
+- **Warrant**: escalat- 36 in the control docs, 182 in all
+- **History**: 2026-11-27 added (stage 3), taking the alias "escalation" from `handoff` (revision pass R3).
+
+### risk tier (`risk-tier`)
+
+- **Definition**: A risk tier is a level from a short ordered list that says how much scrutiny an action or a change gets.
+- **Scope**: Includes action risk levels in approval classifiers and pull-request tiers (low, medium, high) that choose the review run and the gate.
+- **Aliases**: risk level, attention level
+- **Example**: [agent-design/risk.md §3](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/risk.md), a floor, then escalation only.
+- **Near miss**: A memory tier (stage 2): which store a memory lives in, not how risky anything is. "Tier" alone is a homonym and gets no entry.
+- **Kind**: property
+- **Related**: `risk-driver`, `escalation`
+- **Status**: candidate
+- **Warrant**: tier 102 in the control docs; risk level 41 ⚠ not counted by script
+- **History**: 2026-11-27 added (stage 3).
+
+### risk driver (`risk-driver`)
+
+- **Definition**: A risk driver is a typed reason recorded with a risk tier that says what raised it.
+- **Scope**: Includes path and kind rules, size, an authority change, a compatibility change and a predictor's score.
+- **Aliases**: driver, risk factor
+- **Example**: [agent-design/risk.md §11b](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/risk.md), drivers typed by dimension.
+- **Near miss**: A risk dimension (security, correctness, compatibility): the axis a driver is filed under, not the reason itself.
+- **Kind**: thing
+- **Related**: `risk-tier`
+- **Status**: candidate
+- **Warrant**: driver 28 in the control docs, 59 in all
+- **History**: 2026-11-27 added (stage 3).
+
+### allow list (`allow-list`)
+
+- **Definition**: An allow list is a stored set of patterns for commands, paths or tools that code allows, or with a deny list refuses, without asking anyone.
+- **Scope**: Includes Claude Code's permission rules, Codex's prefix rules, deny lists and an approval remembered for the session.
+- **Aliases**: allowlist, deny list, denylist, permission rule
+- **Example**: [agent-permissions-approval.md §3](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-permissions-approval.md), rule and policy definition.
+- **Near miss**: A `permission-mode`: sets which actions need asking at all; an allow list names particular ones.
+- **Kind**: thing
+- **Related**: `approval`, `permission-mode`
+- **Status**: candidate
+- **Warrant**: allowlist or allow list 6 in the control docs, 147 in all; deny list 14 in all
+- **History**: 2026-11-27 added (stage 3). Deny list kept as an alias for now (backlog).
+
+### authority (`authority`)
+
+- **Definition**: Authority is a property of a run: the set of things a run may do on someone's behalf: its permissions, credentials and the principal it acts for.
+- **Scope**: Includes a run's on-behalf-of principal, the permissions a sub-agent inherits, and changes to authority that a security review checks.
+- **Aliases**: privileges
+- **Example**: [agent-subagent-architectures.md §7d](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-subagent-architectures.md), delegation never widens authority.
+- **Near miss**: A context file's authority posture (supreme, advisory, data): how much its text directs the model, not what the run may do (backlog).
+- **Kind**: property
+- **Related**: `permission-mode`, `sandbox`
+- **Status**: candidate
+- **Warrant**: authority 26 in the control docs, 196 in all
+- **History**: 2026-11-27 added (stage 3).
+
+### blocking monitor (`blocking-monitor`)
+
+- **Definition**: A blocking monitor is a second model that reviews an action before it runs and can stop it.
+- **Scope**: Includes Claude Code's auto-mode classifier and Codex's Guardian reviewer.
+- **Aliases**: guardian, security monitor, action monitor
+- **Example**: [agent-permissions-approval.md §2d](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-permissions-approval.md), blocking monitors.
+- **Near miss**: A trajectory judge that runs alongside the agent: comments on the run and blocks nothing (a `steer`).
+- **Kind**: role
+- **Related**: `second-model`, `approval`
+- **Status**: candidate
+- **Warrant**: guardian 54, classifier 36, monitor 26 in the control docs
+- **History**: 2026-11-27 added (stage 3).
+
+### run budget (`run-budget`)
+
+- **Definition**: A run budget is a limit on turns, tokens, cost or time that a run may spend before the harness warns or stops it.
+- **Scope**: Includes turn caps, iteration limits, cost caps and wall-clock limits.
+- **Aliases**: turn cap, iteration limit, cost cap
+- **Example**: [agent-subagent-architectures.md §4](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-subagent-architectures.md), turn and output bounding.
+- **Near miss**: A context budget: limits how much text goes into a request (`truncation`), not how long the run goes on.
+- **Kind**: property
+- **Related**: `halt`
+- **Status**: candidate
+- **Warrant**: budget 12 in the control docs, 464 in all (most are context budgets)
+- **History**: 2026-11-27 added (stage 3).
+
+### loop detection (`loop-detection`)
+
+- **Definition**: Loop detection is a check that spots a run repeating the same call or step and steers, re-asks or stops it.
+- **Scope**: Includes OpenCode's doom-loop check and OpenHands's stuck detector.
+- **Aliases**: stuck detection, doom-loop check, circuit breaker
+- **Example**: [agent-run-recovery.md §4](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-run-recovery.md), when is a retry "the same" retry.
+- **Near miss**: A `retry` limit: caps attempts the harness itself makes, not the agent's own repeats.
+- **Kind**: happening
+- **Related**: `steer`, `escalation`
+- **Status**: candidate
+- **Warrant**: stuck 22, loop detect- 12 in all
+- **History**: 2026-11-27 added (stage 3).
+
+### retry (`retry`)
+
+- **Definition**: A retry is a happening in which the harness or the agent runs a failed call or step again.
+- **Scope**: Includes model-call retries with backoff, tool-call retries, and a fresh attempt at a pipeline step given the last attempt's report.
+- **Aliases**: retrying
+- **Example**: [agent-run-recovery.md §4](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-run-recovery.md).
+- **Near miss**: A `replay`: the framework runs the step again on its own, often after it succeeded.
+- **Kind**: happening
+- **Related**: `replay`, `resume`
+- **Status**: candidate
+- **Warrant**: retr(y|ies) 40 in the control docs, 460 in all
+- **History**: 2026-11-27 added (stage 3).
+
+### replay (`replay`)
+
+- **Definition**: A replay is a happening in which a durable framework runs a step again to rebuild state, so the step's tool calls must be safe to repeat.
+- **Scope**: Includes workflow engines re-executing a node after a restart, and the idempotency keys that make that safe.
+- **Aliases**: re-execution
+- **Example**: [agent-run-recovery.md §6](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-run-recovery.md), when a framework runs your step again.
+- **Near miss**: A `retry`: chosen because the step failed.
+- **Kind**: happening
+- **Related**: `retry`
+- **Status**: candidate
+- **Warrant**: replay 14 in the control docs, 132 in all; idempot- 79 in all
+- **History**: 2026-11-27 added (stage 3).
+
+### resume (`resume`)
+
+- **Definition**: A resume is a happening in which a stopped run or delegate carries on from its saved state instead of starting again.
+- **Scope**: Includes resuming a session by id, Goose's delegate resume and a session moved to a new runner.
+- **Aliases**: resumption
+- **Example**: [agent-run-recovery.md §1](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-run-recovery.md), the four positions.
+- **Near miss**: A fresh attempt that is given the last attempt's report: a `retry`, because the state is not carried on.
+- **Kind**: happening
+- **Related**: `retry`, `suspension`
+- **Status**: candidate
+- **Warrant**: resume- 26 in the control docs, 366 in all
+- **History**: 2026-11-27 added (stage 3).
+
+### suspension (`suspension`)
+
+- **Definition**: A suspension is a happening in which a run stops without ending and waits for a condition to wake it.
+- **Scope**: Includes waiting on a report's resolution, on a person's answer and on an outside event.
+- **Aliases**: suspend
+- **Example**: [agent-design/memory.md §6b](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/memory.md), `blocker` suspends.
+- **Near miss**: An `ending`: the run is over.
+- **Kind**: happening
+- **Related**: `resume`, `halt`
+- **Status**: candidate
+- **Warrant**: suspend- 3 in the control docs, 132 in all
+- **History**: 2026-11-27 added (stage 3).
+
+### completion gate (`completion-gate`)
+
+- **Definition**: A completion gate is a check that refuses to let a run end until its work passes.
+- **Scope**: Includes deterministic checks (tests, build) and computed or provenance halves added to them.
+- **Aliases**: exit gate
+- **Example**: [agent-self-verification.md §2](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-self-verification.md), deterministic completion gates.
+- **Near miss**: A merge gate on a finished change: decides whether it merges, not whether the run may end.
+- **Kind**: thing
+- **Related**: `self-verification`, `halt`
+- **Status**: candidate
+- **Warrant**: completion gate 43 in all
+- **History**: 2026-11-27 added (stage 3).
+
+### prompt injection (`prompt-injection`)
+
+- **Definition**: A prompt injection is a piece of incoming text that tries to make the agent follow instructions its principal did not give.
+- **Scope**: Includes instructions in tool results, web pages, images, files and emails.
+- **Aliases**: injection attack, indirect prompt injection
+- **Example**: [agent-vision-multimodal.md §12](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-vision-multimodal.md), prompt injection through the eyes.
+- **Near miss**: A forged steer: text that pretends to come from the harness ([agent-run-steering.md §2b](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-run-steering.md)); a kind of prompt injection when it arrives in a tool result.
+- **Kind**: thing
+- **Related**: `incoming-text`
+- **Status**: candidate
+- **Warrant**: prompt injection 7 in the control docs, 41 in all
+- **History**: 2026-11-27 added (stage 3).
+
+### trust gate (`trust-gate`)
+
+- **Definition**: A trust gate is a check that refuses to load a workspace's own configuration or context files until a person marks the workspace as trusted.
+- **Scope**: Includes Codex's and Claude Code's workspace trust prompts.
+- **Aliases**: workspace trust, trusted folder
+- **Example**: [agent-context-file-loading.md §14](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-context-file-loading.md), trust gating, and why CI defeats it.
+- **Near miss**: A `permission-mode`: governs actions, not which files are read in.
+- **Kind**: thing
+- **Related**: `context-file`, `incoming-text`
+- **Status**: candidate
+- **Warrant**: trust 18 in the control docs, 324 in all
+- **History**: 2026-11-27 added (stage 3).
+
+### system reminder (`system-reminder`)
+
+- **Definition**: A system reminder is a block of text that the harness adds to a turn, marked as coming from the harness, to tell the agent something.
+- **Scope**: Includes Claude Code's `<system-reminder>` blocks and Pydantic AI's `SystemReminders`, whether they steer or only inform (lost tool calls, a session moved).
+- **Aliases**: reminder, harness notice
+- **Example**: [agent-run-recovery.md §1](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-run-recovery.md), two reminders and a requeue tool.
+- **Near miss**: A `steer`: the purpose (redirecting), which a system reminder is one channel for.
+- **Kind**: thing
+- **Related**: `steer`
+- **Status**: candidate
+- **Warrant**: system-reminder 17 in the control docs, 51 in all; reminder 128 in all
+- **History**: 2026-11-27 split from `steer` (stage-3 revision pass R2): took its aliases "system reminder", "reminder" and "system-reminder" (the last is now the ID).

@@ -1,6 +1,6 @@
 # Method version 1.1: changes for large domains (proposed)
 
-**In one line**: seven changes to process v1 and spec v1 that the prompts domain needs
+**In one line**: eight changes to process v1 and spec v1 that the prompts domain needs
 because it is about thirty times the size of ux: build in stages, draw samples by a
 written rule, test on more items, rate with three model families, and say how a rater run
 through an agent CLI is kept clean.
@@ -12,7 +12,7 @@ little about any one of them. So we split the work into stages, test on bigger s
 and use three raters instead of two, one of them not from the family that wrote the
 definitions.
 
-**Status**: proposed 2026-11-26, not adopted (◆ J20-J26 in
+**Status**: proposed 2026-11-26, not adopted (◆ J20-J22, J24-J27 in
 [`decisions.md`](./decisions.md)). The prompts domain (`domains/prompts/`) follows these
 proposals while they are open, as v1 did with its open recommendations; each one says
 what it changes. When Jonathan adopts them, they are folded into
@@ -146,6 +146,39 @@ three ways that matter:
   already named the thing; Denton's test classification checks that "all the original
   entities can be described" ([§2.3 step 4][den]), which needs enough text to describe.
 - **Changes**: process steps 2 and 5.
+
+## M8. Each stage grows the vocabulary and revises what came before (◆ J27)
+
+- **Change**: three standing steps in every stage after the first.
+  1. **Term backlog**. `domains/<name>/backlog.md` lists concepts that a settled term
+     opens but no stage has defined yet: narrower kinds, neighbours named in a near miss,
+     and words raters or name-test readers reached for. Each row gives the concept, the
+     term that opened it, its warrant and the stage expected to take it. A stage starts
+     by taking its area's rows and ends by adding the rows it opened.
+  2. **Revision pass**. Before drafting, the stage re-reads every earlier entry its
+     harvest touches. It records each finding as one G4 operation: **redefine** or a new
+     near miss for a clarification; **split**, **merge**, **move** or **deprecate** for a
+     breaking change. Breaking changes keep the old ID and label findable (G5), and list
+     the docs in the domain repo that use the old sense, for a rename (G6).
+  3. **Retest**. Every earlier entry changed by the pass goes back to `candidate`. It is
+     tested in the stage's own rounds (a facet value) or name test (a term), before the
+     stage is adopted.
+- **Why**: Z39.19 calls controlled vocabularies "dynamic instruments" and asks for
+  "periodic review of terminology, establishment of new terms, and replacement of
+  obsolete terms, especially in fields where the terminology changes rapidly"
+  ([Z39.19 §11.3.1, p. 96][z39]). New terms are nominated as candidates when "an
+  appropriate term ... cannot be found" (§11.3.1.1), and "an overused term can be replaced
+  by two or more terms of greater specificity" (§11.3.1.3, p. 97), which is a split.
+  Denton's last step is the same loop: "update terminology as it changes; verify that any
+  new entities can be clearly and accurately classified ... You may need to add or
+  rearrange foci, add a new facet" ([Denton §2.3 step 7][den]). In stage 2 of the prompts
+  domain this happened without a rule. Sixteen terms were added, and `context-file` and
+  `memory` were changed and retested. But `compaction` kept truncation in its scope after
+  `truncation` became its own entry, and that overlap was not caught. Jonathan asked for
+  the rule on 2026-11-27: "one decided concept opens up far more ... existing ones may need
+  clarification or even breaking changes".
+- **Changes**: process steps 3 (harvest takes the backlog and starts with the revision
+  pass) and 10 (adoption needs changed entries retested); spec §1 lists `backlog.md`.
 
 ## Not changed
 

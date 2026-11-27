@@ -4,8 +4,8 @@
 Jonathan can make; the six needed before the first domain were decided on 2026-11-25,
 and thirteen can wait.
 
-**Status**: eight decided (J1, J2, J5-J8 on 2026-11-25, J14 and J23 on 2026-11-26), twelve open; six more proposed
-(J20-J26, method v1.1), 2026-11-26.
+**Status**: eight decided (J1, J2, J5-J8 on 2026-11-25, J14 and J23 on 2026-11-26), twelve open; seven more proposed
+(J20-J22, J24-J27, method v1.1), 2026-11-26 and 2026-11-27.
 [`process.md`](./process.md) and [`spec.md`](./spec.md) follow the decisions, and follow
 the recommendation for each open row so they read as a whole. Rejecting an open
 recommendation means editing the rule or step named in its row. These include the five
@@ -43,6 +43,7 @@ while it is open. J14 was decided the same day (table above).
 | J24 | With three raters, two-of-three is the round's label; three-way splits go to Unsorted | Yes (M5) | Wan et al. §4.2 (voting or deliberation); Z39.19 §11.2.2 | spec T7, T8 |
 | J25 | Rules for a rater run through an agent CLI (empty folder, read-only, record CLI and model) | Yes (M6) | spec T8 ("using only"); reasoning | process step 8 |
 | J26 | An item is a heading plus its opening text; raters sort the mechanism | Yes (M7) | Denton §2.3 step 4; the prompts bare-facet test | process steps 2, 5 |
+| J27 | Each stage keeps a term backlog, revises earlier entries by G4 operations, and retests what it changed | Yes (M8), asked for by Jonathan 2026-11-27 | Z39.19 §11.3.1, §11.3.1.1, §11.3.1.3; Denton §2.3 step 7 | process steps 3, 10; spec §1 |
 
 ## Can wait until it comes up
 

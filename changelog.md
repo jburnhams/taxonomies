@@ -2,6 +2,20 @@
 
 All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md).
 
+## 2026-11-27
+
+**Started stage 3 of the prompts taxonomy, the control area, with a term backlog and a revision pass (branch `claude/project-thread-oneclm`)**. Jonathan said yes to stage 3 and asked that each stage add the new terms a decided concept opens, and clarify or break earlier entries where needed. That became proposal M8, and stage 3 is the first to follow it.
+
+- `design/method-v1.1.md`: new M8 (term backlog, revision pass by G4 operations, retest of changed entries), with Z39.19 §11.3.1 and Denton §2.3 step 7 as warrant.
+- `design/decisions.md`: J27 (proposed).
+- `domains/taxonomies/glossary.md`, `changelog.md`: `term-backlog` and `revision-pass` as `candidate` terms.
+- `domains/prompts/backlog.md`: **new**, 16 rows taken by stage 3 and 8 open.
+- `domains/prompts/stage-3/`: **new**. `sample3.py`, `items.csv`, `samples.md` (104 items from 35 files at prompts `e7d4fb2`), `count3.py`, `harvest.md`, `revision.md` (seven earlier entries changed, R1-R7), and the round-1 kit with a name test for 33 labels in `rounds/round-1/`.
+- `domains/prompts/facets.md`: proposed stage-3 sets A (`target`, `response`), B and C (adds `enforcement`), and a bare test on ten items.
+- `domains/prompts/glossary.md`: 10 value entries and 16 terms for the control area, all `candidate`. `compaction`, `approval`, `permission-mode`, `sandbox` clarified; `steer` split (new `system-reminder`); `handoff` and `precedence` lose the homonym aliases "escalation" and "authority" to new entries. All seven are `candidate` again until the name test. The stage-2 `precedence` alias "authority" clash was found by T2 when `authority` was drafted.
+- `domains/prompts/scope.md`: stage 3 row, competency questions 21-27, T9 now covers entries changed by a revision pass.
+- `domains/prompts/changelog.md`: the operations above.
+
 ## 2026-11-26
 
 **Adopted stage 2 of the prompts taxonomy, the context area (branch `claude/project-thread-oneclm`, PR #15)**. Jonathan chose facet set A (operation, content, reach). With that, every ending condition holds on round 2.

@@ -3,6 +3,12 @@
 Every change as a named operation (spec G4), newest day first. The approving agent is
 named on each line (G1); Jonathan can reverse any of them.
 
+## 2026-11-27
+
+- **add** `term-backlog` and `revision-pass` as `candidate` terms, for method v1.1 M8
+  (proposed, J27): each stage keeps a backlog of opened concepts and revises earlier
+  entries by named operations. Proposed by: Claude, after Jonathan asked for it.
+
 ## 2026-11-26
 
 - **adopt** the domain (process step 10): all 57 terms `approved`, `scope.md` status

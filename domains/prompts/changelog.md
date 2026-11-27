@@ -3,6 +3,31 @@
 Every change as a named operation (spec G4), newest day first. The approving agent is
 named on each line (G1); Jonathan can reverse any of them.
 
+## 2026-11-27
+
+- **add** stage 3 (control area), `draft`: `stage-3/sample3.py`, `items.csv` (104 items
+  at prompts `e7d4fb2`), `samples.md`, `count3.py`, `harvest.md`; facet set A (`target`,
+  `response`) with sets B and C and a bare test in `facets.md`; 10 `candidate` value
+  entries; the round-1 kit and name test in `stage-3/rounds/round-1/`; `scope.md` stage
+  row and competency questions 21-27. Proposed by: Claude, after Jonathan said "Yes
+  please" to stage 3.
+- **add** `backlog.md` (method v1.1 M8, proposed as J27): 16 rows taken by stage 3, 8
+  open. Proposed by: Claude, after Jonathan asked for new terms to be added as each
+  decided concept opens more.
+- **add** 16 `candidate` terms from the backlog: `escalation`, `risk-tier`,
+  `risk-driver`, `allow-list`, `authority`, `blocking-monitor`, `run-budget`,
+  `loop-detection`, `retry`, `replay`, `resume`, `suspension`, `completion-gate`,
+  `prompt-injection`, `trust-gate`, `system-reminder`. T1-T6 clean apart from the listed
+  `operations` flag. Approved by: Claude (G1).
+- **redefine** `compaction` (R1: scope against `truncation`), `approval` (R4: a second
+  model can approve), `permission-mode` (R5: near miss for approval policy files),
+  `sandbox` (R6: near miss for worktree isolation). **split** `steer` (R2: aliases
+  "system reminder", "reminder", "system-reminder" to the new `system-reminder`).
+  **redefine** `handoff` (R3: alias "escalation" to the new `escalation`) and
+  `precedence` (R7: alias "authority" to the new `authority`). All seven back to
+  `candidate` for the stage-3 name test; [`stage-3/revision.md`](./stage-3/revision.md)
+  has the reasons and the G6 list. Approved by: Claude (G1); Jonathan can veto.
+
 ## 2026-11-26
 
 - **add** domain `prompts`: `scope.md` (draft, staged per method v1.1 M1), `harvest.md`,
