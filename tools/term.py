@@ -61,6 +61,7 @@ def read(root, rel):
 def records(md):
     """`### label (`id`)` records with their `- **Field**: value` bullets (spec §1 grammar)."""
     out = []
+    md = re.sub(r"^```.*?^```[ \t]*$", "", md, flags=re.M | re.S)  # templates in code fences are not records
     for m in re.finditer(r"^### (.+?) \(`([\w-]+)`\)[ \t]*\n(.*?)(?=^#{1,3} |\Z)", md, re.M | re.S):
         label, rid, body = m.groups()
         fields, cur = {}, None
