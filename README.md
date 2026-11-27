@@ -61,6 +61,8 @@ Changes for large domains are proposed in
   and areas) started 2026-11-26.
 - [`domains/taxonomies/`](./domains/taxonomies/scope.md): this repo's own method, in use
   since 2026-11-26.
+- [`domains/voice/`](./domains/voice/scope.md): `jburnhams/voice-research` (spoken and
+  written voice cloning), stage 1 (kernel and areas) started 2026-11-27, aligned with `prompts`.
 
 ## Domains and the explorer site
 

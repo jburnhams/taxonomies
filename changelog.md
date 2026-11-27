@@ -4,6 +4,12 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-27
 
+**Started the voice taxonomy for `jburnhams/voice-research` (branch `claude/project-thread-h8atpn`)**. Jonathan asked for a taxonomy for the voice-research repo, aligned with `prompts` where they overlap. It is built in stages, as `prompts` is (method v1.1 M1: 329 items). He chose that item excerpts from the private voice-research repo may be public here.
+
+- `domains/voice/`: **new**. `scope.md`, `sample.py`, `items-all.csv`, `samples.md`, `harvest.md`, `facets.md` (sets A-C, bare test), `glossary.md` (62 `candidate` entries), `map.md` (links to `prompts`), `requests.md`, `changelog.md`, and the round-1 kit in `rounds/round-1/`.
+- `.github/ISSUE_TEMPLATE/term-request.yml`: `voice` added to the domain list.
+- `README.md`: lists the voice domain.
+
 **Recorded Jonathan's answers to J27-J32 and moved term requests to issues (branch `claude/project-thread-8dnulq`)**. Jonathan answered the six growth decisions on decision cards. For J27 he chose GitHub issues in this repo over the proposed `term-requests.md` file in each domain repo. He took the recommendation on the other five, including the weekly Tuesday intake task.
 
 - `.github/ISSUE_TEMPLATE/term-request.yml`: **new**. The term-request form (domain, ask, word, term, concept, looked at, example, warrant, asked), labelled `term-request`.
