@@ -5,6 +5,10 @@ named on each line (G1); Jonathan can reverse any of them.
 
 ## 2026-11-27
 
+- **decide** stage-3 facet set A (`target`, `response`), by Jonathan on the decision card,
+  process step 4. **adopt** stage 3 (process step 10): `scope.md` status `in use`; the 10
+  values, 16 terms and the seven revised entries `approved`. Approved by: Claude (G1), on
+  Jonathan's choice; Jonathan can veto.
 - **record** stage-3 round 1 (run on omarchy by the coordinator, `cc4b0e8`): Fleiss' κ
   target 0.83, response 0.80; non-Claude pair 0.75, 0.70; pass (J23). Name test 94% and
   97%, all seven revised entries right. **rename** value `grade` → "set a level" (ID

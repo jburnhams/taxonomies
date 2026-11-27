@@ -4,6 +4,12 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-27
 
+**Adopted stage 3 of the prompts taxonomy, the control area (branch `claude/project-thread-oneclm`, PR #17)**. Jonathan chose facet set A (target, response). With that, every ending condition holds on round 1.
+
+- `domains/prompts/facets.md`, `scope.md`, `stage-3/rounds/round-1/review.md`: stage 3 is `in use`, set A is marked chosen.
+- `domains/prompts/glossary.md`: the stage-3 values and terms, and the seven entries the revision pass changed, are `approved`.
+- `domains/prompts/changelog.md`: the decide and adopt operations.
+
 **Scored prompts stage-3 round 1 and the name test (branch `claude/project-thread-oneclm`, PR #17)**. Both facets pass J23 (Fleiss 0.83 and 0.80, non-Claude pair 0.75 and 0.70) and both name-test readers passed (94%, 97%), including the seven entries the revision pass changed. Stage 3 waits only on Jonathan's choice of facet set.
 
 - `domains/prompts/stage-3/rounds/round-1/name-test/results.md`, `review.md`: **new**.

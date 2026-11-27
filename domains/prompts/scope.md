@@ -31,7 +31,7 @@ Built with the method in [`design/process.md`](../../design/process.md) (version
 - **Status**: stage 1 `in use`, 2026-11-26, after round 3 met the ending conditions below
   ([results](./rounds/round-3/results.md), [review](./rounds/round-3/review.md),
   [name test](./rounds/round-3/name-test/results.md)). Approved by Claude under G1;
-  Jonathan can veto. Stage 2 (context area) `in use`, 2026-11-26, after its round 2 met the ending conditions ([review](./stage-2/rounds/round-2/review.md)); set A chosen by Jonathan. Stage 3 (control area) `draft`, 2026-11-27: facets proposed, round-1 kit ready ([`stage-3/`](./stage-3/)).
+  Jonathan can veto. Stage 2 (context area) `in use`, 2026-11-26, after its round 2 met the ending conditions ([review](./stage-2/rounds/round-2/review.md)); set A chosen by Jonathan. Stage 3 (control area) `in use`, 2026-11-27, after round 1 met the ending conditions ([review](./stage-3/rounds/round-1/review.md)); set A chosen by Jonathan.
 
 ## Stages (proposal M1)
 
@@ -44,7 +44,7 @@ samples and rounds, inside this one context (one meaning per word across all sta
 |---|---|---|---|
 | 1. Kernel | the 30-40 words every area uses (agent, harness, model, run, turn, tool, MCP server, skill, sub-agent, context file, approval, eval, ...) and the split into areas | `area`, `decider`, `moment` (set A, Jonathan 2026-11-26) | in use 2026-11-26 after three rounds |
 | 2. Context | the `context` area: system prompts, context files, compaction, memory. Chosen over `control` because it has the most words in the repo (memory 1,567 uses; compaction 551) and the repo's own "most useful lens" (memory levels) to start from | `operation`, `content`, `reach` (set A, Jonathan 2026-11-26) | in use 2026-11-26 after two rounds |
-| 3. Control | the `control` area: approval, permission modes, sandboxes, risk tiers, blocking monitors, steers, recovery, endings. Next by count (approv- 1,313 uses; risk 593) and the area Jonathan's Forge risk design works in. Starts from the [term backlog](./backlog.md) and a [revision pass](./stage-3/revision.md) over earlier entries (M8) | `target`, `response` (set A proposed, awaiting Jonathan) | draft 2026-11-27, round 1 pending |
+| 3. Control | the `control` area: approval, permission modes, sandboxes, risk tiers, blocking monitors, steers, recovery, endings. Next by count (approv- 1,313 uses; risk 593) and the area Jonathan's Forge risk design works in. Starts from the [term backlog](./backlog.md) and a [revision pass](./stage-3/revision.md) over earlier entries (M8) | `target`, `response` (set A, Jonathan 2026-11-27) | in use 2026-11-27 after one round |
 | 4+. Other areas | one at a time, in the order the repo's work reaches them (J10) | per area | not started |
 
 A later stage may sort *sources* (harnesses, SDKs, products, protocols) as a second kind

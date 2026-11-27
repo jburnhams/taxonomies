@@ -2,8 +2,8 @@
 
 **In one line**: round 1 passed J23 on both facets, the name test passed, all seven
 stage-3 competency questions can be answered from `facets.md` and `glossary.md`, and the
-review found no unmarked synonym and no missing facet. Stage 3 is ready to adopt once
-Jonathan chooses the facet set.
+review found no unmarked synonym and no missing facet. Jonathan chose set A on 2026-11-27
+and stage 3 was adopted.
 
 Checked by Claude, 2026-11-27, against the files as changed after the name test.
 
@@ -54,4 +54,4 @@ All seven are answered.
 | T10 | yes, all seven |
 | T11 | yes |
 | No facet change in the last round | yes |
-| Facet set chosen by Jonathan (process step 4) | **open**: decision card posted 2026-11-27, set A recommended |
+| Facet set chosen by Jonathan (process step 4) | yes: set A, 2026-11-27 |

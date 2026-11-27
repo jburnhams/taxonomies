@@ -270,11 +270,9 @@ What it shows:
    describes; if none is stated, the store's usual home.
 5. **Arrival does not apply** to five of nine, so it is Set C, not Set A.
 
-## Stage 3: control area (proposed)
+## Stage 3: control area
 
-**Status**: proposed 2026-11-27, awaiting Jonathan's choice of set (process step 4). Round 1 passed J23 on both facets and every other ending condition holds ([review](./stage-3/rounds/round-1/review.md)). Set
-A's values have `candidate` glossary entries so the round-1 kit could be built meanwhile;
-they are redone if he picks another set. Samples: [`stage-3/samples.md`](./stage-3/samples.md);
+**Status**: set A chosen by Jonathan, 2026-11-27 (process step 4). In use from 2026-11-27: round 1 passed J23 on both facets and every other ending condition holds ([review](./stage-3/rounds/round-1/review.md)). Samples: [`stage-3/samples.md`](./stage-3/samples.md);
 terms: [`stage-3/harvest.md`](./stage-3/harvest.md); earlier entries this stage changed:
 [`stage-3/revision.md`](./stage-3/revision.md).
 
@@ -302,7 +300,7 @@ still apply to them; the questions below are the ones only this area asks.
   bare items, it had no answer for the endings items (`kt04`) and put risk grading and loop
   warnings together, so it is not proposed; `response` keeps its distinctions finer.
 
-### Set A (proposed): target, response
+### Set A (chosen): target, response
 
 ### Target (`target`)
 

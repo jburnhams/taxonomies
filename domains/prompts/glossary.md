@@ -13,7 +13,7 @@ model configured to act). The moment values `turn`, `tool-call` and `ending` are
 kernel entries for those concepts. Field rules: [`design/spec.md` §4](../../design/spec.md#4-glossarymd).
 Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a531474`.
 
-**Stage 3** (control area, 2026-11-27, `draft`): 10 values of the proposed set A and 16 terms, all `candidate`; seven earlier entries (`compaction`, `steer`, `handoff`, `approval`, `permission-mode`, `sandbox`, `precedence`) changed by the [revision pass](./stage-3/revision.md) and back to `candidate` until the stage-3 name test.
+**Stage 3** (control area): in use from 2026-11-27. 10 values of set A (chosen by Jonathan) and 16 terms `approved`; the seven earlier entries changed by the [revision pass](./stage-3/revision.md) (`compaction`, `steer`, `handoff`, `approval`, `permission-mode`, `sandbox`, `precedence`) passed the name test and are `approved` again.
 
 ## Label choices for Jonathan's veto (J8)
 
@@ -595,9 +595,9 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: Memory consolidation: between runs, for later runs, not to fit this one. A tool result cut to 30,000 characters when it is returned: that is a `truncation` and nothing older is replaced.
 - **Kind**: happening
 - **Related**: `context-window`, `truncation`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: compaction 501 in 63 files
-- **History**: 2026-11-26 added. 2026-11-27 redefine (stage-3 revision pass R1): its scope said "truncation of old tool results" after `truncation` became its own entry in stage 2; scope now says when cutting is part of a compaction and when it is not, and a near miss was added. Back to `candidate` for the stage-3 name test.
+- **History**: 2026-11-26 added. 2026-11-27 redefine (stage-3 revision pass R1): its scope said "truncation of old tool results" after `truncation` became its own entry in stage 2; scope now says when cutting is part of a compaction and when it is not, and a near miss was added. Back to `candidate` for the stage-3 name test. 2026-11-27 approved (stage 3 adopted).
 
 ### memory (`memory`)
 
@@ -621,9 +621,9 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: An approval prompt: asks a person, does not redirect the model. A person's message typed while the agent works (which some harnesses call steering): it is the person's input, `person` deciding, not a steer. A `system-reminder` that only reports a fact, such as which tool calls were lost to a restart: it informs, and the agent decides what to do.
 - **Kind**: thing
 - **Related**: `system-reminder`, `loop-detection`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: steer 103; nudge 108
-- **History**: 2026-11-26 added. 2026-11-26 redefine: near miss added after a name-test reader took steer to be a person's mid-run message. 2026-11-27 split (stage-3 revision pass R2): the aliases "system reminder", "reminder" and "system-reminder" named a channel that also carries notices that redirect nothing ([agent-run-recovery.md](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-run-recovery.md), "Claude Code: two reminders and a requeue tool"); they moved to the new `system-reminder`. ID and label kept.
+- **History**: 2026-11-26 added. 2026-11-26 redefine: near miss added after a name-test reader took steer to be a person's mid-run message. 2026-11-27 split (stage-3 revision pass R2): the aliases "system reminder", "reminder" and "system-reminder" named a channel that also carries notices that redirect nothing ([agent-run-recovery.md](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-run-recovery.md), "Claude Code: two reminders and a requeue tool"); they moved to the new `system-reminder`. ID and label kept. 2026-11-27 approved (stage 3 adopted).
 
 ### approval (`approval`)
 
@@ -634,9 +634,9 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A review of finished work: after the fact, `code-review`. A reviewer approving a pull request: allows a change to merge, not an action to run.
 - **Kind**: happening
 - **Related**: `permission-mode`, `allow-list`, `blocking-monitor`, `escalation`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: approval 759 in 113 files
-- **History**: 2026-11-26 added. 2026-11-27 redefine (stage-3 revision pass R4): the definition named only a person or a rule while its scope included a classifier, which is a `second-model`; near miss for a PR approval added.
+- **History**: 2026-11-26 added. 2026-11-27 redefine (stage-3 revision pass R4): the definition named only a person or a rule while its scope included a classifier, which is a `second-model`; near miss for a PR approval added. 2026-11-27 approved (stage 3 adopted).
 
 ### permission mode (`permission-mode`)
 
@@ -647,9 +647,9 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: Plan mode as a way of working: it also restricts tools, but its point is planning first. An approval policy file such as Cursor's `APPROVAL_POLICY.md`: it sets which pull requests need a person's review, not which of a run's actions need an approval ([agent-design/risk.md §12g](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/risk.md)).
 - **Kind**: thing
 - **Related**: `approval`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: approval mode 17; permission mode 11; plan mode 81; auto mode 31
-- **History**: 2026-11-26 added; "mode" alone is a homonym (harvest 2) and gets no entry. 2026-11-27 redefine (stage-3 revision pass R5): alias "approval policy" kept (Codex's `approval_policy` setting is this), near miss added for the review-policy file of the same name.
+- **History**: 2026-11-26 added; "mode" alone is a homonym (harvest 2) and gets no entry. 2026-11-27 redefine (stage-3 revision pass R5): alias "approval policy" kept (Codex's `approval_policy` setting is this), near miss added for the review-policy file of the same name. 2026-11-27 approved (stage 3 adopted).
 
 ### sandbox (`sandbox`)
 
@@ -659,9 +659,9 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Example**: [agent-local-compute.md](https://github.com/jburnhams/prompts/blob/a531474/agent-local-compute.md)
 - **Near miss**: A permission mode: decides what is asked, not what can be reached. A git worktree per sub-agent ("worktree isolation"): keeps runs' file changes apart, but each can still reach everything its tools can.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: sandbox 457 in 102 files
-- **History**: 2026-11-26 added. 2026-11-27 redefine (stage-3 revision pass R6): near miss added because the alias "isolation" is also used for worktrees, which limit nothing.
+- **History**: 2026-11-26 added. 2026-11-27 redefine (stage-3 revision pass R6): near miss added because the alias "isolation" is also used for worktrees, which limit nothing. 2026-11-27 approved (stage 3 adopted).
 
 ### handoff (`handoff`)
 
@@ -672,9 +672,9 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 - **Near miss**: A sub-agent's report: returned to its spawner, which carries on. An `escalation`: passes one decision to a stricter check and the run carries on once it is answered.
 - **Kind**: happening
 - **Related**: `escalation`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: handoff 261; hand-off 17
-- **History**: 2026-11-26 added. 2026-11-27 redefine (stage-3 revision pass R3): alias "escalation" removed, because the repo uses it for passing a decision up (a risk tier raised, a command sent to the user for approval: [agent-design/risk.md §3](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/risk.md)), not for passing the work; that sense is the new `escalation`.
+- **History**: 2026-11-26 added. 2026-11-27 redefine (stage-3 revision pass R3): alias "escalation" removed, because the repo uses it for passing a decision up (a risk tier raised, a command sent to the user for approval: [agent-design/risk.md §3](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/risk.md)), not for passing the work; that sense is the new `escalation`. 2026-11-27 approved (stage 3 adopted).
 
 ### trigger (`trigger`)
 
@@ -1085,9 +1085,9 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md), tested by 
 - **Near miss**: Load order: text that comes later may win in practice without any rule saying so. A run's `authority`: what the run may do, not which text wins.
 - **Kind**: property
 - **Related**: `framing`, `authority`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: precedence 25 in the context docs
-- **History**: 2026-11-26 added (stage 2). 2026-11-27 redefine (stage-3 revision pass R7): alias "authority" removed, because in the control docs it means what a run may do (the new `authority`); the context docs' "authority" of a file's text stays findable through this entry's near miss and the backlog row on authority postures.
+- **History**: 2026-11-26 added (stage 2). 2026-11-27 redefine (stage-3 revision pass R7): alias "authority" removed, because in the control docs it means what a run may do (the new `authority`); the context docs' "authority" of a file's text stays findable through this entry's near miss and the backlog row on authority postures. 2026-11-27 approved (stage 3 adopted).
 
 ### staleness (`staleness`)
 
@@ -1140,10 +1140,10 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md), tested by 
 - **Warrant**: index 80 in the context docs
 - **History**: 2026-11-26 added (stage 2).
 
-## Stage 3: control area, facet values (proposed)
+## Stage 3: control area, facet values
 
 Values of facet set A for the control area ([`facets.md`](./facets.md#stage-3-control-area-proposed)),
-drafted 2026-11-27 so the round-1 kit could be built while Jonathan chooses a set.
+drafted 2026-11-27; set A chosen by Jonathan 2026-11-27.
 
 ### tool action (`tool-action`)
 
@@ -1154,9 +1154,9 @@ drafted 2026-11-27 so the round-1 kit could be built while Jonathan chooses a se
 - **Near miss**: A tool's own matching or parsing rules (a whitespace-tolerant edit): how the tool works, area `tool`, not whether it may run.
 - **Kind**: thing
 - **Facet**: `target`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: approv- 189, permission 64, sandbox 48 in the control docs
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### run course (`run-course`)
 
@@ -1167,9 +1167,9 @@ drafted 2026-11-27 so the round-1 kit could be built while Jonathan chooses a se
 - **Near miss**: A run's sub-agent spawning: where work goes next is `coordination`, unless the item is about what the sub-agent may do (`tool-action`).
 - **Kind**: thing
 - **Facet**: `target`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: retr(y|ies) 40, resume- 26, steer 13, nudge 12 in the control docs
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### incoming text (`incoming-text`)
 
@@ -1180,9 +1180,9 @@ drafted 2026-11-27 so the round-1 kit could be built while Jonathan chooses a se
 - **Near miss**: A context file's precedence over another one: which instruction text wins, area `context` (`precedence`), unless the item is about refusing text that is not trusted.
 - **Kind**: thing
 - **Facet**: `target`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: trust 18, prompt injection 7 in the control docs; trust 324 in all
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### work product (`work-product`)
 
@@ -1193,9 +1193,9 @@ drafted 2026-11-27 so the round-1 kit could be built while Jonathan chooses a se
 - **Near miss**: Checking whether the change is right (tests, review findings): `verification`. How much scrutiny it gets, and whether it may merge without a person, is control.
 - **Kind**: thing
 - **Facet**: `target`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: risk 129, tier 102 in the control docs
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### gate (`gate`)
 
@@ -1206,9 +1206,9 @@ drafted 2026-11-27 so the round-1 kit could be built while Jonathan chooses a se
 - **Near miss**: `ask-person`: the control does not settle it.
 - **Kind**: happening
 - **Facet**: `response`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: deny 49, refus- 21 in the control docs
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### ask a person (`ask-person`)
 
@@ -1219,9 +1219,9 @@ drafted 2026-11-27 so the round-1 kit could be built while Jonathan chooses a se
 - **Near miss**: A `handoff`: gives the person the work, not one decision.
 - **Kind**: happening
 - **Facet**: `response`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: approv- 189, confirm- 58 in the control docs
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### set a level (`grade`)
 
@@ -1232,9 +1232,9 @@ drafted 2026-11-27 so the round-1 kit could be built while Jonathan chooses a se
 - **Near miss**: An eval's score: grades the quality of work, `verification`.
 - **Kind**: happening
 - **Facet**: `response`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: risk 129, tier 102, driver 28 in the control docs
-- **History**: 2026-11-27 added (stage 3). 2026-11-27 rename: "grade" → "set a level" (ID kept), after both name-test readers took "grade" for a quality score.
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 rename: "grade" → "set a level" (ID kept), after both name-test readers took "grade" for a quality score. 2026-11-27 approved (stage 3 adopted).
 
 ### redirect (`redirect`)
 
@@ -1245,9 +1245,9 @@ drafted 2026-11-27 so the round-1 kit could be built while Jonathan chooses a se
 - **Near miss**: A `system-reminder` that only reports a fact: `supply` in the context area, not a control response.
 - **Kind**: happening
 - **Facet**: `response`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: steer 13, nudge 12, reminder 35 in the control docs
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### recover (`recover`)
 
@@ -1258,9 +1258,9 @@ drafted 2026-11-27 so the round-1 kit could be built while Jonathan chooses a se
 - **Near miss**: `halt` with a later resume: when the item is about the stop and its wake condition, `halt`; when it is about how the work picks up, `recover`.
 - **Kind**: happening
 - **Facet**: `response`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: retr(y|ies) 40, resume- 26, replay 14 in the control docs
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### halt (`halt`)
 
@@ -1271,13 +1271,13 @@ drafted 2026-11-27 so the round-1 kit could be built while Jonathan chooses a se
 - **Near miss**: Refusing one action while the run goes on: `gate`.
 - **Kind**: happening
 - **Facet**: `response`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: interrupt 15, budget 12, suspend- 3 in the control docs; suspend- 132 in all
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ## Stage 3: control area terms
 
-Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](./stage-3/harvest.md); all `candidate` until the stage-3 name test.
+Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](./stage-3/harvest.md); `approved` when stage 3 was adopted, 2026-11-27.
 
 ### escalation (`escalation`)
 
@@ -1288,9 +1288,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A `handoff`: passes the work, not a decision. "Escalation triggers" in a design roadmap (agent-design/medium.md): conditions for upgrading a mechanism, not this term.
 - **Kind**: happening
 - **Related**: `approval`, `risk-tier`, `handoff`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: escalat- 36 in the control docs, 182 in all
-- **History**: 2026-11-27 added (stage 3), taking the alias "escalation" from `handoff` (revision pass R3).
+- **History**: 2026-11-27 added (stage 3), taking the alias "escalation" from `handoff` (revision pass R3). 2026-11-27 approved (stage 3 adopted).
 
 ### risk tier (`risk-tier`)
 
@@ -1301,9 +1301,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A memory tier (stage 2): which store a memory lives in, not how risky anything is. "Tier" alone is a homonym and gets no entry.
 - **Kind**: property
 - **Related**: `risk-driver`, `escalation`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: tier 102 in the control docs; risk level 41 ⚠ not counted by script
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### risk driver (`risk-driver`)
 
@@ -1314,9 +1314,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A risk dimension (security, correctness, compatibility): the axis a driver is filed under, not the reason itself.
 - **Kind**: thing
 - **Related**: `risk-tier`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: driver 28 in the control docs, 59 in all
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### allow list (`allow-list`)
 
@@ -1327,9 +1327,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A `permission-mode`: sets which actions need asking at all; an allow list names particular ones.
 - **Kind**: thing
 - **Related**: `approval`, `permission-mode`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: allowlist or allow list 6 in the control docs, 147 in all; deny list 14 in all
-- **History**: 2026-11-27 added (stage 3). Deny list kept as an alias for now (backlog).
+- **History**: 2026-11-27 added (stage 3). Deny list kept as an alias for now (backlog). 2026-11-27 approved (stage 3 adopted).
 
 ### authority (`authority`)
 
@@ -1340,9 +1340,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A context file's authority posture (supreme, advisory, data): how much its text directs the model, not what the run may do (backlog).
 - **Kind**: property
 - **Related**: `permission-mode`, `sandbox`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: authority 26 in the control docs, 196 in all
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### blocking monitor (`blocking-monitor`)
 
@@ -1353,9 +1353,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A trajectory judge that runs alongside the agent: comments on the run and blocks nothing (a `steer`).
 - **Kind**: role
 - **Related**: `second-model`, `approval`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: guardian 54, classifier 36, monitor 26 in the control docs
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### run budget (`run-budget`)
 
@@ -1366,9 +1366,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A context budget: limits how much text goes into a request (`truncation`), not how long the run goes on.
 - **Kind**: property
 - **Related**: `halt`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: budget 12 in the control docs, 464 in all (most are context budgets)
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### loop detection (`loop-detection`)
 
@@ -1379,9 +1379,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A `retry` limit: caps attempts the harness itself makes, not the agent's own repeats.
 - **Kind**: happening
 - **Related**: `steer`, `escalation`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: stuck 22, loop detect- 12 in all
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### retry (`retry`)
 
@@ -1392,9 +1392,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A `replay`: the framework runs the step again on its own, often after it succeeded.
 - **Kind**: happening
 - **Related**: `replay`, `resume`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: retr(y|ies) 40 in the control docs, 460 in all
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### replay (`replay`)
 
@@ -1405,9 +1405,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A `retry`: chosen because the step failed. Replaying a recorded run to audit it or to test a harness change: a trace replay, which re-executes nothing for real.
 - **Kind**: happening
 - **Related**: `retry`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: replay 14 in the control docs, 132 in all; idempot- 79 in all
-- **History**: 2026-11-27 added (stage 3). 2026-11-27 redefine: near miss added after a name-test reader took replay to be re-running a recorded trace.
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 redefine: near miss added after a name-test reader took replay to be re-running a recorded trace. 2026-11-27 approved (stage 3 adopted).
 
 ### resume (`resume`)
 
@@ -1418,9 +1418,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A fresh attempt that is given the last attempt's report: a `retry`, because the state is not carried on.
 - **Kind**: happening
 - **Related**: `retry`, `suspension`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: resume- 26 in the control docs, 366 in all
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### suspension (`suspension`)
 
@@ -1431,9 +1431,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: An `ending`: the run is over.
 - **Kind**: happening
 - **Related**: `resume`, `halt`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: suspend- 3 in the control docs, 132 in all
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### completion gate (`completion-gate`)
 
@@ -1444,9 +1444,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A merge gate on a finished change: decides whether it merges, not whether the run may end.
 - **Kind**: thing
 - **Related**: `self-verification`, `halt`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: completion gate 43 in all
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### prompt injection (`prompt-injection`)
 
@@ -1457,9 +1457,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A forged steer: text that pretends to come from the harness ([agent-run-steering.md §2b](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-run-steering.md)); a kind of prompt injection when it arrives in a tool result.
 - **Kind**: thing
 - **Related**: `incoming-text`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: prompt injection 7 in the control docs, 41 in all
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### trust gate (`trust-gate`)
 
@@ -1470,9 +1470,9 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A `permission-mode`: governs actions, not which files are read in.
 - **Kind**: thing
 - **Related**: `context-file`, `incoming-text`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: trust 18 in the control docs, 324 in all
-- **History**: 2026-11-27 added (stage 3).
+- **History**: 2026-11-27 added (stage 3). 2026-11-27 approved (stage 3 adopted).
 
 ### system reminder (`system-reminder`)
 
@@ -1483,6 +1483,6 @@ Drafted 2026-11-27 from [`backlog.md`](./backlog.md) and [`stage-3/harvest.md`](
 - **Near miss**: A `steer`: the purpose (redirecting), which a system reminder is one channel for.
 - **Kind**: thing
 - **Related**: `steer`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: system-reminder 17 in the control docs, 51 in all; reminder 128 in all
-- **History**: 2026-11-27 split from `steer` (stage-3 revision pass R2): took its aliases "system reminder", "reminder" and "system-reminder" (the last is now the ID).
+- **History**: 2026-11-27 split from `steer` (stage-3 revision pass R2): took its aliases "system reminder", "reminder" and "system-reminder" (the last is now the ID). 2026-11-27 approved (stage 3 adopted).
