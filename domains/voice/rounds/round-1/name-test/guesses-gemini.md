@@ -1,0 +1,72 @@
+# Name test: gemini guesses
+
+- **CLI**: Antigravity `agy` 1.5.18, `agy -p "<prompt>" --output-format json --print-timeout 1800s --disable-slash-commands --sandbox --model gemini-4-carbon-high`.
+- **Model**: `gemini-4-carbon-high` (Gemini 4 Carbon, High).
+- **Run**: 2026-11-27T20:35:18Z to 2026-11-27T20:37:26Z (UTC), 125 s. Tokens: 11055 in, 9010 out (6980 thinking).
+- **Not removable**: Antigravity's own system prompt.
+- Prompt: the whole of `prompt.md` (commit `9762bc8`), copied alone into a fresh empty temp directory and run from there, as the only input, in a session separate from the rating runs. API keys removed from the environment (billed to the plan).
+
+## Reply (verbatim)
+
+- accent: The regional and phonetic pronunciation habits of the speaker's spoken voice that the text-to-speech model must preserve rather than flattening into a generic default accent.
+- adapter: A small set of trainable parameters, such as a LoRA or speaker module, attached to a base text-to-speech or language model to specialize it to the person's voice without retraining the entire model.
+- automatic metric: A computed quantitative score, such as word error rate or speaker embedding similarity, used to evaluate generated speech or text without human raters.
+- baseline: A simpler reference system, such as an unadapted off-the-shelf model or unprompted assistant, against which custom spoken and written voice models are compared.
+- benchmark: A fixed suite of test prompts, tasks, and scoring criteria used to compare candidate models reproducibly across iterations.
+- both: A scope label indicating that a concept, requirement, or part of the work applies to both the spoken voice and the written voice.
+- calibration: Checking and aligning automated scores, judge ratings, or style controls so they match human judgements of how natural and faithful an output is.
+- coaching: Directing and giving feedback to the speaker during recording sessions so his delivery sounds natural, varied, and authentic rather than stiffly read.
+- content: The literal words, facts, and communicative intent of an utterance or message, separated from the personal identity and style used to express it.
+- coverage: How thoroughly the collected recordings, message samples, or evaluation sets span the phonetic, prosodic, topical, and stylistic range needed for the person's voice.
+- demonstration: A concrete sample of speech or writing used to show a model—or the speaker himself—what a target style or task looks like in practice.
+- elicitation: Designing prompts, reading scripts, or writing scenarios to draw out natural and varied samples of the person's spoken and written voice.
+- emotion: The affective tone, such as warmth, excitement, frustration, or calm, conveyed in a spoken clip or written message.
+- eval: A concrete, runnable test script or check that scores a model on a specific capability or failure mode.
+- evaluation: The overall stage and methodology of measuring how accurately, naturally, and safely the models reproduce the person's spoken and written voice.
+- expression: The dynamic, in-the-moment vocal inflection or verbal delivery that gives an utterance life and emphasis beyond flat, neutral phrasing.
+- few-shot example: One of a small number of real emails or messages placed into the writing assistant's prompt at inference time to guide it toward the person's written style.
+- fine-tuning: Updating the weights of a pretrained text-to-speech or language model on real and synthetic examples so it internalizes the person's voice.
+- generation: Running a spoken or written model to produce new audio clips or drafted messages, either to create synthetic training data or to serve end-user requests.
+- governance: Consent rules, access boundaries, provenance tracking, and misuse safeguards governing how the cloned voice data and models may be stored and used.
+- held-out set: Real recordings and written messages kept strictly excluded from training, prompting, and synthetic data creation so models can be tested on unseen ground truth.
+- identity: The stable, recognizable core of who the person is—such as vocal tract timbre in speech or persistent persona in writing—that remains constant across different contexts and moods.
+- identity embedding: A fixed-length numerical vector extracted from audio or text that encodes who the speaker or author is for conditioning a model or computing similarity.
+- language model: A neural text model used to power the writing assistant, score outputs as an automated judge, or serve as the sequence backbone of a speech model.
+- leakage: Unintended contamination where held-out test data appears in training or retrieval, or where unwanted words or prosody bleed over from a reference clip into generated output.
+- listening test: A structured human evaluation in which people listen to audio clips and rate naturalness or how closely the synthesized voice matches the real speaker.
+- LLM judge: A language model prompted with a rubric to automatically score or compare candidate messages and transcripts for style fidelity and quality.
+- markup: Inline tags or annotations added to text—marking pauses, emphasis, tone, or non-speech sounds—to label transcripts or control how the text-to-speech model renders a line.
+- memorisation: Overfitting in which a model repeats exact phrases, private details, or acoustic passages from its training data instead of generalizing the person's voice to new inputs.
+- message: A single unit of personal written communication, such as an email or chat reply, either collected from the person's archive or drafted by the writing assistant.
+- naturalness: How fluent, human, and free of robotic artifacts generated speech or prose sounds, independent of whether it sounds specifically like the target person.
+- observed style: The tone, register, or delivery actually measured or perceived in a recorded sample or generated output, regardless of what style was asked for.
+- operations: Practical concerns of deploying, running, monitoring, and maintaining the local text-to-speech model and writing assistant on local hardware in everyday use.
+- pairwise judgement: An evaluation protocol in which a human rater or automated judge compares two candidate outputs side by side and chooses which better captures quality or the person's voice.
+- preparation: Cleaning, segmenting, transcribing, filtering, and formatting raw audio recordings and message archives into structured datasets ready for modeling.
+- prosody: The rhythm, pitch contour, stress, speaking rate, and pausing patterns that give spoken language its musicality and personal cadence.
+- real data: Genuine audio recorded directly by the person and authentic emails or messages he actually wrote himself, as opposed to model-generated samples.
+- recording prompt: A specific sentence, passage, or scenario presented to the speaker during recording to capture targeted sounds, cadences, or speaking styles.
+- recording session: A single sitting in a consistent room and microphone setup during which the speaker records a batch of audio clips.
+- reference clip: A short recording of the target speaker passed into a voice-cloning model at inference time to anchor its vocal timbre and speaking style.
+- representation: The internal mathematical or structural form—such as discrete audio tokens, spectrograms, embeddings, or text descriptors—used to encode voice traits for a model.
+- requested style: The target tone, register, or delivery explicitly specified in a prompt or control signal when asking a model to generate speech or text.
+- retrieval: Searching the person's archive at inference time to fetch the most relevant real messages or reference clips—matched by topic, recipient, or tone—to condition generation.
+- speaker similarity: How closely a generated audio clip resembles the target person's real voice in timbre, accent, and cadence.
+- spoken: The audio and speech synthesis side of the repo, concerned with cloning how the person sounds aloud in a text-to-speech model.
+- stance: The interpersonal attitude or footing the person takes toward an audience or topic, such as warmth, deference, bluntness, formality, or skepticism.
+- student: The small local text-to-speech or writing model trained to imitate the person's voice using a combination of his real data and synthetic outputs from a larger teacher model.
+- style: Context-dependent choices in how the person speaks or writes—such as register, pacing, word choice, and phrasing—distinct from both fixed identity and literal content.
+- style embedding: A continuous vector representation extracted from an audio clip or text passage that captures delivery or register separately from identity and content.
+- style label: A discrete tag, such as casual, urgent, conversational, or formal, attached to training examples or generation requests to categorize and steer style.
+- style profile: A compiled summary of the person's recurring vocabulary, phrasing habits, formatting quirks, and register preferences used to guide or evaluate the writing assistant.
+- synthetic data: Artificial speech clips generated by the larger voice-cloning model, or artificial messages drafted by a language model, created to expand training data for a smaller model.
+- take: One individual recorded attempt at reading or performing a recording prompt, from which the cleanest or most natural version can be chosen.
+- teacher: The larger, higher-capacity voice-cloning or language model used to generate high-quality synthetic examples in the person's voice for training the smaller local student model.
+- text-to-speech model: A model that converts input text and voice conditioning into spoken audio waveforms.
+- vocal event: A brief non-lexical human sound in speech—such as an audible breath, laugh, sigh, chuckle, or hesitation—that adds realism and personal character.
+- voice: The distinctive, recognizable way this specific person comes across when communicating, encompassing spoken sound, written prose, or the concept shared across them.
+- voice cloning: Building or conditioning a generative model so that its spoken or written outputs recognizably sound like a specific real individual.
+- watermark: A hidden signal embedded into generated audio or text so synthetic outputs from the cloned voice can later be identified as machine-made.
+- whole voice: All facets of how the person communicates—timbre, accent, prosody, phrasing, style, and stance—treated together as one integrated whole rather than isolated parts.
+- written: The text side of the repo, concerned with modeling how the person composes emails and messages in a writing assistant.
+- zero-shot cloning: Imitating the person's voice at inference time from only a short reference clip or a few text examples using a pretrained model with no weight updates for him.
