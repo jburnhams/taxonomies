@@ -3,6 +3,12 @@
 Every change as a named operation (spec G4), newest day first. The approving agent is
 named on each line (G1); Jonathan can reverse any of them.
 
+## 2026-11-27
+
+- **add** `request` and `breaking-operation` as `candidate` (concepts of the proposed
+  growth flow, `design/growth.md`; the Vocabulary rule asks for an entry rather than a new
+  word). Proposed by: Claude; approval waits for J27-J30.
+
 ## 2026-11-26
 
 - **adopt** the domain (process step 10): all 57 terms `approved`, `scope.md` status

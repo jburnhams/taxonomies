@@ -2,6 +2,18 @@
 
 All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md).
 
+## 2026-11-27
+
+**Proposed a way for domain repos to look up, request and change terms (branch `claude/project-thread-8dnulq`)**. Jonathan asked for clients to be able to ask which existing term to use for a concept, or for a new one when none fits, so taxonomies grow, with the weekly prompts research pass as the example client; he added that research will keep opening up new concepts and that existing terms may need clarification or breaking changes. The weekly pass can push only to `jburnhams/prompts`, so requests are written in the domain repo's own tree and collected here.
+
+- `tools/term.py`: **new**. `lookup` (exact label, alias or old label, else closest terms with scope and near miss, plus earlier requests), `changes --since` (domain changelog lines since a date, breaking ones marked, and requests answered), `intake --write` (copies new records from each domain repo's `term-requests.md` into `domains/<name>/requests.md`). Standard library only; runs piped from raw.githubusercontent.com with no checkout. Tested on all three glossaries and on a throwaway prompts request.
+- `design/growth.md`: **new**, proposed. The loop, the request record (asks `new`, `clarify`, `change`), rules R1-R7 for an intake (outcomes, aliases first, candidates with the asker's warrant, clarify without moving the edge, breaking operations keep old labels findable and some need a round, versions by changelog date with `Breaking:` lines, when intake runs), and the four lines for a domain repo's `CLAUDE.md`.
+- `design/decisions.md`: J27-J32 proposed.
+- `domains/prompts/requests.md`, `domains/ux/requests.md`, `domains/taxonomies/requests.md`: **new**, empty request logs.
+- `domains/taxonomies/glossary.md`, `changelog.md`: `request` and `breaking-operation` added as `candidate`.
+- `CLAUDE.md`, `README.md`: how to ask for a term, and to run intake when working on a domain.
+- Not done: a find-a-term box on the explorer site, and GitHub issues as an inbox (both in `growth.md`, "Not in this proposal"). The weekly scheduled task for intake is proposed (J31), not created.
+
 ## 2026-11-26
 
 **Adopted stage 2 of the prompts taxonomy, the context area (branch `claude/project-thread-oneclm`, PR #15)**. Jonathan chose facet set A (operation, content, reach). With that, every ending condition holds on round 2.
