@@ -4,6 +4,14 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-27
 
+**Ran prompts stage 3 round 1 (control area) and its name test** (kit `9d2b864`, 30 items,
+same three raters). On the 24 in-area items: Fleiss' κ target 0.83, response 0.80;
+openai-gemini 0.75, 0.70. Both pass.
+
+- `domains/prompts/stage-3/rounds/round-1/answers/`: **new**. Each rater's CSV and raw
+  reply with run details. `results.md`: **new**, the three kappa.py runs.
+- `domains/prompts/stage-3/rounds/round-1/name-test/guesses-openai.md`, `guesses-gemini.md`: **new**.
+
 **Started stage 3 of the prompts taxonomy, the control area, with a term backlog and a revision pass (branch `claude/project-thread-oneclm`)**. Jonathan said yes to stage 3 and asked that each stage add the new terms a decided concept opens, and clarify or break earlier entries where needed. That became proposal M8, and stage 3 is the first to follow it.
 
 - `design/method-v1.1.md`: new M8 (term backlog, revision pass by G4 operations, retest of changed entries), with Z39.19 §11.3.1 and Denton §2.3 step 7 as warrant.
