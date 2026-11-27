@@ -4,6 +4,15 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-27
 
+**Recorded Jonathan's answers to J27-J32 and moved term requests to issues (branch `claude/project-thread-8dnulq`)**. Jonathan answered the six growth decisions on decision cards. For J27 he chose GitHub issues in this repo over the proposed `term-requests.md` file in each domain repo. He took the recommendation on the other five, including the weekly Tuesday intake task.
+
+- `.github/ISSUE_TEMPLATE/term-request.yml`: **new**. The term-request form (domain, ask, word, term, concept, looked at, example, warrant, asked), labelled `term-request`.
+- `tools/term.py`: `intake` now reads open `term-request` issues from the public GitHub API instead of domain repos' files, and logs each as `issue-<number>`. `lookup` also lists open issues that match, so an asker adds to an existing issue instead of filing a duplicate.
+- `design/growth.md`: now adopted. The request is an issue (new section "The request issue"); R1 adds a comment and close on the issue; R3 sends a staged domain's request to its term backlog (J33, still proposed); R7 names the Tuesday task. Adds a changelog fallback for sessions that cannot file issues.
+- `design/decisions.md`: J27-J32 move to the decided table. J33, misplaced in the growth table by the merge of PR #17, goes back to the method v1.1 table.
+- `design/spec.md` (§1 file table, G2, G6) and `design/process.md` (steps 11, 12): pointers to `growth.md`.
+- `domains/*/requests.md`, `domains/taxonomies/glossary.md` (`request` redefined as an issue), `CLAUDE.md`, `README.md`: describe issues, not files.
+
 **Merged main into `claude/project-thread-oneclm` (PR #17)**, which had the growth proposal from PR #16. Both branches had numbered a new decision J27. Main keeps J27-J32 for the growth flow, and the stage-3 proposal (method v1.1 M8: term backlog, revision pass, retest) is renumbered **J33**.
 
 - `design/decisions.md`: status line covers both sets; the M8 row is now J33, after J32.

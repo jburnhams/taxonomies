@@ -3,7 +3,9 @@
 
 A domain repo (prompts, ux-research, ...) uses this to ask "which word do I use for this
 concept?" before it writes one, and to see what changed in its glossary since its last
-pass. The taxonomies repo uses `intake` to collect the requests domain repos have written.
+pass. Requests are issues in jburnhams/taxonomies (form: .github/ISSUE_TEMPLATE/term-request.yml);
+the taxonomies repo uses `intake` to log them. Issues are read from the public API (set
+$GITHUB_TOKEN to raise the rate limit).
 Standard library only, one file, so it runs without a checkout of this repo:
 
   curl -fsSL https://raw.githubusercontent.com/jburnhams/taxonomies/main/tools/term.py \\
@@ -14,10 +16,9 @@ Commands:
                                closest terms, plus any request already made for them
   changes DOMAIN --since DATE  operations logged on or after DATE (YYYY-MM-DD), breaking ones
                                marked, and requests answered since then
-  intake [--repos DIR] [--write]
-                               (taxonomies repo) new requests in each domain repo's
-                               term-requests.md, each with its lookup; --write adds them to
-                               domains/<name>/requests.md as `open`
+  intake [--write]             (taxonomies repo) open term-request issues not yet logged,
+                               each with its lookup; --write adds them to
+                               domains/<name>/requests.md as `open` (ID issue-<number>)
 
 Where the files come from: --root DIR, else $TAXONOMIES_ROOT, else this script's own repo
 when it sits in a checkout, else raw.githubusercontent.com (main branch).
@@ -96,7 +97,7 @@ def labels(t):
 
 # ---------- lookup ----------
 
-def lookup(root, domain, query):
+def lookup(root, domain, query, with_issues=False):
     terms = {t["id"]: t for t in records(read(root, f"domains/{domain}/glossary.md"))}
     if not terms:
         sys.exit(f"term.py: no glossary for domain '{domain}' (domains/{domain}/glossary.md)")
@@ -117,6 +118,15 @@ def lookup(root, domain, query):
     scored.sort(key=lambda x: (-x[0], x[1]["id"]))
     near = [t for s, t in scored[:5] if s >= max(2, scored[0][0] // 2)] if scored else []
     asked = [r for r in reqs if q == fold(r["label"]) or (qw and len(qw & words(r["label"] + " " + r.get("Concept", ""))) >= max(1, len(qw) - 1))]
+    if with_issues:  # open issues not yet logged, so both output modes report the same requests
+        try:
+            known = {r["id"] for r in asked}
+            for i in request_issues("open"):
+                if issue_domain(i) == domain and f"issue-{i['number']}" not in known and (
+                        fold(issue_word(i)) == q or (qw and qw <= words(issue_word(i) + " " + i.get("Concept", "")))):
+                    asked.append({"label": issue_word(i), "id": f"issue-{i['number']}", "Outcome": "open", "Asked": i["url"]})
+        except Exception:
+            pass
     return terms, exact, near, asked
 
 
@@ -140,7 +150,7 @@ def show_term(terms, t, why):
 def cmd_lookup(a):
     root = find_root(a.root)
     query = " ".join(a.words)
-    terms, exact, near, asked = lookup(root, a.domain, query)
+    terms, exact, near, asked = lookup(root, a.domain, query, with_issues=True)
     if a.json:
         print(json.dumps({"query": query, "exact": exact, "near": near, "requests": asked}, ensure_ascii=False, indent=1))
     else:
@@ -163,8 +173,8 @@ def cmd_lookup(a):
             for r in asked:
                 print(f"  {r['label']} (`{r['id']}`): {r.get('Outcome', 'open')}  [{r.get('Asked', '')}]")
         if not exact:
-            print("If none fits, use your own word now and add a request to term-requests.md "
-                  "in your repo (template: design/growth.md#the-request-record).")
+            print("If none fits, use your own word now and file a term-request issue in "
+                  "jburnhams/taxonomies (fields: design/growth.md#the-request-issue).")
     return 0 if exact else 1 if near or asked else 2
 
 
@@ -213,44 +223,89 @@ def cmd_changes(a):
 
 # ---------- intake (run in the taxonomies repo) ----------
 
-def domain_repo(scope):
-    m = re.search(r"^- \*\*Context\*\*:.*?github\.com/([\w.-]+/[\w.-]+)", scope, re.M)
-    return m.group(1) if m else None
+API = "https://api.github.com/repos/jburnhams/taxonomies/issues"
+FIELDS = {"domain": "Domain", "ask": "Ask", "word": "Word", "term": "Term", "concept": "Concept",
+          "looked at": "Looked at", "example": "Example", "warrant": "Warrant", "asked": "Asked"}
+
+
+def issue_fields(body):
+    """The `### Field` sections of a term-request issue (the issue form's output, or an agent's body)."""
+    out = {}
+    for m in re.finditer(r"^### (.+?)\s*\n(.*?)(?=^### |\Z)", body or "", re.M | re.S):
+        k = FIELDS.get(m.group(1).strip().lower())
+        v = m.group(2).strip()
+        if k and v and v != "_No response_":
+            out[k] = " ".join(v.split())
+    return out
+
+
+def request_issues(state="open"):
+    """Term-request issues: label `term-request`, or a title starting "[term]". Public repo, no token needed."""
+    out, page = [], 1
+    while True:
+        req = urllib.request.Request(f"{API}?state={state}&per_page=100&page={page}",
+                                     headers={"Accept": "application/vnd.github+json"})
+        tok = os.environ.get("GITHUB_TOKEN")
+        if tok:
+            req.add_header("Authorization", f"Bearer {tok}")
+        with urllib.request.urlopen(req, timeout=20) as r:
+            batch = json.load(r)
+        for i in batch:
+            if "pull_request" in i:
+                continue
+            if any(l["name"] == "term-request" for l in i.get("labels", [])) or i["title"].lower().startswith("[term]"):
+                f = issue_fields(i.get("body"))
+                out.append({"number": i["number"], "url": i["html_url"], "title": i["title"], "state": i["state"], **f})
+        if len(batch) < 100:
+            return out
+        page += 1
+
+
+def issue_domain(i):
+    d = (i.get("Domain") or "").strip().lower()
+    if not d:
+        m = re.match(r"\[term\]\s*([\w-]+)\s*:", i["title"], re.I)
+        d = m.group(1).lower() if m else ""
+    return d
+
+
+def issue_word(i):
+    return i.get("Word") or re.sub(r"^\[term\]\s*[\w-]+\s*:\s*", "", i["title"], flags=re.I)
 
 
 def cmd_intake(a):
     root = find_root(a.root)
     if not root:
         sys.exit("term.py intake: run it in a checkout of jburnhams/taxonomies (or pass --root)")
-    repos = Path(a.repos) if a.repos else root.parent
+    try:
+        issues = request_issues("open")
+    except Exception as e:
+        sys.exit(f"term.py intake: cannot read issues from {API}: {e}")
+    domains = {p.name: p for p in (root / "domains").iterdir() if (p / "glossary.md").exists()}
     found = 0
-    for d in sorted(p for p in (root / "domains").iterdir() if (p / "glossary.md").exists()):
-        repo = domain_repo((d / "scope.md").read_text()) if (d / "scope.md").exists() else None
-        inbox = (repos / repo.split("/")[1] / "term-requests.md") if repo else root / "term-requests.md"
-        if not inbox.exists():
-            print(f"{d.name}: no inbox at {inbox}")
+    for i in issues:
+        d = issue_domain(i)
+        if d not in domains:
+            print(f"#{i['number']} {i['title']}: no domain '{d}' (set the Domain field)")
             continue
-        logp = d / "requests.md"
+        rid = f"issue-{i['number']}"
+        logp = domains[d] / "requests.md"
         log = logp.read_text() if logp.exists() else ""
-        done = {r["id"] for r in records(log)}
-        new = [r for r in records(inbox.read_text()) if r["id"] not in done]
-        print(f"{d.name}: {len(new)} new request(s) in {inbox}")
-        for r in new:
-            found += 1
-            print(f"\n  {r['label']} (`{r['id']}`) ask: {r.get('Ask', 'new')}  term: {r.get('Term', '-')}")
-            print(f"    Concept: {r.get('Concept', '')}")
-            terms, exact, near, _ = lookup(root, d.name, r["label"])
-            hits = exact or near
-            print("    Lookup: " + (", ".join(f"`{t['id']}`" + (" (exact)" if t in exact else "") for t in hits) or "nothing"))
-        if a.write and new:
-            src = f"{repo}/term-requests.md" if repo else "term-requests.md"
-            add = []
-            for r in new:
-                body = "".join(f"- **{k}**: {v}\n" for k, v in r.items() if k not in ("label", "id"))
-                add.append(f"### {r['label']} (`{r['id']}`)\n\n{body}- **From**: `{src}`\n- **Outcome**: open\n")
+        if rid in {r["id"] for r in records(log)}:
+            continue
+        found += 1
+        word = issue_word(i)
+        print(f"\n{d}: #{i['number']} {word} ask: {i.get('Ask', 'new')}  term: {i.get('Term', '-')}  {i['url']}")
+        print(f"    Concept: {i.get('Concept', '')}")
+        terms, exact, near, _ = lookup(root, d, word)
+        print("    Lookup: " + (", ".join(f"`{t['id']}`" + (" (exact)" if t in exact else "") for t in exact or near) or "nothing"))
+        if a.write:
+            body = "".join(f"- **{k}**: {i[k]}\n" for k in FIELDS.values() if i.get(k) and k not in ("Domain", "Word"))
+            rec = f"### {word} (`{rid}`)\n\n{body}- **From**: [#{i['number']}]({i['url']})\n- **Outcome**: open\n"
             log = re.sub(r"^None yet\.\n?", "", log, flags=re.M)
-            logp.write_text(log.rstrip("\n") + "\n\n" + "\n".join(add))
-            print(f"  wrote {len(new)} to {logp.relative_to(root)}")
+            logp.write_text(log.rstrip("\n") + "\n\n" + rec)
+            print(f"    wrote `{rid}` to {logp.relative_to(root)}")
+    print(f"\n{found} new request(s) of {len(issues)} open term-request issue(s)")
     return 0 if found else 1
 
 
@@ -262,7 +317,7 @@ def main(argv=None):
     s.add_argument("--json", action="store_true"); s.set_defaults(f=cmd_lookup)
     s = sub.add_parser("changes"); s.add_argument("domain"); s.add_argument("--since", required=True)
     s.set_defaults(f=cmd_changes)
-    s = sub.add_parser("intake"); s.add_argument("--repos", help="folder holding the domain repos' checkouts")
+    s = sub.add_parser("intake")
     s.add_argument("--write", action="store_true"); s.set_defaults(f=cmd_intake)
     a = p.parse_args(argv)
     return a.f(a)

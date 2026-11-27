@@ -1,0 +1,62 @@
+# A request for a term in one domain's glossary (design/growth.md, J27).
+# Agents filing through the API write the same "### <field>" sections in the body.
+name: Term request
+description: Ask for a new term, a clarification of one, or a change to one
+title: "[term] <domain>: <your word>"
+labels: [term-request]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Look the concept up first: `curl -fsSL https://raw.githubusercontent.com/jburnhams/taxonomies/main/tools/term.py | python3 - lookup <domain> "<words>"`.
+        Use your own word in your docs now; this request is answered with an outcome and closed (rules: `design/growth.md`).
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      options: [prompts, ux, taxonomies]
+    validations: { required: true }
+  - type: dropdown
+    id: ask
+    attributes:
+      label: Ask
+      description: new = no term covers it; clarify = a term left you unsure; change = a label or edge looks wrong
+      options: [new, clarify, change]
+    validations: { required: true }
+  - type: input
+    id: word
+    attributes:
+      label: Word
+      description: the word you are using for the concept
+    validations: { required: true }
+  - type: input
+    id: term
+    attributes:
+      label: Term
+      description: for clarify or change, the ID of the term it is about
+  - type: textarea
+    id: concept
+    attributes:
+      label: Concept
+      description: "One sentence: A <word> is a <nearest broader term> that <what sets it apart>. For clarify or change, the case or the change and why."
+    validations: { required: true }
+  - type: textarea
+    id: looked-at
+    attributes:
+      label: Looked at
+      description: the terms lookup showed, and why each does not fit
+  - type: input
+    id: example
+    attributes:
+      label: Example
+      description: a link to the clearest use in your repo
+  - type: input
+    id: warrant
+    attributes:
+      label: Warrant
+      description: 'how often the word is used, e.g. "approval timeout" 6 in *.md, 2026-11-30'
+  - type: input
+    id: asked
+    attributes:
+      label: Asked
+      description: which repo, pass or doc, and branch or PR
