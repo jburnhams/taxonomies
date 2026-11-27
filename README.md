@@ -71,6 +71,13 @@ Each domain's taxonomy lives in `domains/<name>/` (spec §1):
 an overview, then each domain's facets, terms, items and rounds, down to each rater's
 answers. Published at <https://jburnhams.github.io/taxonomies/>.
 
+**Asking for a term.** From any repo, with no checkout:
+`curl -fsSL https://raw.githubusercontent.com/jburnhams/taxonomies/main/tools/term.py | python3 - lookup prompts "approval mode"`
+gives the term to use, or the closest ones; `changes <domain> --since <date>` lists what
+changed, breaking changes marked. When nothing fits, the domain repo adds a request to its
+own `term-requests.md`; this repo collects and answers them in `domains/<name>/requests.md`.
+The flow and its rules (proposed) are in [`design/growth.md`](./design/growth.md).
+
 ## Sources
 
 - [`sources/`](./sources): one folder per source with citation, access, what was read,

@@ -5,7 +5,7 @@ Jonathan can make; the six needed before the first domain were decided on 2026-1
 and thirteen can wait.
 
 **Status**: eight decided (J1, J2, J5-J8 on 2026-11-25, J14 and J23 on 2026-11-26), twelve open; six more proposed
-(J20-J26, method v1.1), 2026-11-26.
+(J20-J26, method v1.1), 2026-11-26; six more (J27-J32, growth), 2026-11-27.
 [`process.md`](./process.md) and [`spec.md`](./spec.md) follow the decisions, and follow
 the recommendation for each open row so they read as a whole. Rejecting an open
 recommendation means editing the rule or step named in its row. These include the five
@@ -43,6 +43,21 @@ while it is open. J14 was decided the same day (table above).
 | J24 | With three raters, two-of-three is the round's label; three-way splits go to Unsorted | Yes (M5) | Wan et al. §4.2 (voting or deliberation); Z39.19 §11.2.2 | spec T7, T8 |
 | J25 | Rules for a rater run through an agent CLI (empty folder, read-only, record CLI and model) | Yes (M6) | spec T8 ("using only"); reasoning | process step 8 |
 | J26 | An item is a heading plus its opening text; raters sort the mechanism | Yes (M7) | Denton §2.3 step 4; the prompts bare-facet test | process steps 2, 5 |
+
+## Proposed 2026-11-27 (growth: how domain repos ask for terms)
+
+Raised by Jonathan's ask that clients can find the term to use and request new ones,
+and that terms grow, get clarified or change as research goes. Each is argued in
+[`growth.md`](./growth.md); `tools/term.py` and the empty request logs work without them.
+
+| # | Decision | Recommended | Rests on | Lands in |
+|---|---|---|---|---|
+| J27 | Requests are records in the domain repo's own `term-requests.md`, collected here into `domains/<name>/requests.md`, each with an outcome and date (R1, R2) | Yes | Z39.19 §§11.3.1.1-11.3.1.2 (candidate records kept); Denton §2.3 step 4; the weekly prompts pass cannot write here | spec §1, G2 |
+| J28 | An agent may approve a requested non-facet candidate at the next review when T1-T6 pass, one other-family fresh reader guesses it (T9) and two docs use it; facet values wait for a round (R3) | Yes | Z39.19 §5.3.5 (user warrant); spec S6; reasoning for the thresholds | spec G1, G3 |
+| J29 | Breaking operations keep the old label findable; split, move or boundary change of an approved facet value needs a round on that facet first; all breaking operations in an in-use domain named for Jonathan's veto (R4, R5) | Yes | Z39.19 §11.3.2.1a; N6; OBO Foundry; Wan et al. App. B.2.1 | spec G4, G5 |
+| J30 | Version a glossary by its changelog date; mark breaking lines `Breaking: ...`; domain repos catch up at their next pass, not in the same commit (amends G6 across repos) (R6) | Yes | Evans pp. 3-4; reasoning (one owner) | spec §6, G6, T12 |
+| J31 | Run intake at each review, at the start of any thread on a domain, and on a weekly scheduled task the day after the prompts pass (R7) | Yes; the scheduled task only once Jonathan says so | Z39.19 §11.3.1 | spec G7, process step 12 |
+| J32 | Each domain repo's `CLAUDE.md` says: look up first, request on a miss, request clarify or change rather than work round a term, run `changes` at the start of a pass | Yes | Feitelson §III (6.9% agreement unaided) | process step 11 |
 
 ## Can wait until it comes up
 
