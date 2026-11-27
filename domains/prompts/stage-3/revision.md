@@ -2,7 +2,7 @@
 
 **In one line**: seven earlier entries that the control harvest showed were unclear or
 wrong, each fixed by one named operation, and all seven back to `candidate` until the
-stage-3 name test retests them (method v1.1 M8, proposed as J27).
+stage-3 name test retests them (method v1.1 M8, proposed as J33).
 
 **In plain words**: defining the control words showed that some words already agreed in
 stages 1 and 2 overlap the new ones or mean two things. Small fixes add a near miss or

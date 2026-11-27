@@ -1,7 +1,7 @@
 # Prompts taxonomy: term backlog
 
 **In one line**: concepts that a settled term opens but no stage has defined yet, so each
-stage starts from a list instead of from memory (method v1.1 M8, proposed as J27).
+stage starts from a list instead of from memory (method v1.1 M8, proposed as J33).
 
 **In plain words**: defining one word shows you the words next to it. "Approval" brings
 up who approves, what an allow list is, and what happens when the answer is no. Those

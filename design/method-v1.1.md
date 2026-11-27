@@ -12,7 +12,7 @@ little about any one of them. So we split the work into stages, test on bigger s
 and use three raters instead of two, one of them not from the family that wrote the
 definitions.
 
-**Status**: proposed 2026-11-26, not adopted (◆ J20-J22, J24-J27 in
+**Status**: proposed 2026-11-26, not adopted (◆ J20-J22, J24-J26, J33 in
 [`decisions.md`](./decisions.md)). The prompts domain (`domains/prompts/`) follows these
 proposals while they are open, as v1 did with its open recommendations; each one says
 what it changes. When Jonathan adopts them, they are folded into
@@ -147,7 +147,7 @@ three ways that matter:
   entities can be described" ([§2.3 step 4][den]), which needs enough text to describe.
 - **Changes**: process steps 2 and 5.
 
-## M8. Each stage grows the vocabulary and revises what came before (◆ J27)
+## M8. Each stage grows the vocabulary and revises what came before (◆ J33)
 
 - **Change**: three standing steps in every stage after the first.
   1. **Term backlog**. `domains/<name>/backlog.md` lists concepts that a settled term

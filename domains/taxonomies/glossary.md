@@ -7,7 +7,7 @@ words for it, a definition, an example and a near miss.
 heading word of the entry. Everything here is `approved` (2026-11-26, after three rounds); new
 terms come in as `candidate` (spec G3).
 
-**Status**: in use, 2026-11-26, all `approved`. 39 concepts of the method, the 4 term
+**Status**: in use, 2026-11-26, all `approved` but the two 2026-11-27 candidates (`request`, `breaking-operation`). 39 concepts of the method, the 4 term
 kinds, and the 14 values of facets `part`, `stage` and `check` ([`facets.md`](./facets.md)). Field rules:
 [`design/spec.md` §4](../../design/spec.md#4-glossarymd). Warrant counts are whole-word,
 case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/` on
@@ -524,6 +524,32 @@ case-insensitive matches (plurals included) over `design/*.md` and `domains/ux/`
 - **Status**: approved
 - **Warrant**: "alias drift" 2 (design/ and domains/ux/, 2026-11-26)
 - **History**: 2026-11-26 added (drafted from the spec and process; not yet tested); 2026-11-26 approved (ending conditions met after round 3; approved by Claude, Jonathan can veto)
+
+### request (`request`)
+
+- **Definition**: A request is a record in which a domain repo asks for a new term, a clarification or a change, and which keeps its outcome.
+- **Scope**: Written in the domain repo's `term-requests.md` with an Ask of `new`, `clarify` or `change`; collected into `domains/<name>/requests.md` and answered there with an outcome and date. Excludes a `candidate` entry an agent adds to a glossary directly (G2), which is a term, not a request.
+- **Aliases**: term request
+- **Example**: [growth.md, the request record](../../design/growth.md#the-request-record)
+- **Near miss**: An unsorted list entry: an item waiting for a facet value, not a word waiting for a term.
+- **Kind**: thing
+- **Related**: `operation`, `warrant`
+- **Status**: candidate
+- **Warrant**: Jonathan's words ("for clients to ask what existing terms to use for a concept or for a new one to be created", 2026-11-27); "request" 33 in design/growth.md (2026-11-27)
+- **History**: 2026-11-27 added (design/growth.md, proposed)
+
+### breaking operation (`breaking-operation`)
+
+- **Definition**: A breaking operation is an operation after which a domain repo's existing uses of a label or a term no longer match the glossary.
+- **Scope**: A rename, split, merge, move or deprecate that touches a term, or a redefine that moves a term's boundary. Excludes an add, and a redefine that only clarifies (every item already sorted under the term still fits).
+- **Aliases**: breaking change
+- **Example**: [prompts changelog, rename of `rule` to "fixed logic"](../prompts/changelog.md)
+- **Near miss**: Alias drift: the domain repo's lag after a breaking operation, not the operation itself.
+- **Kind**: happening
+- **Broader**: `operation`
+- **Status**: candidate
+- **Warrant**: Jonathan's words ("existing ones may need clarification or even breaking changes", 2026-11-27)
+- **History**: 2026-11-27 added (design/growth.md, proposed)
 
 ### shared kernel (`shared-kernel`)
 

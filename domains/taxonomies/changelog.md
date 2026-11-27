@@ -6,8 +6,11 @@ named on each line (G1); Jonathan can reverse any of them.
 ## 2026-11-27
 
 - **add** `term-backlog` and `revision-pass` as `candidate` terms, for method v1.1 M8
-  (proposed, J27): each stage keeps a backlog of opened concepts and revises earlier
+  (proposed, J33): each stage keeps a backlog of opened concepts and revises earlier
   entries by named operations. Proposed by: Claude, after Jonathan asked for it.
+- **add** `request` and `breaking-operation` as `candidate` (concepts of the proposed
+  growth flow, `design/growth.md`; the Vocabulary rule asks for an entry rather than a new
+  word). Proposed by: Claude; approval waits for J27-J30.
 
 ## 2026-11-26
 

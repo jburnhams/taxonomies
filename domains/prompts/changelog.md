@@ -20,7 +20,7 @@ named on each line (G1); Jonathan can reverse any of them.
   entries; the round-1 kit and name test in `stage-3/rounds/round-1/`; `scope.md` stage
   row and competency questions 21-27. Proposed by: Claude, after Jonathan said "Yes
   please" to stage 3.
-- **add** `backlog.md` (method v1.1 M8, proposed as J27): 16 rows taken by stage 3, 8
+- **add** `backlog.md` (method v1.1 M8, proposed as J33): 16 rows taken by stage 3, 8
   open. Proposed by: Claude, after Jonathan asked for new terms to be added as each
   decided concept opens more.
 - **add** 16 `candidate` terms from the backlog: `escalation`, `risk-tier`,

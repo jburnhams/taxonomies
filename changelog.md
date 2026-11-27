@@ -4,6 +4,11 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-27
 
+**Merged main into `claude/project-thread-oneclm` (PR #17)**, which had the growth proposal from PR #16. Both branches had numbered a new decision J27. Main keeps J27-J32 for the growth flow, and the stage-3 proposal (method v1.1 M8: term backlog, revision pass, retest) is renumbered **J33**.
+
+- `design/decisions.md`: status line covers both sets; the M8 row is now J33, after J32.
+- `design/method-v1.1.md`, `domains/prompts/backlog.md`, `domains/prompts/stage-3/revision.md`, `domains/prompts/changelog.md`, `domains/taxonomies/changelog.md`, this file: J27 → J33 where it named M8.
+
 **Adopted stage 3 of the prompts taxonomy, the control area (branch `claude/project-thread-oneclm`, PR #17)**. Jonathan chose facet set A (target, response). With that, every ending condition holds on round 1.
 
 - `domains/prompts/facets.md`, `scope.md`, `stage-3/rounds/round-1/review.md`: stage 3 is `in use`, set A is marked chosen.
@@ -28,7 +33,7 @@ openai-gemini 0.75, 0.70. Both pass.
 **Started stage 3 of the prompts taxonomy, the control area, with a term backlog and a revision pass (branch `claude/project-thread-oneclm`)**. Jonathan said yes to stage 3 and asked that each stage add the new terms a decided concept opens, and clarify or break earlier entries where needed. That became proposal M8, and stage 3 is the first to follow it.
 
 - `design/method-v1.1.md`: new M8 (term backlog, revision pass by G4 operations, retest of changed entries), with Z39.19 §11.3.1 and Denton §2.3 step 7 as warrant.
-- `design/decisions.md`: J27 (proposed).
+- `design/decisions.md`: J33 (proposed).
 - `domains/taxonomies/glossary.md`, `changelog.md`: `term-backlog` and `revision-pass` as `candidate` terms.
 - `domains/prompts/backlog.md`: **new**, 16 rows taken by stage 3 and 8 open.
 - `domains/prompts/stage-3/`: **new**. `sample3.py`, `items.csv`, `samples.md` (104 items from 35 files at prompts `e7d4fb2`), `count3.py`, `harvest.md`, `revision.md` (seven earlier entries changed, R1-R7), and the round-1 kit with a name test for 33 labels in `rounds/round-1/`.
@@ -36,6 +41,16 @@ openai-gemini 0.75, 0.70. Both pass.
 - `domains/prompts/glossary.md`: 10 value entries and 16 terms for the control area, all `candidate`. `compaction`, `approval`, `permission-mode`, `sandbox` clarified; `steer` split (new `system-reminder`); `handoff` and `precedence` lose the homonym aliases "escalation" and "authority" to new entries. All seven are `candidate` again until the name test. The stage-2 `precedence` alias "authority" clash was found by T2 when `authority` was drafted.
 - `domains/prompts/scope.md`: stage 3 row, competency questions 21-27, T9 now covers entries changed by a revision pass.
 - `domains/prompts/changelog.md`: the operations above.
+
+**Proposed a way for domain repos to look up, request and change terms (branch `claude/project-thread-8dnulq`)**. Jonathan asked for clients to be able to ask which existing term to use for a concept, or for a new one when none fits, so taxonomies grow, with the weekly prompts research pass as the example client; he added that research will keep opening up new concepts and that existing terms may need clarification or breaking changes. The weekly pass can push only to `jburnhams/prompts`, so requests are written in the domain repo's own tree and collected here.
+
+- `tools/term.py`: **new**. `lookup` (exact label, alias or old label, else closest terms with scope and near miss, plus earlier requests), `changes --since` (domain changelog lines since a date, breaking ones marked, and requests answered), `intake --write` (copies new records from each domain repo's `term-requests.md` into `domains/<name>/requests.md`). Standard library only; runs piped from raw.githubusercontent.com with no checkout. Tested on all three glossaries and on a throwaway prompts request.
+- `design/growth.md`: **new**, proposed. The loop, the request record (asks `new`, `clarify`, `change`), rules R1-R7 for an intake (outcomes, aliases first, candidates with the asker's warrant, clarify without moving the edge, breaking operations keep old labels findable and some need a round, versions by changelog date with `Breaking:` lines, when intake runs), and the four lines for a domain repo's `CLAUDE.md`.
+- `design/decisions.md`: J27-J32 proposed.
+- `domains/prompts/requests.md`, `domains/ux/requests.md`, `domains/taxonomies/requests.md`: **new**, empty request logs.
+- `domains/taxonomies/glossary.md`, `changelog.md`: `request` and `breaking-operation` added as `candidate`.
+- `CLAUDE.md`, `README.md`: how to ask for a term, and to run intake when working on a domain.
+- Not done: a find-a-term box on the explorer site, and GitHub issues as an inbox (both in `growth.md`, "Not in this proposal"). The weekly scheduled task for intake is proposed (J31), not created.
 
 ## 2026-11-26
 

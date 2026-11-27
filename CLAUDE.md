@@ -26,3 +26,9 @@ domain. Layout and reading order are in [`README.md`](./README.md).
   `design/` and any domain's files; a concept with no entry gets a `candidate` entry
   there. Its facets ([`facets.md`](./domains/taxonomies/facets.md)) sort every rule:
   `check` says whether a script, a judgement or Jonathan settles it.
+- **Requests**: domain repos ask for terms through [`tools/term.py`](./tools/term.py)
+  (`lookup`, `changes`) and a `term-requests.md` in their own root. When working on a
+  domain, run `python3 tools/term.py intake --write` first and answer each `open` record in
+  `domains/<name>/requests.md` by the rules in [`design/growth.md`](./design/growth.md)
+  (proposed, J27-J32): an outcome, the date, and any operation in the domain changelog,
+  with `Breaking: ...` on breaking ones.
