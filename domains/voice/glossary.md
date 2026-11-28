@@ -9,9 +9,9 @@ until stage 1 passes its rounds (spec G3).
 
 **Status**: stage 1 in use from 2026-11-27, after round 1 and the name test passed
 ([`scope.md`](./scope.md)). 15 values of facet set A (chosen by Jonathan 2026-11-27,
-[`facets.md`](./facets.md)) and 47 kernel terms. 60 are `approved` (`coaching` and `style` after round 2). Two are `candidate`
-(`demonstration` "coaching demo", `whole-voice`): each gained a near miss after round 2 and
-waits for the next round. Field rules:
+[`facets.md`](./facets.md)) and 47 kernel terms. 59 are `approved` (`style` after round 2). Three are `candidate`
+(`coaching`, `demonstration` "coaching demo", `whole-voice`): each failed or changed in round 2
+and waits for the next round. Field rules:
 [`design/spec.md` §4](../../design/spec.md#4-glossarymd). Counts:
 [`harvest.md`](./harvest.md). Examples link to voice-research (private) at `d02cddc`.
 Links to `prompts` terms are in [`map.md`](./map.md).
@@ -48,6 +48,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
    a runtime size). It is not a catch-all of the "other" kind: it is used only when no
    part is named.
 10. **`operations`** is flagged by T3 as a possible plural; a mass noun, as in `prompts`.
+11. **`coaching`** may need a new label: in both name tests, readers took it as feedback on a
+   take, which its scope excludes. "Style cue" (from its alias "cue") is the option to test
+   next round.
 
 ## Area values (`area`)
 
@@ -349,9 +352,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A style label in the canonical record: the same word may be shown as coaching, but in the record it is the requested style.
 - **Kind**: thing
 - **Related**: `demonstration`, `requested-style`
-- **Status**: approved
+- **Status**: candidate
 - **Warrant**: coach- 39 / 16; cue
-- **History**: 2026-11-27 added. 2026-11-27 redefine: scope excludes feedback after a take; a name-test reader read "coaching" as live direction. 2026-11-28 approved (round 2 and name test passed).
+- **History**: 2026-11-27 added. 2026-11-27 redefine: scope excludes feedback after a take; a name-test reader read "coaching" as live direction. 2026-11-28 stays candidate: both round-2 name-test readers read it as feedback on takes; a relabel ("style cue") is for Jonathan.
 
 ### coaching demo (`demonstration`)
 

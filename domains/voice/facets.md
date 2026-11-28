@@ -100,7 +100,7 @@ after round 1 passed J23 on every facet ([results](./rounds/round-1/results.md))
     model, a runtime size, a privacy rule about the archive.
 - **Order**: from who, to how, to what, to how well; the whole last.
 - **Unsorted**: [`r20`](./samples.md#round-1-test-40) (stored F0, energy and durations), 2026-11-27, answered by the `whole-voice` redefinition (`expression`). [`h07`](./samples.md#held-for-round-2-40) (judges prefer longer text) and [`h13`](./samples.md#held-for-round-2-40) (self and other labels bias judges), 2026-11-28, answered by the new `whole-voice` near miss (`whole-voice` and `identity`).
-- **Agreement**: Fleiss' κ 0.89, openai-gemini 0.87; 2026-11-28, 40 items (round 2), same raters. Round 1: 0.81, 0.77, when 6 of 8 disagreements involved `whole-voice`; after its redefinition, 2 of 6.
+- **Agreement**: Fleiss' κ 0.89, openai-gemini 0.87; 2026-11-28, 40 items (round 2), same raters. Round 1: 0.81, 0.77, when 6 of 8 disagreements involved `whole-voice`; after its redefinition, 2 of 4.
 
 ## Set B (alternative): area, modality, origin
 

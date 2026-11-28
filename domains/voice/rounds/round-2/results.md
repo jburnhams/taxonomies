@@ -17,8 +17,8 @@ commands and clean-run rules were the same as round 1; run details are at the to
 | trait | 90% | 0.89 | 0.90 | 0.90 | 0.87 |
 
 Compared with round 1, `area` fell from 0.96 to 0.87 and `trait` rose from 0.81 to 0.89.
-The `whole-voice` redefinition worked: it now appears in only 2 of the 6 trait
-disagreements, against 6 of 8 in round 1.
+The `whole-voice` redefinition worked: it now appears in 2 of the 4 trait
+disagreements (`h09`, `h13`), against 6 of 8 in round 1.
 
 ## Disagreements (claude / openai / gemini → majority, M5)
 
