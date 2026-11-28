@@ -1,0 +1,41 @@
+id,area,modality,trait,note
+h01,evaluation,spoken,content,
+h02,generation,spoken,identity,
+h03,operations,spoken,whole-voice,
+h04,evaluation,written,identity,
+h05,evaluation,written,identity,
+h06,representation,written,expression,
+h07,evaluation,written,expression,unsure whether length alone counts as expression
+h08,representation,spoken,expression,
+h09,evaluation,spoken,expression,Every style must be present in the held-out takes
+h10,elicitation,spoken,expression,
+h11,representation,spoken,expression,
+h12,elicitation,spoken,expression,
+h13,evaluation,both,identity,unsure whether attributed model authorship counts as identity
+h14,elicitation,spoken,content,
+h15,governance,written,whole-voice,
+h16,representation,spoken,expression,
+h17,generation,spoken,content,
+h18,evaluation,spoken,naturalness,
+h19,generation,spoken,identity,
+h20,evaluation,spoken,whole-voice,
+h21,elicitation,spoken,content,
+h22,evaluation,spoken,naturalness,
+h23,generation,spoken,identity,
+h24,evaluation,written,content,
+h25,preparation,spoken,expression,
+h26,elicitation,spoken,naturalness,unsure which synthesis quality drives speaker selection
+h27,evaluation,written,identity,
+h28,elicitation,spoken,naturalness,
+h29,evaluation,written,identity,
+h30,representation,spoken,expression,
+h31,generation,written,content,unsure which trait the personalised generation tasks score
+h32,representation,spoken,naturalness,SNR is the first caption attribute named
+h33,generation,spoken,expression,
+h34,preparation,spoken,identity,
+h35,preparation,spoken,naturalness,
+h36,representation,spoken,expression,
+h37,generation,spoken,expression,
+h38,operations,spoken,whole-voice,
+h39,elicitation,spoken,expression,
+h40,evaluation,written,identity,
