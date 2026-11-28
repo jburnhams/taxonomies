@@ -13,6 +13,8 @@ model configured to act). The moment values `turn`, `tool-call` and `ending` are
 kernel entries for those concepts. Field rules: [`design/spec.md` §4](../../design/spec.md#4-glossarymd).
 Counts: [`harvest.md`](./harvest.md). Examples link to prompts at commit `a531474`.
 
+**Requests** (2026-11-28, [`requests.md`](./requests.md)): `model-prompt` split from `context-window` and `retrieval` added, both `candidate`; `handoff` widened to in-run transfers between agents.
+
 **Stage 3** (control area): in use from 2026-11-27. 10 values of set A (chosen by Jonathan) and 16 terms `approved`; the seven earlier entries changed by the [revision pass](./stage-3/revision.md) (`compaction`, `steer`, `handoff`, `approval`, `permission-mode`, `sandbox`, `precedence`) passed the name test and are `approved` again.
 
 ## Label choices for Jonathan's veto (J8)
@@ -563,15 +565,28 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 ### context window (`context-window`)
 
 - **Definition**: A context window is a limit on how many tokens a model accepts on one request, its reply included.
-- **Scope**: Includes the limit and what fills it: the system prompt, tool definitions, conversation, tool results and injected text. Excludes the area value `context`, which is about how it is filled.
-- **Aliases**: model context, prompt
+- **Scope**: Includes the limit and the space it bounds, which content is loaded into or cut from. The text that fills it on one request is the `model-prompt`. Excludes the area value `context`, which is about how it is filled.
+- **Aliases**: model context
 - **Example**: [agent-context-compaction.md](https://github.com/jburnhams/prompts/blob/a531474/agent-context-compaction.md)
 - **Near miss**: Memory: kept across runs and loaded into the context window only when retrieved.
 - **Kind**: thing
-- **Related**: `system-prompt`, `compaction`
+- **Related**: `system-prompt`, `compaction`, `model-prompt`
 - **Status**: candidate
 - **Warrant**: context window 69 in 29 files
-- **History**: 2026-11-26 added. 2026-11-26 redefine: the limit, not the contents, after both name-test readers gave the established sense (N6).
+- **History**: 2026-11-26 added. 2026-11-26 redefine: the limit, not the contents, after both name-test readers gave the established sense (N6). 2026-11-28 split (request [`issue-20`](./requests.md)): alias "prompt" and "what fills it" moved to the new `model-prompt`, so the limit and the text have one term each.
+
+### prompt (`model-prompt`)
+
+- **Definition**: A prompt is a body of text that a harness sends to a language model on one request: fixed instructions, tool definitions, conversation, tool results and injected text.
+- **Scope**: Includes every part sent on the request, whoever wrote it, and the prompt as assembled for one sub-agent or one second-model call. Excludes the model's reply.
+- **Aliases**: model prompt, model input
+- **Example**: [agent-context-file-loading.md §12a](https://github.com/jburnhams/prompts/blob/4c30cd1/agent-context-file-loading.md), skills: a catalog in the prompt, a body on demand.
+- **Near miss**: A system prompt: one fixed part of it. A context window: the limit it must fit inside, not the text.
+- **Kind**: thing
+- **Related**: `context-window`, `system-prompt`
+- **Status**: candidate
+- **Warrant**: "the/a/its/each/whole/full prompt" 525 in 128 files (prompts `4c30cd1`, excluding `leaked/` and `skills/`); already used in the definitions of `progressive-disclosure` and `index-file`
+- **History**: 2026-11-28 added, split from `context-window` (request [`issue-20`](./requests.md), from the voice domain). Labelled "prompt", the repo's basic-level word; the ID says "model" because voice-research also has recording prompts. Waits for the next round (J28).
 
 ### context file (`context-file`)
 
@@ -665,16 +680,16 @@ round-1 rater prompts (raters sort with the facet values only); tested by the na
 
 ### handoff (`handoff`)
 
-- **Definition**: A handoff is a happening in which a run passes its work to a person or another run instead of finishing it.
-- **Scope**: Includes Keel's `HandOff` ending and giving a task to a person to finish.
-- **Aliases**: hand-off, hand off
+- **Definition**: A handoff is a happening in which a run or an agent passes its work to a person, another run or another agent instead of finishing it, and does not get it back.
+- **Scope**: Includes Keel's `HandOff` ending, giving a task to a person to finish, and passing control inside a run to another agent that answers in its place (OpenAI Agents SDK `transfer_to_<agent>` tools, LangGraph swarm's `active_agent`, Microsoft Agent Framework's Handoff pattern).
+- **Aliases**: hand-off, hand off, transfer, agent transfer
 - **Example**: [agent-permissions-approval.md](https://github.com/jburnhams/prompts/blob/a531474/agent-permissions-approval.md)
 - **Near miss**: A sub-agent's report: returned to its spawner, which carries on. An `escalation`: passes one decision to a stricter check and the run carries on once it is answered.
 - **Kind**: happening
 - **Related**: `escalation`
 - **Status**: approved
-- **Warrant**: handoff 261; hand-off 17
-- **History**: 2026-11-26 added. 2026-11-27 redefine (stage-3 revision pass R3): alias "escalation" removed, because the repo uses it for passing a decision up (a risk tier raised, a command sent to the user for approval: [agent-design/risk.md §3](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/risk.md)), not for passing the work; that sense is the new `escalation`. 2026-11-27 approved (stage 3 adopted).
+- **Warrant**: handoff 261; hand-off 17; handoff or transfer_to 18 in agent-swarms.md (prompts `4c30cd1`), in the in-run sense
+- **History**: 2026-11-26 added. 2026-11-27 redefine (stage-3 revision pass R3): alias "escalation" removed, because the repo uses it for passing a decision up (a risk tier raised, a command sent to the user for approval: [agent-design/risk.md §3](https://github.com/jburnhams/prompts/blob/e7d4fb2/agent-design/risk.md)), not for passing the work; that sense is the new `escalation`. 2026-11-27 approved (stage 3 adopted). 2026-11-28 redefine (request [`issue-29`](./requests.md)): widened to an agent passing control to another agent inside a run ([agent-swarms.md §4b](https://github.com/jburnhams/prompts/blob/4c30cd1/agent-swarms.md)), which the field calls a handoff, and aliases "transfer" and "agent transfer" added; every earlier use still fits, so not breaking (R4).
 
 ### trigger (`trigger`)
 
@@ -1139,6 +1154,19 @@ Drafted 2026-11-26 from [`stage-2/harvest.md`](./stage-2/harvest.md), tested by 
 - **Status**: approved
 - **Warrant**: index 80 in the context docs
 - **History**: 2026-11-26 added (stage 2).
+
+### retrieval (`retrieval`)
+
+- **Definition**: Retrieval is a supply that brings items kept in a store into the prompt, by pasting them in every time, reading them from an index, searching for them or matching a trigger.
+- **Scope**: Includes memory recall, RAG over a knowledge base or past sessions, code search results added to the prompt, and memory tools such as `search_memory`. Excludes writing the items (`recording`).
+- **Aliases**: recall, memory retrieval, RAG, retrieval-augmented generation
+- **Example**: [agent-memory-learning.md §5](https://github.com/jburnhams/prompts/blob/4c30cd1/agent-memory-learning.md), retrieval: pasted in, pointed at, searched, or triggered.
+- **Near miss**: A web search: it brings in outside pages, not items the system keeps, and they arrive as a tool result.
+- **Kind**: happening
+- **Related**: `supply`, `memory`, `progressive-disclosure`, `conditional-loading`
+- **Status**: candidate
+- **Warrant**: retriev- 219 in 81 files (prompts `4c30cd1`, excluding `leaked/` and `skills/`); RAG 14
+- **History**: 2026-11-28 added (request [`issue-21`](./requests.md), from the voice domain). Broader than voice's `retrieval`, which is search only; the repo's own section names five retrieval modes. Waits for the next round (J28).
 
 ## Stage 3: control area, facet values
 

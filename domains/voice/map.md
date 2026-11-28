@@ -24,6 +24,14 @@ the same concept.
   for that context.
 - `recording-session` relatedMatch `prompts:session`: different concepts that share the
   word "session"; voice uses "recording session" so the bare word is not needed.
+- `retrieval` broadMatch `prompts:retrieval`: `prompts` counts every way kept items are
+  brought into the prompt (pasted in, index read, search, trigger match); voice's
+  `retrieval` is the search kind only, with long context as its near miss. Answered
+  2026-11-28 ([#21](https://github.com/jburnhams/taxonomies/issues/21)).
+- (no voice entry) "model prompt" closeMatch `prompts:model-prompt` (labelled "prompt"
+  there): the text sent to a language model on one request. Voice keeps "model prompt",
+  an alias in `prompts`, because "prompt" alone also means a recording prompt here.
+  Answered 2026-11-28 ([#20](https://github.com/jburnhams/taxonomies/issues/20)).
 - (no voice entry) "transcript": the words of a take here; a run's record of turns in
   `prompts` (`prompts:transcript`). Not mapped: different concepts. A later stage may
   add a voice entry labelled to avoid the collision.
@@ -38,4 +46,4 @@ the same concept.
 - **new `prompts: retrieval`**: no term in `prompts`, though the prompts repo uses
   "retriev-" about 400 times; voice has `retrieval` (stage 1 candidate) and would map to it.
 
-Filed 2026-11-27 as [#20](https://github.com/jburnhams/taxonomies/issues/20) (clarify "prompt") and [#21](https://github.com/jburnhams/taxonomies/issues/21) (new `retrieval`); the Tuesday intake answers them.
+Filed 2026-11-27 as [#20](https://github.com/jburnhams/taxonomies/issues/20) (clarify "prompt") and [#21](https://github.com/jburnhams/taxonomies/issues/21) (new `retrieval`); both answered 2026-11-28 (links above, and `domains/prompts/requests.md`).

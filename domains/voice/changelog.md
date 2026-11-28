@@ -5,6 +5,9 @@ named on each line (G1); Jonathan can reverse any of them.
 
 ## 2026-11-28
 
+- **map** `retrieval` broadMatch `prompts:retrieval` and "model prompt" closeMatch
+  `prompts:model-prompt`, after `prompts` answered requests #20 and #21. Voice docs keep
+  "model prompt". Approved by: Claude (G1).
 - **record** round 2 (run on omarchy, `9debcd7`): Fleiss' κ area 0.87, modality 0.96,
   trait 0.89; openai-gemini 0.91, 0.94, 0.87; pass (J23). `h07` and `h13` (LLM-judge
   biases) to Unsorted, answered by a new `whole-voice` near miss. Name test: 2 of 4 retested

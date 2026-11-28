@@ -4,6 +4,15 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-28
 
+**Answered the nine open prompts term requests by hand (branch `claude/project-thread-xrtek5`)**. Jonathan asked for the prompts requests to be processed now rather than at Tuesday's intake. The branch builds on `claude/project-thread-7iimfg` (PR #30), which had logged them, so merging this PR also merges #30. No term request issues were open in `jburnhams/prompts` itself.
+
+- `domains/prompts/glossary.md`: `model-prompt` (labelled "prompt") **new**, split from `context-window`, which keeps the limit (#20); `retrieval` **new** (#21); `handoff` widened to in-run transfers between agents (#29). Both new terms are `candidate`.
+- `domains/prompts/requests.md`: outcomes and answer dates for #20, #21 and #23-#29. #23-#28 are `backlog`: the coordination area has no stage yet.
+- `domains/prompts/backlog.md`: the #29 row moves to a new "Answered by intake" table.
+- `domains/prompts/changelog.md`: the operations.
+- `domains/voice/map.md`: the two answers to voice's requests, as links (`model prompt` closeMatch `prompts:model-prompt`, `retrieval` broadMatch `prompts:retrieval`).
+- Gap found: growth R1 lists no outcome for a request sent to the backlog under R3; `backlog` is used here and proposed for R1.
+
 **Logged the prompts agent swarms requests and opened coordination backlog rows (branch `claude/project-thread-7iimfg`)**. The prompts deep dive into agent swarms found six concepts the glossary has no word for and one unclear term, and filed them as issues #23-#29. Jonathan asked it to "make use of and update taxonomies".
 
 - `domains/prompts/requests.md`: intake run; nine open requests logged (#20, #21, #23-#29), none answered, for the Tuesday intake.

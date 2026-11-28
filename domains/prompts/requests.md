@@ -24,7 +24,8 @@ answers back to the asker. Nothing here is deleted.
 - **Warrant**: "handoff/transfer_to" 18 in agent-swarms.md and its proposals in this sense; agent-subagent-architectures.md §7 uses it the same way for Microsoft Agent Framework's Handoff pattern.
 - **Asked**: jburnhams/prompts agent swarms deep dive, 2026-11-28, branch claude/project-thread-7iimfg
 - **From**: [#29](https://github.com/jburnhams/taxonomies/issues/29)
-- **Outcome**: open
+- **Outcome**: clarified, `handoff`. The in-run transfer is a handoff: the definition now reads "a run or an agent passes its work to a person, another run or another agent instead of finishing it, and does not get it back", and the scope names the OpenAI, LangGraph and Microsoft cases. A sub-agent's report stays the near miss (the spawner gets the work back). Every earlier use still fits, so not breaking (R4); named in the PR for Jonathan's veto (R5).
+- **Answered**: 2026-11-28, Claude (by-hand intake in the Taxonomies project, asked by Jonathan)
 
 ### debate (`issue-28`)
 
@@ -35,7 +36,8 @@ answers back to the asker. Nothing here is deleted.
 - **Warrant**: "debate" 2 in the repo's docs at 16aef6a; 18 in agent-swarms.md and its proposals; the field's own word (multi-agent debate, Du et al. and the 2026 papers 2606.29270, 2609.35875).
 - **Asked**: jburnhams/prompts agent swarms deep dive, 2026-11-28, branch claude/project-thread-7iimfg
 - **From**: [#28](https://github.com/jburnhams/taxonomies/issues/28)
-- **Outcome**: open
+- **Outcome**: backlog (R3). The coordination area has no stage yet, so this is an open row in [`backlog.md`](./backlog.md) that the coordination stage starts from. Keep writing "debate" meanwhile (a usable word, growth loop step 2); `term.py changes prompts` will show the term when the stage defines it.
+- **Answered**: 2026-11-28, Claude (by-hand intake in the Taxonomies project, asked by Jonathan)
 
 ### vote (`issue-27`)
 
@@ -46,7 +48,8 @@ answers back to the asker. Nothing here is deleted.
 - **Warrant**: "vote/voting/majority vote" 18 in the repo's docs at 16aef6a; "ensemble" 25; "best-of-N" 9; 23 in agent-swarms.md and its proposals.
 - **Asked**: jburnhams/prompts agent swarms deep dive, 2026-11-28, branch claude/project-thread-7iimfg
 - **From**: [#27](https://github.com/jburnhams/taxonomies/issues/27)
-- **Outcome**: open
+- **Outcome**: backlog (R3). The coordination area has no stage yet, so this is an open row in [`backlog.md`](./backlog.md) that the coordination stage starts from. Keep writing "vote" meanwhile (a usable word, growth loop step 2); `term.py changes prompts` will show the term when the stage defines it.
+- **Answered**: 2026-11-28, Claude (by-hand intake in the Taxonomies project, asked by Jonathan)
 
 ### board (`issue-26`)
 
@@ -57,7 +60,8 @@ answers back to the asker. Nothing here is deleted.
 - **Warrant**: "message board" 3 and "board" in this sense in agent-subagent-architectures.md §7b at 16aef6a; 40 in agent-swarms.md and its proposals; four independent systems in 2026 (Codex, ArcticSwarm, Antigravity, Agensh).
 - **Asked**: jburnhams/prompts agent swarms deep dive, 2026-11-28, branch claude/project-thread-7iimfg
 - **From**: [#26](https://github.com/jburnhams/taxonomies/issues/26)
-- **Outcome**: open
+- **Outcome**: backlog (R3). The coordination area has no stage yet, so this is an open row in [`backlog.md`](./backlog.md) that the coordination stage starts from. Keep writing "board" meanwhile (a usable word, growth loop step 2); `term.py changes prompts` will show the term when the stage defines it.
+- **Answered**: 2026-11-28, Claude (by-hand intake in the Taxonomies project, asked by Jonathan)
 
 ### fan-out (`issue-25`)
 
@@ -68,7 +72,8 @@ answers back to the asker. Nothing here is deleted.
 - **Warrant**: "fan-out" / "fan out" 130 in the repo's docs at 16aef6a; "fan-in" 4.
 - **Asked**: jburnhams/prompts agent swarms deep dive, 2026-11-28, branch claude/project-thread-7iimfg
 - **From**: [#25](https://github.com/jburnhams/taxonomies/issues/25)
-- **Outcome**: open
+- **Outcome**: backlog (R3). The coordination area has no stage yet, so this is an open row in [`backlog.md`](./backlog.md) that the coordination stage starts from. Keep writing "fan-out" meanwhile (a usable word, growth loop step 2); `term.py changes prompts` will show the term when the stage defines it.
+- **Answered**: 2026-11-28, Claude (by-hand intake in the Taxonomies project, asked by Jonathan)
 
 ### topology (`issue-24`)
 
@@ -79,7 +84,8 @@ answers back to the asker. Nothing here is deleted.
 - **Warrant**: "topolog-" 13 in the repo's docs at 16aef6a (agent-subagent-architectures.md §7 calls Microsoft Agent Framework's five patterns topologies), 10 more in agent-swarms.md and its proposals.
 - **Asked**: jburnhams/prompts agent swarms deep dive, 2026-11-28, branch claude/project-thread-7iimfg
 - **From**: [#24](https://github.com/jburnhams/taxonomies/issues/24)
-- **Outcome**: open
+- **Outcome**: backlog (R3). The coordination area has no stage yet, so this is an open row in [`backlog.md`](./backlog.md) that the coordination stage starts from. Keep writing "topology" meanwhile (a usable word, growth loop step 2); `term.py changes prompts` will show the term when the stage defines it.
+- **Answered**: 2026-11-28, Claude (by-hand intake in the Taxonomies project, asked by Jonathan)
 
 ### swarm (`issue-23`)
 
@@ -90,7 +96,8 @@ answers back to the asker. Nothing here is deleted.
 - **Warrant**: "swarm" 39 in the repo's own docs (excluding leaked/ and skills/) at prompts 16aef6a, 77 in agent-swarms.md and its proposals at 1a3c84b; used as a product name by OpenAI Swarm, Kimi Agent Swarm, Antigravity /swarm, LangGraph swarm.
 - **Asked**: jburnhams/prompts agent swarms deep dive, 2026-11-28, branch claude/project-thread-7iimfg
 - **From**: [#23](https://github.com/jburnhams/taxonomies/issues/23)
-- **Outcome**: open
+- **Outcome**: backlog (R3). The coordination area has no stage yet, so this is an open row in [`backlog.md`](./backlog.md) that the coordination stage starts from. Keep writing "swarm" meanwhile (a usable word, growth loop step 2); `term.py changes prompts` will show the term when the stage defines it.
+- **Answered**: 2026-11-28, Claude (by-hand intake in the Taxonomies project, asked by Jonathan)
 
 ### retrieval (`issue-21`)
 
@@ -101,7 +108,8 @@ answers back to the asker. Nothing here is deleted.
 - **Warrant**: prompts: "retriev-" about 409 matching lines repo-wide, RAG 52 (grep, 2026-11-27); voice-research: retriev-/RAG 160 in 25 files.
 - **Asked**: Voice taxonomy stage 1, `domains/voice/` on branch `claude/project-thread-h8atpn` (PR #19), aligning voice with prompts.
 - **From**: [#21](https://github.com/jburnhams/taxonomies/issues/21)
-- **Outcome**: open
+- **Outcome**: candidate, `retrieval` (context area, a kind of `supply`). Defined from the prompts repo's own use, which is wider than the request: [agent-memory-learning.md §5](https://github.com/jburnhams/prompts/blob/4c30cd1/agent-memory-learning.md) counts pasting in, index reads, search and trigger matching as retrieval modes. Voice's search-only `retrieval` maps to it as broadMatch (`domains/voice/map.md`).
+- **Answered**: 2026-11-28, Claude (by-hand intake in the Taxonomies project, asked by Jonathan)
 
 ### model prompt (`issue-20`)
 
@@ -113,4 +121,5 @@ answers back to the asker. Nothing here is deleted.
 - **Warrant**: voice-research: "prompt" 426 uses in 96 files, about a quarter in this sense (2026-11-27).
 - **Asked**: Voice taxonomy stage 1, `domains/voice/` on branch `claude/project-thread-h8atpn` (PR #19), aligning voice with prompts.
 - **From**: [#20](https://github.com/jburnhams/taxonomies/issues/20)
-- **Outcome**: open
+- **Outcome**: changed, new candidate `model-prompt` (labelled "prompt") split from `context-window`. `context-window` keeps the limit; the text sent on one request is the prompt, and the alias "prompt" moved with it. Not breaking for prompts docs ("loaded into the context window" still reads right); new writing uses "prompt" for the text. Voice-research keeps writing "model prompt" (an alias here), since "prompt" alone is ambiguous there; mapped in `domains/voice/map.md`. Split named in the PR for Jonathan's veto (R5).
+- **Answered**: 2026-11-28, Claude (by-hand intake in the Taxonomies project, asked by Jonathan)

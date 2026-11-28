@@ -12,7 +12,7 @@ at its end.
 Warrant counts are over the control docs ("ctl", the eight in
 [`stage-3/samples.md`](./stage-3/samples.md)) and over every analysis doc and per-source
 README ("all"), at prompts `e7d4fb2`, from [`stage-3/harvest.md`](./stage-3/harvest.md)
-unless marked. **Taken** names the stage and the entry; **open** rows wait for a stage.
+unless marked. **Taken** names the stage and the entry; **answered by intake** rows were settled by a request's answer; **open** rows wait for a stage. Rows opened by a request link its issue, which is closed with a pointer here (growth R3).
 
 ## Taken by stage 3 (control)
 
@@ -35,6 +35,12 @@ unless marked. **Taken** names the stage and the entry; **open** rows wait for a
 | refusing to load project content from a workspace not marked as trusted | `context-file` | trust 18 / 324 | `trust-gate` (new) |
 | the harness channel for adding text to a turn | `steer` (aliases covered notices that are not steers) | system-reminder 17 / 51; reminder 35 / 128 | `system-reminder` (new, split from `steer`) |
 
+## Answered by intake
+
+| Concept | Opened by | Warrant | Answered as |
+|---|---|---|---|
+| one agent passing control to another inside a run (OpenAI, LangGraph, MS "handoff") | [#29](https://github.com/jburnhams/taxonomies/issues/29) (`clarify` on `handoff`) | handoff or transfer_to 18 swarms | `handoff` widened, 2026-11-28 ([`requests.md`](./requests.md) `issue-29`) |
+
 ## Open
 
 | Concept | Opened by | Warrant | Expected stage |
@@ -54,4 +60,3 @@ unless marked. **Taken** names the stage and the entry; **open** rows wait for a
 | board: a shared append-only record agents post to instead of messaging | [#26](https://github.com/jburnhams/taxonomies/issues/26), from `scratchpad`, `memory` near misses | message board 3 all; board 40 swarms | coordination |
 | vote: choosing the answer most independent agents give | [#27](https://github.com/jburnhams/taxonomies/issues/27), from `self-verification` | vote or voting 18 all; ensemble 25; best-of-N 9 | coordination or verification |
 | debate: agents reading each other's answers and revising over rounds | [#28](https://github.com/jburnhams/taxonomies/issues/28), from `vote` | debate 2 all; 18 swarms | coordination or verification |
-| one agent passing control to another inside a run (OpenAI, LangGraph, MS "handoff") | [#29](https://github.com/jburnhams/taxonomies/issues/29) (`clarify` on `handoff`) | handoff or transfer_to 18 swarms | intake first (R4), else coordination |
