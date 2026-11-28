@@ -12,7 +12,7 @@ at its end.
 Warrant counts are over the control docs ("ctl", the eight in
 [`stage-3/samples.md`](./stage-3/samples.md)) and over every analysis doc and per-source
 README ("all"), at prompts `e7d4fb2`, from [`stage-3/harvest.md`](./stage-3/harvest.md)
-unless marked. **Taken** names the stage and the entry; **open** rows wait for a stage.
+unless marked. **Taken** names the stage and the entry; **answered by intake** rows were settled by a request's answer; **open** rows wait for a stage. Rows opened by a request link its issue, which is closed with a pointer here (growth R3).
 
 ## Taken by stage 3 (control)
 
@@ -35,6 +35,12 @@ unless marked. **Taken** names the stage and the entry; **open** rows wait for a
 | refusing to load project content from a workspace not marked as trusted | `context-file` | trust 18 / 324 | `trust-gate` (new) |
 | the harness channel for adding text to a turn | `steer` (aliases covered notices that are not steers) | system-reminder 17 / 51; reminder 35 / 128 | `system-reminder` (new, split from `steer`) |
 
+## Answered by intake
+
+| Concept | Opened by | Warrant | Answered as |
+|---|---|---|---|
+| one agent passing control to another inside a run (OpenAI, LangGraph, MS "handoff") | [#29](https://github.com/jburnhams/taxonomies/issues/29) (`clarify` on `handoff`) | handoff or transfer_to 18 swarms | `handoff` widened, 2026-11-28 ([`requests.md`](./requests.md) `issue-29`) |
+
 ## Open
 
 | Concept | Opened by | Warrant | Expected stage |
@@ -47,3 +53,10 @@ unless marked. **Taken** names the stage and the entry; **open** rows wait for a
 | proof: evidence that a change works in real use, apart from tests | `kr09` | ⚠ not counted | verification |
 | deny list, as its own entry rather than an alias of `allow-list` | `allow-list` | deny list or denylist 5 / 14 | control retest, if raters split it |
 | confirmation policy: a document listing which actions need a person | `permission-mode` alias "approval policy" | confirmation polic- 1 / 9 | control retest |
+| swarm: a set of agents working on one task at once, results combined | [#23](https://github.com/jburnhams/taxonomies/issues/23), from `coordination` | swarm 39 all at prompts `16aef6a`; 77 in `agent-swarms.md` + proposals at `1a3c84b` | coordination |
+| topology: who talks to whom and who combines (independent, centralized, hierarchical, decentralized, board) | [#24](https://github.com/jburnhams/taxonomies/issues/24), from `orchestrator` | topolog- 13 all; 10 swarms | coordination (maybe a facet) |
+| fan-out: starting several sub-agents at once and joining their results | [#25](https://github.com/jburnhams/taxonomies/issues/25), from `sub-agent` | fan out or fan-out 130 all; fan-in 4 | coordination |
+| join: the end of a fan-out, with its deadline and rule for a missing part | `fan-out` (#25) | ⚠ not counted; proposal 3 in `proposals-swarms-2026-11.md` | coordination |
+| board: a shared append-only record agents post to instead of messaging | [#26](https://github.com/jburnhams/taxonomies/issues/26), from `scratchpad`, `memory` near misses | message board 3 all; board 40 swarms | coordination |
+| vote: choosing the answer most independent agents give | [#27](https://github.com/jburnhams/taxonomies/issues/27), from `self-verification` | vote or voting 18 all; ensemble 25; best-of-N 9 | coordination or verification |
+| debate: agents reading each other's answers and revising over rounds | [#28](https://github.com/jburnhams/taxonomies/issues/28), from `vote` | debate 2 all; 18 swarms | coordination or verification |

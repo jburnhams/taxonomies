@@ -3,6 +3,35 @@
 Every change as a named operation (spec G4), newest day first. The approving agent is
 named on each line (G1); Jonathan can reverse any of them.
 
+## 2026-11-28
+
+- **record** intake answers (R1) for all nine open requests, by hand at Jonathan's ask
+  ("process prompts requests / issues"); each issue commented and closed. Approved by:
+  Claude (G1).
+- **split** `context-window` (issue #20): new `candidate` `model-prompt`, labelled
+  "prompt", for the text sent to a model on one request; alias "prompt" and "what fills
+  it" move to it, and `context-window` keeps the limit. Not breaking for prompts docs;
+  new writing uses "prompt" for the text. Named in the PR for Jonathan's veto (R5,
+  touches label choice J8 item 5). Approved by: Claude (G1, `context-window` is
+  `candidate`).
+- **add** `retrieval` (issue #21), `candidate`, context area: a supply that brings kept
+  items into the prompt by any of the five modes in agent-memory-learning.md §5.
+  Proposed by: Claude.
+- **redefine** `handoff` (issue #29): widened to an agent passing control to another
+  agent inside a run; aliases "transfer", "agent transfer". Every earlier use still
+  fits (R4), so not breaking. Approved by: Claude (G1); named in the PR for Jonathan's veto.
+- **record** issues #23-#28 (swarm, topology, fan-out, board, vote, debate) answered
+  `backlog` (R3): the coordination area has no stage yet; their `backlog.md` rows stay
+  open, and the #29 row moves to "Answered by intake". Approved by: Claude (G1).
+- **record** intake (`term.py intake --write`): nine open `term-request` issues logged
+  in `requests.md` as `open` (#20, #21, #23-#29). Not answered here: that is the
+  Tuesday intake's (R7). Approved by: Claude (G1).
+- **add** 8 open rows to `backlog.md` for the coordination stage, opened by the
+  prompts agent swarms deep dive (`agent-swarms.md` at prompts `1a3c84b`): swarm,
+  topology, fan-out, join, board, vote, debate (issues #23-#28, R3), and agent-to-agent
+  control passing (#29, a `clarify` on `handoff` for the intake first). Proposed by:
+  Claude, after Jonathan asked the deep dive to "make use of and update taxonomies".
+
 ## 2026-11-27
 
 - **decide** stage-3 facet set A (`target`, `response`), by Jonathan on the decision card,
