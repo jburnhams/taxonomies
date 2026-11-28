@@ -43,12 +43,15 @@ Built with the method in [`design/process.md`](../../design/process.md) (version
 
 The population is 329 items (133 sources, 196 findings; [`samples.md`](./samples.md)),
 over M1's threshold of about 300, and the repo's own docs split the work into at least
-seven parts (the agendas' areas A-K). So it is built in stages inside one context.
+seven parts (the agendas' areas A-K). So it is built in stages inside one context. By
+voice-research `5af9937` (2026-11-28), there are 172 sources. They were checked against the
+facets in [`harvest.md`](./harvest.md#update-2026-11-28-voice-research-5af9937); the next
+round draws from that population.
 
 | Stage | Covers | Facets | Status |
 |---|---|---|---|
 | 1. Kernel | the words every part uses (voice, take, teacher, student, reference clip, style, synthetic data, held-out set, listening test, LLM judge, ...) and the split into areas | set A (Jonathan 2026-11-27): `area`, `modality`, `trait` ([`facets.md`](./facets.md)) | in use 2026-11-27 after one round; round 2 passed 2026-11-28 |
-| 2+. Areas | one at a time, in the order the repo's work reaches them (J10). Likely first: `evaluation` (most warrant: MOS 189, WER 247, judge 264, metric 151 uses) or `generation` (teacher 223, student 206, fine-tun- 329) | per area | not started |
+| 2+. Areas | one at a time, in the order the repo's work reaches them (J10). Likely first: `evaluation` (most warrant: MOS 189, WER 247, judge 264, metric 151 uses) or `generation` (teacher 223, student 206, fine-tun- 329; after the 2026-11-28 update preference 247, DPO 108, reward 111) | per area | not started |
 
 ## Competency questions (stage 1)
 

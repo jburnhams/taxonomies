@@ -9,11 +9,12 @@ until stage 1 passes its rounds (spec G3).
 
 **Status**: stage 1 in use from 2026-11-27, after round 1 and the name test passed
 ([`scope.md`](./scope.md)). 15 values of facet set A (chosen by Jonathan 2026-11-27,
-[`facets.md`](./facets.md)) and 47 kernel terms. 59 are `approved` (`style` after round 2). Three are `candidate`
-(`coaching`, `demonstration` "coaching demo", `whole-voice`): each failed or changed in round 2
-and waits for the next round. Field rules:
+[`facets.md`](./facets.md)) and 51 kernel terms. 59 are `approved` (`style` after round 2). Seven are `candidate`:
+`coaching`, `demonstration` "coaching demo" and `whole-voice` failed or changed in round 2, and
+`assisted-message`, `preference-data`, `reward` and `style-instruction` were added on 2026-11-28
+from the research update at voice-research `5af9937`; all wait for the next round. Field rules:
 [`design/spec.md` §4](../../design/spec.md#4-glossarymd). Counts:
-[`harvest.md`](./harvest.md). Examples link to voice-research (private) at `d02cddc`.
+[`harvest.md`](./harvest.md). Examples link to voice-research (private) at `d02cddc`, or `5af9937` for entries added 2026-11-28.
 Links to `prompts` terms are in [`map.md`](./map.md).
 
 ## Label choices for Jonathan's veto (J8)
@@ -298,12 +299,25 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Scope**: Includes his takes, unscripted speech, found recordings and sent messages. Excludes anything a model made, even in his voice (`synthetic-data`), and other speakers' corpora.
 - **Aliases**: own data, genuine data, human data
 - **Example**: [voice-design/data-collection.md](https://github.com/jburnhams/voice-research/blob/d02cddc/voice-design/data-collection.md), what to record and keep now.
-- **Near miss**: Voice-converted audio in his timbre: it sounds like him, but a model made it, so it is synthetic data.
+- **Near miss**: Voice-converted audio in his timbre: it sounds like him, but a model made it, so it is synthetic data. An assisted message: real data, but tagged and kept out of the reference corpus (`assisted-message`).
 - **Kind**: thing
 - **Related**: `synthetic-data`
 - **Status**: approved
 - **Warrant**: real 393 / 97 ("real takes", "real data"); genuine
 - **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
+
+### assisted message (`assisted-message`)
+
+- **Definition**: An assisted message is a message Jonathan sent whose words an AI assistant drafted, suggested or rewrote in part.
+- **Scope**: Includes drafts he edited or accepted, accepted suggestions and autocomplete, tagged "AI-assisted" or "AI-drafted" where known. Excludes messages he wrote unaided, which form the pre-assistant reference corpus, and text a model wrote that he never sent (`synthetic-data`).
+- **Aliases**: AI-assisted message, AI-drafted message
+- **Example**: [voice-design/data-collection.md](https://github.com/jburnhams/voice-research/blob/5af9937/voice-design/data-collection.md), §2.4a Assisted or not.
+- **Near miss**: Real data written unaided: also a message he sent, but all its words are his. An assisted message is still real data, kept and tagged, but not the reference for his voice, because AI suggestions pull writing towards the model's style.
+- **Kind**: thing
+- **Related**: `real-data`, `message`, `synthetic-data`
+- **Status**: candidate
+- **Warrant**: assisted, AI-assisted, pre-assistant 24 / 11
+- **History**: 2026-11-28 added (candidate) after the research update at voice-research `5af9937` (39 new sources).
 
 ### synthetic data (`synthetic-data`)
 
@@ -464,7 +478,7 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Scope**: Includes full fine-tuning, speaker adaptation, SFT on one speaker, and training adapters. Excludes training a model from scratch and anything done only in the prompt (`zero-shot-cloning`).
 - **Aliases**: SFT, speaker adaptation, adaptation
 - **Example**: [papers/cosyvoice2/README.md](https://github.com/jburnhams/voice-research/blob/d02cddc/papers/cosyvoice2/README.md), single-speaker fine-tuning from 400 recordings.
-- **Near miss**: Preference training (DPO): it also changes weights, but from pairs of choices rather than his data as targets; a later stage may give it an entry.
+- **Near miss**: Preference training (DPO): it also changes weights, but from `preference-data` (pairs of choices) rather than his data as targets.
 - **Kind**: happening
 - **Related**: `adapter`, `voice-cloning`
 - **Status**: approved
@@ -482,6 +496,19 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Status**: approved
 - **Warrant**: adapter 78 / 18; LoRA 124 / 21
 - **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
+
+### preference data (`preference-data`)
+
+- **Definition**: Preference data is a body of Jonathan's choices between outputs, or of his edits to drafts, kept to train a model towards what he prefers.
+- **Scope**: Includes his blind A/B choices on generated clips (with the pair, display order, choice, time taken and round), (draft, sent text) pairs from his edits, and the preference sentences derived from them, when used to train or steer a model (DPO, listwise preference optimisation, preference sentences retrieved into the model prompt). Excludes choices made on a held-out set to judge a model (`pairwise-judgement`), and choices made by a model (AI feedback), which are a `reward`.
+- **Aliases**: preference pairs, A/B choices (as training data), human feedback, edit-derived preferences
+- **Example**: [voice-design/data-collection.md](https://github.com/jburnhams/voice-research/blob/5af9937/voice-design/data-collection.md), §1.7 his listening judgements as preference data.
+- **Near miss**: A pairwise judgement: the same kind of choice, but made to judge outputs, on a held-out set; one choice is never both. Real data: his takes and messages are targets the model copies; preference data says which of two outputs he prefers.
+- **Kind**: thing
+- **Related**: `pairwise-judgement`, `fine-tuning`, `reward`
+- **Status**: candidate
+- **Warrant**: preference 247 / 53; DPO 108 / 23; preference data or pairs 12 / 10
+- **History**: 2026-11-28 added (candidate) after the research update at voice-research `5af9937` (39 new sources).
 
 ### reference clip (`reference-clip`)
 
@@ -606,6 +633,20 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Status**: approved
 - **Warrant**: label 216 / 75; tag 118 / 23; caption 14
 - **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
+
+### style instruction (`style-instruction`)
+
+- **Definition**: A style instruction is a text in words, given to a text-to-speech model with the text to speak, that describes how to say it.
+- **Scope**: Includes VoxCPM2's bracketed instruction, Fish Audio S2's inline instructions, Gemini TTS's style string, OpenAI's `instructions`, EmoVoice's freestyle text prompt, and an LLM-written delivery description when it is sent to the model. Excludes a word from a fixed list or a bracketed audio tag (`style-label`), markup (`markup`), a description of what was heard (an observed `style-label`, such as a caption), and the reference clip.
+- **Aliases**: instruction, delivery description, style string, style prompt, text prompt (TTS)
+- **Example**: [spoken-style-representation.md](https://github.com/jburnhams/voice-research/blob/5af9937/spoken-style-representation.md), instructions in words now steer cloned voices.
+- **Near miss**: A style label: names a style from a list; an instruction describes it in free words. A requested style: what is asked for; a style instruction is one way of asking. A model prompt: the text sent to a language model; a style instruction goes to a TTS model, beside the text it speaks. Coaching: the same delivery description shown to Jonathan is coaching; sent to the model, it is a style instruction.
+- **Kind**: thing
+- **Related**: `requested-style`, `style-label`, `markup`, `reference-clip`, `coaching`
+- **Matches**: relatedMatch `prompts:model-prompt`
+- **Status**: candidate
+- **Warrant**: instruction 216 / 54 (all senses); style string, style prompt, text prompt, freestyle 20 / 14; delivery description
+- **History**: 2026-11-28 added (candidate) after the research update at voice-research `5af9937` (39 new sources).
 
 ### markup (`markup`)
 
@@ -744,6 +785,19 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Status**: approved
 - **Warrant**: metric 151 / 62; WER 247
 - **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
+
+### reward (`reward`)
+
+- **Definition**: A reward is an automatic score used to train a model or to choose among its outputs, rather than to report how good they are.
+- **Scope**: Includes rewards in reinforcement learning (GRPO on CER and likelihood), verifiers in inference-time search (emotion2vec, Whisper, WavLM in Llasa), reward models trained on preferences, and scores from an LLM or audio LLM used as AI feedback (RLAIF). Excludes the same score reported as a result (`automatic-metric`, `llm-judge`), and Jonathan's own choices (`preference-data`).
+- **Aliases**: reward model, reward signal, verifier (in search), AI feedback
+- **Example**: [papers/no-verifiable-reward-prosody/README.md](https://github.com/jburnhams/voice-research/blob/5af9937/papers/no-verifiable-reward-prosody/README.md), GRPO on CER flattened prosody.
+- **Near miss**: An automatic metric: the same program can be both, but a metric reports and a reward steers. When one model is both, gains are partly on that model (Llasa pushed SIM above real recordings), so a reward is never also the metric that judges it. A speaker verifier: a model that checks whether two clips share a speaker; it is a reward only when used to train or choose.
+- **Kind**: role
+- **Related**: `automatic-metric`, `preference-data`, `leakage`
+- **Status**: candidate
+- **Warrant**: reward 111 / 35; verifier 76 / 26 (both senses); reward model 10 / 6
+- **History**: 2026-11-28 added (candidate) after the research update at voice-research `5af9937` (39 new sources).
 
 ### speaker similarity (`speaker-similarity`)
 
