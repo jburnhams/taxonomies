@@ -3,6 +3,12 @@
 Every change as a named operation (spec G4), newest day first. The approving agent is
 named on each line (G1); Jonathan can reverse any of them.
 
+## 2026-11-28
+
+- **add** the round-2 kit in `rounds/round-2/`: the 40 held items `h01`-`h40`, three shuffled
+  prompts (seeds 71-73) with the `whole-voice` rule as redefined, and a name test of the 4 changed labels.
+  Proposed by: Claude, after Jonathan said "yes please" to round 2 and the rename pass.
+
 ## 2026-11-27
 
 - **adopt** stage 1 (process step 10): `scope.md` status `in use`; 58 entries `approved`,

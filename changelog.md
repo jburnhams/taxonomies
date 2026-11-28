@@ -2,6 +2,13 @@
 
 All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md).
 
+## 2026-11-28
+
+**Voice taxonomy round 2 kit (branch `claude/project-thread-h8atpn`)**. Jonathan asked for round 2 and for the voice-research docs to be renamed to the glossary words.
+
+- `domains/voice/rounds/round-2/`: **new**. The rater kit on the 40 held items, and a name test for the four entries changed after round 1.
+- `domains/voice/changelog.md`: the add.
+
 ## 2026-11-27
 
 **Adopted stage 1 of the voice taxonomy after round 1 (branch `claude/project-thread-h8atpn`)**. Jonathan chose facet set A (`area`, `modality`, `trait`). Three raters were run on omarchy and agreed: Fleiss' κ 0.96, 1.00 and 0.81, and the non-Claude pair 0.97, 1.00 and 0.77. The name test passed with 59 of 62 labels.
