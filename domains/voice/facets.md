@@ -65,7 +65,7 @@ after round 1 passed J23 on every facet ([results](./rounds/round-1/results.md))
     watermarks, provenance.
 - **Order**: by sequence (the order the work happens), then the two cross-cutting areas.
 - **Unsorted**: none.
-- **Agreement**: Fleiss' κ 0.96, openai-gemini 0.97; 2026-11-27, 40 items (round 1), Claude Opus 5.5, GPT-6.2-Astra, Gemini 4 Carbon High.
+- **Agreement**: Fleiss' κ 0.87, openai-gemini 0.91; 2026-11-28, 40 items (round 2), Claude Opus 5.5, GPT-6.2-Astra, Gemini 4 Carbon High. Round 1: 0.96, 0.97.
 
 ### Modality (`modality`)
 
@@ -80,7 +80,7 @@ after round 1 passed J23 on every facet ([results](./rounds/round-1/results.md))
     privacy rule, a judge bias that holds for audio and text).
 - **Order**: by size of the repo's share, then the shared value.
 - **Unsorted**: none.
-- **Agreement**: Fleiss' κ 1.00, openai-gemini 1.00; 2026-11-27, 40 items (round 1), same raters. Only 2 items were `both`.
+- **Agreement**: Fleiss' κ 0.96, openai-gemini 0.94; 2026-11-28, 40 items (round 2), same raters. Round 1: 1.00, 1.00 (only 2 items were `both`).
 
 ### Trait (`trait`)
 
@@ -99,8 +99,8 @@ after round 1 passed J23 on every facet ([results](./rounds/round-1/results.md))
   - `whole-voice`: the voice as a whole, with no one part named: a licence for a cloning
     model, a runtime size, a privacy rule about the archive.
 - **Order**: from who, to how, to what, to how well; the whole last.
-- **Unsorted**: [`r20`](./samples.md#round-1-test-40) (stored F0, energy and durations; three different values), 2026-11-27.
-- **Agreement**: Fleiss' κ 0.81, openai-gemini 0.77; 2026-11-27, 40 items (round 1), same raters. 6 of 8 disagreements involved `whole-voice`, which has been redefined.
+- **Unsorted**: [`r20`](./samples.md#round-1-test-40) (stored F0, energy and durations), 2026-11-27, answered by the `whole-voice` redefinition (`expression`). [`h07`](./samples.md#held-for-round-2-40) (judges prefer longer text) and [`h13`](./samples.md#held-for-round-2-40) (self and other labels bias judges), 2026-11-28, answered by the new `whole-voice` near miss (`whole-voice` and `identity`).
+- **Agreement**: Fleiss' κ 0.89, openai-gemini 0.87; 2026-11-28, 40 items (round 2), same raters. Round 1: 0.81, 0.77, when 6 of 8 disagreements involved `whole-voice`; after its redefinition, 2 of 6.
 
 ## Set B (alternative): area, modality, origin
 

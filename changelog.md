@@ -4,10 +4,12 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-28
 
-**Voice taxonomy round 2 kit (branch `claude/project-thread-h8atpn`)**. Jonathan asked for round 2 and for the voice-research docs to be renamed to the glossary words.
+**Voice taxonomy round 2 (branch `claude/project-thread-h8atpn`)**. Jonathan asked for round 2 and for the voice-research docs to be renamed to the glossary words. Round 2 passed J23 on all three facets (Fleiss' κ 0.87, 0.96, 0.89; non-Claude pair 0.91, 0.94, 0.87). The renames are in voice-research PR #3.
 
-- `domains/voice/rounds/round-2/`: **new**. The rater kit on the 40 held items, and a name test for the four entries changed after round 1.
-- `domains/voice/changelog.md`: the add.
+- `domains/voice/rounds/round-2/`: **new**. The rater kit on the 40 held items, the three raters' answers, the name test for the four entries changed after round 1, `results.md` and `name-test/results.md`.
+- `domains/voice/glossary.md`: `coaching` and `style` approved (60 of 62). `whole-voice` and `demonstration` each gain a near miss and stay `candidate`.
+- `domains/voice/facets.md`, `scope.md`, `changelog.md`: round-2 agreement figures; Unsorted `h07` and `h13` answered.
+- `domains/voice/sample.py`: no sentence break after "e.g.". It had cut item `h36`; the stored draw is unchanged.
 
 ## 2026-11-27
 

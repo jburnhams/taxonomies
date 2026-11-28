@@ -31,7 +31,8 @@ def cut(s, limit=300):
     if len(s) <= limit:
         return s
     out = ""
-    for x in re.split(r"(?<=[.!?])\s", s):
+    # no break after an abbreviation: the draw at d02cddc did, and cut h36 at "(e.g." (round 2)
+    for x in re.split(r"(?<![.\s(]e\.g\.)(?<!i\.e\.)(?<!\bvs\.)(?<!\bal\.)(?<=[.!?])\s", s):
         if len(out) + len(x) > limit and out:
             break
         out += (" " if out else "") + x

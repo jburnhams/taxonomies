@@ -9,9 +9,9 @@ until stage 1 passes its rounds (spec G3).
 
 **Status**: stage 1 in use from 2026-11-27, after round 1 and the name test passed
 ([`scope.md`](./scope.md)). 15 values of facet set A (chosen by Jonathan 2026-11-27,
-[`facets.md`](./facets.md)) and 47 kernel terms. 58 are `approved`. Four are `candidate`
-(`demonstration`, `coaching`, `style`, `whole-voice`): they changed after round 1 and wait
-for the next round. Field rules:
+[`facets.md`](./facets.md)) and 47 kernel terms. 60 are `approved` (`coaching` and `style` after round 2). Two are `candidate`
+(`demonstration` "coaching demo", `whole-voice`): each gained a near miss after round 2 and
+waits for the next round. Field rules:
 [`design/spec.md` §4](../../design/spec.md#4-glossarymd). Counts:
 [`harvest.md`](./harvest.md). Examples link to voice-research (private) at `d02cddc`.
 Links to `prompts` terms are in [`map.md`](./map.md).
@@ -243,12 +243,12 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Scope**: Includes licences and rights for a cloning model, runtime size and speed, privacy rules for the whole archive, and surveys that cover every part. Use it only when the item names no part and measures, changes or stores no quality of the output. An item that names a part only through a metric or a model still names it: WER and ROUGE are `content`, speaker similarity and a cloning model's voice input are `identity`, a judge recognising whose text it is is `identity`. Stored features (pitch, energy, durations) take the trait they are kept for, `expression` when the item does not say.
 - **Aliases**: overall, all traits
 - **Example**: [spoken-student.md](https://github.com/jburnhams/voice-research/blob/d02cddc/spoken-student.md), tiny-voca's size and runtime.
-- **Near miss**: A model release that clones from reference audio: it names no trait in words, but cloning a voice is `identity`. A small model's speed and size: `whole-voice`, since no quality of the output is named.
+- **Near miss**: A judge's length or position bias: it skews whatever the judge scores and names no part, so `whole-voice`; a judge recognising its own text is about whose text it is, so `identity`. A model release that clones from reference audio: it names no trait in words, but cloning a voice is `identity`. A small model's speed and size: `whole-voice`, since no quality of the output is named.
 - **Kind**: property
 - **Facet**: `trait`
 - **Status**: candidate
 - **Warrant**: voice 1,000+ (every doc); voice clon- 127
-- **History**: 2026-11-27 added. 2026-11-27 redefine: scope says a part named through a metric or model counts as named; 6 of 8 round-1 `trait` disagreements involved this value.
+- **History**: 2026-11-27 added. 2026-11-27 redefine: scope says a part named through a metric or model counts as named; 6 of 8 round-1 `trait` disagreements involved this value. 2026-11-28 redefine: near miss for judge biases (round-2 splits `h07`, `h13`); both name-test readers read the label right, stays candidate for one more round.
 
 ## Kernel terms (stage 1)
 
@@ -349,9 +349,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A style label in the canonical record: the same word may be shown as coaching, but in the record it is the requested style.
 - **Kind**: thing
 - **Related**: `demonstration`, `requested-style`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: coach- 39 / 16; cue
-- **History**: 2026-11-27 added. 2026-11-27 redefine: scope excludes feedback after a take; a name-test reader read "coaching" as live direction.
+- **History**: 2026-11-27 added. 2026-11-27 redefine: scope excludes feedback after a take; a name-test reader read "coaching" as live direction. 2026-11-28 approved (round 2 and name test passed).
 
 ### coaching demo (`demonstration`)
 
@@ -359,12 +359,12 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Scope**: Includes Azure and local TTS demos. Excludes any use as training data or as a speaker-similarity reference (data-collection §3).
 - **Aliases**: demonstration, demo, demo audio
 - **Example**: [voice-design/data-collection.md](https://github.com/jburnhams/voice-research/blob/d02cddc/voice-design/data-collection.md), §1.2, how each prompt is given.
-- **Near miss**: Synthetic data: also generated audio, but trained on, not played to him. A few-shot example: shows a model what to write; a coaching demo is only ever played to Jonathan.
+- **Near miss**: Synthetic data: also generated audio, but trained on, not played to him. A few-shot example: shows a model what to write; a coaching demo is only ever played to Jonathan. A walkthrough of how coaching works: a coaching demo is one clip of a style, not a demonstration of the process.
 - **Kind**: thing
 - **Related**: `coaching`
 - **Status**: candidate
 - **Warrant**: demonstration, demo 71 / 34
-- **History**: 2026-11-27 added. 2026-11-27 rename: "demonstration" → "coaching demo" (ID kept); both name-test readers read "demonstration" as an example shown to a model.
+- **History**: 2026-11-27 added. 2026-11-27 rename: "demonstration" → "coaching demo" (ID kept); both name-test readers read "demonstration" as an example shown to a model. 2026-11-28 redefine: near miss for "walkthrough of the process"; one of two round-2 name-test readers read it so. Stays candidate.
 
 ### coverage (`coverage`)
 
@@ -502,9 +502,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: Writing style in authorship verification, or "his style" meaning his habits in every situation: the word is the same, but the question is who, not how, so that is `identity`.
 - **Kind**: thing
 - **Related**: `emotion`, `stance`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: style 1,231 / 137 (all senses)
-- **History**: 2026-11-27 added. 2026-11-27 redefine: near miss names the habit sense; a name-test reader read "style" as his characteristic manner. Label kept (N6, 1,231 uses).
+- **History**: 2026-11-27 added. 2026-11-27 redefine: near miss names the habit sense; a name-test reader read "style" as his characteristic manner. Label kept (N6, 1,231 uses). 2026-11-28 approved (round 2 and name test passed).
 
 ### emotion (`emotion`)
 

@@ -5,6 +5,13 @@ named on each line (G1); Jonathan can reverse any of them.
 
 ## 2026-11-28
 
+- **record** round 2 (run on omarchy, `9debcd7`): Fleiss' κ area 0.87, modality 0.96,
+  trait 0.89; openai-gemini 0.91, 0.94, 0.87; pass (J23). `h07` and `h13` (LLM-judge
+  biases) to Unsorted, answered by a new `whole-voice` near miss. Name test: 3 of 4 retested
+  labels pass with both readers. **approve** `coaching`, `style`. **redefine**
+  `whole-voice` (judge-bias near miss) and `demonstration` (near miss: not a walkthrough of
+  the process); both stay `candidate`. **fix** `sample.py`: no sentence break after "e.g."
+  (it had cut `h36`); the stored draw is unchanged. Approved by: Claude (G1).
 - **add** the round-2 kit in `rounds/round-2/`: the 40 held items `h01`-`h40`, three shuffled
   prompts (seeds 71-73) with the `whole-voice` rule as redefined, and a name test of the 4 changed labels.
   Proposed by: Claude, after Jonathan said "yes please" to round 2 and the rename pass.
