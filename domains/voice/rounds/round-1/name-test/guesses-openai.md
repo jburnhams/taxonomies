@@ -1,0 +1,72 @@
+# Name test: openai guesses
+
+- **CLI**: codex-cli 0.172.0, `codex exec --skip-git-repo-check --sandbox read-only --ephemeral --ignore-user-config --ignore-rules -m gpt-6.2-astra -c model_reasoning_effort=high -c web_search=disabled --json -o answer -`, prompt on stdin.
+- **Model**: `gpt-6.2-astra`, reasoning effort high. Read-only sandbox, user config and MCP servers not loaded, web search off; the event log shows no tool calls.
+- **Run**: 2026-11-27T20:35:18Z to 2026-11-27T20:36:02Z (UTC), 44 s. Tokens: 18865 in, 1533 out (0 reasoning).
+- **Not removable**: Codex's own system prompt, and the user's global `~/.codex/AGENTS.md`.
+- Prompt: the whole of `prompt.md` (commit `9762bc8`), copied alone into a fresh empty temp directory and run from there, as the only input, in a session separate from the rating runs. API keys removed from the environment (billed to the plan).
+
+## Reply (verbatim)
+
+- accent: I’d take this to mean the pronunciation patterns that reflect where he grew up or the speech communities he belongs to.
+- adapter: I’d expect a small trainable component that tailors an existing model to his speech or writing.
+- automatic metric: This is a score that software calculates, such as how closely a generated clip matches his recorded voice.
+- baseline: This is a starting point for comparison, such as how the local model sounds before training on his recordings.
+- benchmark: This is a standard set of tasks and scoring rules used to compare models on the same work.
+- both: I’d read this as a tag for something that applies to both his spoken voice and his writing.
+- calibration: I’d expect a step where people or scoring tools rate known examples to establish what a given score means.
+- coaching: I’d expect guidance given to him during recording, such as asking him to try a line again as if he were talking to a friend.
+- content: This is what he says or writes, including the words and the meaning they convey.
+- coverage: This is how much of the intended range of sounds, speaking styles, or writing situations the examples include.
+- demonstration: This is an example that shows the model or the person recording what the desired result sounds or reads like.
+- elicitation: This is using a question or situation to draw out a particular way of speaking, such as asking him to recall a surprise.
+- emotion: This is the feeling conveyed by a clip or message, such as amusement or frustration.
+- eval: I’d read this as shorthand for an evaluation, probably a particular test someone can run.
+- evaluation: This is the process of checking how well the models reproduce his speech or writing.
+- expression: This is how he uses his voice to convey feeling or emphasis in a particular line.
+- few-shot example: This is one of a handful of examples included in a prompt to show a model how to handle a new case.
+- fine-tuning: This is further training an existing model on examples selected to make its output sound or read like him.
+- generation: This is the step where a model produces a new audio clip or drafts a piece of writing.
+- governance: I’d expect rules about consent, who may use his data and models, and how the resulting clips or messages may be shared.
+- held-out set: These are examples kept out of training so they can be used to check performance on unfamiliar material.
+- identity: This is what makes a voice recognisably his across different sentences, moods, and situations.
+- identity embedding: This is a list of numbers that represents who is speaking and can be used to condition a model or compare speakers.
+- language model: I’d expect the model that uses the conversation and examples of his writing to predict and draft what he might write next.
+- leakage: This is when information the model is supposed to be tested on slips into training or into the examples it sees before answering.
+- listening test: This is a test in which people listen to clips and judge qualities such as naturalness or resemblance to him.
+- LLM judge: This is a large language model asked to assess an output against stated criteria, such as whether a draft sounds like something he would write.
+- markup: I’d expect tags added to text to indicate how it should be spoken, such as where to pause or which word to stress.
+- memorisation: This is when a model learns a particular recording or passage well enough to reproduce it nearly verbatim.
+- message: I’d read this as one complete piece of correspondence, such as an email or chat reply, used as an example or produced as a draft.
+- naturalness: This is how much a clip sounds like a person speaking comfortably, with believable timing and pronunciation.
+- observed style: This is how a clip or message actually comes across to someone listening to or reading it.
+- operations: I’d expect the day-to-day work of running the project, such as managing recordings, training runs, and model versions.
+- pairwise judgement: This is a choice between two outputs on one question, such as which of two clips sounds more like him.
+- preparation: I’d expect the work that gets source material ready to use, such as trimming recordings and checking transcripts.
+- prosody: This is the rhythm and melody of his speech, including pitch changes, timing, pauses, and stress.
+- real data: These are recordings of him actually speaking and messages he actually wrote.
+- recording prompt: This is a line to read, a question to answer, or a situation to respond to while being recorded.
+- recording session: This is one sitting in which he records a batch of speech samples.
+- reference clip: This is a sample of his speech that a model can use as a voice example or a listener can use for comparison.
+- representation: I’d read this as the form in which the project captures a feature of his voice or writing, such as a label or a vector of numbers.
+- requested style: This is how a prompt asks an output to sound or read, such as warm, brisk, or matter-of-fact.
+- retrieval: This is finding relevant examples among his past recordings or messages to help with the current request.
+- speaker similarity: This is how strongly a generated clip sounds as though the same person spoke it as spoke the reference clip.
+- spoken: I’d read this as a tag for work involving his audible speech.
+- stance: This is the position or attitude he takes toward a topic or recipient, such as agreeing cautiously or pushing back.
+- student: This is the small local model learning to produce his voice from examples that include the larger model’s output.
+- style: This is his characteristic way of expressing something, such as the cadence of an explanation or the phrasing of an email reply.
+- style embedding: This is a list of numbers that captures how a sample is delivered or phrased so a model can use that style.
+- style label: This is a short description attached to an example, such as “conversational” or “formal.”
+- style profile: This is a summary drawn from multiple examples of how he tends to speak or write in a given context.
+- synthetic data: I’d expect generated training examples, especially clips of the larger model speaking new lines in his cloned voice.
+- take: This is one recorded attempt at a particular line or prompt.
+- teacher: This is the larger voice-cloning model whose generated examples help train the smaller local model.
+- text-to-speech model: This is a model that takes written text and produces audio of the words being spoken.
+- vocal event: I’d expect an audible action such as a laugh, sigh, or breath within a recording.
+- voice: I’d read this as the qualities that make him recognisable to someone hearing him speak or reading something he wrote.
+- voice cloning: I’d take this to mean generating new speech that sounds as though he said it, using recordings of him as examples.
+- watermark: I’d expect a detectable marker embedded in generated audio or text to identify it as model-produced.
+- whole voice: I’d guess this means the overall impression of how he sounds when his vocal tone, accent, rhythm, and expression are heard together.
+- written: I’d read this as a tag for work involving his emails, messages, and other writing.
+- zero-shot cloning: This is generating speech in his voice from a reference sample without first training the model specifically on him.

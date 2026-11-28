@@ -7,8 +7,11 @@ the other words people use for it, a definition, an example and a near miss.
 If you reach for one of its aliases, it points you here. Everything here is `candidate`
 until stage 1 passes its rounds (spec G3).
 
-**Status**: stage 1 draft, 2026-11-27. 15 values of proposed facet set A
-([`facets.md`](./facets.md)) and 47 kernel terms, all `candidate`. Field rules:
+**Status**: stage 1 in use from 2026-11-27, after round 1 and the name test passed
+([`scope.md`](./scope.md)). 15 values of facet set A (chosen by Jonathan 2026-11-27,
+[`facets.md`](./facets.md)) and 47 kernel terms. 58 are `approved`. Four are `candidate`
+(`demonstration`, `coaching`, `style`, `whole-voice`): they changed after round 1 and wait
+for the next round. Field rules:
 [`design/spec.md` §4](../../design/spec.md#4-glossarymd). Counts:
 [`harvest.md`](./harvest.md). Examples link to voice-research (private) at `d02cddc`.
 Links to `prompts` terms are in [`map.md`](./map.md).
@@ -57,9 +60,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A held-out intelligibility list such as the Harvard sentences: he reads it, but it is chosen to test the output, so it is `evaluation` when the point is the test.
 - **Kind**: thing
 - **Facet**: `area`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: elicit- 45 / 22; script 50; coverage 96; coach- 39; agenda areas B, C, E
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### preparation (`preparation`)
 
@@ -70,9 +73,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A quality score such as DNSMOS: it is `preparation` when it filters takes before training, and `evaluation` when it scores a model's output.
 - **Kind**: thing
 - **Facet**: `area`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: align- 191 / 55; transcript 75; dataset 183; agenda area H
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### representation (`representation`)
 
@@ -83,9 +86,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A teacher that takes a separate emotion reference: the model is `generation`; the separate input is `representation` when the item is about the input.
 - **Kind**: thing
 - **Facet**: `area`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: markup 123; EmotionML 97; embedding 204; label 216; agenda areas A, D
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### generation (`generation`)
 
@@ -96,9 +99,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A rule never to put teacher audio in the held-out set: it is about synthetic data, but its job is to protect the test, so it is `evaluation`.
 - **Kind**: thing
 - **Facet**: `area`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: teacher 223; student 206; fine-tun- 329; synthetic 178; TTS 649; agenda areas F, G
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### evaluation (`evaluation`)
 
@@ -109,9 +112,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A watermark on every generated clip: it is listed beside the diagnostics, but it protects against misuse, so it is `governance`.
 - **Kind**: thing
 - **Facet**: `area`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: eval- 340 / 122; MOS 189; WER 247; metric 151; agenda area I
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### operations (`operations`)
 
@@ -122,9 +125,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A student's parameter count quoted to compare quality: it is `generation` when the point is what the model can learn, `operations` when the point is whether it fits.
 - **Kind**: thing
 - **Facet**: `area`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: real-time 30 / 18; ONNX 25; quanti- 20; agenda areas G (deployment), K
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### governance (`governance`)
 
@@ -135,9 +138,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A licence that forbids training on a teacher's outputs: it decides which teacher is usable, but it is a right, so it is `governance` even inside a teacher comparison.
 - **Kind**: thing
 - **Facet**: `area`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: licence 265 / 140; privacy 87; watermark 42; consent 10; agenda area J
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ## Modality values (`modality`)
 
@@ -150,9 +153,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: An LLM writing the recording prompts: the LLM writes text, but the item is about what he reads aloud, so it is `spoken`.
 - **Kind**: thing
 - **Facet**: `modality`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: spoken-*.md (9 topic docs); speaker 822; TTS 649
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### written (`written`)
 
@@ -163,9 +166,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A paper on LLM judges of writing style: it is about text, so `written`, unless the item says the same bias holds for audio.
 - **Kind**: thing
 - **Facet**: `modality`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: written-*.md (3 topic docs); author 535; message 130
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### both (`both`)
 
@@ -176,9 +179,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A finding about LLM judges in a written-voice doc: judges exist for audio too, but the item is about text, so it is `written`.
 - **Kind**: thing
 - **Facet**: `modality`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: voice-design/ docs and the agendas' shared sections
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ## Trait values (`trait`)
 
@@ -191,9 +194,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: His pitch when sarcastic: pitch is his, but the value that changes with the style is `expression`; his pitch range across all takes is `identity`.
 - **Kind**: property
 - **Facet**: `trait`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: identity 77; speaker similarity 190; authorship 117; accent 177; timbre 36
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### expression (`expression`)
 
@@ -204,9 +207,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A style embedding used to verify authorship: it is called "style", but the question it answers is who wrote it, so `identity`.
 - **Kind**: property
 - **Facet**: `trait`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: style 1,231; emotion 447; expressi- 228; prosod- 144; stance 110
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### content (`content`)
 
@@ -217,9 +220,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A British word list (BATH/TRAP, T-glottalling): it tests words, but the point is how he says them, so `identity`.
 - **Kind**: property
 - **Facet**: `trait`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: WER 247; content fidelity / meaning 20; diphone 63; intelligib- 23
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### naturalness (`naturalness`)
 
@@ -230,22 +233,22 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A listening test asking "which sounds more like you?": a person judges, but the question is whose voice, so `identity`.
 - **Kind**: property
 - **Facet**: `trait`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: natural- 162 / 65; MOS 189
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### whole voice (`whole-voice`)
 
 - **Definition**: Whole voice is a trait value for items about the voice as a whole, with no one part of it named.
-- **Scope**: Includes licences and rights for a cloning model, runtime size and speed, privacy rules for the whole archive, and surveys that cover every part. Use it only when the item names no part; a bundle takes the first part it names.
+- **Scope**: Includes licences and rights for a cloning model, runtime size and speed, privacy rules for the whole archive, and surveys that cover every part. Use it only when the item names no part and measures, changes or stores no quality of the output. An item that names a part only through a metric or a model still names it: WER and ROUGE are `content`, speaker similarity and a cloning model's voice input are `identity`, a judge recognising whose text it is is `identity`. Stored features (pitch, energy, durations) take the trait they are kept for, `expression` when the item does not say.
 - **Aliases**: overall, all traits
 - **Example**: [spoken-student.md](https://github.com/jburnhams/voice-research/blob/d02cddc/spoken-student.md), tiny-voca's size and runtime.
-- **Near miss**: Voice cloning in general: if the item says the clone keeps his timbre, it names a part, so `identity`.
+- **Near miss**: A model release that clones from reference audio: it names no trait in words, but cloning a voice is `identity`. A small model's speed and size: `whole-voice`, since no quality of the output is named.
 - **Kind**: property
 - **Facet**: `trait`
 - **Status**: candidate
 - **Warrant**: voice 1,000+ (every doc); voice clon- 127
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 redefine: scope says a part named through a metric or model counts as named; 6 of 8 round-1 `trait` disagreements involved this value.
 
 ## Kernel terms (stage 1)
 
@@ -257,9 +260,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [README.md](https://github.com/jburnhams/voice-research/blob/d02cddc/README.md), "cloning one person's voice, spoken and written".
 - **Near miss**: An Azure voice such as Sonia: a vendor's preset speaker, used for demonstrations, not anyone's voice to clone.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: voice in every doc; Jonathan's words: "personal voice cloning"
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### take (`take`)
 
@@ -270,9 +273,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: An utterance in LibriTTS or ESD: one recorded unit of speech, but someone else's.
 - **Kind**: thing
 - **Related**: `recording-prompt`, `real-data`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: take (noun) 266 / 87; recording 175; utterance 152; clip 158
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### message (`message`)
 
@@ -282,9 +285,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [written-methods.md](https://github.com/jburnhams/voice-research/blob/d02cddc/written-methods.md), "100 or more sent messages per register".
 - **Near miss**: A draft: text a model wrote for him to send; it becomes evidence only through his choice or edit.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: message 130 / 41; email in written docs
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### real data (`real-data`)
 
@@ -295,9 +298,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: Voice-converted audio in his timbre: it sounds like him, but a model made it, so it is synthetic data.
 - **Kind**: thing
 - **Related**: `synthetic-data`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: real 393 / 97 ("real takes", "real data"); genuine
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### synthetic data (`synthetic-data`)
 
@@ -308,9 +311,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A demonstration: generated audio too, but played to Jonathan as a cue, not used as data.
 - **Kind**: thing
 - **Related**: `real-data`, `teacher`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: synthetic 178 / 62; augment- 85 / 31; pseudo- 18
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### recording prompt (`recording-prompt`)
 
@@ -321,9 +324,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A reference clip: also called a "prompt" in the teacher papers, but it is audio a model copies, not text he reads.
 - **Kind**: thing
 - **Related**: `take`, `coaching`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: prompt 426 / 96 (all senses); script 50; "prompt set"
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### recording session (`recording-session`)
 
@@ -333,14 +336,14 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [voice-design/data-collection.md](https://github.com/jburnhams/voice-research/blob/d02cddc/voice-design/data-collection.md), §1.3 recording conditions.
 - **Near miss**: A harness session in the prompts context: same word, a different thing.
 - **Kind**: happening
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: session 111 / 39
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### coaching (`coaching`)
 
 - **Definition**: Coaching is a cue shown or played with a recording prompt to ask for a style.
-- **Scope**: Includes a style label, an emoji, a colour, a scenario card, and a demonstration before or after the first take. Excludes the recording prompt's text itself.
+- **Scope**: Includes a style label, an emoji, a colour, a scenario card, and a demonstration before or after the first take. Excludes the recording prompt's text itself, and feedback on a take after it is recorded ("try that warmer"), which is a retake request.
 - **Aliases**: cue, emotional cue, coaching mode
 - **Example**: [spoken-elicitation.md](https://github.com/jburnhams/voice-research/blob/d02cddc/spoken-elicitation.md), §3, coaching.
 - **Near miss**: A style label in the canonical record: the same word may be shown as coaching, but in the record it is the requested style.
@@ -348,20 +351,20 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Related**: `demonstration`, `requested-style`
 - **Status**: candidate
 - **Warrant**: coach- 39 / 16; cue
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 redefine: scope excludes feedback after a take; a name-test reader read "coaching" as live direction.
 
-### demonstration (`demonstration`)
+### coaching demo (`demonstration`)
 
-- **Definition**: A demonstration is a generated clip played to Jonathan to show how a style might sound before or after he records it.
+- **Definition**: A coaching demo is a generated clip played to Jonathan to show how a style might sound before or after he records it.
 - **Scope**: Includes Azure and local TTS demos. Excludes any use as training data or as a speaker-similarity reference (data-collection §3).
-- **Aliases**: demo, demo audio
+- **Aliases**: demonstration, demo, demo audio
 - **Example**: [voice-design/data-collection.md](https://github.com/jburnhams/voice-research/blob/d02cddc/voice-design/data-collection.md), §1.2, how each prompt is given.
-- **Near miss**: Synthetic data: also generated audio, but trained on, not played to him.
+- **Near miss**: Synthetic data: also generated audio, but trained on, not played to him. A few-shot example: shows a model what to write; a coaching demo is only ever played to Jonathan.
 - **Kind**: thing
 - **Related**: `coaching`
 - **Status**: candidate
 - **Warrant**: demonstration, demo 71 / 34
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 rename: "demonstration" → "coaching demo" (ID kept); both name-test readers read "demonstration" as an example shown to a model.
 
 ### coverage (`coverage`)
 
@@ -371,9 +374,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [spoken-acquisition.md](https://github.com/jburnhams/voice-research/blob/d02cddc/spoken-acquisition.md), coverage-only ranking.
 - **Near miss**: Data amount: more minutes need not add coverage; CMU Arctic's first 593 prompts reach 78% of diphones.
 - **Kind**: property
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: coverage 96 / 36; diphone 63
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### teacher (`teacher`)
 
@@ -384,9 +387,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: Azure TTS in coaching: it generates speech, but never his and never for training.
 - **Kind**: role
 - **Related**: `student`, `synthetic-data`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: teacher 223 / 74
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### student (`student`)
 
@@ -397,9 +400,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A small teacher: Pocket TTS can clone zero-shot, but here it is the baseline a student must beat.
 - **Kind**: role
 - **Related**: `teacher`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: student 206 / 80
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### text-to-speech model (`tts-model`)
 
@@ -409,9 +412,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [papers/fastspeech2/README.md](https://github.com/jburnhams/voice-research/blob/d02cddc/papers/fastspeech2/README.md), FastSpeech 2.
 - **Near miss**: A speaker verifier: also a speech model, but it reads speech and outputs a score.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: TTS 649 / 92; TTS model 27
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### language model (`language-model`)
 
@@ -422,9 +425,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: CosyVoice's LM stage: a language model inside a TTS model, so the whole is a `tts-model`.
 - **Kind**: thing
 - **Matches**: closeMatch `prompts:language-model`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: LLM 296 / 66; language model 85 / 33
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### voice cloning (`voice-cloning`)
 
@@ -434,9 +437,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [spoken-teachers.md](https://github.com/jburnhams/voice-research/blob/d02cddc/spoken-teachers.md), no single teacher gives his voice, accent and style.
 - **Near miss**: Style transfer: it changes how something is said, not whose voice it is.
 - **Kind**: happening
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: voice clon- 127 / 57; imitation (written)
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### zero-shot cloning (`zero-shot-cloning`)
 
@@ -448,9 +451,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Kind**: happening
 - **Broader**: `voice-cloning`
 - **Related**: `reference-clip`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: zero-shot 137 / 45
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### fine-tuning (`fine-tuning`)
 
@@ -461,9 +464,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: Preference training (DPO): it also changes weights, but from pairs of choices rather than his data as targets; a later stage may give it an entry.
 - **Kind**: happening
 - **Related**: `adapter`, `voice-cloning`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: fine-tun- 329 / 78; adaptation 65 / 26
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### adapter (`adapter`)
 
@@ -473,9 +476,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [written-methods.md](https://github.com/jburnhams/voice-research/blob/d02cddc/written-methods.md), §4, adapter mechanics.
 - **Near miss**: A steering vector: a direction added at inference, not trained weights.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: adapter 78 / 18; LoRA 124 / 21
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### reference clip (`reference-clip`)
 
@@ -486,9 +489,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A recording prompt: what he reads to make a take; a take becomes a reference clip only when it is given to a model.
 - **Kind**: thing
 - **Related**: `zero-shot-cloning`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: reference (clip, audio) 30 / 18; reference 293 (all senses)
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### style (`style`)
 
@@ -496,12 +499,12 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Scope**: Includes emotions, stances and speaking modes (whisper, chat) when named as a target. Excludes a whole author's manner as in "style embedding" for authorship (`identity`).
 - **Aliases**: speaking style, delivery style
 - **Example**: [spoken-style-representation.md](https://github.com/jburnhams/voice-research/blob/d02cddc/spoken-style-representation.md), the project vocabulary.
-- **Near miss**: Writing style in authorship verification: the word is the same, but the question is who, not how.
+- **Near miss**: Writing style in authorship verification, or "his style" meaning his habits in every situation: the word is the same, but the question is who, not how, so that is `identity`.
 - **Kind**: thing
 - **Related**: `emotion`, `stance`
 - **Status**: candidate
 - **Warrant**: style 1,231 / 137 (all senses)
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 redefine: near miss names the habit sense; a name-test reader read "style" as his characteristic manner. Label kept (N6, 1,231 uses).
 
 ### emotion (`emotion`)
 
@@ -511,9 +514,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [specs/w3c-emotion-voc/README.md](https://github.com/jburnhams/voice-research/blob/d02cddc/specs/w3c-emotion-voc/README.md), W3C emotion vocabularies.
 - **Near miss**: Sarcasm: an attitude to what is said, not a feeling, so a `stance`.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: emotion 447 / 62; EmotionML 97
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### stance (`stance`)
 
@@ -523,9 +526,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [spoken-style-representation.md](https://github.com/jburnhams/voice-research/blob/d02cddc/spoken-style-representation.md), "What we conclude" 2.
 - **Near miss**: Sadness: a feeling the W3C vocabulary names, so `emotion`.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: stance 110 / 57
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### vocal event (`vocal-event`)
 
@@ -535,9 +538,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [spoken-style-representation.md](https://github.com/jburnhams/voice-research/blob/d02cddc/spoken-style-representation.md), project vocabulary for vocal events.
 - **Near miss**: A pause: timing of the words, so `prosody`.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: vocal event, laugh, filler, sigh 85 / 29
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### prosody (`prosody`)
 
@@ -547,9 +550,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [spoken-style-representation.md](https://github.com/jburnhams/voice-research/blob/d02cddc/spoken-style-representation.md), explicit prosody inputs.
 - **Near miss**: Accent: also heard in the sounds of words, but a matter of pronunciation, not pitch and timing.
 - **Kind**: property
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: prosod- 144 / 55; F0, pitch 267 / 50
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### accent (`accent`)
 
@@ -559,9 +562,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [spoken-teachers.md](https://github.com/jburnhams/voice-research/blob/d02cddc/spoken-teachers.md), "accent is where zero-shot fails".
 - **Near miss**: A pronunciation error by a model: wrong words, which is `content`, unless the item is about drift towards another accent.
 - **Kind**: property
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: accent 177 / 56
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### requested style (`requested-style`)
 
@@ -572,9 +575,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: An observed style: what a listener or Jonathan heard in the take, which may differ.
 - **Kind**: role
 - **Related**: `observed-style`, `style`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: requested 30 / 13 (with observed)
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### observed style (`observed-style`)
 
@@ -585,9 +588,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A requested style: the label shown before the take.
 - **Kind**: role
 - **Related**: `requested-style`, `style`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: observed 30 / 13 (with requested)
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### style label (`style-label`)
 
@@ -597,9 +600,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [papers/style-tag-tts/README.md](https://github.com/jburnhams/voice-research/blob/d02cddc/papers/style-tag-tts/README.md), free-text tags regressed onto style embeddings.
 - **Near miss**: A style embedding: a learned vector, not words.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: label 216 / 75; tag 118 / 23; caption 14
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### markup (`markup`)
 
@@ -609,9 +612,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [specs/w3c-ssml-1.1/README.md](https://github.com/jburnhams/voice-research/blob/d02cddc/specs/w3c-ssml-1.1/README.md), SSML 1.1.
 - **Near miss**: A free-text tag ("a bit wry"): words about a style, but in no standard.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: markup, SSML 123 / 28; EmotionML 97 / 29
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### style embedding (`style-embedding`)
 
@@ -622,9 +625,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A LUAR authorship embedding: called a style representation, but trained to answer "same author?", so `identity-embedding`.
 - **Kind**: thing
 - **Related**: `identity-embedding`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: embedding 204 / 76; style vector 21; style token 26
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### identity embedding (`identity-embedding`)
 
@@ -635,9 +638,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A style embedding: encodes how, not who; a reference embedding that leaks the speaker is a style embedding with a fault.
 - **Kind**: thing
 - **Related**: `speaker-similarity`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: speaker embedding 40 / 26; authorship embedding (LUAR) in written-evaluation
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### style profile (`style-profile`)
 
@@ -647,9 +650,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [papers/personalbench/README.md](https://github.com/jburnhams/voice-research/blob/d02cddc/papers/personalbench/README.md), profiles barely repeat between runs.
 - **Near miss**: Few-shot examples: his real messages, not a description of them.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: profile 111 / 32
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### few-shot example (`few-shot-example`)
 
@@ -660,9 +663,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A retrieved item: also placed in the prompt, but chosen by a search over the archive; an example chosen that way is both.
 - **Kind**: thing
 - **Related**: `retrieval`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: few-shot, in-context 68 / 24; example 189 (all senses)
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### retrieval (`retrieval`)
 
@@ -673,9 +676,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: Long context: every message goes in, nothing is chosen.
 - **Kind**: happening
 - **Related**: `few-shot-example`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: retriev-, RAG 160 / 25
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### held-out set (`held-out-set`)
 
@@ -686,9 +689,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A benchmark: a published test set for comparing models, not his own data.
 - **Kind**: thing
 - **Related**: `leakage`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: held-out 105 / 70; split 96; test set 47
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### leakage (`leakage`)
 
@@ -699,9 +702,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: Memorisation: training text coming out of the model, a privacy fault, not a test fault.
 - **Kind**: happening
 - **Related**: `held-out-set`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: leak- 79 / 36
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### listening test (`listening-test`)
 
@@ -711,9 +714,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [spoken-evaluation.md](https://github.com/jburnhams/voice-research/blob/d02cddc/spoken-evaluation.md), wording and scale move MOS.
 - **Near miss**: DNSMOS: predicts a listening-test score, but no one listens; it is an automatic metric.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: listener 178; MOS 189; CMOS 44; MUSHRA 39
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### pairwise judgement (`pairwise-judgement`)
 
@@ -723,9 +726,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [written-evaluation.md](https://github.com/jburnhams/voice-research/blob/d02cddc/written-evaluation.md), pairwise beats independent scores.
 - **Near miss**: A MUSHRA trial: all versions side by side, but each is rated on a scale.
 - **Kind**: happening
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: A/B, pairwise, forced-choice 124 / 54
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### automatic metric (`automatic-metric`)
 
@@ -735,9 +738,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [spoken-dataset-qa.md](https://github.com/jburnhams/voice-research/blob/d02cddc/spoken-dataset-qa.md), automatic checks and their limits.
 - **Near miss**: An LLM judge: also a model, but it answers a question in words.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: metric 151 / 62; WER 247
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### speaker similarity (`speaker-similarity`)
 
@@ -749,9 +752,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Kind**: thing
 - **Broader**: `automatic-metric`
 - **Related**: `identity-embedding`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: speaker similarity, SIM, SECS, SS 190 / 45
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### LLM judge (`llm-judge`)
 
@@ -762,9 +765,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A critic in refinement: also an LLM rating output, but its job is to improve the draft, so it is part of `generation` unless its score is reported.
 - **Kind**: role
 - **Matches**: broadMatch `prompts:second-model`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: judge 264 / 34; LLM-as-a-judge
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### calibration (`calibration`)
 
@@ -775,9 +778,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A baseline: a system to beat, not a check that the measure works.
 - **Kind**: happening
 - **Related**: `automatic-metric`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: ceiling, floor 75 / 25; calibrat-
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### eval (`eval`)
 
@@ -788,9 +791,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Near miss**: A benchmark: an eval published for comparing models.
 - **Kind**: thing
 - **Matches**: exactMatch `prompts:eval`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: eval- 340 / 122 (evaluation, eval set)
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### benchmark (`benchmark`)
 
@@ -802,9 +805,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Kind**: thing
 - **Broader**: `eval`
 - **Matches**: exactMatch `prompts:benchmark`
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: benchmark 94 / 42
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### baseline (`baseline`)
 
@@ -814,9 +817,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [written-methods.md](https://github.com/jburnhams/voice-research/blob/d02cddc/written-methods.md), "baselines that must be in the matrix".
 - **Near miss**: His real take as MUSHRA's hidden reference: the target, not a competitor.
 - **Kind**: role
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: baseline 156 / 82
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### watermark (`watermark`)
 
@@ -826,9 +829,9 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [papers/audioseal/README.md](https://github.com/jburnhams/voice-research/blob/d02cddc/papers/audioseal/README.md), AudioSeal.
 - **Near miss**: A dataset manifest: records where data came from, but outside the audio.
 - **Kind**: thing
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: watermark 42 / 9; provenance 15
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 
 ### memorisation (`memorisation`)
 
@@ -838,7 +841,7 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Example**: [written-methods.md](https://github.com/jburnhams/voice-research/blob/d02cddc/written-methods.md), §5, privacy when training on a private archive.
 - **Near miss**: Leakage: a fault in the test design, not a privacy fault of the model.
 - **Kind**: happening
-- **Status**: candidate
+- **Status**: approved
 - **Warrant**: memori- 43 / 9; PII
-- **History**: 2026-11-27 added.
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
 

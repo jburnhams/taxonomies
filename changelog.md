@@ -4,6 +4,12 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-27
 
+**Adopted stage 1 of the voice taxonomy after round 1 (branch `claude/project-thread-h8atpn`)**. Jonathan chose facet set A (`area`, `modality`, `trait`). Three raters were run on omarchy and agreed: Fleiss' κ 0.96, 1.00 and 0.81, and the non-Claude pair 0.97, 1.00 and 0.77. The name test passed with 59 of 62 labels.
+
+- `domains/voice/rounds/round-1/`: the answers, raw replies and name-test guesses from omarchy. `results.md`, `review.md` and `name-test/results.md` are **new**.
+- `domains/voice/glossary.md`: 58 entries are `approved`. `demonstration` is relabelled "coaching demo". `coaching`, `style` and `whole-voice` are redefined and stay `candidate`.
+- `domains/voice/facets.md`, `scope.md`, `changelog.md`: set A is marked chosen and in use, with agreement figures and the Unsorted item `r20`.
+
 **Started the voice taxonomy for `jburnhams/voice-research` (branch `claude/project-thread-h8atpn`)**. Jonathan asked for a taxonomy for the voice-research repo, aligned with `prompts` where they overlap. It is built in stages, as `prompts` is (method v1.1 M1: 329 items). He chose that item excerpts from the private voice-research repo may be public here.
 
 - `domains/voice/`: **new**. `scope.md`, `sample.py`, `items-all.csv`, `samples.md`, `harvest.md`, `facets.md` (sets A-C, bare test), `glossary.md` (62 `candidate` entries), `map.md` (links to `prompts`), `requests.md`, `changelog.md`, and the round-1 kit in `rounds/round-1/`.
