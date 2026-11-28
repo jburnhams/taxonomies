@@ -4,6 +4,13 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-28
 
+**Fixed the gaps the first by-hand intake found in the request process (branch `claude/project-thread-xrtek5`)**. After PR #32 merged, Jonathan asked to fix the missing outcome and make any other improvements to the process.
+
+- `design/growth.md`: R1 gains the `backlog` outcome, a PR link in each issue comment, reopening an issue when Jonathan vetoes its change, and a link in the asking domain's `map.md` when one domain asks another. R3: a stage that takes a backlog row adds **Taken** to the request and comments the term on the closed issue. R4: a widening that keeps every earlier case is a non-breaking redefine, and a narrowing is a boundary change; terms no round sorted are checked against their uses in the domain repo. R5: a change to a J8 label choice is named for veto even on a `candidate`. R7: a session answers what it logs in the same PR; `intake` reports drift. The status line records the amendment.
+- `tools/term.py`: `intake` now checks every request record against R1's outcomes, flags a missing **Answered**, and flags records whose state disagrees with their issue. `lookup` matches answered requests on their label only (concept-word matches were noise) and shows one sentence of each outcome. `changes` also lists requests whose **Taken** date is in range.
+- `domains/prompts/requests.md`, `domains/taxonomies/requests.md`, `domains/ux/requests.md`: the header names `backlog`, the PR link and **Taken**.
+- **Correction.** `domains/prompts/changelog.md` and `requests.md` (`issue-20`): the `context-window` split was logged as not breaking, but a split is breaking by R5. It now has its Breaking line: write "prompt" for the text, "context window" for the limit.
+
 **Answered the nine open prompts term requests by hand (branch `claude/project-thread-xrtek5`)**. Jonathan asked for the prompts requests to be processed now rather than at Tuesday's intake. The branch builds on `claude/project-thread-7iimfg` (PR #30), which had logged them, so merging this PR also merges #30. No term request issues were open in `jburnhams/prompts` itself.
 
 - `domains/prompts/glossary.md`: `model-prompt` (labelled "prompt") **new**, split from `context-window`, which keeps the limit (#20); `retrieval` **new** (#21); `handoff` widened to in-run transfers between agents (#29). Both new terms are `candidate`.

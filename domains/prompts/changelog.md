@@ -5,6 +5,11 @@ named on each line (G1); Jonathan can reverse any of them.
 
 ## 2026-11-28
 
+- **record** correction to the `context-window` split below: a split is breaking by
+  R5, so it carries a Breaking line, which the first entry left out (`term.py changes`
+  already flagged it). Breaking: write "prompt" for the text sent to a model on one
+  request, and "context window" only for its token limit. Uses such as "loaded into the
+  context window" still read right and need no change. Approved by: Claude (G1).
 - **record** intake answers (R1) for all nine open requests, by hand at Jonathan's ask
   ("process prompts requests / issues"); each issue commented and closed. Approved by:
   Claude (G1).

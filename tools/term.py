@@ -30,6 +30,7 @@ from pathlib import Path
 RAW = "https://raw.githubusercontent.com/jburnhams/taxonomies/main/"
 BREAKING = {"rename", "split", "merge", "move", "deprecate"}
 OPS = BREAKING | {"add", "redefine", "alias", "adopt", "record", "review", "score", "decide"}
+OUTCOMES = {"open", "use", "alias", "candidate", "clarified", "changed", "backlog", "declined"}  # growth R1
 STOP = set("a an the of to for in on and or is it its by with as at be that this from".split())
 
 
@@ -117,7 +118,9 @@ def lookup(root, domain, query, with_issues=False):
             scored.append((s, t))
     scored.sort(key=lambda x: (-x[0], x[1]["id"]))
     near = [t for s, t in scored[:5] if s >= max(2, scored[0][0] // 2)] if scored else []
-    asked = [r for r in reqs if q == fold(r["label"]) or (qw and len(qw & words(r["label"] + " " + r.get("Concept", ""))) >= max(1, len(qw) - 1))]
+    # an open request matches on its label or concept; an answered one on its label only,
+    # since its answer is in the glossary and a concept-word match is then mostly noise
+    asked = [r for r in reqs if q == fold(r["label"]) or (qw and outcome(r) == "open" and len(qw & words(r["label"] + " " + r.get("Concept", ""))) >= max(1, len(qw) - 1))]
     if with_issues:  # open issues not yet logged, so both output modes report the same requests
         try:
             known = {r["id"] for r in asked}
@@ -128,6 +131,18 @@ def lookup(root, domain, query, with_issues=False):
         except Exception:
             pass
     return terms, exact, near, asked
+
+
+def outcome(r):
+    """The first word of a request record's Outcome (`use`, `backlog`, ...); 'open' if unset."""
+    m = re.match(r"[`*\s]*([a-z]+)", r.get("Outcome") or "open")
+    return m.group(1) if m else "?"
+
+
+def short(v, n=160):
+    """The first sentence of a long field, for one-line listings."""
+    v = (v or "").split(". ")[0]
+    return v if len(v) <= n else v[:n - 1] + "…"
 
 
 def q_in_labels(t, query):
@@ -171,7 +186,7 @@ def cmd_lookup(a):
         if asked:
             print("Already requested:")
             for r in asked:
-                print(f"  {r['label']} (`{r['id']}`): {r.get('Outcome', 'open')}  [{r.get('Asked', '')}]")
+                print(f"  {r['label']} (`{r['id']}`): {short(r.get('Outcome', 'open'))}  [{r.get('Answered') or r.get('Asked', '')}]")
         if not exact:
             print("If none fits, use your own word now and file a term-request issue in "
                   "jburnhams/taxonomies (fields: design/growth.md#the-request-issue).")
@@ -205,7 +220,7 @@ def cmd_changes(a):
     # breaking: a rename, split, merge, move or deprecate that names a term, or a line marked "Breaking:"
     brk = lambda t, ops: "Breaking:" in t or bool({o.split()[0] for o in ops} & BREAKING and set(ids_in(t)) & tids)
     reqs = [r for r in records(read(root, f"domains/{a.domain}/requests.md"))
-            if (r.get("Answered") or "")[:10] >= a.since]
+            if max((r.get("Answered") or "")[:10], (r.get("Taken") or "")[:10]) >= a.since]
     print(f"{a.domain}: changes on or after {a.since}, newest first (the day itself is included, so lines seen last time may repeat)")
     if not rows and not reqs:
         print("  none")
@@ -214,7 +229,8 @@ def cmd_changes(a):
     if reqs:
         print("Requests answered:")
         for r in reqs:
-            print(f"  {r['label']} (`{r['id']}`): {r.get('Outcome', '')}  [{r.get('Answered', '')}]")
+            taken = f"; taken as {short(r['Taken'])}" if r.get("Taken") else ""
+            print(f"  {r['label']} (`{r['id']}`): {short(r.get('Outcome', ''))}{taken}  [{r.get('Answered', '')}]")
     if any(brk(t, ops) for _, t, ops in rows):
         print("Breaking changes: switch old labels to the new ones in docs you touch "
               "(`lookup` on an old label names its replacement).")
@@ -278,9 +294,10 @@ def cmd_intake(a):
     if not root:
         sys.exit("term.py intake: run it in a checkout of jburnhams/taxonomies (or pass --root)")
     try:
-        issues = request_issues("open")
+        every = request_issues("all")
     except Exception as e:
         sys.exit(f"term.py intake: cannot read issues from {API}: {e}")
+    issues = [i for i in every if i["state"] == "open"]
     domains = {p.name: p for p in (root / "domains").iterdir() if (p / "glossary.md").exists()}
     found = 0
     for i in issues:
@@ -306,7 +323,30 @@ def cmd_intake(a):
             logp.write_text(log.rstrip("\n") + "\n\n" + rec)
             print(f"    wrote `{rid}` to {logp.relative_to(root)}")
     print(f"\n{found} new request(s) of {len(issues)} open term-request issue(s)")
-    return 0 if found else 1
+    drift = check_records(root, domains, {f"issue-{i['number']}": i for i in every})
+    for line in drift:
+        print(line)
+    return 0 if found or drift else 1
+
+
+def check_records(root, domains, by_id):
+    """Records whose outcome is not one of R1's, or whose state disagrees with their issue (R7)."""
+    out = []
+    for d, path in sorted(domains.items()):
+        for r in records((path / "requests.md").read_text() if (path / "requests.md").exists() else ""):
+            o, i = outcome(r), by_id.get(r["id"])
+            where = f"{d}: `{r['id']}` {r['label']}"
+            if o not in OUTCOMES:
+                out.append(f"{where}: outcome '{o}' is not one of {', '.join(sorted(OUTCOMES))} (growth R1)")
+            if o != "open" and not r.get("Answered"):
+                out.append(f"{where}: outcome set but no **Answered** (date, by)")
+            if i and o == "open" and i["state"] == "closed":
+                out.append(f"{where}: still `open` here but issue #{i['number']} is closed (answer it, or reopen the issue)")
+            if i and o != "open" and i["state"] == "open":
+                out.append(f"{where}: answered `{o}` here but issue #{i['number']} is open (comment the outcome and close it)")
+    if out:
+        out.insert(0, "\nRecords to fix:")
+    return out
 
 
 def main(argv=None):
