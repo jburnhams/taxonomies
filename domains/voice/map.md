@@ -24,6 +24,11 @@ the same concept.
   for that context.
 - `recording-session` relatedMatch `prompts:session`: different concepts that share the
   word "session"; voice uses "recording session" so the bare word is not needed.
+- `style-instruction` relatedMatch `prompts:model-prompt`: both are text given to a
+  model, but a style instruction goes to a text-to-speech model beside the text it
+  speaks, and says only how to say it (added 2026-11-28).
+- Assistant **memory** (KnowAct, voice-research `5af9937`): use `prompts:memory`. The
+  voice glossary has no entry of its own, since the concept is the agent-design one.
 - `retrieval` broadMatch `prompts:retrieval`: `prompts` counts every way kept items are
   brought into the prompt (pasted in, index read, search, trigger match); voice's
   `retrieval` is the search kind only, with long context as its near miss. Answered

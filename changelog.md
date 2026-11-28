@@ -4,6 +4,13 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 ## 2026-11-28
 
+**Voice taxonomy: update for the new research (branch `claude/project-thread-h8atpn`)**. Jonathan pointed to the research pass that added 39 sources to voice-research (PR #4, `5af9937`). The facets still sort every new source, and four new concepts enter as `candidate`.
+
+- `domains/voice/glossary.md`: new `candidate` entries `assisted-message`, `preference-data`, `reward` and `style-instruction`. The near miss of `fine-tuning` points to `preference-data`; `real-data` now reads "produced or sent", so assisted messages are real data, tagged (from review on PR #34).
+- `domains/voice/harvest.md`: a new section for the update. It has counts at `d02cddc` and `5af9937`, homonym 8 ("verifier"), the wording check on the new prose, and a facet check of the 39 new sources.
+- `domains/voice/map.md`: `style-instruction` relatedMatch `prompts:model-prompt`; assistant memory uses `prompts:memory`.
+- `domains/voice/scope.md`, `changelog.md`: the population at `5af9937`, and the new warrant for stage 2.
+
 **Fixed the gaps the first by-hand intake found in the request process (branch `claude/project-thread-xrtek5`)**. After PR #32 merged, Jonathan asked to fix the missing outcome and make any other improvements to the process.
 
 - `design/growth.md`: R1 gains the `backlog` outcome, a PR link in each issue comment, reopening an issue when Jonathan vetoes its change, and a link in the asking domain's `map.md` when one domain asks another. R3: a stage that takes a backlog row adds **Taken** to the request and comments the term on the closed issue. R4: a widening that keeps every earlier case is a non-breaking redefine, and a narrowing is a boundary change; terms no round sorted are checked against their uses in the domain repo. R5: a change to a J8 label choice is named for veto even on a `candidate`. R7: a session answers what it logs in the same PR; `intake` reports drift. The status line records the amendment.

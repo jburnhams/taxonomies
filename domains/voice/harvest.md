@@ -148,3 +148,124 @@ as `paper.txt` left out). A count is uses / files. Counts are of the word, all s
   alias there), `session`, `transcript`. Not found: fine-tuning, few-shot examples,
   retrieval, dataset, adapter. "prompt" finds `context-window`, whose definition is a
   limit, not the text sent (homonym 1d).
+
+## Update 2026-11-28 (voice-research `5af9937`)
+
+**In one line**: the research pass of 2026-11-28 (voice-research PR #4) added 39 sources,
+most from 2024-2026, and edits to 14 topic and design docs. The three facets sort every new
+source. Four new concepts get `candidate` entries. The new prose already uses the glossary
+words.
+
+**What changed**: the repo now holds 172 source folders, up from 133. Its own summary is in
+[`coverage-audit.md`](https://github.com/jburnhams/voice-research/blob/5af9937/coverage-audit.md).
+The new sources cover:
+
+- preference and RL training for speech;
+- audio LLM judges;
+- steerable vendor voices and their terms;
+- learning from his edits and writing samples;
+- written style embeddings.
+
+### Counts, before and after
+
+Counted the same way as above, at `d02cddc` and `5af9937`. Each cell is uses / files.
+
+| Word | Before | After | Outcome |
+|---|---|---|---|
+| preference | 128 / 35 | 247 / 53 | new `preference-data` |
+| DPO | 36 / 10 | 108 / 23 | `preference-data` (training on it) |
+| reward | 46 / 18 | 111 / 35 | new `reward` |
+| verifier | 43 / 21 | 76 / 26 | `reward` when used to train or choose; otherwise a speaker verifier |
+| instruction | 141 / 34 | 213 / 54 | new `style-instruction` |
+| style string, style prompt, text prompt, freestyle | | 20 / 14 | aliases of `style-instruction` |
+| caption | 14 / 6 | 59 / 15 | alias of `style-label` (unchanged) |
+| audio LLM | 2 / 2 | 40 / 17 | `llm-judge` (its scope already covers audio judges) |
+| assisted, pre-assistant | 0 / 0 | 24 / 11 | new `assisted-message` |
+| memory | | 42 / 13 | `prompts:memory` (see `map.md`) |
+| edit(s) | 48 / 15 | 121 / 26 | `preference-data` (edit-derived preferences) |
+| homogeni-, ownership | 0 / 0 | 14 / 6, 18 / 6 | no entry: findings, not concepts |
+| aesthetic | 0 / 0 | 20 / 7 | no entry: a metric name (Audiobox Aesthetics) |
+| vendor | 21 / 10 | 56 / 19 | no entry: covered by `governance` and the licence lines |
+
+### New homonym
+
+8. **verifier**: (a) a speaker or authorship verifier, which checks whether two samples
+   share a source (`b04`); (b) a scorer used to choose among outputs in inference-time
+   search (Llasa). Fix: sense (b) is a `reward`; sense (a) keeps its own word.
+
+### Wording in the new prose (G6)
+
+The edits to the topic and design docs were made after the rename pass (voice-research
+PR #3). They add 137 lines, which were checked against all 171 aliases in the glossary.
+
+- No alias of a voice-only term was found.
+- The words that were found are used in senses the glossary keeps:
+  - "utterance" and "clip" for other corpora and generated audio;
+  - "found recordings";
+  - "samples" in the plain sense.
+- One borderline case: in DITTO's summary, "demonstrations" means a few texts used as
+  training targets. This is the authors' word, so it stays.
+
+### Facet check on the 39 new sources
+
+Claude sorted each new source by its title and writeup, using only the value notes in
+`facets.md`. This is a check that the facets still hold, not a rated round.
+
+**Result**: every source took a value in every facet. None went to Unsorted.
+
+**Hesitations** (the trait value is given first, the alternative in brackets):
+
+- **Written style versus authorship** (`expression` or `identity`): 6 sources. This is the
+  known case of homonym 3.
+- **A model's overall method** (`whole-voice` or `expression`): 4 sources.
+- **Quality screens** (`evaluation` or `preparation`): 2 sources.
+- **No glossary word for the concept**: 4 sources. These gave the new entries:
+  - `rlaif-spa` and `no-verifiable-reward-prosody`: `reward`;
+  - `openai-tts-instructions`: `style-instruction`;
+  - `ai-suggestions-homogenise`: `assisted-message`.
+
+| Source | area | modality | trait | Hesitation |
+|---|---|---|---|---|
+| ai-ghostwriter-effect | evaluation | written | identity | area: also `preparation` (tag assisted messages) |
+| ai-suggestions-homogenise | preparation | written | identity | concept: `assisted-message` |
+| audiobox-aesthetics | evaluation | spoken | naturalness | area: also a screen on takes |
+| audiojudge | evaluation | spoken | whole-voice | |
+| beyond-naturalness | evaluation | spoken | expression | trait: stress and prosody against content |
+| capspeech | representation | spoken | expression | |
+| csp-ft | generation | spoken | expression | first named: emotion |
+| ditto | generation | written | identity | trait: style (b) |
+| emergenttts-eval | evaluation | spoken | expression | |
+| emilia | preparation | spoken | whole-voice | |
+| emo-lipo | generation | spoken | expression | |
+| emovoice | generation | spoken | expression | |
+| fish-audio-s2 | generation | spoken | expression | trait: whole model |
+| knowact | generation | written | whole-voice | concept: `prompts:memory` |
+| llasa | generation | spoken | whole-voice | concept: `reward` (verifiers in search) |
+| luar | representation | written | identity | |
+| minimax-speech | generation | spoken | identity | |
+| neutts-finetune-diversity | generation | spoken | whole-voice | |
+| no-verifiable-reward-prosody | generation | spoken | expression | concept: `reward`, `preference-data` |
+| pearl | generation | written | identity | trait: style (b) |
+| prelude-cipher | generation | written | expression | trait: style (b); concept: `preference-data` |
+| prose-plume | generation | written | identity | trait: style (b) |
+| rlaif-spa | generation | spoken | expression | concept: `reward` |
+| rvcbench | evaluation | spoken | identity | |
+| singlish-zero-shot-tts | generation | spoken | identity | area: also `evaluation` |
+| spark-tts | generation | spoken | whole-voice | area: "efficient" (`operations`) |
+| speech-judge-shortcuts | evaluation | spoken | whole-voice | |
+| speechjudge | evaluation | spoken | naturalness | |
+| step-audio-editx | generation | spoken | expression | |
+| styledistance | representation | written | expression | trait: style (b) |
+| synth-eval-good-practices | evaluation | spoken | whole-voice | |
+| tinystyler | generation | written | expression | trait: style (b) |
+| utmosv2 | evaluation | spoken | naturalness | |
+| vox-profile | evaluation | spoken | identity | trait: several traits, accent first named |
+| voxcpm2 | generation | spoken | expression | trait: whole model |
+| chatterbox | generation | spoken | whole-voice | |
+| elevenlabs-v3-tags | representation | spoken | expression | bundle: tags, then terms (`governance`) |
+| gemini-tts | generation | spoken | expression | concept: `style-instruction` |
+| openai-tts-instructions | generation | spoken | expression | concept: `style-instruction` |
+
+The next round should draw its items from the population at `5af9937`, or later, so that
+these sources and the four new entries are tested by raters. The current draw in
+`samples.md` stays at `d02cddc`.
