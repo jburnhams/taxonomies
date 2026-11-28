@@ -6,7 +6,7 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 
 **Voice taxonomy: update for the new research (branch `claude/project-thread-h8atpn`)**. Jonathan pointed to the research pass that added 39 sources to voice-research (PR #4, `5af9937`). The facets still sort every new source, and four new concepts enter as `candidate`.
 
-- `domains/voice/glossary.md`: new `candidate` entries `assisted-message`, `preference-data`, `reward` and `style-instruction`. The near misses of `fine-tuning` and `real-data` now point to them.
+- `domains/voice/glossary.md`: new `candidate` entries `assisted-message`, `preference-data`, `reward` and `style-instruction`. The near miss of `fine-tuning` points to `preference-data`; `real-data` now reads "produced or sent", so assisted messages are real data, tagged (from review on PR #34).
 - `domains/voice/harvest.md`: a new section for the update. It has counts at `d02cddc` and `5af9937`, homonym 8 ("verifier"), the wording check on the new prose, and a facet check of the 39 new sources.
 - `domains/voice/map.md`: `style-instruction` relatedMatch `prompts:model-prompt`; assistant memory uses `prompts:memory`.
 - `domains/voice/scope.md`, `changelog.md`: the population at `5af9937`, and the new warrant for stage 2.

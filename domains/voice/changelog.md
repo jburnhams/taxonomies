@@ -7,8 +7,9 @@ named on each line (G1); Jonathan can reverse any of them.
 
 - **add** `assisted-message`, `preference-data`, `reward` and `style-instruction` as `candidate`, after
   the research update at voice-research `5af9937` (39 new sources). **Redefine** (clarified, non-breaking)
-  the near misses of `fine-tuning` (now points to `preference-data`) and `real-data` (assisted messages
-  are real data, tagged). **Map** `style-instruction` relatedMatch `prompts:model-prompt`; assistant
+  the near miss of `fine-tuning` (now points to `preference-data`), and the definition, scope and near
+  miss of `real-data` ("produced or sent": assisted messages are real data, tagged; a widening that keeps
+  every earlier case, R4). **Map** `style-instruction` relatedMatch `prompts:model-prompt`; assistant
   memory uses `prompts:memory`. **Record** the update check in `harvest.md`: counts before and after,
   homonym 8 ("verifier"), no alias drift in the new prose, and every new source sorted by the three
   facets with none Unsorted. Approved by: Claude (G1), after Jonathan said "See updated research".

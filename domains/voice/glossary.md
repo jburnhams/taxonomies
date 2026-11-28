@@ -295,8 +295,8 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 
 ### real data (`real-data`)
 
-- **Definition**: Real data is a body of recordings or writing that Jonathan himself produced.
-- **Scope**: Includes his takes, unscripted speech, found recordings and sent messages. Excludes anything a model made, even in his voice (`synthetic-data`), and other speakers' corpora.
+- **Definition**: Real data is a body of recordings or writing that Jonathan himself produced or sent.
+- **Scope**: Includes his takes, unscripted speech, found recordings and sent messages, assisted messages among them (tagged, `assisted-message`). Excludes anything a model made that he did not record or send, even in his voice (`synthetic-data`), and other speakers' corpora.
 - **Aliases**: own data, genuine data, human data
 - **Example**: [voice-design/data-collection.md](https://github.com/jburnhams/voice-research/blob/d02cddc/voice-design/data-collection.md), what to record and keep now.
 - **Near miss**: Voice-converted audio in his timbre: it sounds like him, but a model made it, so it is synthetic data. An assisted message: real data, but tagged and kept out of the reference corpus (`assisted-message`).
@@ -304,7 +304,7 @@ Links to `prompts` terms are in [`map.md`](./map.md).
 - **Related**: `synthetic-data`
 - **Status**: approved
 - **Warrant**: real 393 / 97 ("real takes", "real data"); genuine
-- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed).
+- **History**: 2026-11-27 added. 2026-11-27 approved (stage 1 round 1 and name test passed). 2026-11-28 redefine (clarified): "produced or sent", so assisted messages are real data, tagged.
 
 ### assisted message (`assisted-message`)
 
