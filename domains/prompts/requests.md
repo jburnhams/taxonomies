@@ -6,9 +6,11 @@ domain, with its outcome, so the asker can look the answer up.
 **In plain words**: agents and people ask for a term, a clarification or a change by
 filing a `term-request` issue in this repo ([form](https://github.com/jburnhams/taxonomies/issues/new?template=term-request.yml)).
 `python3 tools/term.py intake --write` copies new issues in as `open` (ID `issue-<number>`);
-whoever answers sets **Outcome** (`use`, `alias`, `candidate`, `clarified`, `changed` or
-`declined`, with the term ID) and **Answered** (date, by), logs any operation in
-[`changelog.md`](./changelog.md), comments the outcome on the issue and closes it. Rules:
+whoever answers sets **Outcome** (`use`, `alias`, `candidate`, `clarified`, `changed`,
+`backlog` or `declined`, with the term ID) and **Answered** (date, by), logs any operation
+in [`changelog.md`](./changelog.md), comments the outcome on the issue with a link to the
+PR and closes it. A `backlog` record gains **Taken** (date, term ID) when a stage defines
+its term, and that stage comments the term on the issue. Rules:
 [`design/growth.md`](../../design/growth.md). `term.py lookup` and `changes` show these
 answers back to the asker. Nothing here is deleted.
 
@@ -121,5 +123,5 @@ answers back to the asker. Nothing here is deleted.
 - **Warrant**: voice-research: "prompt" 426 uses in 96 files, about a quarter in this sense (2026-11-27).
 - **Asked**: Voice taxonomy stage 1, `domains/voice/` on branch `claude/project-thread-h8atpn` (PR #19), aligning voice with prompts.
 - **From**: [#20](https://github.com/jburnhams/taxonomies/issues/20)
-- **Outcome**: changed, new candidate `model-prompt` (labelled "prompt") split from `context-window`. `context-window` keeps the limit; the text sent on one request is the prompt, and the alias "prompt" moved with it. Not breaking for prompts docs ("loaded into the context window" still reads right); new writing uses "prompt" for the text. Voice-research keeps writing "model prompt" (an alias here), since "prompt" alone is ambiguous there; mapped in `domains/voice/map.md`. Split named in the PR for Jonathan's veto (R5).
+- **Outcome**: changed, new candidate `model-prompt` (labelled "prompt") split from `context-window`. `context-window` keeps the limit; the text sent on one request is the prompt, and the alias "prompt" moved with it. Breaking (corrected 2026-11-28; first logged as not breaking): write "prompt" for the text sent on one request and "context window" only for its limit; uses such as "loaded into the context window" still read right. Voice-research keeps writing "model prompt" (an alias here), since "prompt" alone is ambiguous there; mapped in `domains/voice/map.md`. Split named in the PR for Jonathan's veto (R5).
 - **Answered**: 2026-11-28, Claude (by-hand intake in the Taxonomies project, asked by Jonathan)

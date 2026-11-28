@@ -18,7 +18,7 @@ opens up more and shows where older ones need a sharper edge (Jonathan, 2026-11-
 **Status**: adopted by Jonathan 2026-11-27 (J27-J32 in [`decisions.md`](./decisions.md)),
 in the interview on the decision cards. For J27 he chose **issues in this repo** over the
 proposed file in each domain repo, so requests are GitHub issues; the rest as proposed.
-The rules below are in force. Spec §1, G2 and G6 and process steps 11-12 point here;
+The rules below are in force. Amended 2026-11-28 at Jonathan's ask, after the first by-hand intake (taxonomies#32): a `backlog` outcome (R1, R3), telling the asker when a stage takes a backlog row (R3), reopening on a veto and updating the asking domain's map (R1), widening versus narrowing (R4), J8 label choices named for veto (R5), and answering what is logged in the same PR (R7). Spec §1, G2 and G6 and process steps 11-12 point here;
 the full rules stay in this file (table at the end). Citations follow the spec's rules; "reasoning" marks a
 point with no source claimed.
 
@@ -130,10 +130,17 @@ For `clarify` or `change`, add a `### Term` section with the term's ID.
   one outcome: `use` (an
   existing term fits; give its ID), `alias` (an existing term fits and the asker's word
   becomes its alias), `candidate` (a new term was added), `clarified` (a field was
-  rewritten), `changed` (a breaking operation, below), or `declined` (with the reason,
-  for example out of scope) (J27, adopted). **Answered** gives the date and who answered.
+  rewritten), `changed` (a breaking operation, below), `backlog` (the concept belongs to
+  an area no stage has built, so it waits as a backlog row, R3), or `declined` (with the
+  reason, for example out of scope) (J27, adopted; `backlog` added 2026-11-28 after the
+  first by-hand intake had no outcome for R3's case). **Answered** gives the date and who answered.
   The intake comments the outcome on the issue (the term to use, or what changed and the
-  `Breaking:` line) and closes it, so the asker is told where they asked. This is
+  `Breaking:` line, and a link to the PR that makes the change) and closes it, so the
+  asker is told where they asked. If Jonathan vetoes that change, the issue is reopened
+  with a comment and the record goes back to `open` (reasoning: an answer that never
+  landed must not read as settled). When the asker is another domain in this repo (the
+  voice domain asking `prompts`), the same PR adds or updates the link in the asking
+  domain's `map.md` (spec C3), so the two contexts stay matched. This is
   Z39.19's candidate-term record, kept for every proposal whether or not it is accepted
   ([Z39.19 §§11.3.1.1-11.3.1.2, pp. 96-97][z39]), and the log is what `lookup` and
   `changes` show back to the asker. A request is not deleted after it is answered (G5's
@@ -152,15 +159,23 @@ For `clarify` or `change`, add a `### Term` section with the term's ID.
   domain (method v1.1 M1), a request in an area not yet built goes into that stage's
   harvest instead: where the domain keeps a term backlog (`domains/prompts/backlog.md`,
   M8, proposed as J33), it becomes an open backlog row whose **Opened by** names the
-  issue, so a stage has one list to start from. Approval (J28, adopted): an agent may move a non-facet candidate to
+  issue, so a stage has one list to start from, and the outcome is `backlog`. The asker
+  keeps using its own word meanwhile (loop step 2). When a stage takes the row, it adds
+  **Taken** (date, term ID) to the request record and comments the term on the closed
+  issue, so the asker hears of it where it asked as well as in `changes`. Approval (J28, adopted): an agent may move a non-facet candidate to
   `approved` (G1) at the next review once T1-T6 pass, one fresh reader from another
   model family guesses its meaning (T9), and it is used in at least two docs
   (reasoning: the bar a round sets for facet values, scaled to one term).
 - **R4. Clarify without moving the edge.** A `clarified` outcome rewrites the
   definition, scope note, near miss or example so the asker's case is decided. It is
-  non-breaking only if every item raters already sorted under the term still fits it
-  (judgement, checked against the term's round items on the explorer site); otherwise
-  it is a boundary change and follows R5. Scope notes exist to "distinguish between
+  non-breaking only if every item raters already sorted under the term, and every use
+  of it in the domain repo, still fits it (judgement, checked against the term's round
+  items on the explorer site, or for a term no round sorted, against a search of its
+  label in the domain repo); otherwise it is a boundary change and follows R5. So a
+  widening that keeps every earlier case is a `clarified` **redefine**; a narrowing, or
+  a move that drops a case, is a boundary change. A widening of an `approved` facet
+  value still waits for a round, since new items under it change what its kappa
+  measured (R3's reasoning). Scope notes exist to "distinguish between
   terms that have overlapping meanings" ([Z39.19 §6.2.2][z39]); the boundary is where
   raters disagree ([Wan et al. App. B.2.1][wan]).
 - **R5. Breaking operations keep the old word findable, and some need a re-test.** A
@@ -173,7 +188,9 @@ For `clarify` or `change`, add a `### Term` section with the term's ID.
   boundary change of an `approved` facet value needs a round on that facet first, with
   fresh items that include the value, since the facet's last kappa no longer describes
   it; for any other term the G1 rule holds. Every breaking operation in an `in use`
-  domain is named in the PR for Jonathan's veto.
+  domain is named in the PR for Jonathan's veto, and so is any operation that changes a
+  label choice he was asked to veto (a domain glossary's "Label choices" list, J8), even
+  when the term is `candidate`.
 - **R6. Mark breaking changes in the changelog, and version by date.** A breaking line in
   `domains/<name>/changelog.md` ends `Breaking: <what a domain repo must do>`, for example
   `Breaking: write "fixed logic" for "rule"`. `term.py changes` flags those lines and
@@ -190,6 +207,12 @@ For `clarify` or `change`, add a `### Term` section with the term's ID.
   prompts research pass, so that pass's requests are answered before the next one
   ([Z39.19 §11.3.1, p. 96][z39]: review at intervals set by how fast terms change). The
   task opens a PR with its answers; its issue comments and closes are made when it runs.
+  A session that runs intake answers what it logs in the same PR; one that cannot answer
+  (it lacks the time or the domain knowledge) leaves the issues unlogged for the next
+  intake rather than opening a PR that only logs them (reasoning: the first logging-only
+  PR, #30, had to be merged into the answering one, #32). `term.py intake` also reports
+  records whose outcome is not one of R1's and records whose state disagrees with their
+  issue (answered but still open, or `open` but closed), so drift shows on every run.
 
 ## What a domain repo's instructions say
 
