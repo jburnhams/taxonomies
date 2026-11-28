@@ -47,3 +47,11 @@ unless marked. **Taken** names the stage and the entry; **open** rows wait for a
 | proof: evidence that a change works in real use, apart from tests | `kr09` | ⚠ not counted | verification |
 | deny list, as its own entry rather than an alias of `allow-list` | `allow-list` | deny list or denylist 5 / 14 | control retest, if raters split it |
 | confirmation policy: a document listing which actions need a person | `permission-mode` alias "approval policy" | confirmation polic- 1 / 9 | control retest |
+| swarm: a set of agents working on one task at once, results combined | [#23](https://github.com/jburnhams/taxonomies/issues/23), from `coordination` | swarm 39 all at prompts `16aef6a`; 77 in `agent-swarms.md` + proposals at `1a3c84b` | coordination |
+| topology: who talks to whom and who combines (independent, centralized, hierarchical, decentralized, board) | [#24](https://github.com/jburnhams/taxonomies/issues/24), from `orchestrator` | topolog- 13 all; 10 swarms | coordination (maybe a facet) |
+| fan-out: starting several sub-agents at once and joining their results | [#25](https://github.com/jburnhams/taxonomies/issues/25), from `sub-agent` | fan out or fan-out 130 all; fan-in 4 | coordination |
+| join: the end of a fan-out, with its deadline and rule for a missing part | `fan-out` (#25) | ⚠ not counted; proposal 3 in `proposals-swarms-2026-11.md` | coordination |
+| board: a shared append-only record agents post to instead of messaging | [#26](https://github.com/jburnhams/taxonomies/issues/26), from `scratchpad`, `memory` near misses | message board 3 all; board 40 swarms | coordination |
+| vote: choosing the answer most independent agents give | [#27](https://github.com/jburnhams/taxonomies/issues/27), from `self-verification` | vote or voting 18 all; ensemble 25; best-of-N 9 | coordination or verification |
+| debate: agents reading each other's answers and revising over rounds | [#28](https://github.com/jburnhams/taxonomies/issues/28), from `vote` | debate 2 all; 18 swarms | coordination or verification |
+| one agent passing control to another inside a run (OpenAI, LangGraph, MS "handoff") | [#29](https://github.com/jburnhams/taxonomies/issues/29) (`clarify` on `handoff`) | handoff or transfer_to 18 swarms | intake first (R4), else coordination |

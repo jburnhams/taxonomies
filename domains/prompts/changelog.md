@@ -3,6 +3,17 @@
 Every change as a named operation (spec G4), newest day first. The approving agent is
 named on each line (G1); Jonathan can reverse any of them.
 
+## 2026-11-28
+
+- **record** intake (`term.py intake --write`): nine open `term-request` issues logged
+  in `requests.md` as `open` (#20, #21, #23-#29). Not answered here: that is the
+  Tuesday intake's (R7). Approved by: Claude (G1).
+- **add** 8 open rows to `backlog.md` for the coordination stage, opened by the
+  prompts agent swarms deep dive (`agent-swarms.md` at prompts `1a3c84b`): swarm,
+  topology, fan-out, join, board, vote, debate (issues #23-#28, R3), and agent-to-agent
+  control passing (#29, a `clarify` on `handoff` for the intake first). Proposed by:
+  Claude, after Jonathan asked the deep dive to "make use of and update taxonomies".
+
 ## 2026-11-27
 
 - **decide** stage-3 facet set A (`target`, `response`), by Jonathan on the decision card,

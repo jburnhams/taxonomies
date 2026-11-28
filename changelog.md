@@ -2,6 +2,14 @@
 
 All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md).
 
+## 2026-11-28
+
+**Logged the prompts agent swarms requests and opened coordination backlog rows (branch `claude/project-thread-7iimfg`)**. The prompts deep dive into agent swarms found six concepts the glossary has no word for and one unclear term, and filed them as issues #23-#29. Jonathan asked it to "make use of and update taxonomies".
+
+- `domains/prompts/requests.md`: intake run; nine open requests logged (#20, #21, #23-#29), none answered, for the Tuesday intake.
+- `domains/prompts/backlog.md`: eight open rows for the coordination stage (swarm, topology, fan-out, join, board, vote, debate, and agent-to-agent control passing).
+- `domains/prompts/changelog.md`: the two operations.
+
 ## 2026-11-27
 
 **Adopted stage 1 of the voice taxonomy after round 1 (branch `claude/project-thread-h8atpn`)**. Jonathan chose facet set A (`area`, `modality`, `trait`). Three raters were run on omarchy and agreed: Fleiss' κ 0.96, 1.00 and 0.81, and the non-Claude pair 0.97, 1.00 and 0.77. The name test passed with 59 of 62 labels.
