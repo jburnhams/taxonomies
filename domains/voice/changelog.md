@@ -3,6 +3,20 @@
 Every change as a named operation (spec G4), newest day first. The approving agent is
 named on each line (G1); Jonathan can reverse any of them.
 
+## 2026-11-28
+
+- **record** round 2 (run on omarchy, `9debcd7`): Fleiss' κ area 0.87, modality 0.96,
+  trait 0.89; openai-gemini 0.91, 0.94, 0.87; pass (J23). `h07` and `h13` (LLM-judge
+  biases) to Unsorted, answered by a new `whole-voice` near miss. Name test: 2 of 4 retested
+  labels pass with both readers. **approve** `style`; `coaching` stays `candidate` (both
+  readers read it as feedback on takes; first scored a pass, corrected after review on #31). **redefine**
+  `whole-voice` (judge-bias near miss) and `demonstration` (near miss: not a walkthrough of
+  the process); both stay `candidate`. **fix** `sample.py`: no sentence break after "e.g."
+  (it had cut `h36`); the stored draw is unchanged. Approved by: Claude (G1).
+- **add** the round-2 kit in `rounds/round-2/`: the 40 held items `h01`-`h40`, three shuffled
+  prompts (seeds 71-73) with the `whole-voice` rule as redefined, and a name test of the 4 changed labels.
+  Proposed by: Claude, after Jonathan said "yes please" to round 2 and the rename pass.
+
 ## 2026-11-27
 
 - **adopt** stage 1 (process step 10): `scope.md` status `in use`; 58 entries `approved`,

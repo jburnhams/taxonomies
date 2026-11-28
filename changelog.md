@@ -10,6 +10,13 @@ All notable changes, grouped by day, newest first. See [`CLAUDE.md`](./CLAUDE.md
 - `domains/prompts/backlog.md`: eight open rows for the coordination stage (swarm, topology, fan-out, join, board, vote, debate, and agent-to-agent control passing).
 - `domains/prompts/changelog.md`: the two operations.
 
+**Voice taxonomy round 2 (branch `claude/project-thread-h8atpn`)**. Jonathan asked for round 2 and for the voice-research docs to be renamed to the glossary words. Round 2 passed J23 on all three facets (Fleiss' κ 0.87, 0.96, 0.89; non-Claude pair 0.91, 0.94, 0.87). The renames are in voice-research PR #3.
+
+- `domains/voice/rounds/round-2/`: **new**. The rater kit on the 40 held items, the three raters' answers, the name test for the four entries changed after round 1, `results.md` and `name-test/results.md`.
+- `domains/voice/glossary.md`: `style` approved (59 of 62). `coaching` stays `candidate`: both name-test readers read it as feedback on takes (first scored a pass, corrected after review on PR #31). `whole-voice` and `demonstration` each gain a near miss and stay `candidate`.
+- `domains/voice/facets.md`, `scope.md`, `changelog.md`: round-2 agreement figures; Unsorted `h07` and `h13` answered.
+- `domains/voice/sample.py`: no sentence break after "e.g.". It had cut item `h36`; the stored draw is unchanged.
+
 ## 2026-11-27
 
 **Adopted stage 1 of the voice taxonomy after round 1 (branch `claude/project-thread-h8atpn`)**. Jonathan chose facet set A (`area`, `modality`, `trait`). Three raters were run on omarchy and agreed: Fleiss' κ 0.96, 1.00 and 0.81, and the non-Claude pair 0.97, 1.00 and 0.77. The name test passed with 59 of 62 labels.
